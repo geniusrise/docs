@@ -1,0 +1,3 @@
+# Geniusctl
+
+::: cli.geniusctl

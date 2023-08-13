@@ -1,0 +1,3 @@
+# Spout
+
+::: core.spout

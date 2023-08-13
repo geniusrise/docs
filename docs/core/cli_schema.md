@@ -1,0 +1,3 @@
+# YAML schema
+
+::: cli.schema

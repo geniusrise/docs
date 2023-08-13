@@ -1,0 +1,3 @@
+# Spoutctl
+
+::: cli.spoutctl

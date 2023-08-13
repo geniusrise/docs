@@ -1,0 +1,69 @@
+site_name: Geniusrise
+nav:
+  - Home: index.md
+  - Getting started: index.md
+  - Core Reference:
+    - cli:
+        - boltctl: core/cli_boltctl.md
+        - discover: core/cli_discover.md
+        - geniusctl: core/cli_geniusctl.md
+        - schema: core/cli_schema.md
+        - spoutctl: core/cli_spoutctl.md
+        - yamlctl: core/cli_yamlctl.md
+    - core:
+        - bolt: core/core_bolt.md
+        - spout: core/core_spout.md
+        - data:
+            - batch_input: core/core_data_batch_input.md
+            - batch_output: core/core_data_batch_output.md
+            - input: core/core_data_input.md
+            - output: core/core_data_output.md
+            - streaming_input: core/core_data_streaming_input.md
+            - streaming_output: core/core_data_streaming_output.md
+        - state:
+            - base: core/core_state_base.md
+            - dynamo: core/core_state_dynamo.md
+            - memory: core/core_state_memory.md
+            - postgres: core/core_state_postgres.md
+            - redis: core/core_state_redis.md
+        - task:
+            - base: core/core_task_base.md
+            - ecs: core/core_task_ecs.md
+            - k8s: core/core_task_k8s.md
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: pink
+    accent: deep purple
+  font:
+    text: Fira Code
+    code: Source Code Pro
+  logo: assets/logo-1.jpg
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - header.autohide
+
+markdown_extensions:
+  - toc:
+      permalink: true
+
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [../geniusrise/geniusrise]
+  - print-site:
+      add_print_site_banner: true
+      print_site_banner_template: "docs/assets/templates/banner.tpl"
+
+extra_css:
+  - 'main.css'
