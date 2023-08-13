@@ -2,6 +2,26 @@ site_name: Geniusrise
 nav:
   - Home: index.md
   - Getting started: index.md
+  - Concepts: index.md
+  - Design and Architecture: index.md
+  - Development:
+    - Local experimentation: index.md
+    - Packaging: index.md
+    - Staged deployment: index.md
+    - Workflow ops: index.md
+    - Data ops: index.md
+    - Model ops: index.md
+  - Deployment:
+    - Kubernetes: index.md
+    - Apache Airflow: index.md
+    - Apache Spark: index.md
+    - Apache Flink: index.md
+    - Apache Beam: index.md
+    - Apache Storm: index.md
+    - AWS ECS: index.md
+    - AWS Batch: index.md
+  - Reference:
+    - YAML structure: index.md
   - Core Reference:
     - cli:
         - boltctl: core/cli_boltctl.md
@@ -40,7 +60,7 @@ theme:
   font:
     text: Fira Code
     code: Source Code Pro
-  logo: assets/logo-1.jpg
+  logo: assets/logo.jpg
   features:
     - navigation.instant
     - navigation.instant.prefetch

@@ -1,17 +1,48 @@
+.md-container {
+  background-color: #120b1f;
+}
+
 .md-header {
   height: 80px;
   /* background-image: linear-gradient(to right, #7d51c4, #d848ad, #fd4f78, #f5b43b, #f5f52e); */
   /* background: radial-gradient(circle, rgba(195, 34, 145, 1) 0%, rgba(253, 114, 45, 1) 100%); */
-  background: linear-gradient(
-    to right,
-    #eeb2b2 20%,
-    #e0cfaf 20% 40%,
-    #e1e1b8 40% 60%,
-    #cceccc 60% 80%,
-    #cacaea 80%
-  );
+  background: linear-gradient(to right,
+      #f34960 40%,
+      #e7b67e 40% 50%,
+      #e4e48c 50% 60%,
+      #96ee96 60% 70%,
+      #8adcff 70% 80%,
+      #9595e9 80% 90%,
+      #e667aa 90%
+    );
 
   color: rgb(18, 1, 11);
+}
+
+.md-nav--primary .md-nav__title {
+  background: #f34960;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 2px;
+  box-shadow: none;
+
+  color: black;
+  font-weight: bold;
+}
+
+.md-nav--secondary .md-nav__title {
+  background: #f34960;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 2px;
+  box-shadow: none;
+
+  color: black;
+  font-weight: bold;
 }
 
 .md-header__content {
@@ -28,7 +59,28 @@
   height: 60px;
 }
 
+.md-grid {
+  max-width: 85rem;
+}
 
+.md-nav__item .md-nav__link--active {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 2px;
+
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+
+  background: linear-gradient(to right,
+        #e4e48c 80%,
+        #96ee96 80% 85%,
+        #8adcff 85% 90%,
+        #9595e9 90% 95%,
+        #e667aa 95% 100%);
+}
 
 .plaid-gradient {
   background: repeating-linear-gradient(90deg,
