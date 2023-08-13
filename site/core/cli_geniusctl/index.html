@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>geniusctl - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../cli_discover/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cli_schema/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#cli.geniusctl">cli.geniusctl</a></li>
+        
+    
+        <li class="main "><a href="#cli.geniusctl.GeniusCtl">GeniusCtl</a></li>
+        
+            <li><a href="#cli.geniusctl.GeniusCtl.__init__">__init__()</a></li>
+        
+            <li><a href="#cli.geniusctl.GeniusCtl.cli">cli()</a></li>
+        
+            <li><a href="#cli.geniusctl.GeniusCtl.create_parser">create_parser()</a></li>
+        
+            <li><a href="#cli.geniusctl.GeniusCtl.list_spouts_and_bolts">list_spouts_and_bolts()</a></li>
+        
+            <li><a href="#cli.geniusctl.GeniusCtl.run">run()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="cli.geniusctl"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.geniusctl.GeniusCtl" class="doc doc-heading">
+          <code>GeniusCtl</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Main class for managing the geniusrise CLI application.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/geniusctl.py</code></summary>
+              <pre class="highlight"><code class="language-python">class GeniusCtl:
+    """
+    Main class for managing the geniusrise CLI application.
+    """
+
+    def __init__(self):
+        """
+        Initialize GeniusCtl.
+
+        Args:
+            directory (str): The directory to scan for spouts and bolts.
+        """
+        self.log = logging.getLogger(self.__class__.__name__)
+        self.discover = Discover()
+        discovered_components = self.discover.scan_directory(os.getenv("GENIUS_COMPONENTS_DIR", "."))
+
+        # Segregate the discovered components based on their type
+        self.spouts = {
+            name: component
+            for name, component in discovered_components.items()
+            if isinstance(component, DiscoveredSpout)
+        }
+        self.bolts = {
+            name: component
+            for name, component in discovered_components.items()
+            if isinstance(component, DiscoveredBolt)
+        }
+
+        self.spout_ctls: Dict[str, SpoutCtl] = {}
+        self.bolt_ctls: Dict[str, BoltCtl] = {}
+
+    def create_parser(self):
+        """
+        Create a command-line parser with arguments for managing the application.
+
+        Returns:
+            argparse.ArgumentParser: Command-line parser.
+        """
+        parser = argparse.ArgumentParser(description="Manage the geniusrise application.")
+        subparsers = parser.add_subparsers(dest="command")
+
+        # Create subparser for each discovered spout
+        for spout_name, discovered_spout in self.spouts.items():
+            spout_parser = subparsers.add_parser(spout_name, help=f"Manage {spout_name}.")
+            spout_ctl = SpoutCtl(discovered_spout)
+            self.spout_ctls[spout_name] = spout_ctl
+            spout_ctl.create_parser(spout_parser)
+
+        # Create subparser for each discovered bolt
+        for bolt_name, discovered_bolt in self.bolts.items():
+            bolt_parser = subparsers.add_parser(bolt_name, help=f"Manage {bolt_name}.")
+            bolt_ctl = BoltCtl(discovered_bolt)
+            self.bolt_ctls[bolt_name] = bolt_ctl
+            bolt_ctl.create_parser(bolt_parser)
+
+        # Create subparser for YAML operations
+        yaml_parser = subparsers.add_parser("yaml", help="Control spouts and bolts with a YAML file.")
+        # Initialize YamlCtl with both spout_ctls and bolt_ctls
+        self.yaml_ctl = YamlCtl(self.spout_ctls, self.bolt_ctls)
+        self.yaml_ctl.create_parser(yaml_parser)
+
+        # Add a 'help' command to print help for all spouts and bolts
+        help_parser = subparsers.add_parser("help", help="Print help for all spouts and bolts.")
+        help_parser.add_argument("spout_or_bolt", nargs="?", help="The spout or bolt to print help for.")
+
+        # Add a 'list' command to list all discovered spouts and bolts
+        list_parser = subparsers.add_parser("list", help="List all discovered spouts and bolts.")
+
+        return parser
+
+    def run(self, args):
+        """
+        Run the command-line interface.
+
+        Args:
+            args (argparse.Namespace): Parsed command-line arguments.
+        """
+        self.log.info(f"Running command: {args.command}")
+
+        if args.command in self.spouts:
+            self.spout_ctls[args.command].run(args)
+        elif args.command in self.bolts:
+            self.bolt_ctls[args.command].run(args)
+        elif args.command == "yaml":
+            self.yaml_ctl.run(args)
+        elif args.command == "help":
+            if args.spout_or_bolt in self.spouts:
+                self.spout_ctls[args.spout_or_bolt].run(args)
+            elif args.spout_or_bolt in self.bolts:
+                self.bolt_ctls[args.spout_or_bolt].run(args)
+            else:
+                for spout_ctl in self.spout_ctls.values():
+                    spout_ctl.run(args)
+                for bolt_ctl in self.bolt_ctls.values():
+                    bolt_ctl.run(args)
+        elif args.command == "list":
+            if len(self.spout.keys()) == 0:
+                print("No spouts or bolts discovered.")
+            self.list_spouts_and_bolts()
+
+    def list_spouts_and_bolts(self):
+        """
+        List all discovered spouts and bolts in a table.
+        """
+        table = PrettyTable(
+            [colored("Name", "green"), colored("Type", "green"), colored("Methods", "green")], align="l"
+        )
+        for spout_name in self.spouts.keys():
+            s = self.spouts[spout_name].klass
+            table.add_row(
+                [
+                    colored(spout_name, "yellow"),
+                    colored("Spout", "cyan"),
+                    "\n".join([x for x in dir(s) if "fetch_" in x]),
+                ],
+                divider=True,
+            )
+        for bolt_name in self.bolts.keys():
+            b = self.bolts[bolt_name].klass
+            table.add_row(
+                [
+                    colored(bolt_name, "yellow"),
+                    colored("Bolt", "magenta"),
+                    "\n".join([x for x in dir(b) if not x.startswith("_")]),
+                ],
+                divider=True,
+            )
+        print(table)
+
+    def cli(self):
+        """
+        Main function to be called when geniusrise is run from the command line.
+        """
+        parser = self.create_parser()
+        args = parser.parse_args()
+        return self.run(args)</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.geniusctl.GeniusCtl.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize GeniusCtl.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>directory</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The directory to scan for spouts and bolts.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/geniusctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self):
+    """
+    Initialize GeniusCtl.
+
+    Args:
+        directory (str): The directory to scan for spouts and bolts.
+    """
+    self.log = logging.getLogger(self.__class__.__name__)
+    self.discover = Discover()
+    discovered_components = self.discover.scan_directory(os.getenv("GENIUS_COMPONENTS_DIR", "."))
+
+    # Segregate the discovered components based on their type
+    self.spouts = {
+        name: component
+        for name, component in discovered_components.items()
+        if isinstance(component, DiscoveredSpout)
+    }
+    self.bolts = {
+        name: component
+        for name, component in discovered_components.items()
+        if isinstance(component, DiscoveredBolt)
+    }
+
+    self.spout_ctls: Dict[str, SpoutCtl] = {}
+    self.bolt_ctls: Dict[str, BoltCtl] = {}</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.geniusctl.GeniusCtl.cli" class="doc doc-heading">
+<code class="highlight language-python">cli()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Main function to be called when geniusrise is run from the command line.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/geniusctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def cli(self):
+    """
+    Main function to be called when geniusrise is run from the command line.
+    """
+    parser = self.create_parser()
+    args = parser.parse_args()
+    return self.run(args)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.geniusctl.GeniusCtl.create_parser" class="doc doc-heading">
+<code class="highlight language-python">create_parser()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a command-line parser with arguments for managing the application.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>argparse.ArgumentParser: Command-line parser.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/geniusctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def create_parser(self):
+    """
+    Create a command-line parser with arguments for managing the application.
+
+    Returns:
+        argparse.ArgumentParser: Command-line parser.
+    """
+    parser = argparse.ArgumentParser(description="Manage the geniusrise application.")
+    subparsers = parser.add_subparsers(dest="command")
+
+    # Create subparser for each discovered spout
+    for spout_name, discovered_spout in self.spouts.items():
+        spout_parser = subparsers.add_parser(spout_name, help=f"Manage {spout_name}.")
+        spout_ctl = SpoutCtl(discovered_spout)
+        self.spout_ctls[spout_name] = spout_ctl
+        spout_ctl.create_parser(spout_parser)
+
+    # Create subparser for each discovered bolt
+    for bolt_name, discovered_bolt in self.bolts.items():
+        bolt_parser = subparsers.add_parser(bolt_name, help=f"Manage {bolt_name}.")
+        bolt_ctl = BoltCtl(discovered_bolt)
+        self.bolt_ctls[bolt_name] = bolt_ctl
+        bolt_ctl.create_parser(bolt_parser)
+
+    # Create subparser for YAML operations
+    yaml_parser = subparsers.add_parser("yaml", help="Control spouts and bolts with a YAML file.")
+    # Initialize YamlCtl with both spout_ctls and bolt_ctls
+    self.yaml_ctl = YamlCtl(self.spout_ctls, self.bolt_ctls)
+    self.yaml_ctl.create_parser(yaml_parser)
+
+    # Add a 'help' command to print help for all spouts and bolts
+    help_parser = subparsers.add_parser("help", help="Print help for all spouts and bolts.")
+    help_parser.add_argument("spout_or_bolt", nargs="?", help="The spout or bolt to print help for.")
+
+    # Add a 'list' command to list all discovered spouts and bolts
+    list_parser = subparsers.add_parser("list", help="List all discovered spouts and bolts.")
+
+    return parser</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.geniusctl.GeniusCtl.list_spouts_and_bolts" class="doc doc-heading">
+<code class="highlight language-python">list_spouts_and_bolts()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List all discovered spouts and bolts in a table.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/geniusctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def list_spouts_and_bolts(self):
+    """
+    List all discovered spouts and bolts in a table.
+    """
+    table = PrettyTable(
+        [colored("Name", "green"), colored("Type", "green"), colored("Methods", "green")], align="l"
+    )
+    for spout_name in self.spouts.keys():
+        s = self.spouts[spout_name].klass
+        table.add_row(
+            [
+                colored(spout_name, "yellow"),
+                colored("Spout", "cyan"),
+                "\n".join([x for x in dir(s) if "fetch_" in x]),
+            ],
+            divider=True,
+        )
+    for bolt_name in self.bolts.keys():
+        b = self.bolts[bolt_name].klass
+        table.add_row(
+            [
+                colored(bolt_name, "yellow"),
+                colored("Bolt", "magenta"),
+                "\n".join([x for x in dir(b) if not x.startswith("_")]),
+            ],
+            divider=True,
+        )
+    print(table)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.geniusctl.GeniusCtl.run" class="doc doc-heading">
+<code class="highlight language-python">run(args)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run the command-line interface.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>args</code></td>
+          <td>
+                <code>argparse.<span title="argparse.Namespace">Namespace</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Parsed command-line arguments.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/geniusctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run(self, args):
+    """
+    Run the command-line interface.
+
+    Args:
+        args (argparse.Namespace): Parsed command-line arguments.
+    """
+    self.log.info(f"Running command: {args.command}")
+
+    if args.command in self.spouts:
+        self.spout_ctls[args.command].run(args)
+    elif args.command in self.bolts:
+        self.bolt_ctls[args.command].run(args)
+    elif args.command == "yaml":
+        self.yaml_ctl.run(args)
+    elif args.command == "help":
+        if args.spout_or_bolt in self.spouts:
+            self.spout_ctls[args.spout_or_bolt].run(args)
+        elif args.spout_or_bolt in self.bolts:
+            self.bolt_ctls[args.spout_or_bolt].run(args)
+        else:
+            for spout_ctl in self.spout_ctls.values():
+                spout_ctl.run(args)
+            for bolt_ctl in self.bolt_ctls.values():
+                bolt_ctl.run(args)
+    elif args.command == "list":
+        if len(self.spout.keys()) == 0:
+            print("No spouts or bolts discovered.")
+        self.list_spouts_and_bolts()</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

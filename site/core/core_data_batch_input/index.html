@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>batch_input - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_spout/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_data_batch_output/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.data.batch_input">core.data.batch_input</a></li>
+        
+    
+        <li class="main "><a href="#core.data.batch_input.BatchInputConfig">BatchInputConfig</a></li>
+        
+            <li><a href="#core.data.batch_input.BatchInputConfig.__init__">__init__()</a></li>
+        
+            <li><a href="#core.data.batch_input.BatchInputConfig.copy_from_remote">copy_from_remote()</a></li>
+        
+            <li><a href="#core.data.batch_input.BatchInputConfig.copy_to_remote">copy_to_remote()</a></li>
+        
+            <li><a href="#core.data.batch_input.BatchInputConfig.delete_file">delete_file()</a></li>
+        
+            <li><a href="#core.data.batch_input.BatchInputConfig.get">get()</a></li>
+        
+            <li><a href="#core.data.batch_input.BatchInputConfig.list_files">list_files()</a></li>
+        
+            <li><a href="#core.data.batch_input.BatchInputConfig.read_file">read_file()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.data.batch_input"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.data.batch_input.BatchInputConfig" class="doc doc-heading">
+          <code>BatchInputConfig</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="core.data.input.InputConfig" href="../core_data_input/#core.data.input.InputConfig">InputConfig</a></code></p>
+
+  
+      <p>Class for managing batch input configurations.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Folder to read input files.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+              <pre class="highlight"><code class="language-python">class BatchInputConfig(InputConfig):
+    """
+    Class for managing batch input configurations.
+
+    Attributes:
+        input_folder (str): Folder to read input files.
+    """
+
+    def __init__(self, input_folder: str, bucket: str, s3_folder: str):
+        """
+        Initialize a new batch input configuration.
+
+        Args:
+            input_folder (str): Folder to read input files.
+        """
+        self.input_folder = input_folder
+        self.bucket = bucket
+        self.s3_folder = s3_folder
+
+    def get(self):
+        """
+        Get the input folder location.
+
+        Returns:
+            str: The input folder location.
+        """
+        if self.input_folder:
+            return self.input_folder
+        else:
+            log.exception("No input folder specified.")
+            raise
+            return None
+
+    def copy_from_remote(self):
+        """
+        Copy contents from a given S3 bucket and location to the input folder.
+
+        Args:
+            bucket (str): The name of the S3 bucket.
+            s3_folder (str): The folder in the S3 bucket.
+        """
+        if self.input_folder:
+            s3 = boto3.resource("s3")
+            _bucket = s3.Bucket(self.bucket)
+            prefix = self.s3_folder if self.s3_folder.endswith("/") else self.s3_folder + "/"
+            for obj in _bucket.objects.filter(Prefix=prefix):
+                if not os.path.exists(os.path.dirname(f"{self.input_folder}/{obj.key}")):
+                    os.makedirs(os.path.dirname(f"{self.input_folder}/{obj.key}"))
+                _bucket.download_file(obj.key, f"{self.input_folder}/{obj.key}")
+        else:
+            log.exception("No input folder specified.")
+            raise
+
+    def list_files(self):
+        """
+        List all files in the input folder.
+
+        Returns:
+            list: A list of file paths.
+        """
+        if self.input_folder:
+            return [
+                os.path.join(self.input_folder, f)
+                for f in os.listdir(self.input_folder)
+                if os.path.isfile(os.path.join(self.input_folder, f))
+            ]
+        else:
+            log.exception("No input folder specified.")
+            raise
+            return []
+
+    def read_file(self, filename):
+        """
+        Read a file from the input folder.
+
+        Args:
+            filename (str): The name of the file.
+
+        Returns:
+            str: The contents of the file.
+        """
+        if self.input_folder:
+            with open(os.path.join(self.input_folder, filename), "r") as file:
+                return file.read()
+        else:
+            log.exception("No input folder specified.")
+            raise
+            return None
+
+    def delete_file(self, filename):
+        """
+        Delete a file from the input folder.
+
+        Args:
+            filename (str): The name of the file.
+        """
+        if self.input_folder:
+            os.remove(os.path.join(self.input_folder, filename))
+        else:
+            log.exception("No input folder specified.")
+            raise
+
+    def copy_to_remote(self, filename, bucket, s3_folder):
+        """
+        Copy a file from the input folder to an S3 bucket.
+
+        Args:
+            filename (str): The name of the file.
+            bucket (str): The name of the S3 bucket.
+            s3_folder (str): The folder in the S3 bucket.
+        """
+        if self.input_folder:
+            s3 = boto3.resource("s3")
+            s3.meta.client.upload_file(
+                os.path.join(self.input_folder, filename), bucket, os.path.join(s3_folder, filename)
+            )
+        else:
+            log.exception("No input folder specified.")
+            raise</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_input.BatchInputConfig.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(input_folder, bucket, s3_folder)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize a new batch input configuration.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Folder to read input files.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self, input_folder: str, bucket: str, s3_folder: str):
+    """
+    Initialize a new batch input configuration.
+
+    Args:
+        input_folder (str): Folder to read input files.
+    """
+    self.input_folder = input_folder
+    self.bucket = bucket
+    self.s3_folder = s3_folder</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_input.BatchInputConfig.copy_from_remote" class="doc doc-heading">
+<code class="highlight language-python">copy_from_remote()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Copy contents from a given S3 bucket and location to the input folder.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>bucket</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the S3 bucket.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>s3_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The folder in the S3 bucket.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def copy_from_remote(self):
+    """
+    Copy contents from a given S3 bucket and location to the input folder.
+
+    Args:
+        bucket (str): The name of the S3 bucket.
+        s3_folder (str): The folder in the S3 bucket.
+    """
+    if self.input_folder:
+        s3 = boto3.resource("s3")
+        _bucket = s3.Bucket(self.bucket)
+        prefix = self.s3_folder if self.s3_folder.endswith("/") else self.s3_folder + "/"
+        for obj in _bucket.objects.filter(Prefix=prefix):
+            if not os.path.exists(os.path.dirname(f"{self.input_folder}/{obj.key}")):
+                os.makedirs(os.path.dirname(f"{self.input_folder}/{obj.key}"))
+            _bucket.download_file(obj.key, f"{self.input_folder}/{obj.key}")
+    else:
+        log.exception("No input folder specified.")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_input.BatchInputConfig.copy_to_remote" class="doc doc-heading">
+<code class="highlight language-python">copy_to_remote(filename, bucket, s3_folder)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Copy a file from the input folder to an S3 bucket.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the file.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bucket</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the S3 bucket.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>s3_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The folder in the S3 bucket.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def copy_to_remote(self, filename, bucket, s3_folder):
+    """
+    Copy a file from the input folder to an S3 bucket.
+
+    Args:
+        filename (str): The name of the file.
+        bucket (str): The name of the S3 bucket.
+        s3_folder (str): The folder in the S3 bucket.
+    """
+    if self.input_folder:
+        s3 = boto3.resource("s3")
+        s3.meta.client.upload_file(
+            os.path.join(self.input_folder, filename), bucket, os.path.join(s3_folder, filename)
+        )
+    else:
+        log.exception("No input folder specified.")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_input.BatchInputConfig.delete_file" class="doc doc-heading">
+<code class="highlight language-python">delete_file(filename)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Delete a file from the input folder.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the file.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def delete_file(self, filename):
+    """
+    Delete a file from the input folder.
+
+    Args:
+        filename (str): The name of the file.
+    """
+    if self.input_folder:
+        os.remove(os.path.join(self.input_folder, filename))
+    else:
+        log.exception("No input folder specified.")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_input.BatchInputConfig.get" class="doc doc-heading">
+<code class="highlight language-python">get()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the input folder location.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input folder location.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get(self):
+    """
+    Get the input folder location.
+
+    Returns:
+        str: The input folder location.
+    """
+    if self.input_folder:
+        return self.input_folder
+    else:
+        log.exception("No input folder specified.")
+        raise
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_input.BatchInputConfig.list_files" class="doc doc-heading">
+<code class="highlight language-python">list_files()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List all files in the input folder.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>list</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A list of file paths.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def list_files(self):
+    """
+    List all files in the input folder.
+
+    Returns:
+        list: A list of file paths.
+    """
+    if self.input_folder:
+        return [
+            os.path.join(self.input_folder, f)
+            for f in os.listdir(self.input_folder)
+            if os.path.isfile(os.path.join(self.input_folder, f))
+        ]
+    else:
+        log.exception("No input folder specified.")
+        raise
+        return []</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_input.BatchInputConfig.read_file" class="doc doc-heading">
+<code class="highlight language-python">read_file(filename)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Read a file from the input folder.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the file.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The contents of the file.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def read_file(self, filename):
+    """
+    Read a file from the input folder.
+
+    Args:
+        filename (str): The name of the file.
+
+    Returns:
+        str: The contents of the file.
+    """
+    if self.input_folder:
+        with open(os.path.join(self.input_folder, filename), "r") as file:
+            return file.read()
+    else:
+        log.exception("No input folder specified.")
+        raise
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

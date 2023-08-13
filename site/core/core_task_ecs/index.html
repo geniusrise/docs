@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>ecs - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_task_base/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_task_k8s/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.task.ecs">core.task.ecs</a></li>
+        
+    
+        <li class="main "><a href="#core.task.ecs.ECSManager">ECSManager</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager--attributes">Attributes</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager--methods">Methods</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.__init__">__init__()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.create_service">create_service()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.create_task_definition">create_task_definition()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.delete_service">delete_service()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.describe_task">describe_task()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.run_task">run_task()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.stop_task">stop_task()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.update_service">update_service()</a></li>
+        
+            <li><a href="#core.task.ecs.ECSManager.update_task">update_task()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.task.ecs"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.task.ecs.ECSManager" class="doc doc-heading">
+          <code>ECSManager</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>A class used to manage the lifecycle of an ECS container.</p>
+<p>...</p>
+<h4 id="core.task.ecs.ECSManager--attributes">Attributes</h4>
+
+<details class="name-" open>
+  <summary>str</summary>
+  <p>the name of the ECS task or service</p>
+</details>
+<details class="command-" open>
+  <summary>List[str]</summary>
+  <p>the command that the container runs</p>
+</details>
+<details class="cluster-" open>
+  <summary>str</summary>
+  <p>the name of the ECS cluster</p>
+</details>
+<details class="subnet_ids-" open>
+  <summary>List[str]</summary>
+  <p>the subnet IDs for the task or service</p>
+</details>
+<details class="security_group_ids-" open>
+  <summary>List[str]</summary>
+  <p>the security group IDs for the task or service</p>
+</details>
+<details class="image-" open>
+  <summary>str</summary>
+  <p>the Docker image for the task</p>
+</details>
+<details class="replicas-" open>
+  <summary>int</summary>
+  <p>the number of task replicas</p>
+</details>
+<details class="port-" open>
+  <summary>int</summary>
+  <p>the port that the container listens on</p>
+</details>
+<details class="log_group-" open>
+  <summary>str</summary>
+  <p>the CloudWatch log group for the task logs</p>
+</details>
+<details class="cpu-" open>
+  <summary>int</summary>
+  <p>the CPU value for the task</p>
+</details>
+<details class="memory-" open>
+  <summary>int</summary>
+  <p>the memory value for the task</p>
+</details>      <h4 id="core.task.ecs.ECSManager--methods">Methods</h4>
+<p>create_task_definition()
+    Registers a new task definition from the attributes of this class
+run_task(task_definition_arn: str)
+    Runs a new task using the specified task definition ARN
+describe_task(task_definition_arn: str)
+    Describes a task using the specified task definition ARN
+stop_task(task_definition_arn: str)
+    Stops a running task using the specified task definition ARN
+update_task(new_image: str, new_command: list)
+    Updates a task with a new Docker image and command
+create_service(task_definition_arn: str)
+    Creates a new service using the specified task definition ARN
+update_service(task_definition_arn: str)
+    Updates a service with a new task definition ARN
+delete_service()
+    Deletes the service</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+              <pre class="highlight"><code class="language-python">class ECSManager:
+    """
+    A class used to manage the lifecycle of an ECS container.
+
+    ...
+
+    Attributes
+    ----------
+    name : str
+        the name of the ECS task or service
+    command : List[str]
+        the command that the container runs
+    cluster : str
+        the name of the ECS cluster
+    subnet_ids : List[str]
+        the subnet IDs for the task or service
+    security_group_ids : List[str]
+        the security group IDs for the task or service
+    image : str
+        the Docker image for the task
+    replicas : int
+        the number of task replicas
+    port : int
+        the port that the container listens on
+    log_group : str
+        the CloudWatch log group for the task logs
+    cpu : int
+        the CPU value for the task
+    memory : int
+        the memory value for the task
+
+    Methods
+    -------
+    create_task_definition()
+        Registers a new task definition from the attributes of this class
+    run_task(task_definition_arn: str)
+        Runs a new task using the specified task definition ARN
+    describe_task(task_definition_arn: str)
+        Describes a task using the specified task definition ARN
+    stop_task(task_definition_arn: str)
+        Stops a running task using the specified task definition ARN
+    update_task(new_image: str, new_command: list)
+        Updates a task with a new Docker image and command
+    create_service(task_definition_arn: str)
+        Creates a new service using the specified task definition ARN
+    update_service(task_definition_arn: str)
+        Updates a service with a new task definition ARN
+    delete_service()
+        Deletes the service
+    """
+
+    def __init__(
+        self,
+        name: str,
+        account_id: str,
+        cluster: str,
+        command: List[str] = [],
+        subnet_ids: List[str] = [],
+        security_group_ids: List[str] = [],
+        image: str = "geniusrise/geniusrise",
+        replicas: int = 1,
+        port: int = 80,
+        log_group: str = "/ecs/geniusrise",
+        cpu: int = 256,
+        memory: int = 512,
+    ):
+        """
+        Constructs all the necessary attributes for the ECSManager object.
+
+        Parameters
+        ----------
+            name : str
+                the name of the ECS task or service
+            account_id : str
+                the id of the AWS account
+            command : List[str]
+                the command that the container runs
+            cluster : str
+                the name of the ECS cluster
+            subnet_ids : List[str]
+                the subnet IDs for the task or service
+            security_group_ids : List[str]
+                the security group IDs for the task or service
+            image : str, optional
+                the Docker image for the task (default is "geniusrise/geniusrise")
+            replicas : int, optional
+                the number of task replicas (default is 1)
+            port : int, optional
+                the port that the container listens on (default is 80)
+            log_group : str, optional
+                the CloudWatch log group for the task logs (default is "/ecs/geniusrise")
+            cpu : int, optional
+                the CPU value for the task (default is 256)
+            memory : int, optional
+                the memory value for the task (default is 512)
+        """
+        self.name = name
+        self.image = image
+        self.cluster = cluster
+        self.command = command
+        self.replicas = replicas
+        self.port = port
+        self.client = boto3.client("ecs")
+        self.log_group = log_group
+        self.logs_client = boto3.client("logs")
+        self.subnet_ids = subnet_ids
+        self.security_group_ids = security_group_ids
+        self.cpu = cpu
+        self.account_id = account_id
+        self.memory = memory
+
+    def create_task_definition(self) -&gt; Optional[str]:
+        """
+        Registers a new task definition from the attributes of this class.
+
+        Returns
+        -------
+        str
+            The ARN of the task definition, or None if an error occurred.
+        """
+        container_definitions = [
+            {
+                "name": self.name,
+                "image": self.image,
+                "command": self.command,
+                "portMappings": [{"containerPort": self.port, "protocol": "tcp"}],
+            }
+        ]
+
+        try:
+            response = self.client.register_task_definition(
+                family=self.name,
+                networkMode="awsvpc",
+                containerDefinitions=container_definitions,
+                requiresCompatibilities=[
+                    "FARGATE",
+                ],
+                cpu=str(self.cpu),
+                memory=str(self.memory),
+                executionRoleArn=f"arn:aws:iam::{self.account_id}:role/ecsTaskExecutionRole",
+            )
+            log.info(f"Task definition {self.name} created.")
+            return response["taskDefinition"]["taskDefinitionArn"]
+        except (BotoCoreError, ClientError) as error:
+            log.error(f"Error creating task definition {self.name}: {error}")
+            return None
+
+    def run_task(self, task_definition_arn: str) -&gt; Optional[dict]:
+        """
+        Runs a new task using the specified task definition ARN.
+
+        Parameters
+        ----------
+        task_definition_arn : str
+            The ARN of the task definition to run.
+
+        Returns
+        -------
+        dict
+            The response from the ECS API, or None if an error occurred.
+        """
+        try:
+            response = self.client.run_task(
+                cluster=self.cluster,
+                taskDefinition=task_definition_arn,
+                count=self.replicas,
+                launchType="FARGATE",
+                networkConfiguration={
+                    "awsvpcConfiguration": {
+                        "subnets": self.subnet_ids,
+                        "assignPublicIp": "ENABLED",
+                        "securityGroups": self.security_group_ids,
+                    }
+                },
+                platformVersion="LATEST",
+            )
+            log.info(f"Task {self.name} started.")
+            return response
+        except (BotoCoreError, ClientError) as error:
+            log.error(f"Error starting task {self.name}: {error}")
+            return None
+
+    def describe_task(self, task_definition_arn: str) -&gt; Optional[dict]:
+        """
+        Describes a task using the specified task definition ARN.
+
+        Parameters
+        ----------
+        task_definition_arn : str
+            The ARN of the task definition to describe.
+
+        Returns
+        -------
+        dict
+            The response from the ECS API, or None if an error occurred.
+        """
+        try:
+            response = self.client.describe_tasks(cluster=self.cluster, tasks=[task_definition_arn])
+            return response
+        except (BotoCoreError, ClientError) as error:
+            log.error(f"Error getting status of task {self.name}: {error}")
+            return None
+
+    def stop_task(self, task_definition_arn: str) -&gt; Optional[dict]:
+        """
+        Stops a running task using the specified task definition ARN.
+
+        Parameters
+        ----------
+        task_definition_arn : str
+            The ARN of the task definition to stop.
+
+        Returns
+        -------
+        dict
+            The response from the ECS API, or None if an error occurred.
+        """
+        try:
+            response = self.client.stop_task(cluster=self.cluster, task=task_definition_arn)
+            log.info(f"Task {self.name} stopped.")
+            return response
+        except (BotoCoreError, ClientError) as error:
+            log.error(f"Error stopping task {self.name}: {error}")
+            return None
+
+    def update_task(self, new_image: str, new_command: list) -&gt; None:
+        """
+        Updates a task with a new Docker image and command.
+
+        Parameters
+        ----------
+        new_image : str
+            The new Docker image for the task.
+        new_command : list
+            The new command for the task.
+        """
+        self.image = new_image
+        self.command = new_command
+        task_definition_arn = self.create_task_definition()
+        if task_definition_arn:
+            self.stop_task(task_definition_arn)
+            self.run_task(task_definition_arn)
+        else:
+            log.error(f"Error updating task {self.name} - could not create ECS task definition.")
+
+    def create_service(self, task_definition_arn: str) -&gt; Optional[dict]:
+        """
+        Creates a new service using the specified task definition ARN.
+
+        Parameters
+        ----------
+        task_definition_arn : str
+            The ARN of the task definition to use for the service.
+
+        Returns
+        -------
+        dict
+            The response from the ECS API, or None if an error occurred.
+        """
+        try:
+            response = self.client.create_service(
+                cluster=self.cluster,
+                serviceName=self.name,
+                taskDefinition=task_definition_arn,
+                desiredCount=self.replicas,
+                launchType="FARGATE",
+                networkConfiguration={
+                    "awsvpcConfiguration": {
+                        "subnets": self.subnet_ids,
+                        "assignPublicIp": "ENABLED",
+                        "securityGroups": self.security_group_ids,
+                    }
+                },
+            )
+            log.info(f"Service {self.name} created.")
+            return response
+        except (BotoCoreError, ClientError) as error:
+            log.error(f"Error creating service {self.name}: {error}")
+            return None
+
+    def update_service(self, task_definition_arn: str) -&gt; Optional[dict]:
+        """
+        Updates a service with a new task definition ARN.
+
+        Parameters
+        ----------
+        task_definition_arn : str
+            The new ARN of the task definition to use for the service.
+
+        Returns
+        -------
+        dict
+            The response from the ECS API, or None if an error occurred.
+        """
+        try:
+            response = self.client.update_service(
+                cluster=self.cluster,
+                service=self.name,
+                taskDefinition=task_definition_arn,
+                desiredCount=self.replicas,
+            )
+            log.info(f"Service {self.name} updated.")
+            return response
+        except (BotoCoreError, ClientError) as error:
+            log.error(f"Error updating service {self.name}: {error}")
+            return None
+
+    def delete_service(self) -&gt; Optional[dict]:
+        """
+        Deletes the service.
+
+        Returns
+        -------
+        dict
+            The response from the ECS API, or None if an error occurred.
+        """
+        try:
+            response = self.client.delete_service(
+                cluster=self.cluster,
+                service=self.name,
+            )
+            log.info(f"Service {self.name} deleted.")
+            return response
+        except (BotoCoreError, ClientError) as error:
+            log.error(f"Error deleting service {self.name}: {error}")
+            return None</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(name, account_id, cluster, command=[], subnet_ids=[], security_group_ids=[], image='geniusrise/geniusrise', replicas=1, port=80, log_group='/ecs/geniusrise', cpu=256, memory=512)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Constructs all the necessary attributes for the ECSManager object.</p>
+<h5 id="core.task.ecs.ECSManager.__init__--parameters">Parameters</h5>
+<pre><code>name : str
+    the name of the ECS task or service
+account_id : str
+    the id of the AWS account
+command : List[str]
+    the command that the container runs
+cluster : str
+    the name of the ECS cluster
+subnet_ids : List[str]
+    the subnet IDs for the task or service
+security_group_ids : List[str]
+    the security group IDs for the task or service
+image : str, optional
+    the Docker image for the task (default is "geniusrise/geniusrise")
+replicas : int, optional
+    the number of task replicas (default is 1)
+port : int, optional
+    the port that the container listens on (default is 80)
+log_group : str, optional
+    the CloudWatch log group for the task logs (default is "/ecs/geniusrise")
+cpu : int, optional
+    the CPU value for the task (default is 256)
+memory : int, optional
+    the memory value for the task (default is 512)
+</code></pre>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(
+    self,
+    name: str,
+    account_id: str,
+    cluster: str,
+    command: List[str] = [],
+    subnet_ids: List[str] = [],
+    security_group_ids: List[str] = [],
+    image: str = "geniusrise/geniusrise",
+    replicas: int = 1,
+    port: int = 80,
+    log_group: str = "/ecs/geniusrise",
+    cpu: int = 256,
+    memory: int = 512,
+):
+    """
+    Constructs all the necessary attributes for the ECSManager object.
+
+    Parameters
+    ----------
+        name : str
+            the name of the ECS task or service
+        account_id : str
+            the id of the AWS account
+        command : List[str]
+            the command that the container runs
+        cluster : str
+            the name of the ECS cluster
+        subnet_ids : List[str]
+            the subnet IDs for the task or service
+        security_group_ids : List[str]
+            the security group IDs for the task or service
+        image : str, optional
+            the Docker image for the task (default is "geniusrise/geniusrise")
+        replicas : int, optional
+            the number of task replicas (default is 1)
+        port : int, optional
+            the port that the container listens on (default is 80)
+        log_group : str, optional
+            the CloudWatch log group for the task logs (default is "/ecs/geniusrise")
+        cpu : int, optional
+            the CPU value for the task (default is 256)
+        memory : int, optional
+            the memory value for the task (default is 512)
+    """
+    self.name = name
+    self.image = image
+    self.cluster = cluster
+    self.command = command
+    self.replicas = replicas
+    self.port = port
+    self.client = boto3.client("ecs")
+    self.log_group = log_group
+    self.logs_client = boto3.client("logs")
+    self.subnet_ids = subnet_ids
+    self.security_group_ids = security_group_ids
+    self.cpu = cpu
+    self.account_id = account_id
+    self.memory = memory</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.create_service" class="doc doc-heading">
+<code class="highlight language-python">create_service(task_definition_arn)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Creates a new service using the specified task definition ARN.</p>
+<h5 id="core.task.ecs.ECSManager.create_service--parameters">Parameters</h5>
+
+<details class="task_definition_arn-" open>
+  <summary>str</summary>
+  <p>The ARN of the task definition to use for the service.</p>
+</details>      <h5 id="core.task.ecs.ECSManager.create_service--returns">Returns</h5>
+<p>dict
+    The response from the ECS API, or None if an error occurred.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def create_service(self, task_definition_arn: str) -&gt; Optional[dict]:
+    """
+    Creates a new service using the specified task definition ARN.
+
+    Parameters
+    ----------
+    task_definition_arn : str
+        The ARN of the task definition to use for the service.
+
+    Returns
+    -------
+    dict
+        The response from the ECS API, or None if an error occurred.
+    """
+    try:
+        response = self.client.create_service(
+            cluster=self.cluster,
+            serviceName=self.name,
+            taskDefinition=task_definition_arn,
+            desiredCount=self.replicas,
+            launchType="FARGATE",
+            networkConfiguration={
+                "awsvpcConfiguration": {
+                    "subnets": self.subnet_ids,
+                    "assignPublicIp": "ENABLED",
+                    "securityGroups": self.security_group_ids,
+                }
+            },
+        )
+        log.info(f"Service {self.name} created.")
+        return response
+    except (BotoCoreError, ClientError) as error:
+        log.error(f"Error creating service {self.name}: {error}")
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.create_task_definition" class="doc doc-heading">
+<code class="highlight language-python">create_task_definition()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Registers a new task definition from the attributes of this class.</p>
+<h5 id="core.task.ecs.ECSManager.create_task_definition--returns">Returns</h5>
+<p>str
+    The ARN of the task definition, or None if an error occurred.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def create_task_definition(self) -&gt; Optional[str]:
+    """
+    Registers a new task definition from the attributes of this class.
+
+    Returns
+    -------
+    str
+        The ARN of the task definition, or None if an error occurred.
+    """
+    container_definitions = [
+        {
+            "name": self.name,
+            "image": self.image,
+            "command": self.command,
+            "portMappings": [{"containerPort": self.port, "protocol": "tcp"}],
+        }
+    ]
+
+    try:
+        response = self.client.register_task_definition(
+            family=self.name,
+            networkMode="awsvpc",
+            containerDefinitions=container_definitions,
+            requiresCompatibilities=[
+                "FARGATE",
+            ],
+            cpu=str(self.cpu),
+            memory=str(self.memory),
+            executionRoleArn=f"arn:aws:iam::{self.account_id}:role/ecsTaskExecutionRole",
+        )
+        log.info(f"Task definition {self.name} created.")
+        return response["taskDefinition"]["taskDefinitionArn"]
+    except (BotoCoreError, ClientError) as error:
+        log.error(f"Error creating task definition {self.name}: {error}")
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.delete_service" class="doc doc-heading">
+<code class="highlight language-python">delete_service()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deletes the service.</p>
+<h5 id="core.task.ecs.ECSManager.delete_service--returns">Returns</h5>
+<p>dict
+    The response from the ECS API, or None if an error occurred.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def delete_service(self) -&gt; Optional[dict]:
+    """
+    Deletes the service.
+
+    Returns
+    -------
+    dict
+        The response from the ECS API, or None if an error occurred.
+    """
+    try:
+        response = self.client.delete_service(
+            cluster=self.cluster,
+            service=self.name,
+        )
+        log.info(f"Service {self.name} deleted.")
+        return response
+    except (BotoCoreError, ClientError) as error:
+        log.error(f"Error deleting service {self.name}: {error}")
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.describe_task" class="doc doc-heading">
+<code class="highlight language-python">describe_task(task_definition_arn)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Describes a task using the specified task definition ARN.</p>
+<h5 id="core.task.ecs.ECSManager.describe_task--parameters">Parameters</h5>
+
+<details class="task_definition_arn-" open>
+  <summary>str</summary>
+  <p>The ARN of the task definition to describe.</p>
+</details>      <h5 id="core.task.ecs.ECSManager.describe_task--returns">Returns</h5>
+<p>dict
+    The response from the ECS API, or None if an error occurred.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def describe_task(self, task_definition_arn: str) -&gt; Optional[dict]:
+    """
+    Describes a task using the specified task definition ARN.
+
+    Parameters
+    ----------
+    task_definition_arn : str
+        The ARN of the task definition to describe.
+
+    Returns
+    -------
+    dict
+        The response from the ECS API, or None if an error occurred.
+    """
+    try:
+        response = self.client.describe_tasks(cluster=self.cluster, tasks=[task_definition_arn])
+        return response
+    except (BotoCoreError, ClientError) as error:
+        log.error(f"Error getting status of task {self.name}: {error}")
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.run_task" class="doc doc-heading">
+<code class="highlight language-python">run_task(task_definition_arn)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Runs a new task using the specified task definition ARN.</p>
+<h5 id="core.task.ecs.ECSManager.run_task--parameters">Parameters</h5>
+
+<details class="task_definition_arn-" open>
+  <summary>str</summary>
+  <p>The ARN of the task definition to run.</p>
+</details>      <h5 id="core.task.ecs.ECSManager.run_task--returns">Returns</h5>
+<p>dict
+    The response from the ECS API, or None if an error occurred.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run_task(self, task_definition_arn: str) -&gt; Optional[dict]:
+    """
+    Runs a new task using the specified task definition ARN.
+
+    Parameters
+    ----------
+    task_definition_arn : str
+        The ARN of the task definition to run.
+
+    Returns
+    -------
+    dict
+        The response from the ECS API, or None if an error occurred.
+    """
+    try:
+        response = self.client.run_task(
+            cluster=self.cluster,
+            taskDefinition=task_definition_arn,
+            count=self.replicas,
+            launchType="FARGATE",
+            networkConfiguration={
+                "awsvpcConfiguration": {
+                    "subnets": self.subnet_ids,
+                    "assignPublicIp": "ENABLED",
+                    "securityGroups": self.security_group_ids,
+                }
+            },
+            platformVersion="LATEST",
+        )
+        log.info(f"Task {self.name} started.")
+        return response
+    except (BotoCoreError, ClientError) as error:
+        log.error(f"Error starting task {self.name}: {error}")
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.stop_task" class="doc doc-heading">
+<code class="highlight language-python">stop_task(task_definition_arn)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Stops a running task using the specified task definition ARN.</p>
+<h5 id="core.task.ecs.ECSManager.stop_task--parameters">Parameters</h5>
+
+<details class="task_definition_arn-" open>
+  <summary>str</summary>
+  <p>The ARN of the task definition to stop.</p>
+</details>      <h5 id="core.task.ecs.ECSManager.stop_task--returns">Returns</h5>
+<p>dict
+    The response from the ECS API, or None if an error occurred.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def stop_task(self, task_definition_arn: str) -&gt; Optional[dict]:
+    """
+    Stops a running task using the specified task definition ARN.
+
+    Parameters
+    ----------
+    task_definition_arn : str
+        The ARN of the task definition to stop.
+
+    Returns
+    -------
+    dict
+        The response from the ECS API, or None if an error occurred.
+    """
+    try:
+        response = self.client.stop_task(cluster=self.cluster, task=task_definition_arn)
+        log.info(f"Task {self.name} stopped.")
+        return response
+    except (BotoCoreError, ClientError) as error:
+        log.error(f"Error stopping task {self.name}: {error}")
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.update_service" class="doc doc-heading">
+<code class="highlight language-python">update_service(task_definition_arn)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Updates a service with a new task definition ARN.</p>
+<h5 id="core.task.ecs.ECSManager.update_service--parameters">Parameters</h5>
+
+<details class="task_definition_arn-" open>
+  <summary>str</summary>
+  <p>The new ARN of the task definition to use for the service.</p>
+</details>      <h5 id="core.task.ecs.ECSManager.update_service--returns">Returns</h5>
+<p>dict
+    The response from the ECS API, or None if an error occurred.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def update_service(self, task_definition_arn: str) -&gt; Optional[dict]:
+    """
+    Updates a service with a new task definition ARN.
+
+    Parameters
+    ----------
+    task_definition_arn : str
+        The new ARN of the task definition to use for the service.
+
+    Returns
+    -------
+    dict
+        The response from the ECS API, or None if an error occurred.
+    """
+    try:
+        response = self.client.update_service(
+            cluster=self.cluster,
+            service=self.name,
+            taskDefinition=task_definition_arn,
+            desiredCount=self.replicas,
+        )
+        log.info(f"Service {self.name} updated.")
+        return response
+    except (BotoCoreError, ClientError) as error:
+        log.error(f"Error updating service {self.name}: {error}")
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.ecs.ECSManager.update_task" class="doc doc-heading">
+<code class="highlight language-python">update_task(new_image, new_command)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Updates a task with a new Docker image and command.</p>
+<h5 id="core.task.ecs.ECSManager.update_task--parameters">Parameters</h5>
+
+<details class="new_image-" open>
+  <summary>str</summary>
+  <p>The new Docker image for the task.</p>
+</details>
+<details class="new_command-" open>
+  <summary>list</summary>
+  <p>The new command for the task.</p>
+</details>
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/ecs.py</code></summary>
+            <pre class="highlight"><code class="language-python">def update_task(self, new_image: str, new_command: list) -&gt; None:
+    """
+    Updates a task with a new Docker image and command.
+
+    Parameters
+    ----------
+    new_image : str
+        The new Docker image for the task.
+    new_command : list
+        The new command for the task.
+    """
+    self.image = new_image
+    self.command = new_command
+    task_definition_arn = self.create_task_definition()
+    if task_definition_arn:
+        self.stop_task(task_definition_arn)
+        self.run_task(task_definition_arn)
+    else:
+        log.error(f"Error updating task {self.name} - could not create ECS task definition.")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

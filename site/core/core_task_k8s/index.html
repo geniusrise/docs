@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>k8s - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_task_ecs/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.task.k8s">core.task.k8s</a></li>
+        
+    
+        <li class="main "><a href="#core.task.k8s.K8sManager">K8sManager</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager--attributes">Attributes</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager--methods">Methods</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.__init__">__init__()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.create_deployment">create_deployment()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.create_service">create_service()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.delete_service">delete_service()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.destroy">destroy()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.get_logs">get_logs()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.get_statistics">get_statistics()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.get_status">get_status()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.run">run()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.scale_deployment">scale_deployment()</a></li>
+        
+            <li><a href="#core.task.k8s.K8sManager.update_deployment">update_deployment()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.task.k8s"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.task.k8s.K8sManager" class="doc doc-heading">
+          <code>K8sManager</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>A class used to manage Kubernetes deployments and services.</p>
+<h4 id="core.task.k8s.K8sManager--attributes">Attributes</h4>
+
+<details class="name-" open>
+  <summary>str</summary>
+  <p>The name of the deployment and service.</p>
+</details>
+<details class="namespace-" open>
+  <summary>str</summary>
+  <p>The namespace to create the deployment and service in.</p>
+</details>
+<details class="image-" open>
+  <summary>str</summary>
+  <p>The Docker image to use for the deployment.</p>
+</details>
+<details class="command-" open>
+  <summary>list</summary>
+  <p>The command to run in the Docker container.</p>
+</details>
+<details class="replicas-" open>
+  <summary>int</summary>
+  <p>The number of replicas to create for the deployment.</p>
+</details>
+<details class="port-" open>
+  <summary>int</summary>
+  <p>The port to expose on the service.</p>
+</details>      <h4 id="core.task.k8s.K8sManager--methods">Methods</h4>
+<p>create_deployment()
+    Creates a new deployment.
+update_deployment(replicas)
+    Updates the number of replicas in the deployment.
+scale_deployment(replicas)
+    Scales the deployment to a new number of replicas.
+delete_deployment()
+    Deletes the deployment.
+create_service()
+    Creates a new service.
+delete_service()
+    Deletes the service.
+run()
+    Creates the deployment and service.
+destroy()
+    Deletes the deployment and service.
+get_status()
+    Returns the status of the deployment.
+get_statistics()
+    Returns the details of the deployment and the pods in the deployment.
+get_logs()
+    Returns the logs of the pods in the deployment.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+              <pre class="highlight"><code class="language-python">class K8sManager:
+    """
+    A class used to manage Kubernetes deployments and services.
+
+    Attributes
+    ----------
+    name : str
+        The name of the deployment and service.
+    namespace : str
+        The namespace to create the deployment and service in.
+    image : str
+        The Docker image to use for the deployment.
+    command : list
+        The command to run in the Docker container.
+    replicas : int
+        The number of replicas to create for the deployment.
+    port : int
+        The port to expose on the service.
+
+    Methods
+    -------
+    create_deployment()
+        Creates a new deployment.
+    update_deployment(replicas)
+        Updates the number of replicas in the deployment.
+    scale_deployment(replicas)
+        Scales the deployment to a new number of replicas.
+    delete_deployment()
+        Deletes the deployment.
+    create_service()
+        Creates a new service.
+    delete_service()
+        Deletes the service.
+    run()
+        Creates the deployment and service.
+    destroy()
+        Deletes the deployment and service.
+    get_status()
+        Returns the status of the deployment.
+    get_statistics()
+        Returns the details of the deployment and the pods in the deployment.
+    get_logs()
+        Returns the logs of the pods in the deployment.
+    """
+
+    def __init__(
+        self,
+        name: str,
+        command: list = [],
+        namespace: str = "default",
+        image: str = "geniusrise/geniusrise",
+        replicas: int = 1,
+        port: int = 80,
+    ):
+        """
+        Constructs all the necessary attributes for the K8sManager object.
+
+        Parameters
+        ----------
+        name : str
+            The name of the deployment and service.
+        command : list
+            The command to run in the Docker container.
+        namespace : str, optional
+            The namespace to create the deployment and service in (default is "default").
+        image : str, optional
+            The Docker image to use for the deployment (default is "geniusrise/geniusrise").
+        replicas : int, optional
+            The number of replicas to create for the deployment (default is 1).
+        port : int, optional
+            The port to expose on the service (default is 80).
+        """
+        self.name = name
+        self.namespace = namespace
+        self.image = image
+        self.command = command
+        self.replicas = replicas
+        self.port = port
+
+        # Load kube config from default location
+        config.load_kube_config()
+
+        # Create a client instance for Core V1 and Apps V1 of Kubernetes API
+        self.core_api = client.CoreV1Api()
+        self.apps_api = client.AppsV1Api()
+
+    def create_deployment(self):
+        """
+        Creates a new deployment.
+
+        The deployment is created in the namespace specified in the constructor. The deployment uses the Docker image
+        and command specified in the constructor, and creates the number of replicas specified in the constructor.
+
+        If an error occurs while creating the deployment, an error message is logged and the method returns None.
+        """
+        # Define the container
+        container = client.V1Container(name=self.name, image=self.image, command=self.command)
+
+        # Define the template
+        template = client.V1PodTemplateSpec(
+            metadata=client.V1ObjectMeta(labels={"app": self.name, "service": "geniusrise"}),
+            spec=client.V1PodSpec(containers=[container]),
+        )
+
+        # Define the spec
+        spec = client.V1DeploymentSpec(
+            replicas=self.replicas,
+            selector=client.V1LabelSelector(match_labels={"app": self.name, "service": "geniusrise"}),
+            template=template,
+        )
+
+        # Define the deployment
+        deployment = client.V1Deployment(metadata=client.V1ObjectMeta(name=self.name), spec=spec)
+
+        # Create the deployment
+        try:
+            self.apps_api.create_namespaced_deployment(namespace=self.namespace, body=deployment)
+            log.info(f"Deployment {self.name} created.")
+        except ApiException as e:
+            log.error(f"Exception when creating deployment {self.name}: {e}")
+
+    def update_deployment(self, replicas):
+        """
+        Updates the number of replicas in the deployment.
+
+        Parameters
+        ----------
+        replicas : int
+            The new number of replicas for the deployment.
+
+        If an error occurs while updating the deployment, an error message is logged and the method returns None.
+        """
+        # Get the existing deployment
+        try:
+            deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+
+            # Update the number of replicas
+            deployment.spec.replicas = replicas
+
+            # Update the deployment
+            self.apps_api.replace_namespaced_deployment(name=self.name, namespace=self.namespace, body=deployment)
+            log.info(f"Deployment {self.name} updated.")
+        except ApiException as e:
+            log.error(f"Exception when updating deployment {self.name}: {e}")
+
+    def scale_deployment(self, replicas):
+        """
+        Scales the deployment to a new number of replicas.
+
+        Parameters
+        ----------
+        replicas : int
+            The new number of replicas for the deployment.
+
+        If an error occurs while scaling the deployment, an error message is logged and the method returns None.
+        """
+        # Get the existing deployment
+        try:
+            deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+
+            # Update the number of replicas
+            deployment.spec.replicas = replicas
+
+            # Update the deployment
+            self.apps_api.replace_namespaced_deployment(name=self.name, namespace=self.namespace, body=deployment)
+            log.info(f"Deployment {self.name} scaled to {replicas} replicas.")
+        except ApiException as e:
+            log.error(f"Exception when scaling deployment {self.name}: {e}")
+
+    def delete_deployment(self):
+        # Delete the deployment
+        try:
+            self.apps_api.delete_namespaced_deployment(name=self.name, namespace=self.namespace)
+            log.info(f"Deployment {self.name} deleted.")
+        except ApiException as e:
+            log.error(f"Exception when deleting deployment {self.name}: {e}")
+
+    def create_service(self):
+        """
+        Deletes the deployment.
+
+        If an error occurs while deleting the deployment, an error message is logged and the method returns None.
+        """
+        # Define the service spec
+        spec = client.V1ServiceSpec(
+            selector={"app": self.name}, ports=[client.V1ServicePort(port=self.port, target_port=self.port)]
+        )
+
+        # Define the service
+        service = client.V1Service(metadata=client.V1ObjectMeta(name=self.name), spec=spec)
+
+        # Create the service
+        try:
+            self.core_api.create_namespaced_service(namespace=self.namespace, body=service)
+            log.info(f"Service {self.name} created.")
+        except ApiException as e:
+            log.error(f"Exception when creating service {self.name}: {e}")
+
+    def delete_service(self):
+        """
+        Creates a new service.
+
+        The service is created in the namespace specified in the constructor. The service exposes the port specified
+        in the constructor.
+
+        If an error occurs while creating the service, an error message is logged and the method returns None.
+        """
+        # Delete the service
+        try:
+            self.core_api.delete_namespaced_service(name=self.name, namespace=self.namespace)
+            log.info(f"Service {self.name} deleted.")
+        except ApiException as e:
+            log.error(f"Exception when deleting service {self.name}: {e}")
+
+    def run(self):
+        """
+        Creates the deployment and service.
+
+        If an error occurs while creating the deployment or service,
+        an error message is logged and the method returns None.
+        """
+        self.create_deployment()
+        self.create_service()
+
+    def destroy(self):
+        """
+        Deletes the deployment and service.
+
+        If an error occurs while deleting the deployment or service,
+        an error message is logged and the method returns None.
+        """
+        self.delete_deployment()
+        self.delete_service()
+
+    def get_status(self) -&gt; Dict[str, Any]:
+        """
+        Get the status of the deployment
+
+        Returns:
+            Dict[str, Any]: The status of the deployment
+        """
+        try:
+            # Get the status of the deployment
+            deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+            return deployment.status.__dict__
+        except ApiException as e:
+            log.error(f"Exception when getting status of deployment {self.name}: {e}")
+            return {}
+
+    def get_statistics(self) -&gt; Dict[str, Any]:
+        """
+        Get the details of the deployment and the pods in the deployment
+
+        Returns:
+            Dict[str, Any]: The details of the deployment and the pods
+        """
+        try:
+            # Get the details of the deployment
+            deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+            deployment_stats = deployment.status
+
+            # Get the details of the pods in the deployment
+            pod_list = self.core_api.list_namespaced_pod(self.namespace, label_selector=f"app={self.name}")
+            pod_stats = [pod.status for pod in pod_list.items]
+
+            return {"deployment": deployment_stats, "pods": pod_stats}
+        except ApiException as e:
+            log.error(f"Exception when getting statistics of deployment {self.name}: {e}")
+            return {}
+
+    def get_logs(self) -&gt; Dict[str, str]:
+        """
+        Get the logs of the pods in the deployment
+
+        Returns:
+            Dict[str, str]: The logs of the pods
+        """
+        try:
+            # Get the logs of the pods in the deployment
+            logs = {}
+            _continue = None
+            while True:
+                pod_list = self.core_api.list_namespaced_pod(
+                    self.namespace, label_selector=f"app={self.name}", _continue=_continue
+                )
+                for pod in pod_list.items:
+                    logs[pod.metadata.name] = self.core_api.read_namespaced_pod_log(pod.metadata.name, self.namespace)
+                _continue = pod_list.metadata._continue
+                if not _continue:
+                    break
+            return logs
+        except ApiException as e:
+            log.error(f"Exception when getting logs of deployment {self.name}: {e}")
+            return {}</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(name, command=[], namespace='default', image='geniusrise/geniusrise', replicas=1, port=80)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Constructs all the necessary attributes for the K8sManager object.</p>
+<h5 id="core.task.k8s.K8sManager.__init__--parameters">Parameters</h5>
+
+<details class="name-" open>
+  <summary>str</summary>
+  <p>The name of the deployment and service.</p>
+</details>
+<details class="command-" open>
+  <summary>list</summary>
+  <p>The command to run in the Docker container.</p>
+</details>
+<details class="namespace-" open>
+  <summary>str, optional</summary>
+  <p>The namespace to create the deployment and service in (default is "default").</p>
+</details>
+<details class="image-" open>
+  <summary>str, optional</summary>
+  <p>The Docker image to use for the deployment (default is "geniusrise/geniusrise").</p>
+</details>
+<details class="replicas-" open>
+  <summary>int, optional</summary>
+  <p>The number of replicas to create for the deployment (default is 1).</p>
+</details>
+<details class="port-" open>
+  <summary>int, optional</summary>
+  <p>The port to expose on the service (default is 80).</p>
+</details>
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(
+    self,
+    name: str,
+    command: list = [],
+    namespace: str = "default",
+    image: str = "geniusrise/geniusrise",
+    replicas: int = 1,
+    port: int = 80,
+):
+    """
+    Constructs all the necessary attributes for the K8sManager object.
+
+    Parameters
+    ----------
+    name : str
+        The name of the deployment and service.
+    command : list
+        The command to run in the Docker container.
+    namespace : str, optional
+        The namespace to create the deployment and service in (default is "default").
+    image : str, optional
+        The Docker image to use for the deployment (default is "geniusrise/geniusrise").
+    replicas : int, optional
+        The number of replicas to create for the deployment (default is 1).
+    port : int, optional
+        The port to expose on the service (default is 80).
+    """
+    self.name = name
+    self.namespace = namespace
+    self.image = image
+    self.command = command
+    self.replicas = replicas
+    self.port = port
+
+    # Load kube config from default location
+    config.load_kube_config()
+
+    # Create a client instance for Core V1 and Apps V1 of Kubernetes API
+    self.core_api = client.CoreV1Api()
+    self.apps_api = client.AppsV1Api()</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.create_deployment" class="doc doc-heading">
+<code class="highlight language-python">create_deployment()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Creates a new deployment.</p>
+<p>The deployment is created in the namespace specified in the constructor. The deployment uses the Docker image
+and command specified in the constructor, and creates the number of replicas specified in the constructor.</p>
+<p>If an error occurs while creating the deployment, an error message is logged and the method returns None.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def create_deployment(self):
+    """
+    Creates a new deployment.
+
+    The deployment is created in the namespace specified in the constructor. The deployment uses the Docker image
+    and command specified in the constructor, and creates the number of replicas specified in the constructor.
+
+    If an error occurs while creating the deployment, an error message is logged and the method returns None.
+    """
+    # Define the container
+    container = client.V1Container(name=self.name, image=self.image, command=self.command)
+
+    # Define the template
+    template = client.V1PodTemplateSpec(
+        metadata=client.V1ObjectMeta(labels={"app": self.name, "service": "geniusrise"}),
+        spec=client.V1PodSpec(containers=[container]),
+    )
+
+    # Define the spec
+    spec = client.V1DeploymentSpec(
+        replicas=self.replicas,
+        selector=client.V1LabelSelector(match_labels={"app": self.name, "service": "geniusrise"}),
+        template=template,
+    )
+
+    # Define the deployment
+    deployment = client.V1Deployment(metadata=client.V1ObjectMeta(name=self.name), spec=spec)
+
+    # Create the deployment
+    try:
+        self.apps_api.create_namespaced_deployment(namespace=self.namespace, body=deployment)
+        log.info(f"Deployment {self.name} created.")
+    except ApiException as e:
+        log.error(f"Exception when creating deployment {self.name}: {e}")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.create_service" class="doc doc-heading">
+<code class="highlight language-python">create_service()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deletes the deployment.</p>
+<p>If an error occurs while deleting the deployment, an error message is logged and the method returns None.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def create_service(self):
+    """
+    Deletes the deployment.
+
+    If an error occurs while deleting the deployment, an error message is logged and the method returns None.
+    """
+    # Define the service spec
+    spec = client.V1ServiceSpec(
+        selector={"app": self.name}, ports=[client.V1ServicePort(port=self.port, target_port=self.port)]
+    )
+
+    # Define the service
+    service = client.V1Service(metadata=client.V1ObjectMeta(name=self.name), spec=spec)
+
+    # Create the service
+    try:
+        self.core_api.create_namespaced_service(namespace=self.namespace, body=service)
+        log.info(f"Service {self.name} created.")
+    except ApiException as e:
+        log.error(f"Exception when creating service {self.name}: {e}")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.delete_service" class="doc doc-heading">
+<code class="highlight language-python">delete_service()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Creates a new service.</p>
+<p>The service is created in the namespace specified in the constructor. The service exposes the port specified
+in the constructor.</p>
+<p>If an error occurs while creating the service, an error message is logged and the method returns None.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def delete_service(self):
+    """
+    Creates a new service.
+
+    The service is created in the namespace specified in the constructor. The service exposes the port specified
+    in the constructor.
+
+    If an error occurs while creating the service, an error message is logged and the method returns None.
+    """
+    # Delete the service
+    try:
+        self.core_api.delete_namespaced_service(name=self.name, namespace=self.namespace)
+        log.info(f"Service {self.name} deleted.")
+    except ApiException as e:
+        log.error(f"Exception when deleting service {self.name}: {e}")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.destroy" class="doc doc-heading">
+<code class="highlight language-python">destroy()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deletes the deployment and service.</p>
+<p>If an error occurs while deleting the deployment or service,
+an error message is logged and the method returns None.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def destroy(self):
+    """
+    Deletes the deployment and service.
+
+    If an error occurs while deleting the deployment or service,
+    an error message is logged and the method returns None.
+    """
+    self.delete_deployment()
+    self.delete_service()</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.get_logs" class="doc doc-heading">
+<code class="highlight language-python">get_logs()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the logs of the pods in the deployment</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, str]: The logs of the pods</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get_logs(self) -&gt; Dict[str, str]:
+    """
+    Get the logs of the pods in the deployment
+
+    Returns:
+        Dict[str, str]: The logs of the pods
+    """
+    try:
+        # Get the logs of the pods in the deployment
+        logs = {}
+        _continue = None
+        while True:
+            pod_list = self.core_api.list_namespaced_pod(
+                self.namespace, label_selector=f"app={self.name}", _continue=_continue
+            )
+            for pod in pod_list.items:
+                logs[pod.metadata.name] = self.core_api.read_namespaced_pod_log(pod.metadata.name, self.namespace)
+            _continue = pod_list.metadata._continue
+            if not _continue:
+                break
+        return logs
+    except ApiException as e:
+        log.error(f"Exception when getting logs of deployment {self.name}: {e}")
+        return {}</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.get_statistics" class="doc doc-heading">
+<code class="highlight language-python">get_statistics()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the details of the deployment and the pods in the deployment</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: The details of the deployment and the pods</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get_statistics(self) -&gt; Dict[str, Any]:
+    """
+    Get the details of the deployment and the pods in the deployment
+
+    Returns:
+        Dict[str, Any]: The details of the deployment and the pods
+    """
+    try:
+        # Get the details of the deployment
+        deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+        deployment_stats = deployment.status
+
+        # Get the details of the pods in the deployment
+        pod_list = self.core_api.list_namespaced_pod(self.namespace, label_selector=f"app={self.name}")
+        pod_stats = [pod.status for pod in pod_list.items]
+
+        return {"deployment": deployment_stats, "pods": pod_stats}
+    except ApiException as e:
+        log.error(f"Exception when getting statistics of deployment {self.name}: {e}")
+        return {}</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.get_status" class="doc doc-heading">
+<code class="highlight language-python">get_status()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the status of the deployment</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: The status of the deployment</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get_status(self) -&gt; Dict[str, Any]:
+    """
+    Get the status of the deployment
+
+    Returns:
+        Dict[str, Any]: The status of the deployment
+    """
+    try:
+        # Get the status of the deployment
+        deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+        return deployment.status.__dict__
+    except ApiException as e:
+        log.error(f"Exception when getting status of deployment {self.name}: {e}")
+        return {}</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.run" class="doc doc-heading">
+<code class="highlight language-python">run()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Creates the deployment and service.</p>
+<p>If an error occurs while creating the deployment or service,
+an error message is logged and the method returns None.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run(self):
+    """
+    Creates the deployment and service.
+
+    If an error occurs while creating the deployment or service,
+    an error message is logged and the method returns None.
+    """
+    self.create_deployment()
+    self.create_service()</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.scale_deployment" class="doc doc-heading">
+<code class="highlight language-python">scale_deployment(replicas)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Scales the deployment to a new number of replicas.</p>
+<h5 id="core.task.k8s.K8sManager.scale_deployment--parameters">Parameters</h5>
+
+<details class="replicas-" open>
+  <summary>int</summary>
+  <p>The new number of replicas for the deployment.</p>
+</details>      <p>If an error occurs while scaling the deployment, an error message is logged and the method returns None.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def scale_deployment(self, replicas):
+    """
+    Scales the deployment to a new number of replicas.
+
+    Parameters
+    ----------
+    replicas : int
+        The new number of replicas for the deployment.
+
+    If an error occurs while scaling the deployment, an error message is logged and the method returns None.
+    """
+    # Get the existing deployment
+    try:
+        deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+
+        # Update the number of replicas
+        deployment.spec.replicas = replicas
+
+        # Update the deployment
+        self.apps_api.replace_namespaced_deployment(name=self.name, namespace=self.namespace, body=deployment)
+        log.info(f"Deployment {self.name} scaled to {replicas} replicas.")
+    except ApiException as e:
+        log.error(f"Exception when scaling deployment {self.name}: {e}")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.k8s.K8sManager.update_deployment" class="doc doc-heading">
+<code class="highlight language-python">update_deployment(replicas)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Updates the number of replicas in the deployment.</p>
+<h5 id="core.task.k8s.K8sManager.update_deployment--parameters">Parameters</h5>
+
+<details class="replicas-" open>
+  <summary>int</summary>
+  <p>The new number of replicas for the deployment.</p>
+</details>      <p>If an error occurs while updating the deployment, an error message is logged and the method returns None.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/k8s.py</code></summary>
+            <pre class="highlight"><code class="language-python">def update_deployment(self, replicas):
+    """
+    Updates the number of replicas in the deployment.
+
+    Parameters
+    ----------
+    replicas : int
+        The new number of replicas for the deployment.
+
+    If an error occurs while updating the deployment, an error message is logged and the method returns None.
+    """
+    # Get the existing deployment
+    try:
+        deployment = self.apps_api.read_namespaced_deployment(name=self.name, namespace=self.namespace)
+
+        # Update the number of replicas
+        deployment.spec.replicas = replicas
+
+        # Update the deployment
+        self.apps_api.replace_namespaced_deployment(name=self.name, namespace=self.namespace, body=deployment)
+        log.info(f"Deployment {self.name} updated.")
+    except ApiException as e:
+        log.error(f"Exception when updating deployment {self.name}: {e}")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>spout - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_bolt/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_data_batch_input/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.spout">core.spout</a></li>
+        
+    
+        <li class="main "><a href="#core.spout.Spout">Spout</a></li>
+        
+            <li><a href="#core.spout.Spout.__call__">__call__()</a></li>
+        
+            <li><a href="#core.spout.Spout.__init__">__init__()</a></li>
+        
+            <li><a href="#core.spout.Spout.create">create()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.spout"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.spout.Spout" class="doc doc-heading">
+          <code>Spout</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="geniusrise.core.task.Task">Task</span></code></p>
+
+  
+      <p>Base class for all spouts.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/spout.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Spout(Task):
+    """
+    Base class for all spouts.
+    """
+
+    def __init__(self, output_config: OutputConfig, state_manager: StateManager, **kwargs) -&gt; None:
+        """
+        The `Spout` class is a base class for all spouts in the given context.
+        It inherits from the `Task` class and provides methods for executing tasks
+        both locally and remotely, as well as managing their state, with state management
+        options including in-memory, Redis, PostgreSQL, and DynamoDB,
+        and output configurations for batch or streaming data.
+
+        The `Spout` class uses the `OutputConfig` and `StateManager` classes, which are abstract base
+         classes for managing output configurations and states, respectively. The `OutputConfig` class
+         has two subclasses: `StreamingOutputConfig` and `BatchOutputConfig`, which manage streaming and
+         batch output configurations, respectively. The `StateManager` class is used to get and set state,
+         and it has several subclasses for different types of state managers.
+
+        The `Spout` class also uses the `ECSManager` and `K8sManager` classes in the `execute_remote` method,
+        which are used to manage tasks on Amazon ECS and Kubernetes, respectively.
+
+        Usage:
+            - Create an instance of the Spout class by providing an OutputConfig object and a StateManager object.
+            - The OutputConfig object specifies the output configuration for the spout.
+            - The StateManager object handles the management of the spout's state.
+
+        Example:
+            output_config = OutputConfig(...)
+            state_manager = StateManager(...)
+            spout = Spout(output_config, state_manager)
+
+        Args:
+            output_config (OutputConfig): The output configuration.
+            state_manager (StateManager): The state manager.
+        """
+        super().__init__()
+        self.output_config = output_config
+        self.state_manager = state_manager
+
+        self.log = logging.getLogger(self.__class__.__name__)
+
+    def __call__(self, method_name: str, *args, **kwargs) -&gt; Any:
+        """
+        Execute a method locally and manage the state.
+
+        Args:
+            method_name (str): The name of the method to execute.
+            *args: Positional arguments to pass to the method.
+            **kwargs: Keyword arguments to pass to the method.
+                Keyword Arguments:
+                    - Additional keyword arguments specific to the method.
+
+        Returns:
+            Any: The result of the method.
+        """
+        try:
+            # Get the type of state manager
+            state_type = self.state_manager.get_state(self.id)
+
+            # Save the current set of class variables to the state manager
+            self.state_manager.set_state(self.id, {})
+
+            # Execute the task's method
+            result = self.execute(method_name, *args, **kwargs)
+
+            # Flush the output config
+            self.output_config.flush()
+
+            # Store the state as successful in the state manager
+            state = {}
+            state["status"] = "success"
+            self.state_manager.set_state(self.id, state)
+
+            return result
+        except Exception as e:
+            state = {}
+            state["status"] = "failed"
+            self.state_manager.set_state(self.id, state)
+            self.log.exception(f"Failed to execute method '{method_name}': {e}")
+            raise
+
+    @staticmethod
+    def create(klass: type, output_type: str, state_type: str, **kwargs) -&gt; "Spout":
+        """
+        Create a spout of a specific type.
+
+        Args:
+            klass (type): The Spout class to create.
+            output_type (str): The type of output config ("batch" or "streaming").
+            state_type (str): The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").
+            **kwargs: Additional keyword arguments for initializing the spout.
+                Keyword Arguments:
+                    Batch output config:
+                    - output_folder (str): The directory where output files should be stored temporarily.
+                    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+                    - output_s3_folder (str): The S3 folder for output storage.
+                    Streaming output config:
+                    - output_kafka_topic (str): Kafka output topic for streaming spouts.
+                    - output_kafka_cluster_connection_string (str): Kafka connection string for streaming spouts.
+                    Redis state manager config:
+                    - redis_host (str): The host address for the Redis server.
+                    - redis_port (int): The port number for the Redis server.
+                    - redis_db (int): The Redis database to be used.
+                    Postgres state manager config:
+                    - postgres_host (str): The host address for the PostgreSQL server.
+                    - postgres_port (int): The port number for the PostgreSQL server.
+                    - postgres_user (str): The username for the PostgreSQL server.
+                    - postgres_password (str): The password for the PostgreSQL server.
+                    - postgres_database (str): The PostgreSQL database to be used.
+                    - postgres_table (str): The PostgreSQL table to be used.
+                    DynamoDB state manager config:
+                    - dynamodb_table_name (str): The name of the DynamoDB table.
+                    - dynamodb_region_name (str): The AWS region for DynamoDB.
+
+        Returns:
+            Spout: The created spout.
+
+        Raises:
+            ValueError: If an invalid output type or state type is provided.
+        """
+        # Create the output config
+        output_config: BatchOutputConfig | StreamingOutputConfig
+        if output_type == "batch":
+            output_config = BatchOutputConfig(
+                output_folder=kwargs.get("output_folder", tempfile.mkdtemp()),
+                bucket=kwargs.get("output_s3_bucket", "geniusrise"),
+                s3_folder=kwargs.get("output_s3_folder", klass.__class__.__name__),
+            )
+        elif output_type == "streaming":
+            output_config = StreamingOutputConfig(
+                output_topic=kwargs.get("output_kafka_topic", None),
+                kafka_servers=kwargs.get("output_kafka_cluster_connection_string", None),
+            )
+        else:
+            raise ValueError(f"Invalid output type: {output_type}")
+
+        # Create the state manager
+        state_manager: StateManager
+        if state_type == "in_memory":
+            state_manager = InMemoryStateManager()
+        elif state_type == "redis":
+            state_manager = RedisStateManager(
+                host=kwargs["redis_host"] if "redis_host" in kwargs else None,
+                port=kwargs["redis_port"] if "redis_port" in kwargs else None,
+                db=kwargs["redis_db"] if "redis_db" in kwargs else None,
+            )
+        elif state_type == "postgres":
+            state_manager = PostgresStateManager(
+                host=kwargs["postgres_host"] if "postgres_host" in kwargs else None,
+                port=kwargs["postgres_port"] if "postgres_port" in kwargs else None,
+                user=kwargs["postgres_user"] if "postgres_user" in kwargs else None,
+                password=kwargs["postgres_password"] if "postgres_password" in kwargs else None,
+                database=kwargs["postgres_database"] if "postgres_database" in kwargs else None,
+                table=kwargs["postgres_table"] if "postgres_table" in kwargs else None,
+            )
+        elif state_type == "dynamodb":
+            state_manager = DynamoDBStateManager(
+                table_name=kwargs["dynamodb_table_name"] if "dynamodb_table_name" in kwargs else None,
+                region_name=kwargs["dynamodb_region_name"] if "dynamodb_region_name" in kwargs else None,
+            )
+        else:
+            raise ValueError(f"Invalid state type: {state_type}")
+
+        # Create the spout
+        spout = klass(output_config=output_config, state_manager=state_manager, **kwargs)
+        return spout</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.spout.Spout.__call__" class="doc doc-heading">
+<code class="highlight language-python">__call__(method_name, *args, **kwargs)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Execute a method locally and manage the state.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>method_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the method to execute.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>*args</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Positional arguments to pass to the method.</p>
+            </div>
+          </td>
+          <td>
+                <code>()</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Keyword arguments to pass to the method.
+Keyword Arguments:
+    - Additional keyword arguments specific to the method.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Any</code></td>          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The result of the method.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/spout.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __call__(self, method_name: str, *args, **kwargs) -&gt; Any:
+    """
+    Execute a method locally and manage the state.
+
+    Args:
+        method_name (str): The name of the method to execute.
+        *args: Positional arguments to pass to the method.
+        **kwargs: Keyword arguments to pass to the method.
+            Keyword Arguments:
+                - Additional keyword arguments specific to the method.
+
+    Returns:
+        Any: The result of the method.
+    """
+    try:
+        # Get the type of state manager
+        state_type = self.state_manager.get_state(self.id)
+
+        # Save the current set of class variables to the state manager
+        self.state_manager.set_state(self.id, {})
+
+        # Execute the task's method
+        result = self.execute(method_name, *args, **kwargs)
+
+        # Flush the output config
+        self.output_config.flush()
+
+        # Store the state as successful in the state manager
+        state = {}
+        state["status"] = "success"
+        self.state_manager.set_state(self.id, state)
+
+        return result
+    except Exception as e:
+        state = {}
+        state["status"] = "failed"
+        self.state_manager.set_state(self.id, state)
+        self.log.exception(f"Failed to execute method '{method_name}': {e}")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.spout.Spout.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(output_config, state_manager, **kwargs)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>The <code>Spout</code> class is a base class for all spouts in the given context.
+It inherits from the <code>Task</code> class and provides methods for executing tasks
+both locally and remotely, as well as managing their state, with state management
+options including in-memory, Redis, PostgreSQL, and DynamoDB,
+and output configurations for batch or streaming data.</p>
+<p>The <code>Spout</code> class uses the <code>OutputConfig</code> and <code>StateManager</code> classes, which are abstract base
+ classes for managing output configurations and states, respectively. The <code>OutputConfig</code> class
+ has two subclasses: <code>StreamingOutputConfig</code> and <code>BatchOutputConfig</code>, which manage streaming and
+ batch output configurations, respectively. The <code>StateManager</code> class is used to get and set state,
+ and it has several subclasses for different types of state managers.</p>
+<p>The <code>Spout</code> class also uses the <code>ECSManager</code> and <code>K8sManager</code> classes in the <code>execute_remote</code> method,
+which are used to manage tasks on Amazon ECS and Kubernetes, respectively.</p>
+
+<details class="usage" open>
+  <summary>Usage</summary>
+  <ul>
+<li>Create an instance of the Spout class by providing an OutputConfig object and a StateManager object.</li>
+<li>The OutputConfig object specifies the output configuration for the spout.</li>
+<li>The StateManager object handles the management of the spout's state.</li>
+</ul>
+</details>
+<details class="example" open>
+  <summary>Example</summary>
+  <p>output_config = OutputConfig(...)
+state_manager = StateManager(...)
+spout = Spout(output_config, state_manager)</p>
+</details>
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>output_config</code></td>
+          <td>
+                <code><span title="geniusrise.core.data.OutputConfig">OutputConfig</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The output configuration.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state_manager</code></td>
+          <td>
+                <code><span title="geniusrise.core.state.StateManager">StateManager</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The state manager.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/spout.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self, output_config: OutputConfig, state_manager: StateManager, **kwargs) -&gt; None:
+    """
+    The `Spout` class is a base class for all spouts in the given context.
+    It inherits from the `Task` class and provides methods for executing tasks
+    both locally and remotely, as well as managing their state, with state management
+    options including in-memory, Redis, PostgreSQL, and DynamoDB,
+    and output configurations for batch or streaming data.
+
+    The `Spout` class uses the `OutputConfig` and `StateManager` classes, which are abstract base
+     classes for managing output configurations and states, respectively. The `OutputConfig` class
+     has two subclasses: `StreamingOutputConfig` and `BatchOutputConfig`, which manage streaming and
+     batch output configurations, respectively. The `StateManager` class is used to get and set state,
+     and it has several subclasses for different types of state managers.
+
+    The `Spout` class also uses the `ECSManager` and `K8sManager` classes in the `execute_remote` method,
+    which are used to manage tasks on Amazon ECS and Kubernetes, respectively.
+
+    Usage:
+        - Create an instance of the Spout class by providing an OutputConfig object and a StateManager object.
+        - The OutputConfig object specifies the output configuration for the spout.
+        - The StateManager object handles the management of the spout's state.
+
+    Example:
+        output_config = OutputConfig(...)
+        state_manager = StateManager(...)
+        spout = Spout(output_config, state_manager)
+
+    Args:
+        output_config (OutputConfig): The output configuration.
+        state_manager (StateManager): The state manager.
+    """
+    super().__init__()
+    self.output_config = output_config
+    self.state_manager = state_manager
+
+    self.log = logging.getLogger(self.__class__.__name__)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.spout.Spout.create" class="doc doc-heading">
+<code class="highlight language-python">create(klass, output_type, state_type, **kwargs)</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a spout of a specific type.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>klass</code></td>
+          <td>
+                <code>type</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The Spout class to create.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The type of output config ("batch" or "streaming").</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments for initializing the spout.
+Keyword Arguments:
+    Batch output config:
+    - output_folder (str): The directory where output files should be stored temporarily.
+    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+    - output_s3_folder (str): The S3 folder for output storage.
+    Streaming output config:
+    - output_kafka_topic (str): Kafka output topic for streaming spouts.
+    - output_kafka_cluster_connection_string (str): Kafka connection string for streaming spouts.
+    Redis state manager config:
+    - redis_host (str): The host address for the Redis server.
+    - redis_port (int): The port number for the Redis server.
+    - redis_db (int): The Redis database to be used.
+    Postgres state manager config:
+    - postgres_host (str): The host address for the PostgreSQL server.
+    - postgres_port (int): The port number for the PostgreSQL server.
+    - postgres_user (str): The username for the PostgreSQL server.
+    - postgres_password (str): The password for the PostgreSQL server.
+    - postgres_database (str): The PostgreSQL database to be used.
+    - postgres_table (str): The PostgreSQL table to be used.
+    DynamoDB state manager config:
+    - dynamodb_table_name (str): The name of the DynamoDB table.
+    - dynamodb_region_name (str): The AWS region for DynamoDB.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Spout</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="core.spout.Spout" href="#core.spout.Spout">Spout</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The created spout.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If an invalid output type or state type is provided.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/spout.py</code></summary>
+            <pre class="highlight"><code class="language-python">@staticmethod
+def create(klass: type, output_type: str, state_type: str, **kwargs) -&gt; "Spout":
+    """
+    Create a spout of a specific type.
+
+    Args:
+        klass (type): The Spout class to create.
+        output_type (str): The type of output config ("batch" or "streaming").
+        state_type (str): The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").
+        **kwargs: Additional keyword arguments for initializing the spout.
+            Keyword Arguments:
+                Batch output config:
+                - output_folder (str): The directory where output files should be stored temporarily.
+                - output_s3_bucket (str): The name of the S3 bucket for output storage.
+                - output_s3_folder (str): The S3 folder for output storage.
+                Streaming output config:
+                - output_kafka_topic (str): Kafka output topic for streaming spouts.
+                - output_kafka_cluster_connection_string (str): Kafka connection string for streaming spouts.
+                Redis state manager config:
+                - redis_host (str): The host address for the Redis server.
+                - redis_port (int): The port number for the Redis server.
+                - redis_db (int): The Redis database to be used.
+                Postgres state manager config:
+                - postgres_host (str): The host address for the PostgreSQL server.
+                - postgres_port (int): The port number for the PostgreSQL server.
+                - postgres_user (str): The username for the PostgreSQL server.
+                - postgres_password (str): The password for the PostgreSQL server.
+                - postgres_database (str): The PostgreSQL database to be used.
+                - postgres_table (str): The PostgreSQL table to be used.
+                DynamoDB state manager config:
+                - dynamodb_table_name (str): The name of the DynamoDB table.
+                - dynamodb_region_name (str): The AWS region for DynamoDB.
+
+    Returns:
+        Spout: The created spout.
+
+    Raises:
+        ValueError: If an invalid output type or state type is provided.
+    """
+    # Create the output config
+    output_config: BatchOutputConfig | StreamingOutputConfig
+    if output_type == "batch":
+        output_config = BatchOutputConfig(
+            output_folder=kwargs.get("output_folder", tempfile.mkdtemp()),
+            bucket=kwargs.get("output_s3_bucket", "geniusrise"),
+            s3_folder=kwargs.get("output_s3_folder", klass.__class__.__name__),
+        )
+    elif output_type == "streaming":
+        output_config = StreamingOutputConfig(
+            output_topic=kwargs.get("output_kafka_topic", None),
+            kafka_servers=kwargs.get("output_kafka_cluster_connection_string", None),
+        )
+    else:
+        raise ValueError(f"Invalid output type: {output_type}")
+
+    # Create the state manager
+    state_manager: StateManager
+    if state_type == "in_memory":
+        state_manager = InMemoryStateManager()
+    elif state_type == "redis":
+        state_manager = RedisStateManager(
+            host=kwargs["redis_host"] if "redis_host" in kwargs else None,
+            port=kwargs["redis_port"] if "redis_port" in kwargs else None,
+            db=kwargs["redis_db"] if "redis_db" in kwargs else None,
+        )
+    elif state_type == "postgres":
+        state_manager = PostgresStateManager(
+            host=kwargs["postgres_host"] if "postgres_host" in kwargs else None,
+            port=kwargs["postgres_port"] if "postgres_port" in kwargs else None,
+            user=kwargs["postgres_user"] if "postgres_user" in kwargs else None,
+            password=kwargs["postgres_password"] if "postgres_password" in kwargs else None,
+            database=kwargs["postgres_database"] if "postgres_database" in kwargs else None,
+            table=kwargs["postgres_table"] if "postgres_table" in kwargs else None,
+        )
+    elif state_type == "dynamodb":
+        state_manager = DynamoDBStateManager(
+            table_name=kwargs["dynamodb_table_name"] if "dynamodb_table_name" in kwargs else None,
+            region_name=kwargs["dynamodb_region_name"] if "dynamodb_region_name" in kwargs else None,
+        )
+    else:
+        raise ValueError(f"Invalid state type: {state_type}")
+
+    # Create the spout
+    spout = klass(output_config=output_config, state_manager=state_manager, **kwargs)
+    return spout</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

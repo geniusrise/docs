@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>yamlctl - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../cli_spoutctl/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_bolt/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#cli.yamlctl">cli.yamlctl</a></li>
+        
+    
+        <li class="main "><a href="#cli.yamlctl.YamlCtl">YamlCtl</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.__init__">__init__()</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.create_parser">create_parser()</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.resolve_reference">resolve_reference()</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.run">run()</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.run_bolt">run_bolt()</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.run_bolts">run_bolts()</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.run_spout">run_spout()</a></li>
+        
+            <li><a href="#cli.yamlctl.YamlCtl.run_spouts">run_spouts()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="cli.yamlctl"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.yamlctl.YamlCtl" class="doc doc-heading">
+          <code>YamlCtl</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Command-line interface for managing spouts and bolts based on a YAML configuration.</p>
+<p>The YamlCtl class provides methods to run specific or all spouts and bolts defined in a YAML file.
+The YAML file's structure is defined by the Geniusfile schema.</p>
+<p>Example YAML structure:</p>
+<pre><code>version: &quot;1&quot;
+spouts:
+  spout_name1:
+    name: &quot;spout1&quot;
+    method: &quot;method_name&quot;
+    ...
+bolts:
+  bolt_name1:
+    name: &quot;bolt1&quot;
+    method: &quot;method_name&quot;
+    ...
+</code></pre>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>geniusfile</code></td>
+          <td>
+                <code><span title="geniusrise.cli.schema.Geniusfile">Geniusfile</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Parsed YAML configuration.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>spout_ctls</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="geniusrise.cli.spoutctl.SpoutCtl">SpoutCtl</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary of SpoutCtl instances.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bolt_ctls</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="geniusrise.cli.boltctl.BoltCtl">BoltCtl</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary of BoltCtl instances.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+              <pre class="highlight"><code class="language-python">class YamlCtl:
+    """
+    Command-line interface for managing spouts and bolts based on a YAML configuration.
+
+    The YamlCtl class provides methods to run specific or all spouts and bolts defined in a YAML file.
+    The YAML file's structure is defined by the Geniusfile schema.
+
+    Example YAML structure:
+    ```
+    version: "1"
+    spouts:
+      spout_name1:
+        name: "spout1"
+        method: "method_name"
+        ...
+    bolts:
+      bolt_name1:
+        name: "bolt1"
+        method: "method_name"
+        ...
+    ```
+
+    Attributes:
+        geniusfile (Geniusfile): Parsed YAML configuration.
+        spout_ctls (Dict[str, SpoutCtl]): Dictionary of SpoutCtl instances.
+        bolt_ctls (Dict[str, BoltCtl]): Dictionary of BoltCtl instances.
+    """
+
+    def __init__(self, spout_ctls: Dict[str, SpoutCtl], bolt_ctls: Dict[str, BoltCtl]):
+        """
+        Initialize YamlCtl with the path to the YAML file and control instances for spouts and bolts.
+
+        Args:
+            spout_ctls (Dict[str, SpoutCtl]): Dictionary of SpoutCtl instances.
+            bolt_ctls (Dict[str, BoltCtl]): Dictionary of BoltCtl instances.
+        """
+        self.spout_ctls = spout_ctls
+        self.bolt_ctls = bolt_ctls
+        self.log = logging.getLogger(self.__class__.__name__)
+
+    def create_parser(self, parser):
+        """
+        Create and return the command-line parser for managing spouts and bolts.
+        """
+        parser.add_argument("--spout", type=str, help="Name of the specific spout to run.")
+        parser.add_argument("--bolt", type=str, help="Name of the specific bolt to run.")
+        parser.add_argument("--file", default=".", type=str, help="Path of the genius.yml file, default to .")
+        return parser
+
+    def run(self, args):
+        """
+        Run the command-line interface for managing spouts and bolts based on provided arguments.
+        Please note that there is no ordering of the spouts and bolts in the YAML configuration.
+        Each spout and bolt is an independent entity even when connected together.
+
+        Args:
+            args (argparse.Namespace): Parsed command-line arguments.
+        """
+        with open(args.file, "r") as file:
+            self.geniusfile = Geniusfile.parse_obj(yaml.safe_load(file))
+        if args.spout == "all":
+            self.run_spouts()
+        elif args.bolt == "all":
+            self.run_bolts()
+        elif args.spout:
+            self.run_spout(args.spout)
+        elif args.bolt:
+            self.run_bolt(args.bolt)
+        else:
+            self.run_spouts()
+            self.run_bolts()
+
+    def run_spouts(self):
+        """Run all spouts defined in the YAML configuration."""
+        self.log.info(emoji.emojize(":rocket: Running all spouts..."))
+        for spout_name, _ in self.geniusfile.spouts.items():
+            self.run_spout(spout_name)
+
+    def run_bolts(self):
+        """Run all bolts defined in the YAML configuration."""
+        self.log.info(emoji.emojize(":rocket: Running all bolts..."))
+        for bolt_name, _ in self.geniusfile.bolts.items():
+            self.run_bolt(bolt_name)
+
+    def run_spout(self, spout_name: str):
+        """
+        Run a specific spout based on its name.
+
+        Args:
+            spout_name (str): Name of the spout to run.
+        """
+        spout = self.geniusfile.spouts.get(spout_name)
+        if not spout:
+            self.log.error(emoji.emojize(f":x: Spout {spout_name} not found."))
+            return
+
+        spout_ctl = self.spout_ctls.get(spout_name)
+        if not spout_ctl:
+            self.log.error(emoji.emojize(f":x: SpoutCtl for {spout_name} not found."))
+            return
+
+        self.log.info(emoji.emojize(f":rocket: Running spout {spout_name}..."))
+        flat_args = ["run", spout.output.type, spout.state.type, spout.method] + self._convert_spout(spout)
+
+        parser = argparse.ArgumentParser()
+        self.spout_ctls[spout_name].create_parser(parser)
+        namespace_args = parser.parse_args(flat_args)
+        spout_ctl.run(namespace_args)
+
+    def run_bolt(self, bolt_name: str):
+        """
+        Run a specific bolt based on its name.
+
+        Args:
+            bolt_name (str): Name of the bolt to run.
+        """
+        bolt = self.geniusfile.bolts.get(bolt_name)
+        if not bolt:
+            self.log.error(emoji.emojize(f":x: Bolt {bolt_name} not found."))
+            return
+
+        # Resolve reference if input type is "spout" or "bolt"
+        if bolt.input.type in ["spout", "bolt"]:
+            if not bolt.input.args or not bolt.input.args.name:
+                raise ValueError(emoji.emojize(f"Need referenced spouts or bolt to be mentioned here {bolt.input}"))
+            ref_name = bolt.input.args.name
+            resolved_output = self.resolve_reference(bolt.input.type, ref_name)
+            if not resolved_output:
+                self.log.error(emoji.emojize(f":x: Failed to resolve reference for bolt {bolt_name}."))
+                return
+            bolt.input.type = resolved_output.type  # Set the resolved output type as the bolt's input type
+            bolt.input.args = resolved_output.args  # Set the resolved output args as the bolt's input args
+
+        bolt_ctl = self.bolt_ctls.get(bolt_name)
+        if not bolt_ctl:
+            self.log.error(emoji.emojize(f":x: BoltCtl for {bolt_name} not found."))
+            return
+
+        self.log.info(emoji.emojize(f":rocket: Running bolt {bolt_name}..."))
+        flat_args = ["run", bolt.input.type, bolt.output.type, bolt.state.type, bolt.method] + self._convert_bolt(bolt)
+
+        parser = argparse.ArgumentParser()
+        self.bolt_ctls[bolt_name].create_parser(parser)
+        namespace_args = parser.parse_args(flat_args)
+        bolt_ctl.run(namespace_args)
+
+    def resolve_reference(self, input_type: str, ref_name: str):
+        """
+        Resolve the reference of a bolt's input based on the input type (spout or bolt).
+
+        Args:
+            input_type (str): Type of the input ("spout" or "bolt").
+            ref_name (str): Name of the spout or bolt to refer to.
+
+        Returns:
+            Output: The output configuration of the referred spout or bolt.
+        """
+        if input_type == "spout":
+            referred_spout = self.geniusfile.spouts.get(ref_name)
+            if not referred_spout:
+                self.log.error(emoji.emojize(f":x: Referred spout {ref_name} not found."))
+                return None
+            return referred_spout.output
+        elif input_type == "bolt":
+            referred_bolt = self.geniusfile.bolts.get(ref_name)
+            if not referred_bolt:
+                self.log.error(emoji.emojize(f":x: Referred bolt {ref_name} not found."))
+                return None
+            return referred_bolt.output
+        else:
+            self.log.error(emoji.emojize(f":x: Invalid reference type {input_type}."))
+            return None
+
+    @typing.no_type_check
+    def _convert_spout(self, spout: Spout) -&gt; List[str]:
+        spout_args = []
+
+        # Convert output
+        if spout.output.type == "batch":
+            spout_args.append(f"--output_folder={spout.output.args.folder}")
+            spout_args.append(f"--output_s3_bucket={spout.output.args.bucket}")
+            spout_args.append(f"--output_s3_folder={spout.output.args.folder}")
+        elif spout.output.type == "streaming":
+            spout_args.append(f"--output_kafka_topic={spout.output.args.output_topic}")
+            spout_args.append(f"--output_kafka_cluster_connection_string={spout.output.args.kafka_servers}")
+
+        # Convert state
+        if spout.state.type == "redis":
+            spout_args.append(f"--redis_host={spout.state.args.redis_host}")
+            spout_args.append(f"--redis_port={spout.state.args.redis_port}")
+            spout_args.append(f"--redis_db={spout.state.args.redis_db}")
+        elif spout.state.type == "postgres":
+            spout_args.append(f"--postgres_host={spout.state.args.postgres_host}")
+            spout_args.append(f"--postgres_port={spout.state.args.postgres_port}")
+            spout_args.append(f"--postgres_user={spout.state.args.postgres_user}")
+            spout_args.append(f"--postgres_password={spout.state.args.postgres_password}")
+            spout_args.append(f"--postgres_database={spout.state.args.postgres_database}")
+            spout_args.append(f"--postgres_table={spout.state.args.postgres_table}")
+        elif spout.state.type == "dynamodb":
+            spout_args.append(f"--dynamodb_table_name={spout.state.args.dynamodb_table_name}")
+            spout_args.append(f"--dynamodb_region_name={spout.state.args.dynamodb_region_name}")
+
+        return spout_args
+
+    @typing.no_type_check
+    def _convert_bolt(self, bolt: Bolt) -&gt; List[str]:
+        bolt_args = []
+
+        # Convert input
+        if bolt.input.type == "batch":
+            bolt_args.append(f"--input_folder={bolt.input.args.folder}")
+            bolt_args.append(f"--input_s3_bucket={bolt.input.args.bucket}")
+            bolt_args.append(f"--input_s3_folder={bolt.input.args.folder}")
+        elif bolt.input.type == "streaming":
+            bolt_args.append(f"--input_kafka_topic={bolt.input.args.input_topic}")
+            bolt_args.append(f"--input_kafka_cluster_connection_string={bolt.input.args.kafka_servers}")
+
+        # Convert output
+        if bolt.output.type == "batch":
+            bolt_args.append(f"--output_folder={bolt.output.args.folder}")
+            bolt_args.append(f"--output_s3_bucket={bolt.output.args.bucket}")
+            bolt_args.append(f"--output_s3_folder={bolt.output.args.folder}")
+        elif bolt.output.type == "streaming":
+            bolt_args.append(f"--output_kafka_topic={bolt.output.args.output_topic}")
+            bolt_args.append(f"--output_kafka_cluster_connection_string={bolt.output.args.kafka_servers}")
+
+        # Convert state
+        if bolt.state.type == "redis":
+            bolt_args.append(f"--redis_host={bolt.state.args.redis_host}")
+            bolt_args.append(f"--redis_port={bolt.state.args.redis_port}")
+            bolt_args.append(f"--redis_db={bolt.state.args.redis_db}")
+        elif bolt.state.type == "postgres":
+            bolt_args.append(f"--postgres_host={bolt.state.args.postgres_host}")
+            bolt_args.append(f"--postgres_port={bolt.state.args.postgres_port}")
+            bolt_args.append(f"--postgres_user={bolt.state.args.postgres_user}")
+            bolt_args.append(f"--postgres_password={bolt.state.args.postgres_password}")
+            bolt_args.append(f"--postgres_database={bolt.state.args.postgres_database}")
+            bolt_args.append(f"--postgres_table={bolt.state.args.postgres_table}")
+        elif bolt.state.type == "dynamodb":
+            bolt_args.append(f"--dynamodb_table_name={bolt.state.args.dynamodb_table_name}")
+            bolt_args.append(f"--dynamodb_region_name={bolt.state.args.dynamodb_region_name}")
+
+        return bolt_args</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(spout_ctls, bolt_ctls)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize YamlCtl with the path to the YAML file and control instances for spouts and bolts.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>spout_ctls</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="geniusrise.cli.spoutctl.SpoutCtl">SpoutCtl</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary of SpoutCtl instances.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bolt_ctls</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="geniusrise.cli.boltctl.BoltCtl">BoltCtl</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary of BoltCtl instances.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self, spout_ctls: Dict[str, SpoutCtl], bolt_ctls: Dict[str, BoltCtl]):
+    """
+    Initialize YamlCtl with the path to the YAML file and control instances for spouts and bolts.
+
+    Args:
+        spout_ctls (Dict[str, SpoutCtl]): Dictionary of SpoutCtl instances.
+        bolt_ctls (Dict[str, BoltCtl]): Dictionary of BoltCtl instances.
+    """
+    self.spout_ctls = spout_ctls
+    self.bolt_ctls = bolt_ctls
+    self.log = logging.getLogger(self.__class__.__name__)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.create_parser" class="doc doc-heading">
+<code class="highlight language-python">create_parser(parser)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create and return the command-line parser for managing spouts and bolts.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def create_parser(self, parser):
+    """
+    Create and return the command-line parser for managing spouts and bolts.
+    """
+    parser.add_argument("--spout", type=str, help="Name of the specific spout to run.")
+    parser.add_argument("--bolt", type=str, help="Name of the specific bolt to run.")
+    parser.add_argument("--file", default=".", type=str, help="Path of the genius.yml file, default to .")
+    return parser</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.resolve_reference" class="doc doc-heading">
+<code class="highlight language-python">resolve_reference(input_type, ref_name)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Resolve the reference of a bolt's input based on the input type (spout or bolt).</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Type of the input ("spout" or "bolt").</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ref_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the spout or bolt to refer to.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Output</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The output configuration of the referred spout or bolt.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def resolve_reference(self, input_type: str, ref_name: str):
+    """
+    Resolve the reference of a bolt's input based on the input type (spout or bolt).
+
+    Args:
+        input_type (str): Type of the input ("spout" or "bolt").
+        ref_name (str): Name of the spout or bolt to refer to.
+
+    Returns:
+        Output: The output configuration of the referred spout or bolt.
+    """
+    if input_type == "spout":
+        referred_spout = self.geniusfile.spouts.get(ref_name)
+        if not referred_spout:
+            self.log.error(emoji.emojize(f":x: Referred spout {ref_name} not found."))
+            return None
+        return referred_spout.output
+    elif input_type == "bolt":
+        referred_bolt = self.geniusfile.bolts.get(ref_name)
+        if not referred_bolt:
+            self.log.error(emoji.emojize(f":x: Referred bolt {ref_name} not found."))
+            return None
+        return referred_bolt.output
+    else:
+        self.log.error(emoji.emojize(f":x: Invalid reference type {input_type}."))
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.run" class="doc doc-heading">
+<code class="highlight language-python">run(args)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run the command-line interface for managing spouts and bolts based on provided arguments.
+Please note that there is no ordering of the spouts and bolts in the YAML configuration.
+Each spout and bolt is an independent entity even when connected together.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>args</code></td>
+          <td>
+                <code>argparse.<span title="argparse.Namespace">Namespace</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Parsed command-line arguments.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run(self, args):
+    """
+    Run the command-line interface for managing spouts and bolts based on provided arguments.
+    Please note that there is no ordering of the spouts and bolts in the YAML configuration.
+    Each spout and bolt is an independent entity even when connected together.
+
+    Args:
+        args (argparse.Namespace): Parsed command-line arguments.
+    """
+    with open(args.file, "r") as file:
+        self.geniusfile = Geniusfile.parse_obj(yaml.safe_load(file))
+    if args.spout == "all":
+        self.run_spouts()
+    elif args.bolt == "all":
+        self.run_bolts()
+    elif args.spout:
+        self.run_spout(args.spout)
+    elif args.bolt:
+        self.run_bolt(args.bolt)
+    else:
+        self.run_spouts()
+        self.run_bolts()</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.run_bolt" class="doc doc-heading">
+<code class="highlight language-python">run_bolt(bolt_name)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run a specific bolt based on its name.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>bolt_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the bolt to run.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run_bolt(self, bolt_name: str):
+    """
+    Run a specific bolt based on its name.
+
+    Args:
+        bolt_name (str): Name of the bolt to run.
+    """
+    bolt = self.geniusfile.bolts.get(bolt_name)
+    if not bolt:
+        self.log.error(emoji.emojize(f":x: Bolt {bolt_name} not found."))
+        return
+
+    # Resolve reference if input type is "spout" or "bolt"
+    if bolt.input.type in ["spout", "bolt"]:
+        if not bolt.input.args or not bolt.input.args.name:
+            raise ValueError(emoji.emojize(f"Need referenced spouts or bolt to be mentioned here {bolt.input}"))
+        ref_name = bolt.input.args.name
+        resolved_output = self.resolve_reference(bolt.input.type, ref_name)
+        if not resolved_output:
+            self.log.error(emoji.emojize(f":x: Failed to resolve reference for bolt {bolt_name}."))
+            return
+        bolt.input.type = resolved_output.type  # Set the resolved output type as the bolt's input type
+        bolt.input.args = resolved_output.args  # Set the resolved output args as the bolt's input args
+
+    bolt_ctl = self.bolt_ctls.get(bolt_name)
+    if not bolt_ctl:
+        self.log.error(emoji.emojize(f":x: BoltCtl for {bolt_name} not found."))
+        return
+
+    self.log.info(emoji.emojize(f":rocket: Running bolt {bolt_name}..."))
+    flat_args = ["run", bolt.input.type, bolt.output.type, bolt.state.type, bolt.method] + self._convert_bolt(bolt)
+
+    parser = argparse.ArgumentParser()
+    self.bolt_ctls[bolt_name].create_parser(parser)
+    namespace_args = parser.parse_args(flat_args)
+    bolt_ctl.run(namespace_args)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.run_bolts" class="doc doc-heading">
+<code class="highlight language-python">run_bolts()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run all bolts defined in the YAML configuration.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run_bolts(self):
+    """Run all bolts defined in the YAML configuration."""
+    self.log.info(emoji.emojize(":rocket: Running all bolts..."))
+    for bolt_name, _ in self.geniusfile.bolts.items():
+        self.run_bolt(bolt_name)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.run_spout" class="doc doc-heading">
+<code class="highlight language-python">run_spout(spout_name)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run a specific spout based on its name.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>spout_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the spout to run.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run_spout(self, spout_name: str):
+    """
+    Run a specific spout based on its name.
+
+    Args:
+        spout_name (str): Name of the spout to run.
+    """
+    spout = self.geniusfile.spouts.get(spout_name)
+    if not spout:
+        self.log.error(emoji.emojize(f":x: Spout {spout_name} not found."))
+        return
+
+    spout_ctl = self.spout_ctls.get(spout_name)
+    if not spout_ctl:
+        self.log.error(emoji.emojize(f":x: SpoutCtl for {spout_name} not found."))
+        return
+
+    self.log.info(emoji.emojize(f":rocket: Running spout {spout_name}..."))
+    flat_args = ["run", spout.output.type, spout.state.type, spout.method] + self._convert_spout(spout)
+
+    parser = argparse.ArgumentParser()
+    self.spout_ctls[spout_name].create_parser(parser)
+    namespace_args = parser.parse_args(flat_args)
+    spout_ctl.run(namespace_args)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.yamlctl.YamlCtl.run_spouts" class="doc doc-heading">
+<code class="highlight language-python">run_spouts()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run all spouts defined in the YAML configuration.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/yamlctl.py</code></summary>
+            <pre class="highlight"><code class="language-python">def run_spouts(self):
+    """Run all spouts defined in the YAML configuration."""
+    self.log.info(emoji.emojize(":rocket: Running all spouts..."))
+    for spout_name, _ in self.geniusfile.spouts.items():
+        self.run_spout(spout_name)</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>streaming_input - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_data_output/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_data_streaming_output/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.data.streaming_input">core.data.streaming_input</a></li>
+        
+    
+        <li class="main "><a href="#core.data.streaming_input.StreamingInputConfig">StreamingInputConfig</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.__init__">__init__()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.__iter__">__iter__()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.__next__">__next__()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.close">close()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.commit">commit()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.filter_messages">filter_messages()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.get">get()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.iterator">iterator()</a></li>
+        
+            <li><a href="#core.data.streaming_input.StreamingInputConfig.seek">seek()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.data.streaming_input"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.data.streaming_input.StreamingInputConfig" class="doc doc-heading">
+          <code>StreamingInputConfig</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="core.data.input.InputConfig" href="../core_data_input/#core.data.input.InputConfig">InputConfig</a></code></p>
+
+  
+      <p>Class for managing streaming input configurations.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_topic</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka topic to consume data.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>consumer</code></td>
+          <td>
+                <code><span title="kafka.KafkaConsumer">KafkaConsumer</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka consumer for consuming data.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+              <pre class="highlight"><code class="language-python">class StreamingInputConfig(InputConfig):
+    """
+    Class for managing streaming input configurations.
+
+    Attributes:
+        input_topic (str): Kafka topic to consume data.
+        consumer (KafkaConsumer): Kafka consumer for consuming data.
+    """
+
+    def __init__(self, input_topic: str, kafka_cluster_connection_string: str, group_id: str = "geniusrise"):
+        """
+        Initialize a new streaming input configuration.
+
+        Args:
+            input_topic (str): Kafka topic to consume data.
+            kafka_cluster_connection_string (str): Kafka cluster connection string.
+            group_id (str, optional): Kafka consumer group id. Defaults to "geniusrise".
+        """
+        self.input_topic = input_topic
+        try:
+            self.consumer = KafkaConsumer(
+                self.input_topic, bootstrap_servers=kafka_cluster_connection_string, group_id=group_id
+            )
+        except Exception as e:
+            log.exception(f"Failed to create Kafka consumer: {e}")
+            raise
+            self.consumer = None
+
+    def get(self):
+        """
+        Get data from the input topic.
+
+        Returns:
+            KafkaConsumer: The Kafka consumer.
+        """
+        if self.input_topic and self.consumer:
+            try:
+                return self.consumer
+            except Exception as e:
+                log.exception(f"Failed to consume from Kafka topic {self.input_topic}: {e}")
+                raise
+                return None
+        else:
+            log.exception("No input source specified.")
+            raise
+            return None
+
+    def iterator(self):
+        """
+        Iterator method for yielding data from the Kafka consumer.
+
+        Yields:
+            Kafka message: The next message from the Kafka consumer.
+        """
+        if self.consumer:
+            try:
+                for message in self.consumer:
+                    yield message
+            except Exception as e:
+                log.exception(f"Failed to iterate over Kafka consumer: {e}")
+                raise
+        else:
+            log.exception("No Kafka consumer available.")
+            raise
+
+    def __iter__(self):
+        """
+        Make the class iterable.
+        """
+        return self
+
+    def __next__(self):
+        """
+        Get the next message from the Kafka consumer.
+        """
+        if self.consumer:
+            try:
+                return next(self.consumer)
+            except StopIteration:
+                raise
+            except Exception as e:
+                log.exception(f"Failed to get next message from Kafka consumer: {e}")
+                raise
+                return None
+        else:
+            log.exception("No Kafka consumer available.")
+            raise
+            return None
+
+    def close(self):
+        """
+        Close the Kafka consumer.
+        """
+        if self.consumer:
+            try:
+                self.consumer.close()
+            except Exception as e:
+                log.exception(f"Failed to close Kafka consumer: {e}")
+                raise
+
+    def seek(self, partition: int, offset: int):
+        """
+        Change the position from which the Kafka consumer reads.
+        """
+        if self.consumer:
+            try:
+                self.consumer.seek(partition, offset)
+            except Exception as e:
+                log.exception(f"Failed to seek Kafka consumer: {e}")
+                raise
+
+    def commit(self):
+        """
+        Manually commit offsets.
+        """
+        if self.consumer:
+            try:
+                self.consumer.commit()
+            except Exception as e:
+                log.exception(f"Failed to commit offsets: {e}")
+                raise
+
+    def filter_messages(self, filter_func: Callable):
+        """
+        Filter messages from the Kafka consumer based on a filter function.
+
+        Args:
+            filter_func (callable): A function that takes a Kafka message and returns a boolean.
+
+        Yields:
+            Kafka message: The next message from the Kafka consumer that passes the filter.
+        """
+        if self.consumer:
+            try:
+                for message in self.consumer:
+                    if filter_func(message):
+                        yield message
+            except Exception as e:
+                log.exception(f"Failed to filter messages from Kafka consumer: {e}")
+                raise
+        else:
+            log.exception("No Kafka consumer available.")
+            raise</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(input_topic, kafka_cluster_connection_string, group_id='geniusrise')</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize a new streaming input configuration.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_topic</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka topic to consume data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>kafka_cluster_connection_string</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka cluster connection string.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>group_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka consumer group id. Defaults to "geniusrise".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;geniusrise&#39;</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self, input_topic: str, kafka_cluster_connection_string: str, group_id: str = "geniusrise"):
+    """
+    Initialize a new streaming input configuration.
+
+    Args:
+        input_topic (str): Kafka topic to consume data.
+        kafka_cluster_connection_string (str): Kafka cluster connection string.
+        group_id (str, optional): Kafka consumer group id. Defaults to "geniusrise".
+    """
+    self.input_topic = input_topic
+    try:
+        self.consumer = KafkaConsumer(
+            self.input_topic, bootstrap_servers=kafka_cluster_connection_string, group_id=group_id
+        )
+    except Exception as e:
+        log.exception(f"Failed to create Kafka consumer: {e}")
+        raise
+        self.consumer = None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.__iter__" class="doc doc-heading">
+<code class="highlight language-python">__iter__()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Make the class iterable.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __iter__(self):
+    """
+    Make the class iterable.
+    """
+    return self</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.__next__" class="doc doc-heading">
+<code class="highlight language-python">__next__()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the next message from the Kafka consumer.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __next__(self):
+    """
+    Get the next message from the Kafka consumer.
+    """
+    if self.consumer:
+        try:
+            return next(self.consumer)
+        except StopIteration:
+            raise
+        except Exception as e:
+            log.exception(f"Failed to get next message from Kafka consumer: {e}")
+            raise
+            return None
+    else:
+        log.exception("No Kafka consumer available.")
+        raise
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.close" class="doc doc-heading">
+<code class="highlight language-python">close()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Close the Kafka consumer.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def close(self):
+    """
+    Close the Kafka consumer.
+    """
+    if self.consumer:
+        try:
+            self.consumer.close()
+        except Exception as e:
+            log.exception(f"Failed to close Kafka consumer: {e}")
+            raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.commit" class="doc doc-heading">
+<code class="highlight language-python">commit()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Manually commit offsets.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def commit(self):
+    """
+    Manually commit offsets.
+    """
+    if self.consumer:
+        try:
+            self.consumer.commit()
+        except Exception as e:
+            log.exception(f"Failed to commit offsets: {e}")
+            raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.filter_messages" class="doc doc-heading">
+<code class="highlight language-python">filter_messages(filter_func)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Filter messages from the Kafka consumer based on a filter function.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filter_func</code></td>
+          <td>
+                <code>callable</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A function that takes a Kafka message and returns a boolean.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Yields:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka message: The next message from the Kafka consumer that passes the filter.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def filter_messages(self, filter_func: Callable):
+    """
+    Filter messages from the Kafka consumer based on a filter function.
+
+    Args:
+        filter_func (callable): A function that takes a Kafka message and returns a boolean.
+
+    Yields:
+        Kafka message: The next message from the Kafka consumer that passes the filter.
+    """
+    if self.consumer:
+        try:
+            for message in self.consumer:
+                if filter_func(message):
+                    yield message
+        except Exception as e:
+            log.exception(f"Failed to filter messages from Kafka consumer: {e}")
+            raise
+    else:
+        log.exception("No Kafka consumer available.")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.get" class="doc doc-heading">
+<code class="highlight language-python">get()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get data from the input topic.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>KafkaConsumer</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The Kafka consumer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get(self):
+    """
+    Get data from the input topic.
+
+    Returns:
+        KafkaConsumer: The Kafka consumer.
+    """
+    if self.input_topic and self.consumer:
+        try:
+            return self.consumer
+        except Exception as e:
+            log.exception(f"Failed to consume from Kafka topic {self.input_topic}: {e}")
+            raise
+            return None
+    else:
+        log.exception("No input source specified.")
+        raise
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.iterator" class="doc doc-heading">
+<code class="highlight language-python">iterator()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Iterator method for yielding data from the Kafka consumer.</p>
+
+
+
+  <p><strong>Yields:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka message: The next message from the Kafka consumer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def iterator(self):
+    """
+    Iterator method for yielding data from the Kafka consumer.
+
+    Yields:
+        Kafka message: The next message from the Kafka consumer.
+    """
+    if self.consumer:
+        try:
+            for message in self.consumer:
+                yield message
+        except Exception as e:
+            log.exception(f"Failed to iterate over Kafka consumer: {e}")
+            raise
+    else:
+        log.exception("No Kafka consumer available.")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.streaming_input.StreamingInputConfig.seek" class="doc doc-heading">
+<code class="highlight language-python">seek(partition, offset)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Change the position from which the Kafka consumer reads.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/streaming_input.py</code></summary>
+            <pre class="highlight"><code class="language-python">def seek(self, partition: int, offset: int):
+    """
+    Change the position from which the Kafka consumer reads.
+    """
+    if self.consumer:
+        try:
+            self.consumer.seek(partition, offset)
+        except Exception as e:
+            log.exception(f"Failed to seek Kafka consumer: {e}")
+            raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

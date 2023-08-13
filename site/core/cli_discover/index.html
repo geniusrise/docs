@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>discover - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../cli_boltctl/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cli_geniusctl/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#cli.discover">cli.discover</a></li>
+        
+    
+        <li class="main "><a href="#cli.discover.Discover">Discover</a></li>
+        
+            <li><a href="#cli.discover.Discover.__init__">__init__()</a></li>
+        
+            <li><a href="#cli.discover.Discover.discover_installed_extensions">discover_installed_extensions()</a></li>
+        
+            <li><a href="#cli.discover.Discover.find_classes">find_classes()</a></li>
+        
+            <li><a href="#cli.discover.Discover.get_init_args">get_init_args()</a></li>
+        
+            <li><a href="#cli.discover.Discover.import_module">import_module()</a></li>
+        
+            <li><a href="#cli.discover.Discover.scan_directory">scan_directory()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="cli.discover"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.discover.Discover" class="doc doc-heading">
+          <code>Discover</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/discover.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Discover:
+    def __init__(self, directory: Optional[str] = None):
+        """Initialize the Discover class."""
+        self.classes: Dict[str, Any] = {}
+        self.log = logging.getLogger(self.__class__.__name__)
+        self.directory = directory
+
+    def scan_directory(self, directory: Optional[str] = None) -&gt; Dict[str, Any]:
+        """
+        Scan for spouts/bolts in installed extensions and user's codebase.
+
+        Args:
+            directory (Optional[str]): Directory to scan for user-defined spouts/bolts.
+
+        Returns:
+            Dict[str, Any]: Discovered spouts/bolts.
+        """
+        directory = directory if directory else self.directory
+        self.log.info(emoji.emojize("🔍 Starting discovery..."))
+
+        # Discover installed extensions
+        self.discover_installed_extensions()
+
+        # Discover user-defined spouts/bolts
+        if directory:
+            self.directory = directory
+            for root, _, files in os.walk(self.directory):
+                if "__init__.py" in files:
+                    module = self.import_module(root)
+                    self.find_classes(module)
+        return self.classes
+
+    def discover_installed_extensions(self):
+        """Discover installed geniusrise extensions."""
+        self.log.info(emoji.emojize("🔎 Discovering installed extensions..."))
+        for entry_point in pkg_resources.iter_entry_points(group="geniusrise.extensions"):
+            try:
+                module = entry_point.load()
+                self.find_classes(module)
+            except Exception as e:
+                self.log.error(emoji.emojize(f"❌ Error discovering classes in {entry_point.name}: {e}"))
+
+    def import_module(self, path: str):
+        """
+        Import a module given its path.
+
+        Args:
+            path (str): Path to the module.
+
+        Returns:
+            Any: Imported module.
+        """
+        project_root = os.path.abspath(os.path.join(self.directory, "../../../../"))  # type: ignore
+        relative_path = os.path.relpath(path, project_root)
+        module_path = relative_path.replace(os.sep, ".")
+        if module_path.endswith("__init__"):
+            module_path = module_path[:-9]  # remove trailing '__init__'
+
+        self.log.info(emoji.emojize(f"📦 Importing module {module_path}..."))
+        module = importlib.import_module(module_path)
+        return module
+
+    def find_classes(self, module: Any):
+        """
+        Discover spout/bolt classes in a module.
+
+        Args:
+            module (Any): Module to scan for spout/bolt classes.
+        """
+        for name, obj in inspect.getmembers(module):
+            discovered: DiscoveredSpout | DiscoveredBolt
+            if inspect.isclass(obj) and issubclass(obj, Spout) and obj != Spout:
+                discovered = DiscoveredSpout(name=name, klass=obj, init_args=self.get_init_args(obj))
+                self.log.info(emoji.emojize(f"🚀 Discovered Spout {discovered.name}"))
+                self.classes[name] = discovered
+            elif inspect.isclass(obj) and issubclass(obj, Bolt) and obj != Bolt:
+                discovered = DiscoveredBolt(name=name, klass=obj, init_args=self.get_init_args(obj))
+                self.log.info(emoji.emojize(f"⚡ Discovered Bolt {discovered.name}"))
+                self.classes[name] = discovered
+
+    def get_init_args(self, cls: type) -&gt; Dict[str, Any]:
+        """
+        Extract initialization arguments of a class.
+
+        Args:
+            cls (type): Class to extract initialization arguments from.
+
+        Returns:
+            Dict[str, Any]: Initialization arguments.
+        """
+        init_signature = inspect.signature(cls.__init__)  # type: ignore
+        init_params = init_signature.parameters
+        init_args = {}
+        for name, kind in init_params.items():
+            if name == "self":
+                continue
+            if name == "kwargs" or name == "args":
+                init_args["kwargs"] = Any
+                continue
+            if isinstance(kind.annotation, ABCMeta):
+                init_args[name] = self.get_init_args(kind.annotation)
+            elif kind.annotation == inspect.Parameter.empty:
+                init_args[name] = "No type hint provided 😢"
+            else:
+                init_args[name] = kind.annotation
+        return init_args</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.discover.Discover.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(directory=None)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize the Discover class.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/discover.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self, directory: Optional[str] = None):
+    """Initialize the Discover class."""
+    self.classes: Dict[str, Any] = {}
+    self.log = logging.getLogger(self.__class__.__name__)
+    self.directory = directory</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.discover.Discover.discover_installed_extensions" class="doc doc-heading">
+<code class="highlight language-python">discover_installed_extensions()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Discover installed geniusrise extensions.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/discover.py</code></summary>
+            <pre class="highlight"><code class="language-python">def discover_installed_extensions(self):
+    """Discover installed geniusrise extensions."""
+    self.log.info(emoji.emojize("🔎 Discovering installed extensions..."))
+    for entry_point in pkg_resources.iter_entry_points(group="geniusrise.extensions"):
+        try:
+            module = entry_point.load()
+            self.find_classes(module)
+        except Exception as e:
+            self.log.error(emoji.emojize(f"❌ Error discovering classes in {entry_point.name}: {e}"))</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.discover.Discover.find_classes" class="doc doc-heading">
+<code class="highlight language-python">find_classes(module)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Discover spout/bolt classes in a module.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>module</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Module to scan for spout/bolt classes.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/discover.py</code></summary>
+            <pre class="highlight"><code class="language-python">def find_classes(self, module: Any):
+    """
+    Discover spout/bolt classes in a module.
+
+    Args:
+        module (Any): Module to scan for spout/bolt classes.
+    """
+    for name, obj in inspect.getmembers(module):
+        discovered: DiscoveredSpout | DiscoveredBolt
+        if inspect.isclass(obj) and issubclass(obj, Spout) and obj != Spout:
+            discovered = DiscoveredSpout(name=name, klass=obj, init_args=self.get_init_args(obj))
+            self.log.info(emoji.emojize(f"🚀 Discovered Spout {discovered.name}"))
+            self.classes[name] = discovered
+        elif inspect.isclass(obj) and issubclass(obj, Bolt) and obj != Bolt:
+            discovered = DiscoveredBolt(name=name, klass=obj, init_args=self.get_init_args(obj))
+            self.log.info(emoji.emojize(f"⚡ Discovered Bolt {discovered.name}"))
+            self.classes[name] = discovered</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.discover.Discover.get_init_args" class="doc doc-heading">
+<code class="highlight language-python">get_init_args(cls)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extract initialization arguments of a class.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cls</code></td>
+          <td>
+                <code>type</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Class to extract initialization arguments from.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: Initialization arguments.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/discover.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get_init_args(self, cls: type) -&gt; Dict[str, Any]:
+    """
+    Extract initialization arguments of a class.
+
+    Args:
+        cls (type): Class to extract initialization arguments from.
+
+    Returns:
+        Dict[str, Any]: Initialization arguments.
+    """
+    init_signature = inspect.signature(cls.__init__)  # type: ignore
+    init_params = init_signature.parameters
+    init_args = {}
+    for name, kind in init_params.items():
+        if name == "self":
+            continue
+        if name == "kwargs" or name == "args":
+            init_args["kwargs"] = Any
+            continue
+        if isinstance(kind.annotation, ABCMeta):
+            init_args[name] = self.get_init_args(kind.annotation)
+        elif kind.annotation == inspect.Parameter.empty:
+            init_args[name] = "No type hint provided 😢"
+        else:
+            init_args[name] = kind.annotation
+    return init_args</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.discover.Discover.import_module" class="doc doc-heading">
+<code class="highlight language-python">import_module(path)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Import a module given its path.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>path</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path to the module.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Any</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Imported module.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/discover.py</code></summary>
+            <pre class="highlight"><code class="language-python">def import_module(self, path: str):
+    """
+    Import a module given its path.
+
+    Args:
+        path (str): Path to the module.
+
+    Returns:
+        Any: Imported module.
+    """
+    project_root = os.path.abspath(os.path.join(self.directory, "../../../../"))  # type: ignore
+    relative_path = os.path.relpath(path, project_root)
+    module_path = relative_path.replace(os.sep, ".")
+    if module_path.endswith("__init__"):
+        module_path = module_path[:-9]  # remove trailing '__init__'
+
+    self.log.info(emoji.emojize(f"📦 Importing module {module_path}..."))
+    module = importlib.import_module(module_path)
+    return module</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.discover.Discover.scan_directory" class="doc doc-heading">
+<code class="highlight language-python">scan_directory(directory=None)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Scan for spouts/bolts in installed extensions and user's codebase.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>directory</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Directory to scan for user-defined spouts/bolts.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: Discovered spouts/bolts.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/discover.py</code></summary>
+            <pre class="highlight"><code class="language-python">def scan_directory(self, directory: Optional[str] = None) -&gt; Dict[str, Any]:
+    """
+    Scan for spouts/bolts in installed extensions and user's codebase.
+
+    Args:
+        directory (Optional[str]): Directory to scan for user-defined spouts/bolts.
+
+    Returns:
+        Dict[str, Any]: Discovered spouts/bolts.
+    """
+    directory = directory if directory else self.directory
+    self.log.info(emoji.emojize("🔍 Starting discovery..."))
+
+    # Discover installed extensions
+    self.discover_installed_extensions()
+
+    # Discover user-defined spouts/bolts
+    if directory:
+        self.directory = directory
+        for root, _, files in os.walk(self.directory):
+            if "__init__.py" in files:
+                module = self.import_module(root)
+                self.find_classes(module)
+    return self.classes</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>schema - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../cli_geniusctl/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cli_spoutctl/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#cli.schema">cli.schema</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.Bolt">Bolt</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.Deploy">Deploy</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.DeployArgs">DeployArgs</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.ExtraKwargs">ExtraKwargs</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.Geniusfile">Geniusfile</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.Input">Input</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.InputArgs">InputArgs</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.Output">Output</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.OutputArgs">OutputArgs</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.Spout">Spout</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.State">State</a></li>
+        
+    
+        <li class="main "><a href="#cli.schema.StateArgs">StateArgs</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="cli.schema"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.Bolt" class="doc doc-heading">
+          <code>Bolt</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines a bolt. A bolt has a name, method, optional arguments, input, output, state, and deployment.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Bolt(BaseModel):
+    """
+    This class defines a bolt. A bolt has a name, method, optional arguments, input, output, state, and deployment.
+    """
+
+    name: str
+    method: str
+    args: Optional[ExtraKwargs]
+    input: Input
+    output: Output
+    state: State
+    deploy: Deploy</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.Deploy" class="doc doc-heading">
+          <code>Deploy</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the deployment of the spout or bolt. The deployment can be of type k8s or ecs.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Deploy(BaseModel):
+    """
+    This class defines the deployment of the spout or bolt. The deployment can be of type k8s or ecs.
+    """
+
+    type: str
+    args: Optional[DeployArgs]
+
+    @validator("type")
+    def validate_type(cls, v, values, **kwargs):
+        if v not in ["k8s", "ecs"]:
+            raise ValueError("Invalid deploy type")
+        return v
+
+    @validator("args", pre=True, always=True)
+    def validate_args(cls, v, values, **kwargs):
+        if "type" in values:
+            if values["type"] == "ecs":
+                required_fields = [
+                    "name",
+                    "namespace",
+                    "image",
+                    "replicas",
+                    "account_id",
+                    "cluster",
+                    "subnet_ids",
+                    "security_group_ids",
+                    "log_group",
+                    "cpu",
+                    "memory",
+                ]
+                for field in required_fields:
+                    if not v or field not in v or not v[field]:
+                        raise ValueError(f"Missing required field '{field}' for ecs deploy type")
+            elif values["type"] == "k8s":
+                required_fields = ["name", "namespace", "image", "replicas"]
+                for field in required_fields:
+                    if not v or field not in v or not v[field]:
+                        raise ValueError(f"Missing required field '{field}' for k8s deploy type")
+        return v</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.DeployArgs" class="doc doc-heading">
+          <code>DeployArgs</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the arguments for the deployment. Depending on the type of deployment (k8s, ecs),
+different arguments are required.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class DeployArgs(BaseModel):
+    """
+    This class defines the arguments for the deployment. Depending on the type of deployment (k8s, ecs),
+    different arguments are required.
+    """
+
+    name: Optional[str]
+    namespace: Optional[str]
+    image: Optional[str]
+    replicas: Optional[int]
+    account_id: Optional[str]
+    cluster: Optional[str]
+    subnet_ids: Optional[List[str]]
+    security_group_ids: Optional[List[str]]
+    log_group: Optional[str]
+    cpu: Optional[int]
+    memory: Optional[int]
+
+    class Config:
+        extra = Extra.allow</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.ExtraKwargs" class="doc doc-heading">
+          <code>ExtraKwargs</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class is used to handle any extra arguments that are not explicitly defined in the schema.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class ExtraKwargs(BaseModel):
+    """
+    This class is used to handle any extra arguments that are not explicitly defined in the schema.
+    """
+
+    class Config:
+        extra = Extra.allow</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.Geniusfile" class="doc doc-heading">
+          <code>Geniusfile</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the overall structure of the YAML file. It includes a version, spouts, and bolts.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Geniusfile(BaseModel):
+    """
+    This class defines the overall structure of the YAML file. It includes a version, spouts, and bolts.
+    """
+
+    version: str
+    spouts: Dict[str, Spout]
+    bolts: Dict[str, Bolt]
+
+    @validator("version")
+    def validate_version(cls, v, values, **kwargs):
+        if v != "1":
+            raise ValueError("Invalid version")
+        return v</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.Input" class="doc doc-heading">
+          <code>Input</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the input of the bolt. The input can be of type batch, streaming, spout, or bolt.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Input(BaseModel):
+    """
+    This class defines the input of the bolt. The input can be of type batch, streaming, spout, or bolt.
+    """
+
+    type: str
+    args: Optional[InputArgs]
+
+    @validator("type")
+    def validate_type(cls, v, values, **kwargs):
+        if v not in ["batch", "streaming", "spout", "bolt"]:
+            raise ValueError("Invalid input type")
+        return v
+
+    @validator("args", pre=True, always=True)
+    def validate_args(cls, v, values, **kwargs):
+        if "type" in values:
+            if values["type"] == "batch":
+                if not v or "bucket" not in v or "folder" not in v:
+                    raise ValueError("Missing required fields for batch input type")
+            elif values["type"] == "streaming":
+                if not v or "input_topic" not in v or "kafka_servers" not in v:
+                    raise ValueError("Missing required fields for streaming input type")
+            elif values["type"] in ["spout", "bolt"]:
+                if not v or "name" not in v:
+                    raise ValueError(f"Missing required fields for {values['type']} input type")
+        return v</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.InputArgs" class="doc doc-heading">
+          <code>InputArgs</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the arguments for the input. Depending on the type of input (batch, streaming, spout, bolt),
+different arguments are required.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class InputArgs(BaseModel):
+    """
+    This class defines the arguments for the input. Depending on the type of input (batch, streaming, spout, bolt),
+    different arguments are required.
+    """
+
+    input_topic: Optional[str]
+    kafka_servers: Optional[str]
+    output_folder: Optional[str]
+    bucket: Optional[str]
+    folder: Optional[str]
+    name: Optional[str]
+
+    class Config:
+        extra = Extra.allow</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.Output" class="doc doc-heading">
+          <code>Output</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the output of the spout or bolt. The output can be of type batch or streaming.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Output(BaseModel):
+    """
+    This class defines the output of the spout or bolt. The output can be of type batch or streaming.
+    """
+
+    type: str
+    args: Optional[OutputArgs]
+
+    @validator("type")
+    def validate_type(cls, v, values, **kwargs):
+        if v not in ["batch", "streaming"]:
+            raise ValueError("Invalid output type")
+        return v
+
+    @validator("args", pre=True, always=True)
+    def validate_args(cls, v, values, **kwargs):
+        if "type" in values:
+            if values["type"] == "batch":
+                if not v or "bucket" not in v or "folder" not in v:
+                    raise ValueError("Missing required fields for batch output type")
+            elif values["type"] == "streaming":
+                if not v or "output_topic" not in v or "kafka_servers" not in v:
+                    raise ValueError("Missing required fields for streaming output type")
+        return v</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.OutputArgs" class="doc doc-heading">
+          <code>OutputArgs</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the arguments for the output. Depending on the type of output (batch, streaming),
+different arguments are required.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class OutputArgs(BaseModel):
+    """
+    This class defines the arguments for the output. Depending on the type of output (batch, streaming),
+    different arguments are required.
+    """
+
+    bucket: Optional[str]
+    folder: Optional[str]
+    output_topic: Optional[str]
+    kafka_servers: Optional[str]
+
+    class Config:
+        extra = Extra.allow</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.Spout" class="doc doc-heading">
+          <code>Spout</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines a spout. A spout has a name, method, optional arguments, output, state, and deployment.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Spout(BaseModel):
+    """
+    This class defines a spout. A spout has a name, method, optional arguments, output, state, and deployment.
+    """
+
+    name: str
+    method: str
+    args: Optional[ExtraKwargs]
+    output: Output
+    state: State
+    deploy: Deploy</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.State" class="doc doc-heading">
+          <code>State</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the state of the spout or bolt. The state can be of type in_memory, redis, postgres, or dynamodb.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class State(BaseModel):
+    """
+    This class defines the state of the spout or bolt. The state can be of type in_memory, redis, postgres, or dynamodb.
+    """
+
+    type: str
+    args: Optional[StateArgs]
+
+    @validator("type")
+    def validate_type(cls, v, values, **kwargs):
+        if v not in ["in_memory", "redis", "postgres", "dynamodb"]:
+            raise ValueError("Invalid state type")
+        return v
+
+    @validator("args", pre=True, always=True)
+    def validate_args(cls, v, values, **kwargs):
+        if "type" in values:
+            if values["type"] == "redis":
+                if not v or "redis_host" not in v or "redis_port" not in v or "redis_db" not in v:
+                    raise ValueError("Missing required fields for redis state type")
+            elif values["type"] == "postgres":
+                if (
+                    not v
+                    or "postgres_host" not in v
+                    or "postgres_port" not in v
+                    or "postgres_user" not in v
+                    or "postgres_password" not in v
+                    or "postgres_database" not in v
+                    or "postgres_table" not in v
+                ):
+                    raise ValueError("Missing required fields for postgres state type")
+            elif values["type"] == "dynamodb":
+                if not v or "dynamodb_table_name" not in v or "dynamodb_region_name" not in v:
+                    raise ValueError("Missing required fields for dynamodb state type")
+        return v</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="cli.schema.StateArgs" class="doc doc-heading">
+          <code>StateArgs</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+  
+      <p>This class defines the arguments for the state. Depending on the type of state (in_memory, redis, postgres, dynamodb),
+different arguments are required.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/cli/schema.py</code></summary>
+              <pre class="highlight"><code class="language-python">class StateArgs(BaseModel):
+    """
+    This class defines the arguments for the state. Depending on the type of state (in_memory, redis, postgres, dynamodb),
+    different arguments are required.
+    """
+
+    redis_host: Optional[str]
+    redis_port: Optional[int]
+    redis_db: Optional[int]
+    postgres_host: Optional[str]
+    postgres_port: Optional[int]
+    postgres_user: Optional[str]
+    postgres_password: Optional[str]
+    postgres_database: Optional[str]
+    postgres_table: Optional[str]
+    dynamodb_table_name: Optional[str]
+    dynamodb_region_name: Optional[str]
+
+    class Config:
+        extra = Extra.allow</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

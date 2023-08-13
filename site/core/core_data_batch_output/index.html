@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>batch_output - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_data_batch_input/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_data_input/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.data.batch_output">core.data.batch_output</a></li>
+        
+    
+        <li class="main "><a href="#core.data.batch_output.BatchOutputConfig">BatchOutputConfig</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.__init__">__init__()</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.copy_file_to_remote">copy_file_to_remote()</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.copy_to_remote">copy_to_remote()</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.delete_file">delete_file()</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.flush">flush()</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.list_files">list_files()</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.read_file">read_file()</a></li>
+        
+            <li><a href="#core.data.batch_output.BatchOutputConfig.save">save()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.data.batch_output"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.data.batch_output.BatchOutputConfig" class="doc doc-heading">
+          <code>BatchOutputConfig</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="core.data.output.OutputConfig" href="../core_data_output/#core.data.output.OutputConfig">OutputConfig</a></code></p>
+
+  
+      <p>Class for managing batch output configurations.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>output_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Folder to save output files.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+              <pre class="highlight"><code class="language-python">class BatchOutputConfig(OutputConfig):
+    """
+    Class for managing batch output configurations.
+
+    Attributes:
+        output_folder (str): Folder to save output files.
+    """
+
+    def __init__(self, output_folder: str, bucket: str, s3_folder: str):
+        """
+        Initialize a new batch output configuration.
+
+        Args:
+            output_folder (str): Folder to save output files.
+        """
+        self.output_folder = output_folder
+        self.bucket = bucket
+        self.s3_folder = s3_folder
+
+    def save(self, data: Any, filename: str):
+        """
+        Save data to a file in the output folder.
+
+        Args:
+            data (Any): The data to save.
+            filename (str): The filename to use when saving the data to a file.
+        """
+        try:
+            with open(os.path.join(self.output_folder, filename), "w") as f:
+                f.write(json.dumps(data))
+            log.debug(f"Wrote the data into {self.output_folder}/{filename}.")
+        except Exception as e:
+            log.exception(f"Failed to write data to file: {e}")
+            raise
+
+    def copy_to_remote(self):
+        """
+        Recursively copy all files and directories from the output folder to a given S3 bucket and folder.
+
+        Args:
+            bucket (str): The name of the S3 bucket.
+            s3_folder (str): The folder in the S3 bucket.
+        """
+        s3 = boto3.client("s3")
+        try:
+            for root, _, files in os.walk(self.output_folder):
+                for filename in files:
+                    local_path = os.path.join(root, filename)
+                    relative_path = os.path.relpath(local_path, self.output_folder)
+                    s3_key = os.path.join(self.s3_folder, relative_path)
+                    s3.upload_file(local_path, self.bucket, s3_key)
+        except Exception as e:
+            log.exception(f"Failed to copy files to S3: {e}")
+            raise
+
+    def flush(self):
+        """
+        Flush the output by copying all files and directories from the output folder to a given S3 bucket and folder.
+        """
+        # Replace 'bucket' and 's3_folder' with your actual bucket and folder
+        self.copy_to_remote()
+
+    def list_files(self):
+        """
+        List all files in the output folder.
+
+        Returns:
+            list: The list of files in the output folder.
+        """
+        return [
+            os.path.join(self.output_folder, f)
+            for f in os.listdir(self.output_folder)
+            if os.path.isfile(os.path.join(self.output_folder, f))
+        ]
+
+    def read_file(self, filename: str):
+        """
+        Read a file from the output folder.
+
+        Args:
+            filename (str): The name of the file to read.
+
+        Returns:
+            str: The contents of the file.
+        """
+        with open(os.path.join(self.output_folder, filename), "r") as f:
+            return f.read()
+
+    def delete_file(self, filename: str):
+        """
+        Delete a file from the output folder.
+
+        Args:
+            filename (str): The name of the file to delete.
+        """
+        os.remove(os.path.join(self.output_folder, filename))
+
+    def copy_file_to_remote(self, filename: str):
+        """
+        Copy a specific file from the output folder to the S3 bucket.
+
+        Args:
+            filename (str): The name of the file to copy.
+        """
+        s3 = boto3.client("s3")
+        try:
+            s3.upload_file(
+                os.path.join(self.output_folder, filename), self.bucket, os.path.join(self.s3_folder, filename)
+            )
+        except Exception as e:
+            log.exception(f"Failed to copy file to S3: {e}")
+            raise</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(output_folder, bucket, s3_folder)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize a new batch output configuration.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>output_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Folder to save output files.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self, output_folder: str, bucket: str, s3_folder: str):
+    """
+    Initialize a new batch output configuration.
+
+    Args:
+        output_folder (str): Folder to save output files.
+    """
+    self.output_folder = output_folder
+    self.bucket = bucket
+    self.s3_folder = s3_folder</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.copy_file_to_remote" class="doc doc-heading">
+<code class="highlight language-python">copy_file_to_remote(filename)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Copy a specific file from the output folder to the S3 bucket.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the file to copy.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def copy_file_to_remote(self, filename: str):
+    """
+    Copy a specific file from the output folder to the S3 bucket.
+
+    Args:
+        filename (str): The name of the file to copy.
+    """
+    s3 = boto3.client("s3")
+    try:
+        s3.upload_file(
+            os.path.join(self.output_folder, filename), self.bucket, os.path.join(self.s3_folder, filename)
+        )
+    except Exception as e:
+        log.exception(f"Failed to copy file to S3: {e}")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.copy_to_remote" class="doc doc-heading">
+<code class="highlight language-python">copy_to_remote()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Recursively copy all files and directories from the output folder to a given S3 bucket and folder.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>bucket</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the S3 bucket.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>s3_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The folder in the S3 bucket.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def copy_to_remote(self):
+    """
+    Recursively copy all files and directories from the output folder to a given S3 bucket and folder.
+
+    Args:
+        bucket (str): The name of the S3 bucket.
+        s3_folder (str): The folder in the S3 bucket.
+    """
+    s3 = boto3.client("s3")
+    try:
+        for root, _, files in os.walk(self.output_folder):
+            for filename in files:
+                local_path = os.path.join(root, filename)
+                relative_path = os.path.relpath(local_path, self.output_folder)
+                s3_key = os.path.join(self.s3_folder, relative_path)
+                s3.upload_file(local_path, self.bucket, s3_key)
+    except Exception as e:
+        log.exception(f"Failed to copy files to S3: {e}")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.delete_file" class="doc doc-heading">
+<code class="highlight language-python">delete_file(filename)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Delete a file from the output folder.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the file to delete.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def delete_file(self, filename: str):
+    """
+    Delete a file from the output folder.
+
+    Args:
+        filename (str): The name of the file to delete.
+    """
+    os.remove(os.path.join(self.output_folder, filename))</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.flush" class="doc doc-heading">
+<code class="highlight language-python">flush()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Flush the output by copying all files and directories from the output folder to a given S3 bucket and folder.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def flush(self):
+    """
+    Flush the output by copying all files and directories from the output folder to a given S3 bucket and folder.
+    """
+    # Replace 'bucket' and 's3_folder' with your actual bucket and folder
+    self.copy_to_remote()</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.list_files" class="doc doc-heading">
+<code class="highlight language-python">list_files()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List all files in the output folder.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>list</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The list of files in the output folder.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def list_files(self):
+    """
+    List all files in the output folder.
+
+    Returns:
+        list: The list of files in the output folder.
+    """
+    return [
+        os.path.join(self.output_folder, f)
+        for f in os.listdir(self.output_folder)
+        if os.path.isfile(os.path.join(self.output_folder, f))
+    ]</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.read_file" class="doc doc-heading">
+<code class="highlight language-python">read_file(filename)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Read a file from the output folder.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the file to read.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The contents of the file.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def read_file(self, filename: str):
+    """
+    Read a file from the output folder.
+
+    Args:
+        filename (str): The name of the file to read.
+
+    Returns:
+        str: The contents of the file.
+    """
+    with open(os.path.join(self.output_folder, filename), "r") as f:
+        return f.read()</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.batch_output.BatchOutputConfig.save" class="doc doc-heading">
+<code class="highlight language-python">save(data, filename)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Save data to a file in the output folder.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The data to save.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The filename to use when saving the data to a file.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/data/batch_output.py</code></summary>
+            <pre class="highlight"><code class="language-python">def save(self, data: Any, filename: str):
+    """
+    Save data to a file in the output folder.
+
+    Args:
+        data (Any): The data to save.
+        filename (str): The filename to use when saving the data to a file.
+    """
+    try:
+        with open(os.path.join(self.output_folder, filename), "w") as f:
+            f.write(json.dumps(data))
+        log.debug(f"Wrote the data into {self.output_folder}/{filename}.")
+    except Exception as e:
+        log.exception(f"Failed to write data to file: {e}")
+        raise</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

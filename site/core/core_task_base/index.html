@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>base - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_state_redis/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_task_ecs/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.task.base">core.task.base</a></li>
+        
+    
+        <li class="main "><a href="#core.task.base.Task">Task</a></li>
+        
+            <li><a href="#core.task.base.Task.output_config">output_config</a></li>
+        
+            <li><a href="#core.task.base.Task.__init__">__init__()</a></li>
+        
+            <li><a href="#core.task.base.Task.__repr__">__repr__()</a></li>
+        
+            <li><a href="#core.task.base.Task.execute">execute()</a></li>
+        
+            <li><a href="#core.task.base.Task.get_methods">get_methods()</a></li>
+        
+            <li><a href="#core.task.base.Task.print_help">print_help()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.task.base"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.task.base.Task" class="doc doc-heading">
+          <code>Task</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="abc.ABC">ABC</span></code></p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/base.py</code></summary>
+              <pre class="highlight"><code class="language-python">class Task(ABC):
+    input_config: InputConfig
+    output_config: OutputConfig
+
+    """
+    Class for managing tasks.
+
+    Attributes:
+        id (uuid.UUID): Unique identifier for the task.
+        input_config (InputConfig): Configuration for input data.
+        output_config (OutputConfig): Configuration for output data.
+    """
+
+    def __init__(self):
+        """
+        Initialize a new task.
+
+        Args:
+            input_config (InputConfig): Configuration for input data.
+            output_config (OutputConfig): Configuration for output data.
+        """
+        self.id = str(uuid.uuid4())
+
+    def __repr__(self):
+        """
+        Return a string representation of the task.
+
+        Returns:
+            str: A string representation of the task.
+        """
+        return f"Task(id={self.id}, input_config={self.input_config}, output_config={self.output_config})"
+
+    def execute(self, method_name: str, *args, **kwargs) -&gt; Any:
+        """
+        Execute a given fetch_* method if it exists.
+
+        Args:
+            method_name (str): The name of the fetch_* method to execute.
+            *args: Positional arguments to pass to the method.
+            **kwargs: Keyword arguments to pass to the method.
+
+        Returns:
+            Any: The result of the fetch_* method, or None if the method does not exist.
+        """
+        method = getattr(self, method_name, None)
+        if callable(method):
+            return method(*args, **kwargs)
+        else:
+            raise AttributeError(f"'{self.__class__.__name__}' object has no attribute '{method_name}'")
+
+    @staticmethod
+    def get_methods(cls) -&gt; List[Tuple[str, List[str], Optional[str]]]:
+        """
+        Get all the fetch_* methods and their parameters along with their default values and docstrings.
+
+        Returns:
+            List[Tuple[str, List[str], str]]: A list of tuples, where each tuple contains the name of a fetch_* method,
+            a list of its parameters along with their default values, and its docstring.
+        """
+        fetch_methods = []
+        for name, method in inspect.getmembers(cls, predicate=inspect.isfunction):
+            if name.startswith("fetch_"):
+                params = inspect.signature(method).parameters
+                params_str = [
+                    f"{name}={param.default if param.default is not param.empty else ''}"
+                    for name, param in params.items()
+                ]
+                docstring = inspect.getdoc(method)
+                fetch_methods.append((name, params_str, docstring))
+        return fetch_methods
+
+    @staticmethod
+    def print_help(cls):
+        """
+        Pretty print the fetch_* methods and their parameters along with their default values and docstrings.
+        Also prints the class's docstring and __init__ parameters.
+        """
+        # Print class docstring
+        print(cls.__name__, colored(inspect.getdoc(cls) if inspect.getdoc(cls) else "", "green"))
+
+        # Print fetch_* methods
+        fetch_methods = cls.get_methods(cls)
+        if fetch_methods:
+            table = PrettyTable(align="l")
+            table.field_names = [
+                colored("Method", "cyan"),
+                colored("Parameters", "cyan"),
+                colored("Description", "cyan"),
+            ]
+            for name, params, docstring in fetch_methods:
+                parameters = [_p.replace("=", "") for _p in params if "self" not in _p]
+                table.add_row([colored(name, "yellow"), "\n".join(parameters), docstring], divider=True)
+            print(table)
+        else:
+            print(colored("No fetch_* methods found.", "red"))</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="core.task.base.Task.output_config" class="doc doc-heading">
+<code class="highlight language-python">output_config: OutputConfig</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Class for managing tasks.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+                <code>uuid.<span title="uuid.UUID">UUID</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Unique identifier for the task.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>input_config</code></td>
+          <td>
+                <code><span title="geniusrise.core.data.InputConfig">InputConfig</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Configuration for input data.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output_config</code></td>
+          <td>
+                <code><span title="geniusrise.core.data.OutputConfig">OutputConfig</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Configuration for output data.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.base.Task.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize a new task.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_config</code></td>
+          <td>
+                <code><span title="geniusrise.core.data.InputConfig">InputConfig</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Configuration for input data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output_config</code></td>
+          <td>
+                <code><span title="geniusrise.core.data.OutputConfig">OutputConfig</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Configuration for output data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/base.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self):
+    """
+    Initialize a new task.
+
+    Args:
+        input_config (InputConfig): Configuration for input data.
+        output_config (OutputConfig): Configuration for output data.
+    """
+    self.id = str(uuid.uuid4())</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.base.Task.__repr__" class="doc doc-heading">
+<code class="highlight language-python">__repr__()</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a string representation of the task.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A string representation of the task.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/base.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __repr__(self):
+    """
+    Return a string representation of the task.
+
+    Returns:
+        str: A string representation of the task.
+    """
+    return f"Task(id={self.id}, input_config={self.input_config}, output_config={self.output_config})"</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.base.Task.execute" class="doc doc-heading">
+<code class="highlight language-python">execute(method_name, *args, **kwargs)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Execute a given fetch_* method if it exists.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>method_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the fetch_* method to execute.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>*args</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Positional arguments to pass to the method.</p>
+            </div>
+          </td>
+          <td>
+                <code>()</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Keyword arguments to pass to the method.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Any</code></td>          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The result of the fetch_* method, or None if the method does not exist.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/base.py</code></summary>
+            <pre class="highlight"><code class="language-python">def execute(self, method_name: str, *args, **kwargs) -&gt; Any:
+    """
+    Execute a given fetch_* method if it exists.
+
+    Args:
+        method_name (str): The name of the fetch_* method to execute.
+        *args: Positional arguments to pass to the method.
+        **kwargs: Keyword arguments to pass to the method.
+
+    Returns:
+        Any: The result of the fetch_* method, or None if the method does not exist.
+    """
+    method = getattr(self, method_name, None)
+    if callable(method):
+        return method(*args, **kwargs)
+    else:
+        raise AttributeError(f"'{self.__class__.__name__}' object has no attribute '{method_name}'")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.base.Task.get_methods" class="doc doc-heading">
+<code class="highlight language-python">get_methods()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all the fetch_* methods and their parameters along with their default values and docstrings.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span>[<span title="typing.Tuple">Tuple</span>[str, <span title="typing.List">List</span>[str], <span title="typing.Optional">Optional</span>[str]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>List[Tuple[str, List[str], str]]: A list of tuples, where each tuple contains the name of a fetch_* method,</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span>[<span title="typing.Tuple">Tuple</span>[str, <span title="typing.List">List</span>[str], <span title="typing.Optional">Optional</span>[str]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>a list of its parameters along with their default values, and its docstring.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/base.py</code></summary>
+            <pre class="highlight"><code class="language-python">@staticmethod
+def get_methods(cls) -&gt; List[Tuple[str, List[str], Optional[str]]]:
+    """
+    Get all the fetch_* methods and their parameters along with their default values and docstrings.
+
+    Returns:
+        List[Tuple[str, List[str], str]]: A list of tuples, where each tuple contains the name of a fetch_* method,
+        a list of its parameters along with their default values, and its docstring.
+    """
+    fetch_methods = []
+    for name, method in inspect.getmembers(cls, predicate=inspect.isfunction):
+        if name.startswith("fetch_"):
+            params = inspect.signature(method).parameters
+            params_str = [
+                f"{name}={param.default if param.default is not param.empty else ''}"
+                for name, param in params.items()
+            ]
+            docstring = inspect.getdoc(method)
+            fetch_methods.append((name, params_str, docstring))
+    return fetch_methods</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.task.base.Task.print_help" class="doc doc-heading">
+<code class="highlight language-python">print_help()</code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Pretty print the fetch_* methods and their parameters along with their default values and docstrings.
+Also prints the class's docstring and <strong>init</strong> parameters.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/task/base.py</code></summary>
+            <pre class="highlight"><code class="language-python">@staticmethod
+def print_help(cls):
+    """
+    Pretty print the fetch_* methods and their parameters along with their default values and docstrings.
+    Also prints the class's docstring and __init__ parameters.
+    """
+    # Print class docstring
+    print(cls.__name__, colored(inspect.getdoc(cls) if inspect.getdoc(cls) else "", "green"))
+
+    # Print fetch_* methods
+    fetch_methods = cls.get_methods(cls)
+    if fetch_methods:
+        table = PrettyTable(align="l")
+        table.field_names = [
+            colored("Method", "cyan"),
+            colored("Parameters", "cyan"),
+            colored("Description", "cyan"),
+        ]
+        for name, params, docstring in fetch_methods:
+            parameters = [_p.replace("=", "") for _p in params if "self" not in _p]
+            table.add_row([colored(name, "yellow"), "\n".join(parameters), docstring], divider=True)
+        print(table)
+    else:
+        print(colored("No fetch_* methods found.", "red"))</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>

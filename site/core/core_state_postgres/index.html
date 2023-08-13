@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>postgres - Geniusrise Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Geniusrise Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../..">cli</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="../..">core</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="next" href="../core_state_memory/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../core_state_redis/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+      
+    
+        <li class="main active"><a href="#core.state.postgres">core.state.postgres</a></li>
+        
+    
+        <li class="main "><a href="#core.state.postgres.PostgresStateManager">PostgresStateManager</a></li>
+        
+            <li><a href="#core.state.postgres.PostgresStateManager.__init__">__init__()</a></li>
+        
+            <li><a href="#core.state.postgres.PostgresStateManager.get_state">get_state()</a></li>
+        
+            <li><a href="#core.state.postgres.PostgresStateManager.set_state">set_state()</a></li>
+        
+    
+    
+    </ul>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.state.postgres"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="core.state.postgres.PostgresStateManager" class="doc doc-heading">
+          <code>PostgresStateManager</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="geniusrise.core.state.StateManager">StateManager</span></code></p>
+
+  
+      <p>A state manager that stores state in a PostgreSQL database.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>conn</code></td>
+          <td>
+                <code>psycopg2.<span title="psycopg2.extensions">extensions</span>.<span title="psycopg2.extensions.connection">connection</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The PostgreSQL connection.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/state/postgres.py</code></summary>
+              <pre class="highlight"><code class="language-python">class PostgresStateManager(StateManager):
+    """
+    A state manager that stores state in a PostgreSQL database.
+
+    Attributes:
+        conn (psycopg2.extensions.connection): The PostgreSQL connection.
+    """
+
+    def __init__(self, host: str, port: int, user: str, password: str, database: str, table: str = "geniusrise_state"):
+        """
+        Initialize a new PostgreSQL state manager.
+
+        Args:
+            host (str): The host of the PostgreSQL server.
+            port (int): The port of the PostgreSQL server.
+            user (str): The user to connect as.
+            password (str): The user's password.
+            database (str): The database to connect to.
+        """
+        super().__init__()
+        self.table = table
+        try:
+            self.conn = psycopg2.connect(host=host, port=port, user=user, password=password, database=database)
+        except psycopg2.Error as e:
+            log.exception(f"Failed to connect to PostgreSQL: {e}")
+            raise
+            self.conn = None
+
+    def get_state(self, key: str) -&gt; Optional[Dict]:
+        """
+        Get the state associated with a key.
+
+        Args:
+            key (str): The key to get the state for.
+
+        Returns:
+            Dict: The state associated with the key.
+        """
+        if self.conn:
+            try:
+                with self.conn.cursor() as cur:
+                    cur.execute(f"SELECT value FROM {self.table} WHERE key = '{key}'")
+                    result = cur.fetchone()
+                    return jsonpickle.decode(result[0]["data"]) if result else None
+            except psycopg2.Error as e:
+                log.exception(f"Failed to get state from PostgreSQL: {e}")
+                raise
+                return None
+        else:
+            log.exception("No PostgreSQL connection.")
+            raise
+            return None
+
+    def set_state(self, key: str, value: Dict) -&gt; None:
+        """
+        Set the state associated with a key.
+
+        Args:
+            key (str): The key to set the state for.
+            value (Dict): The state to set.
+        """
+        if self.conn:
+            try:
+                with self.conn.cursor() as cur:
+                    data = {"data": jsonpickle.encode(value)}
+                    cur.execute(
+                        f"""
+                        INSERT INTO {self.table} (key, value)
+                        VALUES (%s, %s)
+                        ON CONFLICT (key)
+                        DO UPDATE SET value = EXCLUDED.value;
+                        """,
+                        (key, json.dumps(data)),
+                    )
+                self.conn.commit()
+            except psycopg2.Error as e:
+                log.exception(f"Failed to set state in PostgreSQL: {e}")
+                raise
+        else:
+            log.error("No PostgreSQL connection.")</code></pre>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.state.postgres.PostgresStateManager.__init__" class="doc doc-heading">
+<code class="highlight language-python">__init__(host, port, user, password, database, table='geniusrise_state')</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize a new PostgreSQL state manager.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>host</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The host of the PostgreSQL server.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>port</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The port of the PostgreSQL server.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>user</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The user to connect as.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>password</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The user's password.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>database</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The database to connect to.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/state/postgres.py</code></summary>
+            <pre class="highlight"><code class="language-python">def __init__(self, host: str, port: int, user: str, password: str, database: str, table: str = "geniusrise_state"):
+    """
+    Initialize a new PostgreSQL state manager.
+
+    Args:
+        host (str): The host of the PostgreSQL server.
+        port (int): The port of the PostgreSQL server.
+        user (str): The user to connect as.
+        password (str): The user's password.
+        database (str): The database to connect to.
+    """
+    super().__init__()
+    self.table = table
+    try:
+        self.conn = psycopg2.connect(host=host, port=port, user=user, password=password, database=database)
+    except psycopg2.Error as e:
+        log.exception(f"Failed to connect to PostgreSQL: {e}")
+        raise
+        self.conn = None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.state.postgres.PostgresStateManager.get_state" class="doc doc-heading">
+<code class="highlight language-python">get_state(key)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the state associated with a key.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>key</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The key to get the state for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Dict</code></td>          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The state associated with the key.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/state/postgres.py</code></summary>
+            <pre class="highlight"><code class="language-python">def get_state(self, key: str) -&gt; Optional[Dict]:
+    """
+    Get the state associated with a key.
+
+    Args:
+        key (str): The key to get the state for.
+
+    Returns:
+        Dict: The state associated with the key.
+    """
+    if self.conn:
+        try:
+            with self.conn.cursor() as cur:
+                cur.execute(f"SELECT value FROM {self.table} WHERE key = '{key}'")
+                result = cur.fetchone()
+                return jsonpickle.decode(result[0]["data"]) if result else None
+        except psycopg2.Error as e:
+            log.exception(f"Failed to get state from PostgreSQL: {e}")
+            raise
+            return None
+    else:
+        log.exception("No PostgreSQL connection.")
+        raise
+        return None</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.state.postgres.PostgresStateManager.set_state" class="doc doc-heading">
+<code class="highlight language-python">set_state(key, value)</code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set the state associated with a key.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>key</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The key to set the state for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>value</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The state to set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>/run/media/ixaxaar/src/code/src/geniusrise/geniusrise/geniusrise/core/state/postgres.py</code></summary>
+            <pre class="highlight"><code class="language-python">def set_state(self, key: str, value: Dict) -&gt; None:
+    """
+    Set the state associated with a key.
+
+    Args:
+        key (str): The key to set the state for.
+        value (Dict): The state to set.
+    """
+    if self.conn:
+        try:
+            with self.conn.cursor() as cur:
+                data = {"data": jsonpickle.encode(value)}
+                cur.execute(
+                    f"""
+                    INSERT INTO {self.table} (key, value)
+                    VALUES (%s, %s)
+                    ON CONFLICT (key)
+                    DO UPDATE SET value = EXCLUDED.value;
+                    """,
+                    (key, json.dumps(data)),
+                )
+            self.conn.commit()
+        except psycopg2.Error as e:
+            log.exception(f"Failed to set state in PostgreSQL: {e}")
+            raise
+    else:
+        log.error("No PostgreSQL connection.")</code></pre>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div></div>
+                </div>
+        </div>
+
+    <hr>
+    <footer class="container">
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="http://kristopolous.github.io/BOOTSTRA.386">BOOTSTRA.386</a>.</center>
+    </footer>
+        <script src="../../../../search/main.js"></script>
+    </body>
+</html>
