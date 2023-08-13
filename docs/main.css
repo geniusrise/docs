@@ -74,7 +74,7 @@
   font-weight: bold;
   text-decoration: underline;
 
-  background: linear-gradient(to right,
+  background: linear-gradient(90deg,
         #e4e48c 80%,
         #96ee96 80% 85%,
         #8adcff 85% 90%,
