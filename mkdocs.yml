@@ -1,8 +1,8 @@
 site_name: Geniusrise
 nav:
   - Home: index.md
-  - Getting started: index.md
   - Concepts: index.md
+  - Getting started: guides/installation.md
   - Design and Architecture: index.md
   - Development:
     - Local experimentation: index.md
