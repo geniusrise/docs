@@ -1,4 +1,4 @@
-![banner](./assets/sc2.jpg)
+![banner](./assets/sc1.jpg)
 # Geniusrise Documentation
 
 ## About

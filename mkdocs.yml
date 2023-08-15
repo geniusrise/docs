@@ -1,4 +1,7 @@
 site_name: Geniusrise
+site_url: docs.geniusrise.ai
+site_author: ixaxaar
+
 nav:
   - Home: index.md
   - Concepts: guides/concepts.md
