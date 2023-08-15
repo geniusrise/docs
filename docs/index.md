@@ -5,8 +5,7 @@
 
 ---
 
-Geniusrise is a computation framework is designed to support both batch and
-streaming data processing asynchronous Directed Acyclic Graphs (DAGs).
+Geniusrise is a modular, loosely-coupled MLOps framework designed for the era of Large Language Models, offering flexibility, inclusivity, and standardization. It seamlessly integrates tasks, state management, data handling, and model versioning, all while supporting diverse infrastructures and user expertise levels. With its plug-and-play architecture, Geniusrise empowers teams to build, share, and deploy ML workflows across various platforms efficiently.
 
 ## Guides
 
