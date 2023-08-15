@@ -19,6 +19,10 @@
   color: rgb(18, 1, 11);
 }
 
+strong {
+  color: #df2572;
+}
+
 .md-nav--primary .md-nav__title {
   background: #f34960;
   padding-left: 10px;
