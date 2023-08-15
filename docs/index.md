@@ -15,9 +15,9 @@ streaming data processing asynchronous Directed Acyclic Graphs (DAGs).
 ### Getting started
 
 1. [Home](guides/index.md): Front page
-- [Concepts](guides/cnocepts.md): Concepts of the framework
-- [Installation](guides/installation.md): Start here, installation and setup
-- [Design and Architecture](guides/index.md): Design and architecture of the framework
+- [Concepts](guides/concepts.md): Concepts of the framework, start here
+- [Architecture](guides/architecture.md): Design and architecture of the framework
+- [Installation](guides/installation.md): Installation and setup
 
 ### Development
 
