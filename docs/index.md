@@ -20,7 +20,7 @@ Geniusrise is a modular, loosely-coupled MLOps framework designed for the era of
 
 ### Development
 
-1. [Local experimentation](guides/index.md): Local experimentation workflow
+1. [Local experimentation](guides/local.md): Local setup and project creation.
 - [Packaging](guides/index.md): Packaging your application
 - [Staged deployment](guides/index.md): Deploying parts or whole of your application
 - [Workflow ops](guides/index.md): Operations and management of workflows

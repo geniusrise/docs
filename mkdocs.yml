@@ -8,7 +8,7 @@ nav:
   - Architecture: guides/architecture.md
   - Installation: guides/installation.md
   - Development:
-    - Local experimentation: index.md
+    - Local setup: guides/local.md
     - Packaging: index.md
     - Staged deployment: index.md
     - Workflow ops: index.md
@@ -71,11 +71,19 @@ theme:
     - navigation.sections
     - navigation.expand
     - header.autohide
+    - content.code.copy
+    - content.code.select
 
 markdown_extensions:
   - toc:
       permalink: true
-
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 plugins:
   - search

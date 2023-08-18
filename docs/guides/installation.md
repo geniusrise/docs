@@ -3,7 +3,9 @@
 Geniusrise is composed of the core framework and various plugins that implement specific tasks.
 The core has to be installed first, and after that selected plugins can be installed as and when required.
 
-## Installing Geniusrise Core Framework
+## Installing Geniusrise
+
+---
 
 ### Using pip
 
@@ -34,7 +36,55 @@ which geniusrise
 geniusrise --help
 ```
 
-## Installing Geniusrise Plugins
+### Using package managers
+
+Geniusrise is also available as native packages for some Linux distributions.
+
+#### AUR
+
+Geniusrise is available on the AUR for arch and derived distros.
+
+```bash
+yay -S geniusrise
+```
+
+or directly from git master:
+
+```bash
+yay -S geniusrise-git
+```
+
+#### PPA
+
+Geniusrise is also available on the PPA for debian-based distros.
+
+```bash
+sudo add-apt-repository ppa:ixaxaar/geniusrise
+sudo apt-get update
+sudo apt-get install -y geniusrise
+```
+
+#### Brew (cask)
+
+```bash
+brew cask install geniusrise
+```
+
+#### Docker
+
+Geniusrise containers are available on Docker hub.
+
+```bash
+docker run -it --rm geniusrise/geniusrise:latest
+```
+
+#### Nix
+
+Coming soon 😢
+
+## Installing Plugins
+
+---
 
 Geniusrise offers a variety of plugins that act as composable lego blocks. To install a specific plugin, use the following format:
 
@@ -44,7 +94,9 @@ pip install geniusrise[plugin-name]
 
 Replace `plugin-name` with the name of the desired plugin.
 
-## Alternative Installation Methods
+## Alternative Methods
+
+---
 
 ### Using Conda
 
@@ -82,6 +134,8 @@ poetry add geniusrise[plugin-name]
 ```
 
 ## Development
+
+---
 
 For development, you may want to install from the repo:
 
