@@ -86,56 +86,34 @@ strong {
         #e667aa 95% 100%);
 }
 
-.plaid-gradient {
-  background: repeating-linear-gradient(90deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(0deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 5px,
-      rgba(143, 77, 63, 0.25) 5px,
-      rgba(143, 77, 63, 0.25) 10px), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143,
-        77,
-        63,
-        0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+/* Code */
+:root > * {
+  /* Foreground, background, and line highlight colors */
+  --md-code-fg-color: #e6eb9f;
+  /* Foreground color */
+  --md-code-bg-color: #131010;
+  /* Background color */
+  --md-code-hl-color: #e4e48c;
+  /* Line highlight color */
 
-  background: repeating-linear-gradient(90deg,
-      transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
-      transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
-      transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px), repeating-linear-gradient(0deg,
-      transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
-      transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
-      transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px), repeating-linear-gradient(-45deg,
-      transparent 0 5px,
-      rgba(143, 77, 63, 0.25) 5px 10px), repeating-linear-gradient(45deg, transparent 0 5px, rgba(143,
-        77,
-        63,
-        0.25) 5px 10px);
+  /* Syntax highlighting colors */
+  --md-code-hl-number-color: #7d51c4;
+  --md-code-hl-special-color: #d848ad;
+  --md-code-hl-function-color: #fd4f78;
+  --md-code-hl-constant-color: #f5b43b;
+  --md-code-hl-keyword-color: #f34960;
+  --md-code-hl-string-color: #e7b67e;
+  --md-code-hl-name-color: #96ee96;
+  --md-code-hl-operator-color: #8adcff;
+  --md-code-hl-punctuation-color: #9595e9;
+  --md-code-hl-comment-color: #e667aa;
+  --md-code-hl-generic-color: #df2572;
+  --md-code-hl-variable-color: #f34960;
+}
+
+pre code {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  border-radius: 10px !important;
+  /* border-bottom: solid 8px #df2572; */
+  padding: 1rem !important;
 }
