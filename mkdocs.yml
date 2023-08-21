@@ -9,6 +9,7 @@ nav:
   - Installation: guides/installation.md
   - Development:
     - Local setup: guides/local.md
+    - Dev Cycle: guides/dev_cycle.md
     - Packaging: index.md
     - Staged deployment: index.md
     - Workflow ops: index.md

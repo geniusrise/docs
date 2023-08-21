@@ -317,6 +317,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/dev_cycle/" class="md-nav__link">
+        Dev Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
         Packaging
       </a>
@@ -997,22 +1011,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core.state.base.StateManager" class="md-nav__link">
-    StateManager
+  <a href="#core.state.base.State" class="md-nav__link">
+    State
   </a>
   
-    <nav class="md-nav" aria-label="StateManager">
+    <nav class="md-nav" aria-label="State">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#core.state.base.StateManager.get_state" class="md-nav__link">
+  <a href="#core.state.base.State.get_state" class="md-nav__link">
     get_state()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.base.StateManager.set_state" class="md-nav__link">
+  <a href="#core.state.base.State.set_state" class="md-nav__link">
     set_state()
   </a>
   
@@ -1220,22 +1234,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core.state.base.StateManager" class="md-nav__link">
-    StateManager
+  <a href="#core.state.base.State" class="md-nav__link">
+    State
   </a>
   
-    <nav class="md-nav" aria-label="StateManager">
+    <nav class="md-nav" aria-label="State">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#core.state.base.StateManager.get_state" class="md-nav__link">
+  <a href="#core.state.base.State.get_state" class="md-nav__link">
     get_state()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.base.StateManager.set_state" class="md-nav__link">
+  <a href="#core.state.base.State.set_state" class="md-nav__link">
     set_state()
   </a>
   
@@ -1286,11 +1300,11 @@
 
 
 
-<h2 id="core.state.base.StateManager" class="doc doc-heading">
-          <code>StateManager</code>
+<h2 id="core.state.base.State" class="doc doc-heading">
+          <code>State</code>
 
 
-<a href="#core.state.base.StateManager" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#core.state.base.State" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1332,7 +1346,7 @@
 <span class="normal"><a href="#__codelineno-0-47">47</a></span>
 <span class="normal"><a href="#__codelineno-0-48">48</a></span>
 <span class="normal"><a href="#__codelineno-0-49">49</a></span>
-<span class="normal"><a href="#__codelineno-0-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="k">class</span> <span class="nc">StateManager</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="sd">    Abstract base class for a state manager.</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>
@@ -1382,14 +1396,14 @@
 
 
 
-<h3 id="core.state.base.StateManager.get_state" class="doc doc-heading">
+<h3 id="core.state.base.State.get_state" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">get_state</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
 
-<a href="#core.state.base.StateManager.get_state" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#core.state.base.State.get_state" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1486,14 +1500,14 @@
 
 
 
-<h3 id="core.state.base.StateManager.set_state" class="doc doc-heading">
+<h3 id="core.state.base.State.set_state" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">set_state</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
 
-<a href="#core.state.base.StateManager.set_state" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#core.state.base.State.set_state" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">

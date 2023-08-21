@@ -317,6 +317,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/dev_cycle/" class="md-nav__link">
+        Dev Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
         Packaging
       </a>
@@ -1025,43 +1039,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager" class="md-nav__link">
-    InMemoryStateManager
+  <a href="#core.state.memory.InMemoryState" class="md-nav__link">
+    InMemoryState
   </a>
   
-    <nav class="md-nav" aria-label="InMemoryStateManager">
+    <nav class="md-nav" aria-label="InMemoryState">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager--attributes" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState--attributes" class="md-nav__link">
     Attributes:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager--usage" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState--usage" class="md-nav__link">
     Usage:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager.__init__" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState.__init__" class="md-nav__link">
     __init__()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager.get_state" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState.get_state" class="md-nav__link">
     get_state()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager.set_state" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState.set_state" class="md-nav__link">
     set_state()
   </a>
   
@@ -1241,43 +1255,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager" class="md-nav__link">
-    InMemoryStateManager
+  <a href="#core.state.memory.InMemoryState" class="md-nav__link">
+    InMemoryState
   </a>
   
-    <nav class="md-nav" aria-label="InMemoryStateManager">
+    <nav class="md-nav" aria-label="InMemoryState">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager--attributes" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState--attributes" class="md-nav__link">
     Attributes:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager--usage" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState--usage" class="md-nav__link">
     Usage:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager.__init__" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState.__init__" class="md-nav__link">
     __init__()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager.get_state" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState.get_state" class="md-nav__link">
     get_state()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#core.state.memory.InMemoryStateManager.set_state" class="md-nav__link">
+  <a href="#core.state.memory.InMemoryState.set_state" class="md-nav__link">
     set_state()
   </a>
   
@@ -1328,26 +1342,26 @@
 
 
 
-<h2 id="core.state.memory.InMemoryStateManager" class="doc doc-heading">
-          <code>InMemoryStateManager</code>
+<h2 id="core.state.memory.InMemoryState" class="doc doc-heading">
+          <code>InMemoryState</code>
 
 
-<a href="#core.state.memory.InMemoryStateManager" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#core.state.memory.InMemoryState" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
           <p class="doc doc-class-bases">
-            Bases: <code><span title="geniusrise.core.state.StateManager">StateManager</span></code></p>
+            Bases: <code><span title="geniusrise.core.state.State">State</span></code></p>
 
   
-      <p>🧠 <strong>InMemoryStateManager</strong>: A state manager that stores state in memory.</p>
+      <p>🧠 <strong>InMemoryState</strong>: A state manager that stores state in memory.</p>
 <p>This manager is useful for temporary storage or testing purposes. Since it's in-memory, the data will be lost once the application stops.</p>
-<h4 id="core.state.memory.InMemoryStateManager--attributes">Attributes:<a class="headerlink" href="#core.state.memory.InMemoryStateManager--attributes" title="Permanent link">&para;</a></h4>
+<h4 id="core.state.memory.InMemoryState--attributes">Attributes:<a class="headerlink" href="#core.state.memory.InMemoryState--attributes" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>store</code> (Dict[str, Dict]): The in-memory store for states.</li>
 </ul>
-<h4 id="core.state.memory.InMemoryStateManager--usage">Usage:<a class="headerlink" href="#core.state.memory.InMemoryStateManager--usage" title="Permanent link">&para;</a></h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">manager</span> <span class="o">=</span> <span class="n">InMemoryStateManager</span><span class="p">()</span>
+<h4 id="core.state.memory.InMemoryState--usage">Usage:<a class="headerlink" href="#core.state.memory.InMemoryState--usage" title="Permanent link">&para;</a></h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">manager</span> <span class="o">=</span> <span class="n">InMemoryState</span><span class="p">()</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">manager</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="s2">&quot;user123&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;active&quot;</span><span class="p">})</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">state</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">get_state</span><span class="p">(</span><span class="s2">&quot;user123&quot;</span><span class="p">)</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>  <span class="c1"># Outputs: {&quot;status&quot;: &quot;active&quot;}</span>
@@ -1418,9 +1432,9 @@
 <span class="normal"><a href="#__codelineno-0-81">81</a></span>
 <span class="normal"><a href="#__codelineno-0-82">82</a></span>
 <span class="normal"><a href="#__codelineno-0-83">83</a></span>
-<span class="normal"><a href="#__codelineno-0-84">84</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="k">class</span> <span class="nc">InMemoryStateManager</span><span class="p">(</span><span class="n">StateManager</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-84">84</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="k">class</span> <span class="nc">InMemoryState</span><span class="p">(</span><span class="n">State</span><span class="p">):</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="sd">    🧠 **InMemoryStateManager**: A state manager that stores state in memory.</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="sd">    🧠 **InMemoryState**: A state manager that stores state in memory.</span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>
 </span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="sd">    This manager is useful for temporary storage or testing purposes. Since it&#39;s in-memory, the data will be lost once the application stops.</span>
 </span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>
@@ -1429,7 +1443,7 @@
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>
 </span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="sd">    ## Usage:</span>
 </span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="sd">    ```python</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">    manager = InMemoryStateManager()</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">    manager = InMemoryState()</span>
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">    manager.set_state(&quot;user123&quot;, {&quot;status&quot;: &quot;active&quot;})</span>
 </span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="sd">    state = manager.get_state(&quot;user123&quot;)</span>
 </span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">    print(state)  # Outputs: {&quot;status&quot;: &quot;active&quot;}</span>
@@ -1500,10 +1514,10 @@
 
 
 
-<h3 id="core.state.memory.InMemoryStateManager.__init__" class="doc doc-heading">
+<h3 id="core.state.memory.InMemoryState.__init__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
 
-<a href="#core.state.memory.InMemoryStateManager.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#core.state.memory.InMemoryState.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1534,10 +1548,10 @@
 
 
 
-<h3 id="core.state.memory.InMemoryStateManager.get_state" class="doc doc-heading">
+<h3 id="core.state.memory.InMemoryState.get_state" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">get_state</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
-<a href="#core.state.memory.InMemoryStateManager.get_state" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#core.state.memory.InMemoryState.get_state" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
@@ -1642,10 +1656,10 @@
 
 
 
-<h3 id="core.state.memory.InMemoryStateManager.set_state" class="doc doc-heading">
+<h3 id="core.state.memory.InMemoryState.set_state" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">set_state</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
 
-<a href="#core.state.memory.InMemoryStateManager.set_state" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#core.state.memory.InMemoryState.set_state" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
