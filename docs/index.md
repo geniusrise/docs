@@ -58,6 +58,30 @@ Geniusrise is a modular, loosely-coupled MLOps framework designed for the era of
 
 ---
 
+## Spouts reference
+
+### Streaming
+
+1. [Http Polling](spouts/http_polling.md): Spout for Http Polling.
+- [Socket.io](spouts/socket.io.md): Spout for Socket.io.
+- [gRPC](spouts/grpc.md): Spout for gRPC.
+- [QUIC](spouts/quic.md): Spout for QUIC.
+- [UDP](spouts/udp.md): Spout for UDP.
+- [Webhook](spouts/webhook.md): Spout for Webhook.
+- [Websocket](spouts/websocket.md): Spout for Websocket.
+- [SNS](spouts/sns.md): Spout for SNS.
+- [SQS](spouts/sqs.md): Spout for SQS.
+- [AMQP](spouts/amqp.md): Spout for AMQP.
+- [Kafka](spouts/kafka.md): Spout for Kafka.
+- [Kinesis Streams](spouts/kinesis.md): Spout for Kinesis Streams.
+- [MQTT](spouts/mqtt.md): Spout for MQTT.
+- [ActiveMQ](spouts/activemq.md): Spout for ActiveMQ.
+- [ZeroMQ](spouts/zeromq.md): Spout for ZeroMQ.
+- [Redis Pubsub](spouts/redis_pubsub.md): Spout for Redis Pubsub.
+- [Redis Streams](spouts/redis_streams.md): Spout for Redis Streams.
+
+---
+
 ## Library Reference
 
 - geniusrise.cli:
@@ -89,24 +113,3 @@ Geniusrise is a modular, loosely-coupled MLOps framework designed for the era of
         - [ecs](core/core_task_ecs.md): Runner class using AWS ECS
         - [k8s](core/core_task_k8s.md): Runner class using kubernetes
 
-## Spouts reference
-
-### Streaming
-
-- [Http Polling](spouts/http_polling.md): Spout for Http Polling.
-- [Socket.io](spouts/socket.io.md): Spout for Socket.io.
-- [gRPC](spouts/grpc.md): Spout for gRPC.
-- [QUIC](spouts/quic.md): Spout for QUIC.
-- [UDP](spouts/udp.md): Spout for UDP.
-- [Webhook](spouts/webhook.md): Spout for Webhook.
-- [Websocket](spouts/websocket.md): Spout for Websocket.
-- [SNS](spouts/sns.md): Spout for SNS.
-- [SQS](spouts/sqs.md): Spout for SQS.
-- [AMQP](spouts/amqp.md): Spout for AMQP.
-- [Kafka](spouts/kafka.md): Spout for Kafka.
-- [Kinesis Streams](spouts/kinesis.md): Spout for Kinesis Streams.
-- [MQTT](spouts/mqtt.md): Spout for MQTT.
-- [ActiveMQ](spouts/activemq.md): Spout for ActiveMQ.
-- [ZeroMQ](spouts/zeromq.md): Spout for ZeroMQ.
-- [Redis Pubsub](spouts/redis_pubsub.md): Spout for Redis Pubsub.
-- [Redis Streams](spouts/redis_streams.md): Spout for Redis Streams.

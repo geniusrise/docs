@@ -10,22 +10,41 @@ nav:
   - Development:
       - Local setup: guides/local.md
       - Dev Cycle: guides/dev_cycle.md
-      - Packaging: index.md
-      - Staged deployment: index.md
-      - Workflow ops: index.md
-      - Data ops: index.md
-      - Model ops: index.md
+      - Packaging: guides/404.md
+      - Staged deployment: guides/404.md
+      - Workflow ops: guides/404.md
+      - Data ops: guides/404.md
+      - Model ops: guides/404.md
   - Deployment:
-      - Kubernetes: index.md
-      - Apache Airflow: index.md
-      - Apache Spark: index.md
-      - Apache Flink: index.md
-      - Apache Beam: index.md
-      - Apache Storm: index.md
+      - Kubernetes: guides/404.md
+      - Apache Airflow: guides/404.md
+      - Apache Spark: guides/404.md
+      - Apache Flink: guides/404.md
+      - Apache Beam: guides/404.md
+      - Apache Storm: guides/404.md
       - AWS ECS: index.md
-      - AWS Batch: index.md
+      - AWS Batch: guides/404.md
   - Reference:
-      - YAML structure: index.md
+      - YAML structure: guides/404.md
+  - Spouts:
+      - streaming:
+          - Http Polling: spouts/http_polling.md
+          - Socket.io: spouts/socket.io.md
+          - gRPC: spouts/grpc.md
+          - QUIC: spouts/quic.md
+          - UDP: spouts/udp.md
+          - Webhook: spouts/webhook.md
+          - Websocket: spouts/websocket.md
+          - SNS: spouts/sns.md
+          - SQS: spouts/sqs.md
+          - AMQP: spouts/amqp.md
+          - Kafka: spouts/kafka.md
+          - Kinesis Streams: spouts/kinesis.md
+          - MQTT: spouts/mqtt.md
+          - ActiveMQ: spouts/activemq.md
+          - ZeroMQ: spouts/zeromq.md
+          - Redis Pubsub: spouts/redis_pubsub.md
+          - Redis Streams: spouts/redis_streams.md
   - Core Reference:
       - cli:
           - boltctl: core/cli_boltctl.md
@@ -54,25 +73,6 @@ nav:
               - base: core/core_task_base.md
               - ecs: core/core_task_ecs.md
               - k8s: core/core_task_k8s.md
-  - Spouts:
-      - streaming:
-          - Http Polling: spouts/http_polling.md
-          - Socket.io: spouts/socket.io.md
-          - gRPC: spouts/grpc.md
-          - QUIC: spouts/quic.md
-          - UDP: spouts/udp.md
-          - Webhook: spouts/webhook.md
-          - Websocket: spouts/websocket.md
-          - SNS: spouts/sns.md
-          - SQS: spouts/sqs.md
-          - AMQP: spouts/amqp.md
-          - Kafka: spouts/kafka.md
-          - Kinesis Streams: spouts/kinesis.md
-          - MQTT: spouts/mqtt.md
-          - ActiveMQ: spouts/activemq.md
-          - ZeroMQ: spouts/zeromq.md
-          - Redis Pubsub: spouts/redis_pubsub.md
-          - Redis Streams: spouts/redis_streams.md
 
 theme:
   name: material
