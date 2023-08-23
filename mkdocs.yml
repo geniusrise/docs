@@ -8,52 +8,71 @@ nav:
   - Architecture: guides/architecture.md
   - Installation: guides/installation.md
   - Development:
-    - Local setup: guides/local.md
-    - Dev Cycle: guides/dev_cycle.md
-    - Packaging: index.md
-    - Staged deployment: index.md
-    - Workflow ops: index.md
-    - Data ops: index.md
-    - Model ops: index.md
+      - Local setup: guides/local.md
+      - Dev Cycle: guides/dev_cycle.md
+      - Packaging: index.md
+      - Staged deployment: index.md
+      - Workflow ops: index.md
+      - Data ops: index.md
+      - Model ops: index.md
   - Deployment:
-    - Kubernetes: index.md
-    - Apache Airflow: index.md
-    - Apache Spark: index.md
-    - Apache Flink: index.md
-    - Apache Beam: index.md
-    - Apache Storm: index.md
-    - AWS ECS: index.md
-    - AWS Batch: index.md
+      - Kubernetes: index.md
+      - Apache Airflow: index.md
+      - Apache Spark: index.md
+      - Apache Flink: index.md
+      - Apache Beam: index.md
+      - Apache Storm: index.md
+      - AWS ECS: index.md
+      - AWS Batch: index.md
   - Reference:
-    - YAML structure: index.md
+      - YAML structure: index.md
   - Core Reference:
-    - cli:
-        - boltctl: core/cli_boltctl.md
-        - discover: core/cli_discover.md
-        - geniusctl: core/cli_geniusctl.md
-        - schema: core/cli_schema.md
-        - spoutctl: core/cli_spoutctl.md
-        - yamlctl: core/cli_yamlctl.md
-    - core:
-        - bolt: core/core_bolt.md
-        - spout: core/core_spout.md
-        - data:
-            - batch_input: core/core_data_batch_input.md
-            - batch_output: core/core_data_batch_output.md
-            - input: core/core_data_input.md
-            - output: core/core_data_output.md
-            - streaming_input: core/core_data_streaming_input.md
-            - streaming_output: core/core_data_streaming_output.md
-        - state:
-            - base: core/core_state_base.md
-            - dynamo: core/core_state_dynamo.md
-            - memory: core/core_state_memory.md
-            - postgres: core/core_state_postgres.md
-            - redis: core/core_state_redis.md
-        - task:
-            - base: core/core_task_base.md
-            - ecs: core/core_task_ecs.md
-            - k8s: core/core_task_k8s.md
+      - cli:
+          - boltctl: core/cli_boltctl.md
+          - discover: core/cli_discover.md
+          - geniusctl: core/cli_geniusctl.md
+          - schema: core/cli_schema.md
+          - spoutctl: core/cli_spoutctl.md
+          - yamlctl: core/cli_yamlctl.md
+      - core:
+          - bolt: core/core_bolt.md
+          - spout: core/core_spout.md
+          - data:
+              - batch_input: core/core_data_batch_input.md
+              - batch_output: core/core_data_batch_output.md
+              - input: core/core_data_input.md
+              - output: core/core_data_output.md
+              - streaming_input: core/core_data_streaming_input.md
+              - streaming_output: core/core_data_streaming_output.md
+          - state:
+              - base: core/core_state_base.md
+              - dynamo: core/core_state_dynamo.md
+              - memory: core/core_state_memory.md
+              - postgres: core/core_state_postgres.md
+              - redis: core/core_state_redis.md
+          - task:
+              - base: core/core_task_base.md
+              - ecs: core/core_task_ecs.md
+              - k8s: core/core_task_k8s.md
+  - Spouts:
+      - streaming:
+          - Http Polling: spouts/http_polling.md
+          - Socket.io: spouts/socket.io.md
+          - gRPC: spouts/grpc.md
+          - QUIC: spouts/quic.md
+          - UDP: spouts/udp.md
+          - Webhook: spouts/webhook.md
+          - Websocket: spouts/websocket.md
+          - SNS: spouts/sns.md
+          - SQS: spouts/sqs.md
+          - AMQP: spouts/amqp.md
+          - Kafka: spouts/kafka.md
+          - Kinesis Streams: spouts/kinesis.md
+          - MQTT: spouts/mqtt.md
+          - ActiveMQ: spouts/activemq.md
+          - ZeroMQ: spouts/zeromq.md
+          - Redis Pubsub: spouts/redis_pubsub.md
+          - Redis Streams: spouts/redis_streams.md
 
 theme:
   name: material
@@ -92,7 +111,10 @@ plugins:
       default_handler: python
       handlers:
         python:
-          paths: [../geniusrise/geniusrise]
+          paths:
+            [../geniusrise/geniusrise, ../streaming-spouts/streaming_spouts]
+          options:
+            show_source: false
   - print-site:
       add_print_site_banner: true
       print_site_banner_template: "docs/assets/templates/banner.tpl"
@@ -133,4 +155,4 @@ plugins:
   #                             'license'
   #                           ]                   # theme will not be set if listed commands present (default as listed)
 extra_css:
-  - 'main.css'
+  - "main.css"
