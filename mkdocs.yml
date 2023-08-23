@@ -22,7 +22,7 @@ nav:
       - Apache Flink: guides/404.md
       - Apache Beam: guides/404.md
       - Apache Storm: guides/404.md
-      - AWS ECS: index.md
+      - AWS ECS: guides/404.md
       - AWS Batch: guides/404.md
   - Reference:
       - YAML structure: guides/404.md
