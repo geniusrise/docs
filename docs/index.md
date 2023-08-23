@@ -1,5 +1,5 @@
 ![banner](./assets/sc1.jpg)
-# Geniusrise Documentation
+# Geniusrise AgentOps
 
 ## About
 
