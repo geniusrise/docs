@@ -9,7 +9,7 @@ Geniusrise is a modular, loosely-coupled AgentOps / MLOps framework designed for
 
 It seamlessly integrates tasks, state management, data handling, and model versioning, all while supporting diverse infrastructures and user expertise levels. With its plug-and-play architecture, Geniusrise empowers teams to build, share, and deploy AI agent workflows across various platforms efficiently.
 
-Geniusrise also offers a marketplace for the community to list, host and sell their agents. [geniusrise.com](https://coming-soon.com).
+Geniusrise also offers a marketplace for the community to list, host open source agents and sell commercial agents. [geniusrise.com](https://coming-soon.com), coming soon.
 
 ## Guides
 
@@ -17,12 +17,15 @@ Geniusrise also offers a marketplace for the community to list, host and sell th
 
 ### Getting started
 
-1. [Home](guides/index.md): Front page, you are here.
-- [Concepts](guides/concepts.md): Concepts of the framework, start here.
+---
+
+1. [Concepts](guides/concepts.md): Concepts of the framework, start here.
 - [Architecture](guides/architecture.md): Design and architecture of the framework.
 - [Installation](guides/installation.md): Installation and setup.
 
 ### Development
+
+---
 
 1. [Local experimentation](guides/local.md): Local setup and project creation.
 - [Dev Cycle](guides/dev_cycle.md): Describes one full local development cycle.
@@ -32,26 +35,17 @@ Geniusrise also offers a marketplace for the community to list, host and sell th
 - [Data ops](guides/index.md): Operations and management of data
 - [Model ops](guides/index.md): Operations and management of models
 
-### Deployment
-
-1. [Kubernetes](guides/index.md): Running geniusrise on kubernetes
-- [Apache Airflow](guides/index.md): Orchestrating batch jobs on Apache Airflow
-- [Apache Spark](guides/index.md): Using geniusrise as a spark library
-- [Apache Flink](guides/index.md): Using geniusrise as a flink library
-- [Apache Beam](guides/index.md): Using geniusrise as a beam library
-- [Apache Storm](guides/index.md): Using geniusrise as a storm library
-- [AWS ECS](guides/index.md): Running geniusrise on AWS ECS
-- [AWS Batch](guides/index.md): Running geniusrise batch jobs on AWS Batch
-
 ### Reference
+
+---
 
 1. [YAML structure](guides/index.md): Geniusfile structure and configuration
 2. [Community Plugins](guides/plugins.md): Building and shipping community plugins (spouts and bolts)
 3. [Project templates](guides/index.md): Project templates for community plugins
 
----
-
 ## Examples
+
+---
 
 1. [Write a confluence PRD and have jira and github issues created and linked automatically](examples/index.md)
 - [Monitor, alert and summarize machinery metrics in a process industry](examples/index.md)
@@ -60,33 +54,42 @@ Geniusrise also offers a marketplace for the community to list, host and sell th
 - [Batch or streaming fine-tuning and managing a huggingface-hosted model](examples/index.md)
 - [Batch or streaming fine-tuning and managing an openAI model](examples/index.md)
 
----
 
-## Spouts reference
+### Deployment
 
-### Streaming
+| Runners                         |                                   |                                 |
+| ------------------------------- | --------------------------------- | ------------------------------- |
+| [Kubernetes](guides/index.md)   | [Apache Airflow](guides/index.md) | [Apache Spark](guides/index.md) |
+| [Apache Flink](guides/index.md) | [Apache Beam](guides/index.md)    | [Apache Storm](guides/index.md) |
+| [AWS ECS](guides/index.md)      | [AWS Batch](guides/index.md)      |                                 |
 
-1. [Http Polling](spouts/http_polling.md): Spout for Http Polling.
-- [Socket.io](spouts/socket.io.md): Spout for Socket.io.
-- [gRPC](spouts/grpc.md): Spout for gRPC.
-- [QUIC](spouts/quic.md): Spout for QUIC.
-- [UDP](spouts/udp.md): Spout for UDP.
-- [Webhook](spouts/webhook.md): Spout for Webhook.
-- [Websocket](spouts/websocket.md): Spout for Websocket.
-- [SNS](spouts/sns.md): Spout for SNS.
-- [SQS](spouts/sqs.md): Spout for SQS.
-- [AMQP](spouts/amqp.md): Spout for AMQP.
-- [Kafka](spouts/kafka.md): Spout for Kafka.
-- [Kinesis Streams](spouts/kinesis.md): Spout for Kinesis Streams.
-- [MQTT](spouts/mqtt.md): Spout for MQTT.
-- [ActiveMQ](spouts/activemq.md): Spout for ActiveMQ.
-- [ZeroMQ](spouts/zeromq.md): Spout for ZeroMQ.
-- [Redis Pubsub](spouts/redis_pubsub.md): Spout for Redis Pubsub.
-- [Redis Streams](spouts/redis_streams.md): Spout for Redis Streams.
+## Spouts
 
----
+| Streaming                              |                                          |                                      |
+| -------------------------------------- | ---------------------------------------- | ------------------------------------ |
+| [Http Polling](spouts/http_polling.md) | [Socket.io](spouts/socket.io.md)         | [gRPC](spouts/grpc.md)               |
+| [QUIC](spouts/quic.md)                 | [UDP](spouts/udp.md)                     | [Webhook](spouts/webhook.md)         |
+| [Websocket](spouts/websocket.md)       | [SNS](spouts/sns.md)                     | [SQS](spouts/sqs.md)                 |
+| [AMQP](spouts/amqp.md)                 | [Kafka](spouts/kafka.md)                 | [Kinesis Streams](spouts/kinesis.md) |
+| [MQTT](spouts/mqtt.md)                 | [ActiveMQ](spouts/activemq.md)           | [ZeroMQ](spouts/zeromq.md)           |
+| [Redis Pubsub](spouts/redis_pubsub.md) | [Redis Streams](spouts/redis_streams.md) |                                      |
 
-## Library Reference
+
+## Bolts
+
+| Huggingface - Fine tuning                                     |                                                                     |                                                               |
+| ------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [Language Model](bolts/huggingface/language_model.md)         | [Named Entity Recognition](bolts/huggingface/ner.md)                | [Question Answering](bolts/huggingface/question_answering.md) |
+| [Sentiment Analysis](bolts/huggingface/sentiment_analysis.md) | [Summarization](bolts/huggingface/summarization.md)                 | [Translation](bolts/huggingface/translation.md)               |
+| [Classification](bolts/huggingface/classification.md)         | [Commonsense Reasoning](bolts/huggingface/commonsense_reasoning.md) | [Instruction Tuning](bolts/huggingface/instruction_tuning.md) |
+
+| OpenAI - Fine tuning                                     |                                                                |                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------- |
+| [Classification](bolts/openai/classification.md)         | [Commonsense Reasoning](bolts/openai/commonsense_reasoning.md) | [Instruction Tuning](bolts/openai/instruction_tuning.md) |
+| [Language Model](bolts/openai/language_model.md)         | [Named Entity Recognition](bolts/openai/ner.md)                | [Question Answering](bolts/openai/question_answering.md) |
+| [Sentiment Analysis](bolts/openai/sentiment_analysis.md) | [Summarization](bolts/openai/summarization.md)                 | [Translation](bolts/openai/translation.md)               |
+
+## Library
 
 - geniusrise.cli:
     - [geniusctl](core/cli_geniusctl.md): The main command line application

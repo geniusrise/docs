@@ -45,6 +45,27 @@ nav:
           - ZeroMQ: spouts/zeromq.md
           - Redis Pubsub: spouts/redis_pubsub.md
           - Redis Streams: spouts/redis_streams.md
+  - Bolts:
+      - Huggingface:
+          - Classification: bolts/huggingface/classification.md
+          - Commonsense Reasoning: bolts/huggingface/commonsense_reasoning.md
+          - Instruction Tuning: bolts/huggingface/instruction_tuning.md
+          - Language Model: bolts/huggingface/language_model.md
+          - Named Entity Recognition: bolts/huggingface/ner.md
+          - Question Answering: bolts/huggingface/question_answering.md
+          - Sentiment Analysis: bolts/huggingface/sentiment_analysis.md
+          - Summarization: bolts/huggingface/summarization.md
+          - Translation: bolts/huggingface/translation.md
+      - OpenAI:
+          - Classification: bolts/openai/classification.md
+          - Commonsense Reasoning: bolts/openai/commonsense_reasoning.md
+          - Instruction Tuning: bolts/openai/instruction_tuning.md
+          - Language Model: bolts/openai/language_model.md
+          - Named Entity Recognition: bolts/openai/ner.md
+          - Question Answering: bolts/openai/question_answering.md
+          - Sentiment Analysis: bolts/openai/sentiment_analysis.md
+          - Summarization: bolts/openai/summarization.md
+          - Translation: bolts/openai/translation.md
   - Core Reference:
       - cli:
           - boltctl: core/cli_boltctl.md
@@ -112,7 +133,11 @@ plugins:
       handlers:
         python:
           paths:
-            [../geniusrise/geniusrise, ../streaming-spouts/streaming_spouts]
+            [
+              ../geniusrise/geniusrise,
+              ../streaming-spouts/streaming_spouts,
+              ../huggingface-bolts/huggingface,
+            ]
           options:
             show_source: false
   - print-site:
