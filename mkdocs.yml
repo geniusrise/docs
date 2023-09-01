@@ -16,18 +16,20 @@ nav:
       - Data ops: guides/404.md
       - Model ops: guides/404.md
   - Deployment:
-      - Kubernetes: guides/404.md
-      - Apache Airflow: guides/404.md
-      - Apache Spark: guides/404.md
-      - Apache Flink: guides/404.md
-      - Apache Beam: guides/404.md
-      - Apache Storm: guides/404.md
-      - AWS ECS: guides/404.md
-      - AWS Batch: guides/404.md
+      - Runners:
+        - Kubernetes: guides/404.md
+        - Apache Airflow: guides/404.md
+        - AWS ECS: guides/404.md
+        - AWS Batch: guides/404.md
+        - Apache Storm: guides/404.md
+      - Library:
+        - Apache Spark: guides/404.md
+        - Apache Flink: guides/404.md
+        - Apache Beam: guides/404.md
   - Reference:
       - YAML structure: guides/404.md
   - Spouts:
-      - streaming:
+      - Streaming:
           - Http Polling: spouts/http_polling.md
           - Socket.io: spouts/socket.io.md
           - gRPC: spouts/grpc.md
@@ -45,6 +47,8 @@ nav:
           - ZeroMQ: spouts/zeromq.md
           - Redis Pubsub: spouts/redis_pubsub.md
           - Redis Streams: spouts/redis_streams.md
+      - Database:
+        - TODO
   - Bolts:
       - Huggingface:
           - Classification: bolts/huggingface/classification.md
@@ -66,6 +70,11 @@ nav:
           - Sentiment Analysis: bolts/openai/sentiment_analysis.md
           - Summarization: bolts/openai/summarization.md
           - Translation: bolts/openai/translation.md
+  - Utility Bolts:
+      - Indexing:
+        - TODO
+      - OpenAPI:
+        - TODO
   - Core Reference:
       - cli:
           - boltctl: core/cli_boltctl.md
@@ -110,7 +119,7 @@ theme:
     - navigation.instant.prefetch
     - navigation.tracking
     - navigation.sections
-    - navigation.expand
+    # - navigation.expand
     - header.autohide
     - content.code.copy
     - content.code.select
