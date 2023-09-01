@@ -10,20 +10,16 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/spouts/websocket/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/core/core_data_stream_to_batch_output/">
       
       
-        <link rel="prev" href="../webhook/">
-      
-      
-        <link rel="next" href="../sns/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Websocket - Geniusrise</title>
+        <title>Streaming data output behaving as batch output - Geniusrise</title>
       
     
     
@@ -91,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#websocket" class="md-skip">
+        <a href="#streaming-data-output-behaving-as-batch-output" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Websocket
+              Streaming data output behaving as batch output
             
           </span>
         </div>
@@ -673,18 +669,16 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
@@ -693,7 +687,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Spouts
@@ -704,16 +698,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
       
       
       
@@ -722,7 +714,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
           Streaming
@@ -735,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http_polling/" class="md-nav__link">
+      <a href="../../spouts/http_polling/" class="md-nav__link">
         Http Polling
       </a>
     </li>
@@ -749,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socket.io/" class="md-nav__link">
+      <a href="../../spouts/socket.io/" class="md-nav__link">
         Socket.io
       </a>
     </li>
@@ -763,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../grpc/" class="md-nav__link">
+      <a href="../../spouts/grpc/" class="md-nav__link">
         gRPC
       </a>
     </li>
@@ -777,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quic/" class="md-nav__link">
+      <a href="../../spouts/quic/" class="md-nav__link">
         QUIC
       </a>
     </li>
@@ -791,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../udp/" class="md-nav__link">
+      <a href="../../spouts/udp/" class="md-nav__link">
         UDP
       </a>
     </li>
@@ -805,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../webhook/" class="md-nav__link">
+      <a href="../../spouts/webhook/" class="md-nav__link">
         Webhook
       </a>
     </li>
@@ -817,100 +809,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Websocket
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../spouts/websocket/" class="md-nav__link">
         Websocket
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket" class="md-nav__link">
-    websocket.Websocket
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-    <nav class="md-nav" aria-label="__init__()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#websocket.Websocket.__init__--using-geniusrise-to-invoke-via-command-line" class="md-nav__link">
-    Using geniusrise to invoke via command line
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#websocket.Websocket.__init__--using-geniusrise-to-invoke-via-yaml-file" class="md-nav__link">
-    Using geniusrise to invoke via YAML file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket.__listen" class="md-nav__link">
-    __listen()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket.listen" class="md-nav__link">
-    listen()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket.receive_message" class="md-nav__link">
-    receive_message()
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -922,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sns/" class="md-nav__link">
+      <a href="../../spouts/sns/" class="md-nav__link">
         SNS
       </a>
     </li>
@@ -936,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sqs/" class="md-nav__link">
+      <a href="../../spouts/sqs/" class="md-nav__link">
         SQS
       </a>
     </li>
@@ -950,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../amqp/" class="md-nav__link">
+      <a href="../../spouts/amqp/" class="md-nav__link">
         AMQP
       </a>
     </li>
@@ -964,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kafka/" class="md-nav__link">
+      <a href="../../spouts/kafka/" class="md-nav__link">
         Kafka
       </a>
     </li>
@@ -978,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kinesis/" class="md-nav__link">
+      <a href="../../spouts/kinesis/" class="md-nav__link">
         Kinesis Streams
       </a>
     </li>
@@ -992,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mqtt/" class="md-nav__link">
+      <a href="../../spouts/mqtt/" class="md-nav__link">
         MQTT
       </a>
     </li>
@@ -1006,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activemq/" class="md-nav__link">
+      <a href="../../spouts/activemq/" class="md-nav__link">
         ActiveMQ
       </a>
     </li>
@@ -1020,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zeromq/" class="md-nav__link">
+      <a href="../../spouts/zeromq/" class="md-nav__link">
         ZeroMQ
       </a>
     </li>
@@ -1034,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis_pubsub/" class="md-nav__link">
+      <a href="../../spouts/redis_pubsub/" class="md-nav__link">
         Redis Pubsub
       </a>
     </li>
@@ -1048,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis_streams/" class="md-nav__link">
+      <a href="../../spouts/redis_streams/" class="md-nav__link">
         Redis Streams
       </a>
     </li>
@@ -1671,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/cli_boltctl/" class="md-nav__link">
+      <a href="../cli_boltctl/" class="md-nav__link">
         boltctl
       </a>
     </li>
@@ -1685,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/cli_discover/" class="md-nav__link">
+      <a href="../cli_discover/" class="md-nav__link">
         discover
       </a>
     </li>
@@ -1699,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/cli_geniusctl/" class="md-nav__link">
+      <a href="../cli_geniusctl/" class="md-nav__link">
         geniusctl
       </a>
     </li>
@@ -1713,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/cli_schema/" class="md-nav__link">
+      <a href="../cli_schema/" class="md-nav__link">
         schema
       </a>
     </li>
@@ -1727,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/cli_spoutctl/" class="md-nav__link">
+      <a href="../cli_spoutctl/" class="md-nav__link">
         spoutctl
       </a>
     </li>
@@ -1741,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/cli_yamlctl/" class="md-nav__link">
+      <a href="../cli_yamlctl/" class="md-nav__link">
         yamlctl
       </a>
     </li>
@@ -1789,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_bolt/" class="md-nav__link">
+      <a href="../core_bolt/" class="md-nav__link">
         bolt
       </a>
     </li>
@@ -1803,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_spout/" class="md-nav__link">
+      <a href="../core_spout/" class="md-nav__link">
         spout
       </a>
     </li>
@@ -1844,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_data_batch_input/" class="md-nav__link">
+      <a href="../core_data_batch_input/" class="md-nav__link">
         batch_input
       </a>
     </li>
@@ -1858,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_data_batch_output/" class="md-nav__link">
+      <a href="../core_data_batch_output/" class="md-nav__link">
         batch_output
       </a>
     </li>
@@ -1872,7 +1775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_data_input/" class="md-nav__link">
+      <a href="../core_data_input/" class="md-nav__link">
         input
       </a>
     </li>
@@ -1886,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_data_output/" class="md-nav__link">
+      <a href="../core_data_output/" class="md-nav__link">
         output
       </a>
     </li>
@@ -1900,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_data_streaming_input/" class="md-nav__link">
+      <a href="../core_data_streaming_input/" class="md-nav__link">
         streaming_input
       </a>
     </li>
@@ -1914,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_data_streaming_output/" class="md-nav__link">
+      <a href="../core_data_streaming_output/" class="md-nav__link">
         streaming_output
       </a>
     </li>
@@ -1962,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_state_base/" class="md-nav__link">
+      <a href="../core_state_base/" class="md-nav__link">
         base
       </a>
     </li>
@@ -1976,7 +1879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_state_dynamo/" class="md-nav__link">
+      <a href="../core_state_dynamo/" class="md-nav__link">
         dynamo
       </a>
     </li>
@@ -1990,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_state_memory/" class="md-nav__link">
+      <a href="../core_state_memory/" class="md-nav__link">
         memory
       </a>
     </li>
@@ -2004,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_state_postgres/" class="md-nav__link">
+      <a href="../core_state_postgres/" class="md-nav__link">
         postgres
       </a>
     </li>
@@ -2018,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_state_redis/" class="md-nav__link">
+      <a href="../core_state_redis/" class="md-nav__link">
         redis
       </a>
     </li>
@@ -2066,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_task_base/" class="md-nav__link">
+      <a href="../core_task_base/" class="md-nav__link">
         base
       </a>
     </li>
@@ -2080,7 +1983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_task_ecs/" class="md-nav__link">
+      <a href="../core_task_ecs/" class="md-nav__link">
         ecs
       </a>
     </li>
@@ -2094,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../core/core_task_k8s/" class="md-nav__link">
+      <a href="../core_task_k8s/" class="md-nav__link">
         k8s
       </a>
     </li>
@@ -2149,57 +2052,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#websocket.Websocket" class="md-nav__link">
-    websocket.Websocket
+  <a href="#core.data.stream_to_batch_output" class="md-nav__link">
+    core.data.stream_to_batch_output
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#websocket.Websocket.__init__" class="md-nav__link">
-    __init__()
+  <a href="#core.data.stream_to_batch_output.StreamToBatchOutput" class="md-nav__link">
+    StreamToBatchOutput
   </a>
   
-    <nav class="md-nav" aria-label="__init__()">
+    <nav class="md-nav" aria-label="StreamToBatchOutput">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#websocket.Websocket.__init__--using-geniusrise-to-invoke-via-command-line" class="md-nav__link">
-    Using geniusrise to invoke via command line
+  <a href="#core.data.stream_to_batch_output.StreamToBatchOutput.__init__" class="md-nav__link">
+    __init__()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#websocket.Websocket.__init__--using-geniusrise-to-invoke-via-yaml-file" class="md-nav__link">
-    Using geniusrise to invoke via YAML file
+  <a href="#core.data.stream_to_batch_output.StreamToBatchOutput.flush" class="md-nav__link">
+    flush()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core.data.stream_to_batch_output.StreamToBatchOutput.save" class="md-nav__link">
+    save()
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket.__listen" class="md-nav__link">
-    __listen()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket.listen" class="md-nav__link">
-    listen()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#websocket.Websocket.receive_message" class="md-nav__link">
-    receive_message()
-  </a>
   
 </li>
       
@@ -2218,18 +2107,90 @@
                   
 
 
-<h1 id="websocket">Websocket<a class="headerlink" href="#websocket" title="Permanent link">&para;</a></h1>
-<p>Spout for Websocket</p>
+<h1 id="streaming-data-output-behaving-as-batch-output">Streaming data output behaving as batch output<a class="headerlink" href="#streaming-data-output-behaving-as-batch-output" title="Permanent link">&para;</a></h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+<a id="core.data.stream_to_batch_output"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
 
 
 <div class="doc doc-object doc-class">
 
 
-<a id="websocket.Websocket"></a>
-  <div class="doc doc-contents first">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="geniusrise.Spout">Spout</span></code></p>
 
+<h2 id="core.data.stream_to_batch_output.StreamToBatchOutput" class="doc doc-heading">
+          <code>StreamToBatchOutput</code>
+
+
+<a href="#core.data.stream_to_batch_output.StreamToBatchOutput" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="core.data.streaming_output.StreamingOutput" href="../core_data_streaming_output/#core.data.streaming_output.StreamingOutput">StreamingOutput</a></code>, <code><a class="autorefs autorefs-internal" title="core.data.batch_output.BatchOutput" href="../core_data_batch_output/#core.data.batch_output.BatchOutput">BatchOutput</a></code></p>
+
+  
+      <p>📦 StreamToBatchOutput: Manages buffered streaming output data.</p>
+
+<details class="inherits" open>
+  <summary>Inherits</summary>
+  <p>StreamingOutput: For Kafka streaming capabilities.
+BatchOutput: For batch-like file operations.</p>
+</details>
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>buffer_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of messages to buffer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>buffered_messages</code></td>
+          <td>
+                <code><span title="typing.List">List</span>[<span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>List of buffered messages.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Usage:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">config</span> <span class="o">=</span> <span class="n">StreamToBatchOutput</span><span class="p">(</span><span class="s2">&quot;my_topic&quot;</span><span class="p">,</span> <span class="s2">&quot;localhost:9094&quot;</span><span class="p">,</span> <span class="s2">&quot;/path/to/output&quot;</span><span class="p">,</span> <span class="s2">&quot;my_bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;s3/folder&quot;</span><span class="p">,</span> <span class="n">buffer_size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">config</span><span class="o">.</span><span class="n">save</span><span class="p">({</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">})</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">config</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</span></code></pre></div></p>
 
 
   
@@ -2249,15 +2210,15 @@
 
 
 
-<h2 id="websocket.Websocket.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<h3 id="core.data.stream_to_batch_output.StreamToBatchOutput.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">s3_folder</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">,</span> <span class="n">output_topic</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">kafka_servers</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
-<a href="#websocket.Websocket.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#core.data.stream_to_batch_output.StreamToBatchOutput.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Initialize the Websocket class.</p>
+      <p>💥 Initialize a new buffered streaming output data.</p>
 
 
 
@@ -2273,176 +2234,193 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>output</code></td>
-          <td>
-                <code><span title="geniusrise.StreamingOutput">StreamingOutput</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An instance of the StreamingOutput class for saving the data.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>state</code></td>
-          <td>
-                <code><span title="geniusrise.State">State</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An instance of the State class for maintaining the state.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional keyword arguments.</p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-      <h4 id="websocket.Websocket.__init__--using-geniusrise-to-invoke-via-command-line">Using geniusrise to invoke via command line<a class="headerlink" href="#websocket.Websocket.__init__--using-geniusrise-to-invoke-via-command-line" title="Permanent link">&para;</a></h4>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius<span class="w"> </span>Websocket<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>streaming<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span>--output_kafka_topic<span class="w"> </span>websocket_test<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span>--output_kafka_cluster_connection_string<span class="w"> </span>localhost:9094<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span>--postgres_host<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span>--postgres_port<span class="w"> </span><span class="m">5432</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span>--postgres_user<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span>--postgres_password<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span>--postgres_database<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span>--postgres_table<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span>listen<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span>--args<span class="w"> </span><span class="nv">host</span><span class="o">=</span>localhost<span class="w"> </span><span class="nv">port</span><span class="o">=</span><span class="m">8765</span>
-</span></code></pre></div>
-<h4 id="websocket.Websocket.__init__--using-geniusrise-to-invoke-via-yaml-file">Using geniusrise to invoke via YAML file<a class="headerlink" href="#websocket.Websocket.__init__--using-geniusrise-to-invoke-via-yaml-file" title="Permanent link">&para;</a></h4>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">spouts</span><span class="p">:</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">my_websocket_spout</span><span class="p">:</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Websocket&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;listen&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8765</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">output</span><span class="p">:</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;streaming&quot;</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">                </span><span class="nt">output_topic</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;websocket_test&quot;</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                </span><span class="nt">kafka_servers</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost:9094&quot;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="nt">state</span><span class="p">:</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                </span><span class="nt">postgres_host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                </span><span class="nt">postgres_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                </span><span class="nt">postgres_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">                </span><span class="nt">postgres_password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">                </span><span class="nt">postgres_database</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;geniusrise&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">                </span><span class="nt">postgres_table</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;state&quot;</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="nt">deploy</span><span class="p">:</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;k8s&quot;</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_websocket_spout&quot;</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">                </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;default&quot;</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">                </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_websocket_spout_image&quot;</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">                </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-</span></code></pre></div>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="websocket.Websocket.__listen" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">__listen</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
-
-<a href="#websocket.Websocket.__listen" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Start listening for data from the WebSocket server.</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="websocket.Websocket.listen" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">listen</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8765</span><span class="p">)</span></code>
-
-<a href="#websocket.Websocket.listen" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>📖 Start the WebSocket server.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>host</code></td>
+          <td><code>output_topic</code></td>
           <td>
                 <code>str</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The WebSocket server host. Defaults to "localhost".</p>
+              <p>Kafka topic to ingest data.</p>
             </div>
           </td>
           <td>
-                <code>&#39;localhost&#39;</code>
+                <code>&#39;&#39;</code>
           </td>
         </tr>
         <tr>
-          <td><code>port</code></td>
+          <td><code>kafka_servers</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Kafka bootstrap servers.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Folder to save output files.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bucket</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>S3 bucket name.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>s3_folder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Folder within the S3 bucket.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>buffer_size</code></td>
           <td>
                 <code>int</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The WebSocket server port. Defaults to 8765.</p>
+              <p>Number of messages to buffer.</p>
             </div>
           </td>
           <td>
-                <code>8765</code>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.stream_to_batch_output.StreamToBatchOutput.flush" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">flush</span><span class="p">()</span></code>
+
+<a href="#core.data.stream_to_batch_output.StreamToBatchOutput.flush" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🔄 Flush the output by saving buffered messages to a file and copying it to S3.</p>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>Exception</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If no Kafka producer is available or an error occurs.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core.data.stream_to_batch_output.StreamToBatchOutput.save" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#core.data.stream_to_batch_output.StreamToBatchOutput.save" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>📤 Buffer data into local memory until buffer size is reached.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The data to buffer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>This argument is ignored for buffered streaming outputs.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
           </td>
         </tr>
     </tbody>
@@ -2465,7 +2443,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>If unable to start the WebSocket server.</p>
+              <p>If no Kafka producer is available or an error occurs.</p>
             </div>
           </td>
         </tr>
@@ -2477,69 +2455,13 @@
 </div>
 
 
-<div class="doc doc-object doc-function">
 
-
-
-<h2 id="websocket.Websocket.receive_message" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">receive_message</span><span class="p">(</span><span class="n">websocket</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
-
-<a href="#websocket.Websocket.receive_message" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Receive a message from a WebSocket client and save it along with metadata.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>websocket</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>WebSocket client connection.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>path</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>WebSocket path.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  </div>
 
   </div>
 
 </div>
+
 
 
 

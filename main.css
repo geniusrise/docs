@@ -1,5 +1,5 @@
 .md-container {
-  background-color: #100d16;
+  background-color: #0d0816;
 }
 
 .md-header {
@@ -8,7 +8,7 @@
   /* background: radial-gradient(circle, rgba(195, 34, 145, 1) 0%, rgba(253, 114, 45, 1) 100%); */
   background: linear-gradient(to right,
       #f34960 40%,
-      #e2c19b 40% 50%,
+      #e7b67e 40% 50%,
       #e4e48c 50% 60%,
       #96ee96 60% 70%,
       #8adcff 70% 80%,
@@ -88,9 +88,9 @@ strong {
 /* Code */
 :root>* {
   /* Foreground, background, and line highlight colors */
-  --md-code-fg-color: #fffef4;
+  --md-code-fg-color: #e6eb9f;
   /* Foreground color */
-  --md-code-bg-color: #151520;
+  --md-code-bg-color: #131010;
   /* Background color */
   --md-code-hl-color: #e4e48c;
   /* Line highlight color */
@@ -101,7 +101,7 @@ strong {
   --md-code-hl-function-color: #fd4f78;
   --md-code-hl-constant-color: #f5b43b;
   --md-code-hl-keyword-color: #f34960;
-  --md-code-hl-string-color: #e2c19b;
+  --md-code-hl-string-color: #e7b67e;
   --md-code-hl-name-color: #96ee96;
   --md-code-hl-operator-color: #8adcff;
   --md-code-hl-punctuation-color: #9595e9;
@@ -122,7 +122,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
-  background-color: #100d16 !important;
+  background-color: #0d0816 !important;
   color: #e6eb9f;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 10px;
