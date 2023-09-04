@@ -17,15 +17,15 @@ nav:
       - Model ops: guides/404.md
   - Deployment:
       - Runners:
-        - Kubernetes: guides/kubernetes.md
-        - Apache Airflow: guides/404.md
-        - AWS ECS: guides/404.md
-        - AWS Batch: guides/404.md
-        - Apache Storm: guides/404.md
+          - Kubernetes: guides/kubernetes.md
+          - Apache Airflow: guides/404.md
+          - AWS ECS: guides/404.md
+          - AWS Batch: guides/404.md
+          - Apache Storm: guides/404.md
       - Library:
-        - Apache Spark: guides/404.md
-        - Apache Flink: guides/404.md
-        - Apache Beam: guides/404.md
+          - Apache Spark: guides/404.md
+          - Apache Flink: guides/404.md
+          - Apache Beam: guides/404.md
   - Reference:
       - YAML structure: guides/404.md
   - Spouts:
@@ -48,9 +48,10 @@ nav:
           - Redis Pubsub: spouts/redis_pubsub.md
           - Redis Streams: spouts/redis_streams.md
       - Database:
-        - TODO
+          - TODO
   - Bolts:
       - Huggingface:
+          - Base Fine Tuner: bolts/huggingface/base.md
           - Classification: bolts/huggingface/classification.md
           - Commonsense Reasoning: bolts/huggingface/commonsense_reasoning.md
           - Instruction Tuning: bolts/huggingface/instruction_tuning.md
@@ -72,9 +73,9 @@ nav:
           - Translation: bolts/openai/translation.md
   - Utility Bolts:
       - Indexing:
-        - TODO
+          - TODO
       - OpenAPI:
-        - TODO
+          - TODO
   - Core Reference:
       - cli:
           - boltctl: core/cli_boltctl.md
