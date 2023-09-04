@@ -17,7 +17,7 @@ nav:
       - Model ops: guides/404.md
   - Deployment:
       - Runners:
-        - Kubernetes: guides/404.md
+        - Kubernetes: guides/kubernetes.md
         - Apache Airflow: guides/404.md
         - AWS ECS: guides/404.md
         - AWS Batch: guides/404.md
