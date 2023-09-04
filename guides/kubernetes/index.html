@@ -10,23 +10,27 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/bolts/openai/base/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/guides/kubernetes/">
       
       
+        <link rel="prev" href="../404/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      
+        <link rel="next" href="../404/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Base - Geniusrise</title>
+        <title>Kubernetes - Geniusrise</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -42,27 +46,27 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/print-site-enum-headings1.css">
+      <link rel="stylesheet" href="../../css/print-site-enum-headings1.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-enum-headings2.css">
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-enum-headings3.css">
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-enum-headings4.css">
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-enum-headings5.css">
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-enum-headings6.css">
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
     
-      <link rel="stylesheet" href="../../../css/print-site.css">
+      <link rel="stylesheet" href="../../css/print-site.css">
     
-      <link rel="stylesheet" href="../../../css/print-site-material.css">
+      <link rel="stylesheet" href="../../css/print-site-material.css">
     
-      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../main.css">
+      <link rel="stylesheet" href="../../main.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -86,6 +90,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kubernetes-runner" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,9 +107,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Geniusrise" class="md-header__button md-logo" aria-label="Geniusrise" data-md-component="logo">
+    <a href="../.." title="Geniusrise" class="md-header__button md-logo" aria-label="Geniusrise" data-md-component="logo">
       
-  <img src="../../../assets/logo.jpg" alt="logo">
+  <img src="../../assets/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Base
+              Kubernetes
             
           </span>
         </div>
@@ -185,9 +194,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Geniusrise" class="md-nav__button md-logo" aria-label="Geniusrise" data-md-component="logo">
+    <a href="../.." title="Geniusrise" class="md-nav__button md-logo" aria-label="Geniusrise" data-md-component="logo">
       
-  <img src="../../../assets/logo.jpg" alt="logo">
+  <img src="../../assets/logo.jpg" alt="logo">
 
     </a>
     Geniusrise
@@ -203,7 +212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -218,7 +227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/concepts/" class="md-nav__link">
+      <a href="../concepts/" class="md-nav__link">
         Concepts
       </a>
     </li>
@@ -233,7 +242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         Architecture
       </a>
     </li>
@@ -248,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -292,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/local/" class="md-nav__link">
+      <a href="../local/" class="md-nav__link">
         Local setup
       </a>
     </li>
@@ -306,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/dev_cycle/" class="md-nav__link">
+      <a href="../dev_cycle/" class="md-nav__link">
         Dev Cycle
       </a>
     </li>
@@ -320,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Packaging
       </a>
     </li>
@@ -334,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Staged deployment
       </a>
     </li>
@@ -348,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Workflow ops
       </a>
     </li>
@@ -362,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Data ops
       </a>
     </li>
@@ -376,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Model ops
       </a>
     </li>
@@ -396,16 +405,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
       
       
       
@@ -414,7 +425,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Deployment
@@ -425,14 +436,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
       
       
       
@@ -441,7 +454,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
           Runners
@@ -452,11 +465,128 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../guides/kubernetes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kubernetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Kubernetes
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command-Line Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-Line Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-arguments" class="md-nav__link">
+    Common Arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_resource" class="md-nav__link">
+    create_resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_resource" class="md-nav__link">
+    delete_resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_status" class="md-nav__link">
+    get_status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_logs" class="md-nav__link">
+    get_logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list_pods-list_services-list_deployments" class="md-nav__link">
+    list_pods, list_services, list_deployments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_pod-describe_service-describe_deployment" class="md-nav__link">
+    describe_pod, describe_service, describe_deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml-configuration" class="md-nav__link">
+    YAML Configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -468,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Apache Airflow
       </a>
     </li>
@@ -482,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         AWS ECS
       </a>
     </li>
@@ -496,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         AWS Batch
       </a>
     </li>
@@ -510,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Apache Storm
       </a>
     </li>
@@ -558,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Apache Spark
       </a>
     </li>
@@ -572,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Apache Flink
       </a>
     </li>
@@ -586,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Apache Beam
       </a>
     </li>
@@ -644,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         YAML structure
       </a>
     </li>
@@ -722,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/http_polling/" class="md-nav__link">
+      <a href="../../spouts/http_polling/" class="md-nav__link">
         Http Polling
       </a>
     </li>
@@ -736,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/socket.io/" class="md-nav__link">
+      <a href="../../spouts/socket.io/" class="md-nav__link">
         Socket.io
       </a>
     </li>
@@ -750,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/grpc/" class="md-nav__link">
+      <a href="../../spouts/grpc/" class="md-nav__link">
         gRPC
       </a>
     </li>
@@ -764,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/quic/" class="md-nav__link">
+      <a href="../../spouts/quic/" class="md-nav__link">
         QUIC
       </a>
     </li>
@@ -778,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/udp/" class="md-nav__link">
+      <a href="../../spouts/udp/" class="md-nav__link">
         UDP
       </a>
     </li>
@@ -792,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/webhook/" class="md-nav__link">
+      <a href="../../spouts/webhook/" class="md-nav__link">
         Webhook
       </a>
     </li>
@@ -806,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/websocket/" class="md-nav__link">
+      <a href="../../spouts/websocket/" class="md-nav__link">
         Websocket
       </a>
     </li>
@@ -820,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/sns/" class="md-nav__link">
+      <a href="../../spouts/sns/" class="md-nav__link">
         SNS
       </a>
     </li>
@@ -834,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/sqs/" class="md-nav__link">
+      <a href="../../spouts/sqs/" class="md-nav__link">
         SQS
       </a>
     </li>
@@ -848,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/amqp/" class="md-nav__link">
+      <a href="../../spouts/amqp/" class="md-nav__link">
         AMQP
       </a>
     </li>
@@ -862,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/kafka/" class="md-nav__link">
+      <a href="../../spouts/kafka/" class="md-nav__link">
         Kafka
       </a>
     </li>
@@ -876,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/kinesis/" class="md-nav__link">
+      <a href="../../spouts/kinesis/" class="md-nav__link">
         Kinesis Streams
       </a>
     </li>
@@ -890,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/mqtt/" class="md-nav__link">
+      <a href="../../spouts/mqtt/" class="md-nav__link">
         MQTT
       </a>
     </li>
@@ -904,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/activemq/" class="md-nav__link">
+      <a href="../../spouts/activemq/" class="md-nav__link">
         ActiveMQ
       </a>
     </li>
@@ -918,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/zeromq/" class="md-nav__link">
+      <a href="../../spouts/zeromq/" class="md-nav__link">
         ZeroMQ
       </a>
     </li>
@@ -932,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/redis_pubsub/" class="md-nav__link">
+      <a href="../../spouts/redis_pubsub/" class="md-nav__link">
         Redis Pubsub
       </a>
     </li>
@@ -946,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spouts/redis_streams/" class="md-nav__link">
+      <a href="../../spouts/redis_streams/" class="md-nav__link">
         Redis Streams
       </a>
     </li>
@@ -994,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TODO" class="md-nav__link">
+      <a href="../../TODO" class="md-nav__link">
         None
       </a>
     </li>
@@ -1079,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/base/" class="md-nav__link">
+      <a href="../../bolts/huggingface/base/" class="md-nav__link">
         Base Fine Tuner
       </a>
     </li>
@@ -1093,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/classification/" class="md-nav__link">
+      <a href="../../bolts/huggingface/classification/" class="md-nav__link">
         Classification
       </a>
     </li>
@@ -1107,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/commonsense_reasoning/" class="md-nav__link">
+      <a href="../../bolts/huggingface/commonsense_reasoning/" class="md-nav__link">
         Commonsense Reasoning
       </a>
     </li>
@@ -1121,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/instruction_tuning/" class="md-nav__link">
+      <a href="../../bolts/huggingface/instruction_tuning/" class="md-nav__link">
         Instruction Tuning
       </a>
     </li>
@@ -1135,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/language_model/" class="md-nav__link">
+      <a href="../../bolts/huggingface/language_model/" class="md-nav__link">
         Language Model
       </a>
     </li>
@@ -1149,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/ner/" class="md-nav__link">
+      <a href="../../bolts/huggingface/ner/" class="md-nav__link">
         Named Entity Recognition
       </a>
     </li>
@@ -1163,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/question_answering/" class="md-nav__link">
+      <a href="../../bolts/huggingface/question_answering/" class="md-nav__link">
         Question Answering
       </a>
     </li>
@@ -1177,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/sentiment_analysis/" class="md-nav__link">
+      <a href="../../bolts/huggingface/sentiment_analysis/" class="md-nav__link">
         Sentiment Analysis
       </a>
     </li>
@@ -1191,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/summarization/" class="md-nav__link">
+      <a href="../../bolts/huggingface/summarization/" class="md-nav__link">
         Summarization
       </a>
     </li>
@@ -1205,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../huggingface/translation/" class="md-nav__link">
+      <a href="../../bolts/huggingface/translation/" class="md-nav__link">
         Translation
       </a>
     </li>
@@ -1253,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classification/" class="md-nav__link">
+      <a href="../../bolts/openai/classification/" class="md-nav__link">
         Classification
       </a>
     </li>
@@ -1267,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commonsense_reasoning/" class="md-nav__link">
+      <a href="../../bolts/openai/commonsense_reasoning/" class="md-nav__link">
         Commonsense Reasoning
       </a>
     </li>
@@ -1281,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../instruction_tuning/" class="md-nav__link">
+      <a href="../../bolts/openai/instruction_tuning/" class="md-nav__link">
         Instruction Tuning
       </a>
     </li>
@@ -1295,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../language_model/" class="md-nav__link">
+      <a href="../../bolts/openai/language_model/" class="md-nav__link">
         Language Model
       </a>
     </li>
@@ -1309,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ner/" class="md-nav__link">
+      <a href="../../bolts/openai/ner/" class="md-nav__link">
         Named Entity Recognition
       </a>
     </li>
@@ -1323,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../question_answering/" class="md-nav__link">
+      <a href="../../bolts/openai/question_answering/" class="md-nav__link">
         Question Answering
       </a>
     </li>
@@ -1337,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sentiment_analysis/" class="md-nav__link">
+      <a href="../../bolts/openai/sentiment_analysis/" class="md-nav__link">
         Sentiment Analysis
       </a>
     </li>
@@ -1351,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../summarization/" class="md-nav__link">
+      <a href="../../bolts/openai/summarization/" class="md-nav__link">
         Summarization
       </a>
     </li>
@@ -1365,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../translation/" class="md-nav__link">
+      <a href="../../bolts/openai/translation/" class="md-nav__link">
         Translation
       </a>
     </li>
@@ -1450,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TODO" class="md-nav__link">
+      <a href="../../TODO" class="md-nav__link">
         None
       </a>
     </li>
@@ -1498,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../TODO" class="md-nav__link">
+      <a href="../../TODO" class="md-nav__link">
         None
       </a>
     </li>
@@ -1583,7 +1713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/cli_boltctl/" class="md-nav__link">
+      <a href="../../core/cli_boltctl/" class="md-nav__link">
         boltctl
       </a>
     </li>
@@ -1597,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/cli_discover/" class="md-nav__link">
+      <a href="../../core/cli_discover/" class="md-nav__link">
         discover
       </a>
     </li>
@@ -1611,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/cli_geniusctl/" class="md-nav__link">
+      <a href="../../core/cli_geniusctl/" class="md-nav__link">
         geniusctl
       </a>
     </li>
@@ -1625,7 +1755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/cli_schema/" class="md-nav__link">
+      <a href="../../core/cli_schema/" class="md-nav__link">
         schema
       </a>
     </li>
@@ -1639,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/cli_spoutctl/" class="md-nav__link">
+      <a href="../../core/cli_spoutctl/" class="md-nav__link">
         spoutctl
       </a>
     </li>
@@ -1653,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/cli_yamlctl/" class="md-nav__link">
+      <a href="../../core/cli_yamlctl/" class="md-nav__link">
         yamlctl
       </a>
     </li>
@@ -1701,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_bolt/" class="md-nav__link">
+      <a href="../../core/core_bolt/" class="md-nav__link">
         bolt
       </a>
     </li>
@@ -1715,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_spout/" class="md-nav__link">
+      <a href="../../core/core_spout/" class="md-nav__link">
         spout
       </a>
     </li>
@@ -1756,7 +1886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_data_batch_input/" class="md-nav__link">
+      <a href="../../core/core_data_batch_input/" class="md-nav__link">
         batch_input
       </a>
     </li>
@@ -1770,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_data_batch_output/" class="md-nav__link">
+      <a href="../../core/core_data_batch_output/" class="md-nav__link">
         batch_output
       </a>
     </li>
@@ -1784,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_data_input/" class="md-nav__link">
+      <a href="../../core/core_data_input/" class="md-nav__link">
         input
       </a>
     </li>
@@ -1798,7 +1928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_data_output/" class="md-nav__link">
+      <a href="../../core/core_data_output/" class="md-nav__link">
         output
       </a>
     </li>
@@ -1812,7 +1942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_data_streaming_input/" class="md-nav__link">
+      <a href="../../core/core_data_streaming_input/" class="md-nav__link">
         streaming_input
       </a>
     </li>
@@ -1826,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_data_streaming_output/" class="md-nav__link">
+      <a href="../../core/core_data_streaming_output/" class="md-nav__link">
         streaming_output
       </a>
     </li>
@@ -1874,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_state_base/" class="md-nav__link">
+      <a href="../../core/core_state_base/" class="md-nav__link">
         base
       </a>
     </li>
@@ -1888,7 +2018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_state_dynamo/" class="md-nav__link">
+      <a href="../../core/core_state_dynamo/" class="md-nav__link">
         dynamo
       </a>
     </li>
@@ -1902,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_state_memory/" class="md-nav__link">
+      <a href="../../core/core_state_memory/" class="md-nav__link">
         memory
       </a>
     </li>
@@ -1916,7 +2046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_state_postgres/" class="md-nav__link">
+      <a href="../../core/core_state_postgres/" class="md-nav__link">
         postgres
       </a>
     </li>
@@ -1930,7 +2060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_state_redis/" class="md-nav__link">
+      <a href="../../core/core_state_redis/" class="md-nav__link">
         redis
       </a>
     </li>
@@ -1978,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_task_base/" class="md-nav__link">
+      <a href="../../core/core_task_base/" class="md-nav__link">
         base
       </a>
     </li>
@@ -1992,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_task_ecs/" class="md-nav__link">
+      <a href="../../core/core_task_ecs/" class="md-nav__link">
         ecs
       </a>
     </li>
@@ -2006,7 +2136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core/core_task_k8s/" class="md-nav__link">
+      <a href="../../core/core_task_k8s/" class="md-nav__link">
         k8s
       </a>
     </li>
@@ -2051,6 +2181,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command-Line Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-Line Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-arguments" class="md-nav__link">
+    Common Arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_resource" class="md-nav__link">
+    create_resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_resource" class="md-nav__link">
+    delete_resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_status" class="md-nav__link">
+    get_status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_logs" class="md-nav__link">
+    get_logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list_pods-list_services-list_deployments" class="md-nav__link">
+    list_pods, list_services, list_deployments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_pod-describe_service-describe_deployment" class="md-nav__link">
+    describe_pod, describe_service, describe_deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml-configuration" class="md-nav__link">
+    YAML Configuration
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2065,9 +2288,136 @@
                   
 
 
-  <h1>Base</h1>
-
-
+<h1 id="kubernetes-runner">Kubernetes Runner<a class="headerlink" href="#kubernetes-runner" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This runner module enables running spouts or bolts on Kubernetes. It provides the ability to:</p>
+<ol>
+<li>create</li>
+<li>delete</li>
+<li>scale</li>
+<li>describe</li>
+</ol>
+<p>various Kubernetes resources like</p>
+<ol>
+<li>Pods</li>
+<li>Deployments</li>
+<li>Services</li>
+</ol>
+<h2 id="command-line-interface">Command-Line Interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h2>
+<p>The following commands are available:</p>
+<ol>
+<li><code>create</code>: Create a Kubernetes resource.</li>
+<li><code>delete</code>: Delete a Kubernetes resource.</li>
+<li><code>status</code>: Get the status of a Kubernetes resource.</li>
+<li><code>logs</code>: Get logs of a Kubernetes resource.</li>
+<li><code>pod</code>: Describe a Kubernetes pod.</li>
+<li><code>pods</code>: List all pods.</li>
+<li><code>service</code>: Describe a Kubernetes service.</li>
+<li><code>services</code>: List all services.</li>
+<li><code>deployment</code>: Describe a Kubernetes deployment.</li>
+<li><code>deployments</code>: List all deployments.</li>
+<li><code>scale</code>: Scale a Kubernetes deployment.</li>
+</ol>
+<h3 id="common-arguments">Common Arguments<a class="headerlink" href="#common-arguments" title="Permanent link">&para;</a></h3>
+<p>These arguments are common to all commands:</p>
+<ul>
+<li><code>--kube_config_path</code>: Path to the kubeconfig file.</li>
+<li><code>--cluster_name</code>: Name of the Kubernetes cluster.</li>
+<li><code>--context_name</code>: Name of the kubeconfig context.</li>
+<li><code>--namespace</code>: Kubernetes namespace (default is "default").</li>
+<li><code>--labels</code>: Labels for Kubernetes resources, as a JSON string.</li>
+<li><code>--annotations</code>: Annotations for Kubernetes resources, as a JSON string.</li>
+<li><code>--api_key</code>: API key for Kubernetes cluster.</li>
+<li><code>--api_host</code>: API host for Kubernetes cluster.</li>
+<li><code>--verify_ssl</code>: Whether to verify SSL certificates (default is True).</li>
+<li><code>--ssl_ca_cert</code>: Path to the SSL CA certificate.</li>
+</ul>
+<h3 id="create_resource"><code>create_resource</code><a class="headerlink" href="#create_resource" title="Permanent link">&para;</a></h3>
+<p>Create a Kubernetes resource.</p>
+<ul>
+<li><code>name</code>: Name of the resource.</li>
+<li><code>image</code>: Docker image for the resource.</li>
+<li><code>command</code>: Command to run in the container.</li>
+<li><code>--registry_creds</code>: Credentials for Docker registry, as a JSON string.</li>
+<li><code>--is_service</code>: Whether this is a service (default is False).</li>
+<li><code>--replicas</code>: Number of replicas (default is 1).</li>
+<li><code>--port</code>: Service port (default is 80).</li>
+<li><code>--target_port</code>: Container target port (default is 8080).</li>
+<li><code>--env_vars</code>: Environment variables, as a JSON string.</li>
+</ul>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>create_resource<span class="w"> </span>my_resource<span class="w"> </span>nginx<span class="w"> </span><span class="s2">&quot;nginx -g &#39;daemon off;&#39;&quot;</span><span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span>
+</span></code></pre></div>
+<h3 id="delete_resource"><code>delete_resource</code><a class="headerlink" href="#delete_resource" title="Permanent link">&para;</a></h3>
+<p>Delete a Kubernetes resource.</p>
+<ul>
+<li><code>name</code>: Name of the resource.</li>
+<li><code>--is_service</code>: Whether this is a service (default is False).</li>
+</ul>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>delete_resource<span class="w"> </span>my_resource
+</span></code></pre></div>
+<h3 id="get_status"><code>get_status</code><a class="headerlink" href="#get_status" title="Permanent link">&para;</a></h3>
+<p>Get the status of a Kubernetes resource.</p>
+<ul>
+<li><code>name</code>: Name of the resource.</li>
+</ul>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>get_status<span class="w"> </span>my_resource
+</span></code></pre></div>
+<h3 id="get_logs"><code>get_logs</code><a class="headerlink" href="#get_logs" title="Permanent link">&para;</a></h3>
+<p>Get logs of a Kubernetes resource.</p>
+<ul>
+<li><code>name</code>: Name of the resource.</li>
+<li><code>--tail_lines</code>: Number of lines to tail (default is 10).</li>
+</ul>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>get_logs<span class="w"> </span>my_resource<span class="w"> </span>--tail_lines<span class="o">=</span><span class="m">20</span>
+</span></code></pre></div>
+<h3 id="scale"><code>scale</code><a class="headerlink" href="#scale" title="Permanent link">&para;</a></h3>
+<p>Scale a Kubernetes deployment.</p>
+<ul>
+<li><code>name</code>: Name of the deployment.</li>
+<li><code>replicas</code>: Number of replicas.</li>
+</ul>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>scale<span class="w"> </span>my_resource<span class="w"> </span><span class="m">5</span>
+</span></code></pre></div>
+<h3 id="list_pods-list_services-list_deployments"><code>list_pods</code>, <code>list_services</code>, <code>list_deployments</code><a class="headerlink" href="#list_pods-list_services-list_deployments" title="Permanent link">&para;</a></h3>
+<p>List all pods, services, or deployments.</p>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>list_pods
+</span></code></pre></div>
+<h3 id="describe_pod-describe_service-describe_deployment"><code>describe_pod</code>, <code>describe_service</code>, <code>describe_deployment</code><a class="headerlink" href="#describe_pod-describe_service-describe_deployment" title="Permanent link">&para;</a></h3>
+<p>Describe a pod, service, or deployment.</p>
+<ul>
+<li><code>name</code>: Name of the resource.</li>
+</ul>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>describe_pod<span class="w"> </span>my_pod
+</span></code></pre></div>
+<h2 id="yaml-configuration">YAML Configuration<a class="headerlink" href="#yaml-configuration" title="Permanent link">&para;</a></h2>
+<p>You can also use a YAML configuration file to specify the common arguments. The command-specific arguments will still come from the command line.</p>
+<p>Example YAML:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">deploy</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;k8s&quot;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">args</span><span class="p">:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">kube_config_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">cluster_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;geniusrise&quot;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">context_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;eks&quot;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;geniusrise_k8s_test&quot;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="s">&quot;tag1&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;lol&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;tag2&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;lel&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">annotations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nt">api_key</span><span class="p">:</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="nt">api_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="nt">verify_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">ssl_ca_cert</span><span class="p">:</span>
+</span></code></pre></div>
+<p>To use the YAML configuration, you can read it in your Python script and pass the arguments to the <code>K8sResourceManager</code> methods.</p>
+<p>Example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>--config<span class="o">=</span>my_config.yaml<span class="w"> </span>create_resource<span class="w"> </span>my_resource<span class="w"> </span>nginx<span class="w"> </span><span class="s2">&quot;nginx -g &#39;daemon off;&#39;&quot;</span><span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span>
+</span></code></pre></div>
+<p>In this example, the <code>--config=my_config.yaml</code> would be used to read the common arguments from the YAML file, and the rest of the arguments would be taken from the command line.</p>
 
 
 
@@ -2105,13 +2455,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.sections", "header.autohide", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.sections", "header.autohide", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
-          <script src="../../../js/print-site.js"></script>
+          <script src="../../js/print-site.js"></script>
         
       
     

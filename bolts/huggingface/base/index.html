@@ -10,16 +10,20 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/bolts/openai/base/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/bolts/huggingface/base/">
       
       
+        <link rel="prev" href="../../../spouts/redis_streams/">
+      
+      
+        <link rel="next" href="../classification/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Base - Geniusrise</title>
+        <title>Base Fine Tuner - Geniusrise</title>
       
     
     
@@ -86,6 +90,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#classification" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Base
+              Base Fine Tuner
             
           </span>
         </div>
@@ -1021,16 +1030,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
@@ -1039,7 +1050,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Bolts
@@ -1050,14 +1061,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" checked>
       
       
       
@@ -1066,7 +1079,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_9_1">
           <span class="md-nav__icon md-icon"></span>
           Huggingface
@@ -1077,175 +1090,105 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../huggingface/base/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Base Fine Tuner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Base Fine Tuner
       </a>
-    </li>
-  
+      
+        
 
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/classification/" class="md-nav__link">
-        Classification
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/commonsense_reasoning/" class="md-nav__link">
-        Commonsense Reasoning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/instruction_tuning/" class="md-nav__link">
-        Instruction Tuning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/language_model/" class="md-nav__link">
-        Language Model
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/ner/" class="md-nav__link">
-        Named Entity Recognition
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/question_answering/" class="md-nav__link">
-        Question Answering
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/sentiment_analysis/" class="md-nav__link">
-        Sentiment Analysis
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/summarization/" class="md-nav__link">
-        Summarization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../huggingface/translation/" class="md-nav__link">
-        Translation
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner" class="md-nav__link">
+    base.HuggingFaceFineTuner
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.compute_metrics" class="md-nav__link">
+    compute_metrics()
+  </a>
+  
+</li>
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.fine_tune" class="md-nav__link">
+    fine_tune()
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.load_dataset" class="md-nav__link">
+    load_dataset()
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.load_models" class="md-nav__link">
+    load_models()
+  </a>
+  
+</li>
       
-        <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
-          OpenAI
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.preprocess_data" class="md-nav__link">
+    preprocess_data()
+  </a>
+  
+</li>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9_2">
-          <span class="md-nav__icon md-icon"></span>
-          OpenAI
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.upload_to_hf_hub" class="md-nav__link">
+    upload_to_hf_hub()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
           
             
               
@@ -1366,6 +1309,166 @@
   
     <li class="md-nav__item">
       <a href="../translation/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+          OpenAI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          OpenAI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/classification/" class="md-nav__link">
+        Classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/commonsense_reasoning/" class="md-nav__link">
+        Commonsense Reasoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/instruction_tuning/" class="md-nav__link">
+        Instruction Tuning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/language_model/" class="md-nav__link">
+        Language Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/ner/" class="md-nav__link">
+        Named Entity Recognition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/question_answering/" class="md-nav__link">
+        Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/sentiment_analysis/" class="md-nav__link">
+        Sentiment Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/summarization/" class="md-nav__link">
+        Summarization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openai/translation/" class="md-nav__link">
         Translation
       </a>
     </li>
@@ -2051,6 +2154,72 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner" class="md-nav__link">
+    base.HuggingFaceFineTuner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.compute_metrics" class="md-nav__link">
+    compute_metrics()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.fine_tune" class="md-nav__link">
+    fine_tune()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.load_dataset" class="md-nav__link">
+    load_dataset()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.load_models" class="md-nav__link">
+    load_models()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.preprocess_data" class="md-nav__link">
+    preprocess_data()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base.HuggingFaceFineTuner.upload_to_hf_hub" class="md-nav__link">
+    upload_to_hf_hub()
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2065,9 +2234,616 @@
                   
 
 
-  <h1>Base</h1>
+<h1 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h1>
 
 
+<div class="doc doc-object doc-class">
+
+
+<a id="base.HuggingFaceFineTuner"></a>
+  <div class="doc doc-contents first">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="geniusrise.Bolt">Bolt</span></code></p>
+
+  
+      <p>A bolt for fine-tuning Hugging Face models.</p>
+<p>This bolt uses the Hugging Face Transformers library to fine-tune a pre-trained model.
+It uses the <code>Trainer</code> class from the Transformers library to handle the training.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="base.HuggingFaceFineTuner.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#base.HuggingFaceFineTuner.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize the bolt.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input</code></td>
+          <td>
+                <code><span title="geniusrise.BatchInput">BatchInput</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The batch input data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output</code></td>
+          <td>
+                <code>OutputConfig</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The output data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state</code></td>
+          <td>
+                <code><span title="geniusrise.State">State</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The state manager.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="base.HuggingFaceFineTuner.compute_metrics" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">compute_metrics</span><span class="p">(</span><span class="n">eval_pred</span><span class="p">)</span></code>
+
+<a href="#base.HuggingFaceFineTuner.compute_metrics" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Compute metrics for evaluation. This class implements a simple classification evaluation, tasks should ideally override this.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>eval_pred</code></td>
+          <td>
+                <code><span title="transformers.EvalPrediction">EvalPrediction</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The evaluation predictions.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>dict</code></td>          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, float]] | <span title="typing.Dict">Dict</span>[str, float]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The computed metrics.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="base.HuggingFaceFineTuner.fine_tune" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fine_tune</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">tokenizer_name</span><span class="p">,</span> <span class="n">num_train_epochs</span><span class="p">,</span> <span class="n">per_device_train_batch_size</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">tokenizer_class</span><span class="o">=</span><span class="s1">&#39;AutoTokenizer&#39;</span><span class="p">,</span> <span class="nb">eval</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hf_repo_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_commit_message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_private</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hf_create_pr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#base.HuggingFaceFineTuner.fine_tune" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fine-tune the model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The pre-trained model name.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The pre-trained tokenizer name.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>num_train_epochs</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Total number of training epochs to perform.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>per_device_train_batch_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Batch size per device during training.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>model_class</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The model class to use. Defaults to "AutoModel".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;AutoModel&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer_class</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The tokenizer class to use. Defaults to "AutoTokenizer".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;AutoTokenizer&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>eval</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to evaluate the model after training. Defaults to False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hf_repo_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The Hugging Face repo ID. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hf_commit_message</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The Hugging Face commit message. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hf_token</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The Hugging Face token. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hf_private</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to make the repo private. Defaults to True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hf_create_pr</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to create a pull request. Defaults to False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments for training.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>Exception</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If any step in the fine-tuning process fails.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="base.HuggingFaceFineTuner.load_dataset" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_dataset</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+  </span>
+
+<a href="#base.HuggingFaceFineTuner.load_dataset" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load a dataset from a file.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>dataset_path</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The path to the dataset file.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments to pass to the <code>load_dataset</code> method.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Dataset</code></td>          <td>
+                <code><span title="datasets.Dataset">Dataset</span> | <span title="datasets.DatasetDict">DatasetDict</span> | <span title="typing.Optional">Optional</span>[<span title="datasets.Dataset">Dataset</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The loaded dataset.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>NotImplementedError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>This method should be overridden by subclasses.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="base.HuggingFaceFineTuner.load_models" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_models</span><span class="p">()</span></code>
+
+<a href="#base.HuggingFaceFineTuner.load_models" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load the model and tokenizer</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="base.HuggingFaceFineTuner.preprocess_data" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">preprocess_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#base.HuggingFaceFineTuner.preprocess_data" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load and preprocess the dataset</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="base.HuggingFaceFineTuner.upload_to_hf_hub" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">upload_to_hf_hub</span><span class="p">()</span></code>
+
+<a href="#base.HuggingFaceFineTuner.upload_to_hf_hub" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Upload the model and tokenizer to Hugging Face Hub.</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 
