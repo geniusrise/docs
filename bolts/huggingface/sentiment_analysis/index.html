@@ -2454,7 +2454,65 @@
 
   
       <p>A bolt for fine-tuning Hugging Face models on sentiment analysis tasks.</p>
-<h3 id="sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line">Using Command Line<a class="headerlink" href="#sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line" title="Permanent link">&para;</a></h3>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input</code></td>
+          <td>
+                <code>BatchInput</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The batch input data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output</code></td>
+          <td>
+                <code>OutputConfig</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The output data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state</code></td>
+          <td>
+                <code>State</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The state manager.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <h3 id="sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line">Using Command Line<a class="headerlink" href="#sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius<span class="w"> </span>HuggingFaceSentimentAnalysisFineTuner<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>streaming<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span>--input_kafka_topic<span class="w"> </span>webhook_test<span class="w"> </span><span class="se">\</span>

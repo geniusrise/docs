@@ -8391,32 +8391,6 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
     </thead>
     <tbody>
         <tr>
-          <td><code>model</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained model to fine-tune.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The tokenizer associated with the model.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
           <td><code>input</code></td>
           <td>
                 <code><span data-autorefs-optional="BatchInput">BatchInput</span></code>
@@ -8706,32 +8680,6 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
       </tr>
     </thead>
     <tbody>
-        <tr>
-          <td><code>model</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained model to fine-tune.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The tokenizer associated with the model.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
         <tr>
           <td><code>input</code></td>
           <td>
@@ -9176,32 +9124,6 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
       </tr>
     </thead>
     <tbody>
-        <tr>
-          <td><code>model</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained model to fine-tune.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The tokenizer associated with the model.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
         <tr>
           <td><code>input</code></td>
           <td>
@@ -9676,32 +9598,6 @@ and then computes the BLEU score for evaluation.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>model</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained model to fine-tune.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The tokenizer associated with the model.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
           <td><code>input</code></td>
           <td>
                 <code><span data-autorefs-optional="BatchInput">BatchInput</span></code>
@@ -9737,19 +9633,6 @@ and then computes the BLEU score for evaluation.</p>
           <td>
             <div class="doc-md-description">
               <p>The state manager.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional keyword arguments.</p>
             </div>
           </td>
           <td>
@@ -10265,32 +10148,6 @@ and then computes the BLEU score for evaluation.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>model</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained model to fine-tune.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The tokenizer associated with the model.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
           <td><code>input</code></td>
           <td>
                 <code><span data-autorefs-optional="BatchInput">BatchInput</span></code>
@@ -10716,7 +10573,65 @@ and then computes the BLEU score for evaluation.</p>
 
   
       <p>A bolt for fine-tuning Hugging Face models on question answering tasks.</p>
-<h3 id="bolts-huggingface-question_answering-question_answering.HuggingFaceQuestionAnsweringFineTuner--using-geniusrise-to-invoke-via-command-line">Using geniusrise to invoke via command line<a class="headerlink" href="#bolts-huggingface-question_answering-question_answering.HuggingFaceQuestionAnsweringFineTuner--using-geniusrise-to-invoke-via-command-line" title="Permanent link">&para;</a></h3>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input</code></td>
+          <td>
+                <code><span data-autorefs-optional-hover="geniusrise.core.BatchInput">BatchInput</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The batch input data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output</code></td>
+          <td>
+                <code><span data-autorefs-optional="OutputConfig">OutputConfig</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The output data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state</code></td>
+          <td>
+                <code><span data-autorefs-optional-hover="geniusrise.core.State">State</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The state manager.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <h3 id="bolts-huggingface-question_answering-question_answering.HuggingFaceQuestionAnsweringFineTuner--using-geniusrise-to-invoke-via-command-line">Using geniusrise to invoke via command line<a class="headerlink" href="#bolts-huggingface-question_answering-question_answering.HuggingFaceQuestionAnsweringFineTuner--using-geniusrise-to-invoke-via-command-line" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#bolts-huggingface-question_answering-__codelineno-0-1"></a>genius<span class="w"> </span>HuggingFaceQuestionAnsweringFineTuner<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#bolts-huggingface-question_answering-__codelineno-0-2"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#bolts-huggingface-question_answering-__codelineno-0-3"></a><span class="w">        </span>--input_bucket<span class="w"> </span>my_bucket<span class="w"> </span><span class="se">\</span>
@@ -11145,7 +11060,65 @@ and then computes the BLEU score for evaluation.</p>
 
   
       <p>A bolt for fine-tuning Hugging Face models on sentiment analysis tasks.</p>
-<h3 id="bolts-huggingface-sentiment_analysis-sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line">Using Command Line<a class="headerlink" href="#bolts-huggingface-sentiment_analysis-sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line" title="Permanent link">&para;</a></h3>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input</code></td>
+          <td>
+                <code><span data-autorefs-optional="BatchInput">BatchInput</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The batch input data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>output</code></td>
+          <td>
+                <code><span data-autorefs-optional="OutputConfig">OutputConfig</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The output data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state</code></td>
+          <td>
+                <code><span data-autorefs-optional="State">State</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The state manager.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <h3 id="bolts-huggingface-sentiment_analysis-sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line">Using Command Line<a class="headerlink" href="#bolts-huggingface-sentiment_analysis-sentiment_analysis.HuggingFaceSentimentAnalysisFineTuner--using-command-line" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#bolts-huggingface-sentiment_analysis-__codelineno-0-1"></a>genius<span class="w"> </span>HuggingFaceSentimentAnalysisFineTuner<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#bolts-huggingface-sentiment_analysis-__codelineno-0-2"></a><span class="w">    </span>streaming<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#bolts-huggingface-sentiment_analysis-__codelineno-0-3"></a><span class="w">        </span>--input_kafka_topic<span class="w"> </span>webhook_test<span class="w"> </span><span class="se">\</span>
@@ -11599,32 +11572,6 @@ and then computes the BLEU score for evaluation.</p>
       </tr>
     </thead>
     <tbody>
-        <tr>
-          <td><code>model</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained model to fine-tune.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The tokenizer associated with the model.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
         <tr>
           <td><code>input</code></td>
           <td>
@@ -12100,11 +12047,9 @@ and then computes the BLEU score for evaluation.</p>
   
       <p>A bolt for fine-tuning Hugging Face models on translation tasks.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#bolts-huggingface-translation-__codelineno-0-1"></a>Args:
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#bolts-huggingface-translation-__codelineno-0-2"></a>    model: The pre-trained model to fine-tune.
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#bolts-huggingface-translation-__codelineno-0-3"></a>    tokenizer: The tokenizer associated with the model.
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#bolts-huggingface-translation-__codelineno-0-4"></a>    input (BatchInput): The batch input data.
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#bolts-huggingface-translation-__codelineno-0-5"></a>    output (OutputConfig): The output data.
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#bolts-huggingface-translation-__codelineno-0-6"></a>    state (State): The state manager.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#bolts-huggingface-translation-__codelineno-0-2"></a>    input (BatchInput): The batch input data.
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#bolts-huggingface-translation-__codelineno-0-3"></a>    output (OutputConfig): The output data.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#bolts-huggingface-translation-__codelineno-0-4"></a>    state (State): The state manager.
 </span></code></pre></div>
 <h3 id="bolts-huggingface-translation-translation.HuggingFaceTranslationFineTuner--using-geniusrise-to-invoke-via-command-line">Using geniusrise to invoke via command line<a class="headerlink" href="#bolts-huggingface-translation-translation.HuggingFaceTranslationFineTuner--using-geniusrise-to-invoke-via-command-line" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#bolts-huggingface-translation-__codelineno-1-1"></a>genius<span class="w"> </span>HuggingFaceTranslationFineTuner<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
