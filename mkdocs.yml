@@ -8,13 +8,14 @@ nav:
   - Architecture: guides/architecture.md
   - Installation: guides/installation.md
   - Development:
-      - Local setup: guides/local.md
-      - Dev Cycle: guides/dev_cycle.md
-      - Packaging: guides/404.md
-      - Staged deployment: guides/404.md
-      - Workflow ops: guides/404.md
-      - Data ops: guides/404.md
-      - Model ops: guides/404.md
+      - Guides:
+        - Local setup: guides/local.md
+        - Dev Cycle: guides/dev_cycle.md
+        - Packaging: guides/404.md
+        - Staged deployment: guides/404.md
+        - Workflow ops: guides/404.md
+        - Data ops: guides/404.md
+        - Model ops: guides/404.md
   - Deployment:
       - Runners:
           - Kubernetes: guides/kubernetes.md
@@ -29,7 +30,7 @@ nav:
   - Reference:
       - YAML structure: guides/404.md
   - Spouts:
-      - Streaming:
+      - Listeners:
           - Http Polling: spouts/http_polling.md
           - Socket.io: spouts/socket.io.md
           - gRPC: spouts/grpc.md
@@ -47,7 +48,9 @@ nav:
           - ZeroMQ: spouts/zeromq.md
           - Redis Pubsub: spouts/redis_pubsub.md
           - Redis Streams: spouts/redis_streams.md
-      - Database:
+      - Databases:
+          - TODO
+      - OpenAPI:
           - TODO
   - Bolts:
       - Huggingface:
@@ -71,7 +74,6 @@ nav:
           - Sentiment Analysis: bolts/openai/sentiment_analysis.md
           - Summarization: bolts/openai/summarization.md
           - Translation: bolts/openai/translation.md
-  - Utility Bolts:
       - Indexing:
           - TODO
       - OpenAPI:
@@ -145,8 +147,9 @@ plugins:
           paths:
             [
               ../geniusrise/geniusrise,
-              ../streaming-spouts/streaming_spouts,
-              ../huggingface-bolts/huggingface,
+              ../geniusrise-listeners/listeners,
+              ../geniusrise-huggingface/huggingface,
+              ../geniusrise-openai/,
             ]
           options:
             show_source: false

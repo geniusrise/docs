@@ -85,6 +85,14 @@ strong {
       #e667aa 95% 100%);
 }
 
+.doc .doc-heading {
+  font-size: x-large;
+}
+
+.doc .doc-heading code {
+  background: none !important;
+}
+
 /* Code */
 :root>* {
   /* Foreground, background, and line highlight colors */

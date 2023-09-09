@@ -1,3 +1,3 @@
-# Classification
+# Base Fine Tuner
 
 ::: base.HuggingFaceFineTuner
