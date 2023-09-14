@@ -42,24 +42,37 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 2. 🌐 [**Community Plugins**](guides/plugins.md) - <span style="color:#e667aa">Building and shipping community plugins (spouts and bolts).</span>
 3. 🎨 [**Project Templates**](guides/index.md) - <span style="color:#e667aa">Project templates for community plugins.</span>
 
-### 🚀 Deployment
+### 🏃 Runners
 
-| 🌐 **Runners**                     |                                     |                                   |
-| --------------------------------- | ----------------------------------- | --------------------------------- |
-| 🟢 [Kubernetes](guides/index.md)   | 🟣 [Apache Airflow](guides/index.md) | 🟡 [Apache Spark](guides/index.md) |
-| 🟠 [Apache Flink](guides/index.md) | 🟤 [Apache Beam](guides/index.md)    | 🔵 [Apache Storm](guides/index.md) |
-| 🟥 [AWS ECS](guides/index.md)      | 🟩 [AWS Batch](guides/index.md)      |                                   |
+| 🌐 **Runners**                       |                                  |                              |                                   |
+| ----------------------------------- | -------------------------------- | ---------------------------- | --------------------------------- |
+| 🟢 [k8s deployment](guides/index.md) | 🟤 [k8s service](guides/index.md) | 🟡 [k8s job](guides/index.md) | 🟠 [k8s cron job](guides/index.md) |
+| 🟣 [Apache Airflow](guides/index.md) | 🔵 [AWS Fargate](guides/index.md) | 🟥 [AWS ECS](guides/index.md) | 🟩 [AWS Batch](guides/index.md)    |
+
 
 ### 🌪️ Spouts
 
-| 🌐 **Streaming**                          |                                            |                                        |
-| ---------------------------------------- | ------------------------------------------ | -------------------------------------- |
-| 🟢 [Http Polling](spouts/http_polling.md) | 🟣 [Socket.io](spouts/socket.io.md)         | 🟡 [gRPC](spouts/grpc.md)               |
-| 🟠 [QUIC](spouts/quic.md)                 | 🟤 [UDP](spouts/udp.md)                     | 🔵 [Webhook](spouts/webhook.md)         |
-| 🟥 [Websocket](spouts/websocket.md)       | 🟩 [SNS](spouts/sns.md)                     | 🟧 [SQS](spouts/sqs.md)                 |
-| 🟨 [AMQP](spouts/amqp.md)                 | 🟫 [Kafka](spouts/kafka.md)                 | 🟪 [Kinesis Streams](spouts/kinesis.md) |
-| 🟩 [MQTT](spouts/mqtt.md)                 | 🟨 [ActiveMQ](spouts/activemq.md)           | 🟫 [ZeroMQ](spouts/zeromq.md)           |
-| 🟪 [Redis Pubsub](spouts/redis_pubsub.md) | 🟧 [Redis Streams](spouts/redis_streams.md) |                                        |
+| 🌐 **Streaming**                            |                                    |                                    |                                          |
+| ------------------------------------------ | ---------------------------------- | ---------------------------------- | ---------------------------------------- |
+| 🟢 [Http Polling](spouts/http_polling.md)   | 🟣 [Socket.io](spouts/socket.io.md) | 🟡 [gRPC](spouts/grpc.md)           | 🟠 [QUIC](spouts/quic.md)                 |
+| 🟤 [UDP](spouts/udp.md)                     | 🔵 [Webhook](spouts/webhook.md)     | 🟥 [Websocket](spouts/websocket.md) | 🟩 [SNS](spouts/sns.md)                   |
+| 🟧 [SQS](spouts/sqs.md)                     | 🟨 [AMQP](spouts/amqp.md)           | 🟫 [Kafka](spouts/kafka.md)         | 🟪 [Kinesis Streams](spouts/kinesis.md)   |
+| 🟩 [MQTT](spouts/mqtt.md)                   | 🟨 [ActiveMQ](spouts/activemq.md)   | 🟫 [ZeroMQ](spouts/zeromq.md)       | 🟪 [Redis Pubsub](spouts/redis_pubsub.md) |
+| 🟧 [Redis Streams](spouts/redis_streams.md) |                                    |                                    |                                          |
+
+| 📦 **Databases**                           |                                                   |                                               |                                       |
+| ----------------------------------------- | ------------------------------------------------- | --------------------------------------------- | ------------------------------------- |
+| 🟢 [HBase](databases/hbase.md)             | 🟣 [PostgreSQL](databases/postgres.md)             | 🔵 [MySQL](databases/mysql.md)                 | 🟠 [MongoDB](databases/mongodb.md)     |
+| 🟢 [Cassandra](databases/cassandra.md)     | 🟣 [Redis](databases/redis.md)                     | 🔵 [Elasticsearch](databases/elasticsearch.md) | 🟠 [Oracle](databases/oracle.md)       |
+| 🟢 [SQL Server](databases/sql_server.md)   | 🟣 [SQLite](databases/sqlite.md)                   | 🔵 [Neo4j](databases/neo4j.md)                 | 🟠 [Bigtable](databases/bigtable.md)   |
+| 🟢 [DynamoDB](databases/dynamodb.md)       | 🟣 [Azure Table Storage](databases/azure_table.md) | 🔵 [Couchbase](databases/couchbase.md)         | 🟠 [InfluxDB](databases/influxdb.md)   |
+| 🟢 [TimescaleDB](databases/timescaledb.md) | 🟣 [Teradata](databases/teradata.md)               | 🔵 [TiDB](databases/tidb.md)                   | 🟠 [Voltdb](databases/voltdb.md)       |
+| 🟢 [Sybase](databases/sybase.md)           | 🟣 [DB2](databases/db2.md)                         | 🔵 [AWS Presto](databases/presto.md)           | 🟠 [Riak](databases/riak.md)           |
+| 🟢 [MemSQL](databases/memsql.md)           | 🟣 [LDAP](databases/ldap.md)                       | 🔵 [AWS KeySpaces](databases/keyspaces.md)     | 🟠 [KairosDB](databases/kairosdb.md)   |
+| 🟢 [Graphite](databases/graphite.md)       | 🟣 [Google FireStore](databases/firestore.md)      | 🔵 [AWS DocumentDB](databases/documentdb.md)   | 🟠 [Cockroach](databases/cockroach.md) |
+| 🟢 [Cloud SQL](databases/cloud_sql.md)     | 🟣 [Azure CosmosDB](databases/cosmosdb.md)         | 🔵 [AWS Athena](databases/athena.md)           | 🟠 [ArangoDB](databases/arangodb.md)   |
+| 🟢 [Nuodb](databases/nuodb.md)             | 🟣 [OpenTSDB](databases/opentsdb.md)               | 🔵 [Google Bigquery](databases/bigquery.md)    | 🟠 [Vertica](databases/vertica.md)     |
+| 🟢 [Google Spanner](databases/spanner.md)  |                                                   |                                               |                                       |
 
 ### ⚡ Bolts
 
@@ -79,14 +92,14 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 
 ### 📚 Library
 
-| 📦 **geniusrise.cli**                 | 📦 **geniusrise.core**         | 📦 **geniusrise.core.data**                                           | 📦 **geniusrise.core.state**                   | 📦 **geniusrise.core.task**       | 📦 **geniusrise.runners**       |
-| ------------------------------------ | ----------------------------- | -------------------------------------------------------------------- | --------------------------------------------- | -------------------------------- | ------------------------------ |
-| 🟠 [geniusctl](core/cli_geniusctl.md) | 🟢 [bolt](core/core_bolt.md)   | 🟣 [input](core/core_data_input.md)                                   | 🔴 [base](core/core_state_base.md)             | 🟤 [base](core/core_task_base.md) | 🔵 [ecs](core/core_task_ecs.md) |
-| 🟠 [yamlctl](core/cli_yamlctl.md)     | 🟢 [spout](core/core_spout.md) | 🟣 [output](core/core_data_output.md)                                 | 🔴 [dynamo](core/core_state_dynamo.md)         |                                  | 🔵 [k8s](core/core_task_k8s.md) |
-| 🟠 [boltctl](core/cli_boltctl.md)     |                               | 🟣 [batch_input](core/core_data_batch_input.md)                       | 🔴 [memory](core/core_state_memory.md)         |                                  |                                |
-| 🟠 [spoutctl](core/cli_spoutctl.md)   |                               | 🟣 [batch_output](core/core_data_batch_output.md)                     | 🔴 [postgres](core/core_state_postgres.md)     |                                  |                                |
-| 🟠 [schema](core/cli_schema.md)       |                               | 🟣 [streaming_input](core/core_data_streaming_input.md)               | 🔴 [redis](core/core_state_redis.md)           |                                  |                                |
-| 🟠 [discover](core/cli_discover.md)   |                               | 🟣 [streaming_output](core/core_data_streaming_output.md)             | 🔴 [prometheus](core/core_state_prometheus.md) |                                  |                                |
-|                                      |                               | 🟣 [stream_to_batch_input](core/core_data_stream_to_batch_input.md)   |                                               |                                  |                                |
-|                                      |                               | 🟣 [stream_to_batch_output](core/core_data_stream_to_batch_output.md) |                                               |                                  |                                |
-|                                      |                               | 🟣 [batch_to_stream_input](core/core_data_batch_to_stream_input.md)   |                                               |                                  |                                |
+| 📦 **cli**                            | 📦 **core**                       | 📦 **data**                                                           | 📦 **core.state**                              | 📦 **runners**                  |
+| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------- | ------------------------------ |
+| 🟠 [geniusctl](core/cli_geniusctl.md) | 🟢 [bolt](core/core_bolt.md)      | 🟣 [input](core/core_data_input.md)                                   | 🔴 [base](core/core_state_base.md)             | 🔵 [ecs](core/core_task_ecs.md) |
+| 🟠 [yamlctl](core/cli_yamlctl.md)     | 🟢 [spout](core/core_spout.md)    | 🟣 [output](core/core_data_output.md)                                 | 🔴 [dynamo](core/core_state_dynamo.md)         | 🔵 [k8s](core/core_task_k8s.md) |
+| 🟠 [boltctl](core/cli_boltctl.md)     | 🟤 [base](core/core_task_base.md) | 🟣 [batch_input](core/core_data_batch_input.md)                       | 🔴 [memory](core/core_state_memory.md)         |                                |
+| 🟠 [spoutctl](core/cli_spoutctl.md)   |                                  | 🟣 [batch_output](core/core_data_batch_output.md)                     | 🔴 [postgres](core/core_state_postgres.md)     |                                |
+| 🟠 [schema](core/cli_schema.md)       |                                  | 🟣 [streaming_input](core/core_data_streaming_input.md)               | 🔴 [redis](core/core_state_redis.md)           |                                |
+| 🟠 [discover](core/cli_discover.md)   |                                  | 🟣 [streaming_output](core/core_data_streaming_output.md)             | 🔴 [prometheus](core/core_state_prometheus.md) |                                |
+|                                      |                                  | 🟣 [stream_to_batch_input](core/core_data_stream_to_batch_input.md)   |                                               |                                |
+|                                      |                                  | 🟣 [stream_to_batch_output](core/core_data_stream_to_batch_output.md) |                                               |                                |
+|                                      |                                  | 🟣 [batch_to_stream_input](core/core_data_batch_to_stream_input.md)   |                                               |                                |

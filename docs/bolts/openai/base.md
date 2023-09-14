@@ -1,3 +1,3 @@
 # Base Fine Tuner
 
-::: open_ai.OpenAIFineTuner
+::: geniusrise_openai.OpenAIFineTuner

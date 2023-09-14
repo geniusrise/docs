@@ -1,3 +1,3 @@
 # Sentiment Analysis Fine Tuner
 
-::: open_ai.OpenAITranslationFineTuner
+::: geniusrise_openai.OpenAITranslationFineTuner

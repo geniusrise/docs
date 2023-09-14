@@ -1,3 +1,3 @@
 # Classification Fine Tuner
 
-::: open_ai.OpenAIClassificationFineTuner
+::: geniusrise_openai.OpenAIClassificationFineTuner

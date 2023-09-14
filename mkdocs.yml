@@ -9,13 +9,13 @@ nav:
   - Installation: guides/installation.md
   - Development:
       - Guides:
-        - Local setup: guides/local.md
-        - Dev Cycle: guides/dev_cycle.md
-        - Packaging: guides/404.md
-        - Staged deployment: guides/404.md
-        - Workflow ops: guides/404.md
-        - Data ops: guides/404.md
-        - Model ops: guides/404.md
+          - Local setup: guides/local.md
+          - Dev Cycle: guides/dev_cycle.md
+          - Packaging: guides/404.md
+          - Staged deployment: guides/404.md
+          - Workflow ops: guides/404.md
+          - Data ops: guides/404.md
+          - Model ops: guides/404.md
   - Deployment:
       - Runners:
           - Kubernetes: guides/kubernetes.md
@@ -49,7 +49,47 @@ nav:
           - Redis Pubsub: spouts/redis_pubsub.md
           - Redis Streams: spouts/redis_streams.md
       - Databases:
-          - TODO
+          - MySQL: databases/mysql.md
+          - SQLite: databases/sqlite.md
+          - PostgreSQL: databases/postgres.md
+          - Oracle: databases/oracle.md
+          - SQLServer: databases/sql_server.md
+          - CockroachDB: databases/cockroach.md
+          - MongoDB: databases/mongodb.md
+          - Redis: databases/redis.md
+          - Elasticsearch: databases/elasticsearch.md
+          - Cassandra: databases/cassandra.md
+          - Neo4j: databases/neo4j.md
+          - Couchbase: databases/couchbase.md
+          - Riak: databases/riak.md
+          - InfluxDB: databases/influxdb.md
+          - TimescaleDB: databases/timescaledb.md
+          - OpenTSDB: databases/opentsdb.md
+          - Spanner: databases/spanner.md
+          - TiDB: databases/tidb.md
+          - VoltDB: databases/voltdb.md
+          - DynamoDB: databases/dynamodb.md
+          - Firestore: databases/firestore.md
+          - CosmosDB: databases/cosmosdb.md
+          - GoogleCloudSQL: databases/cloud_sql.md
+          - LDAP: databases/ldap.md
+          - DB2: databases/db2.md
+          - Sybase: databases/sybase.md
+          - Teradata: databases/teradata.md
+          - HBase: databases/hbase.md
+          - ArangoDB: databases/arangodb.md
+          - DocumentDB: databases/documentdb.md
+          - Presto: databases/presto.md
+          - Athena: databases/athena.md
+          - KairosDB: databases/kairosdb.md
+          - Graphite: databases/graphite.md
+          - NuoDB: databases/nuodb.md
+          - MemSQL: databases/memsql.md
+          - Bigtable: databases/bigtable.md
+          - AWSKeyspaces: databases/keyspaces.md
+          - AzureTableStorage: databases/azure_table.md
+          - BigQuery: databases/bigquery.md
+          - Vertica: databases/vertica.md
       - OpenAPI:
           - TODO
   - Bolts:
@@ -147,9 +187,10 @@ plugins:
           paths:
             [
               ../geniusrise/geniusrise,
-              ../geniusrise-listeners/listeners,
-              ../geniusrise-huggingface/huggingface,
+              ../geniusrise-listeners/geniusrise_listeners,
+              ../geniusrise-huggingface/geniusrise_huggingface,
               ../geniusrise-openai/,
+              ../geniusrise-databases/,
             ]
           options:
             show_source: false
