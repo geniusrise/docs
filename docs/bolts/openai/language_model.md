@@ -1,3 +1,3 @@
 # Language Model Fine Tuner
 
-::: open_ai.OpenAILanguageModelFineTuner
+::: geniusrise_openai.OpenAILanguageModelFineTuner
