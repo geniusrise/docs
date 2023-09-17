@@ -29,11 +29,18 @@ sudo pip install geniusrise
 
 To verify the installation, you can check whether the geniusrise binary exists in PATH:
 
+```bash
+which genius
+
+genius --help
+```
+
+### Docker
+
+Geniusrise containers are available on Docker hub.
 
 ```bash
-which geniusrise
-
-geniusrise --help
+docker run -it --rm geniusrise/geniusrise:latest
 ```
 
 ### Using package managers
@@ -58,25 +65,11 @@ yay -S geniusrise-git
 
 Geniusrise is also available on the PPA for debian-based distros.
 
-```bash
-sudo add-apt-repository ppa:ixaxaar/geniusrise
-sudo apt-get update
-sudo apt-get install -y geniusrise
-```
+Coming soon 😢
 
 #### Brew (cask)
 
-```bash
-brew cask install geniusrise
-```
-
-#### Docker
-
-Geniusrise containers are available on Docker hub.
-
-```bash
-docker run -it --rm geniusrise/geniusrise:latest
-```
+Coming soon 😢
 
 #### Nix
 
@@ -89,10 +82,20 @@ Coming soon 😢
 Geniusrise offers a variety of plugins that act as composable lego blocks. To install a specific plugin, use the following format:
 
 ```bash
-pip install geniusrise[plugin-name]
+pip install geniusrise-<plugin-name>
 ```
 
-Replace `plugin-name` with the name of the desired plugin.
+Replace `<plugin-name>` with the name of the desired plugin.
+
+Available plugins are:
+
+1. geniusrise-huggingface: bolts for huggingface
+2. geniusrise-openai: bolts for openai
+3. geniusrise-listeners: spouts for streaming event listeners
+4. geniusrise-databases: spouts for databases
+5. geniusrise-prompt-actions: spouts for prompt-action chaining
+
+Please visit [https://github.com/geniusrise](https://github.com/geniusrise) for a complete list of available plugins.
 
 ## Alternative Methods
 
@@ -112,14 +115,7 @@ conda activate your-env
 pip install geniusrise
 ```
 
-For plugins:
-
-```bash
-pip install geniusrise[plugin-name]
-```
-
 ### Using Poetry
-
 
 1. Add Geniusrise as a dependency:
 
@@ -130,7 +126,7 @@ poetry add geniusrise
 For plugins:
 
 ```bash
-poetry add geniusrise[plugin-name]
+poetry add geniusrise-<plugin-name>
 ```
 
 ## Development
