@@ -7,7 +7,8 @@
   /* background-image: linear-gradient(to right, #7d51c4, #d848ad, #fd4f78, #f5b43b, #f5f52e); */
   /* background: radial-gradient(circle, rgba(195, 34, 145, 1) 0%, rgba(253, 114, 45, 1) 100%); */
   background: linear-gradient(to right,
-      #f34960 40%,
+      #0d0816 30%,
+      #f34960 30% 40%,
       #e7b67e 40% 50%,
       #e4e48c 50% 60%,
       #96ee96 60% 70%,
