@@ -314,7 +314,7 @@ spouts:
         hf_repo_id: ixaxaar/geniusrise-api-status-code-prediction
         hf_commit_message: "initial local testing"
         hf_create_pr: True
-        hf_token: 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
+        hf_token: hf_lalala
     input:
       type: spout
         args:
