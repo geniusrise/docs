@@ -1,10 +1,8 @@
-![banner](./assets/sc1.jpg)
-
-# Geniusrise Agent Framework
-
-## About
+![banner](./assets/logo_with_text.png)
 
 ---
+
+# Geniusrise Agent Ecosystem
 
 Geniusrise is a modular, loosely-coupled AgentOps / MLOps framework designed for the era of Large Language Models, offering flexibility, inclusivity, and standardization in designing networks of AI agents.
 
