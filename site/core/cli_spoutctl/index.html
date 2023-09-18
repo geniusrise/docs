@@ -2327,6 +2327,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cli.spoutctl.SpoutCtl.deploy_spout" class="md-nav__link">
+    deploy_spout()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cli.spoutctl.SpoutCtl.execute_spout" class="md-nav__link">
     execute_spout()
   </a>
@@ -2804,6 +2811,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cli.spoutctl.SpoutCtl.deploy_spout" class="md-nav__link">
+    deploy_spout()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cli.spoutctl.SpoutCtl.execute_spout" class="md-nav__link">
     execute_spout()
   </a>
@@ -3034,7 +3048,7 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").</p>
+              <p>The type of state manager ("none", "redis", "postgres", or "dynamodb").</p>
             </div>
           </td>
           <td>
@@ -3106,6 +3120,84 @@
             <div class="doc-md-description">
               <p>The created spout.</p>
             </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="cli.spoutctl.SpoutCtl.deploy_spout" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">deploy_spout</span><span class="p">(</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#cli.spoutctl.SpoutCtl.deploy_spout" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deploy a spout of a specific type.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments for initializing the spout.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Keyword Arguments:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Batch output:
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    - output_folder (str): The directory where output files should be stored temporarily.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - output_s3_folder (str): The S3 folder for output storage.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    Streaming output:
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    - output_kafka_topic (str): Kafka output topic for streaming spouts.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - output_kafka_cluster_connection_string (str): Kafka connection string for streaming spouts.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    Stream to Batch output:
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    - output_folder (str): The directory where output files should be stored temporarily.
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    - output_s3_folder (str): The S3 folder for output storage.
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    - buffer_size (int): Number of messages to buffer.
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    Redis state manager config:
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    - redis_host (str): The host address for the Redis server.
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    - redis_port (int): The port number for the Redis server.
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    - redis_db (int): The Redis database to be used.
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    Postgres state manager config:
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    - postgres_host (str): The host address for the PostgreSQL server.
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    - postgres_port (int): The port number for the PostgreSQL server.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    - postgres_user (str): The username for the PostgreSQL server.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    - postgres_password (str): The password for the PostgreSQL server.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    - postgres_database (str): The PostgreSQL database to be used.
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    - postgres_table (str): The PostgreSQL table to be used.
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    DynamoDB state manager config:
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    - dynamodb_table_name (str): The name of the DynamoDB table.
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    - dynamodb_region_name (str): The AWS region for DynamoDB.
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    Prometheus state manager config:
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    - prometheus_gateway (str): The push gateway for Prometheus metrics.
+</span></code></pre></div></p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
