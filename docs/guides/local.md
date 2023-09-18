@@ -11,7 +11,51 @@ Lets create a workflow in which:
 3. The server buffers events in batches of 1000 and uploads them on to s3.
 4. Train a small LLM model on the data to be used to predict whether the request was valid.
 
-This language model could be used to predict if a request will fail before serving it and also the failure reason.
+A representation of the process using a sequence diagram:
+
+```puml
+@startuml
+
+skinparam backgroundColor #0d0816
+skinparam ArrowColor #ffffff
+skinparam defaultFontColor #ffffff
+skinparam SequenceLifeLineBorderColor #ffffff
+skinparam actorStyle awesome
+
+
+skinparam actor {
+  BackgroundColor #f34960
+  FontColor #0d0816
+}
+
+skinparam participant {
+  BackgroundColor #e667aa
+  FontColor #0d0816
+}
+
+actor Client
+
+database "S3 Bucket" as S3
+participant "Listen for HTTP Events" as Listen
+participant "Buffer Events" as Buffer
+participant "Upload to S3" as Upload
+participant "Load Data from S3" as LoadData
+participant "Fine-tune LLM Model" as FineTune
+participant "Save Model" as UploadModel
+
+Client -> Listen : Send HTTP Request
+Listen -> Buffer : Buffer Events
+Buffer -> Upload : Batch of 1000 Events
+Upload -> S3 : Upload Data
+S3 -> LoadData : Fetch Data
+LoadData -> FineTune : Train Model
+FineTune -> UploadModel : Upload Trained Model
+UploadModel -> S3 : Save Model
+
+@enduml
+```
+
+This model could be used to predict if a request will fail before serving it. It could also be used to classify requests as malicious etc.
 
 ## Install
 
@@ -45,7 +89,7 @@ pip install geniusrise-huggingface
 pip freeze > requirements.txt
 ```
 
-5. Verify if everythign is installed:
+5. Verify if everything is installed:
 
 ```bash
 $ genius list
@@ -90,7 +134,7 @@ $ genius list
 +--------------------------------------------+-------+
 ```
 
-## Run the server
+## Input Data
 
 Lets start with the server which has to listen for HTTP events. We can use the `Webhook` listener for this purpose.
 
@@ -126,7 +170,7 @@ The Application mounted at '' has an empty config.
     [17/Sep/2023:14:00:18] ENGINE Bus STARTED
 ```
 
-### Data
+## Data
 
 Lets create some data for testing:
 
@@ -176,13 +220,13 @@ The Webhook spout generates data like this:
 
 We need to extract the `data` field from this data before training. This can be done by passing a lambda `lambda x: x['data']` to the fine tuning bolt.
 
-More info on other argumens can be found with:
+More info on other arguments can be found with:
 
 ```bash
 genius Webhook rise --help
 ```
 
-## Test the fine-tuner
+## Fine-tuning
 
 Now lets test the second leg of this, the model. Since we want to use the model for predicting the status code given the data, we will use classification as our task for fine-tuning the model.
 
@@ -203,35 +247,94 @@ genius HuggingFaceClassificationFineTuner rise \
         model_name="bert-base-uncased" \
         tokenizer_name="bert-base-uncased" \
         num_train_epochs=2 \
-        per_device_train_batch_size=1 \
+        per_device_train_batch_size=64 \
         model_class=BertForSequenceClassification \
         tokenizer_class=BertTokenizer \
         data_masked=True \
         data_extractor_lambda="lambda x: x['data']" \
         hf_repo_id=ixaxaar/geniusrise-api-status-code-prediction \
         hf_commit_message="initial local testing" \
-        hf_create_pr=True
+        hf_create_pr=True \
+        hf_token=hf_lalala
 
 ```
 
-<code>
-    🚀 Initialized Task with ID: HuggingFaceClassificationFineTuner435ef121-c302-40d2-8662-0a22ef931ba6
-    Found credentials in environment variables.
-
+```
+    🚀 Initialized Task with ID: HuggingFaceClassificationFineTuner772627a0-43a5-4f9d-9b0f-4362d69ba08c
+    Found credentials in shared credentials file: ~/.aws/credentials
 Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-Loading dataset from /tmp/tmpzvclz5pa/train
-{'0': 0, '1': 1} ************\*\*************\_\_\_************\*\*************
-New labels detected, ignore if fine-tuning
-Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 300/300 [00:00<00:00, 4678.97 examples/s]
-{'loss': 1.0978, 'learning_rate': 8.333333333333334e-06, 'epoch': 1.67}
-{'train_runtime': 1263.9142, 'train_samples_per_second': 0.475, 'train_steps_per_second': 0.475, 'train_loss': 1.0084133847554524, 'epoch': 2.0}
-100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 600/600 [21:03<00:00, 2.11s/it]
-pytorch_model.bin: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 438M/438M [04:20<00:00, 1.68MB/s]
-
+    Loading dataset from /tmp/tmp3h3wav4h/train
+    New labels detected, ignore if fine-tuning
+Map: 100%|██████████████████████████| 300/300 [00:00<00:00, 4875.76 examples/s]
+{'train_runtime': 13.3748, 'train_samples_per_second': 44.861, 'train_steps_per_second': 22.43, 'train_loss': 0.6400579833984374, 'epoch': 2.0}
+100%|████████████████████████████████████████| 300/300 [00:13<00:00, 22.43it/s]
+pytorch_model.bin: 100%|████████████████████| 438M/438M [01:29<00:00, 4.88MB/s]
     Successfully executed the bolt method: fine_tune 👍
-
-</code>
+```
 
 You'll see a progress bar at the bottom, on completion, a pull request will appear on huggingface hub.
-Here is the model we trained: https://huggingface.co/ixaxaar/geniusrise-api-status-code-prediction
+Here is the model we trained: [https://huggingface.co/ixaxaar/geniusrise-api-status-code-prediction](https://huggingface.co/ixaxaar/geniusrise-api-status-code-prediction).
+
+## Packaging
+
+Finally, lets package this workflow so that we can run it again and again.
+
+Create a `genius.yml` file, similar to the cli commands:
+
+```yaml
+version: 1
+
+spouts:
+  http_listener:
+    name: Webhook
+    method: listen
+      args:
+        port: 8080
+    state:
+      type: none
+    output:
+      type: stream_to_batch
+      args:
+        bucket: geniusrise-test
+        folder: train
+
+  http_classifier:
+    name: HuggingFaceClassificationFineTuner
+    method: fine_tune
+      args:
+        model_name: "bert-base-uncased"
+        tokenizer_name: "bert-base-uncased"
+        num_train_epochs: 2
+        per_device_train_batch_size: 2
+        model_class: BertForSequenceClassification
+        tokenizer_class: BertTokenizer
+        data_masked: True
+        data_extractor_lambda: "lambda x: x['data']"
+        hf_repo_id: ixaxaar/geniusrise-api-status-code-prediction
+        hf_commit_message: "initial local testing"
+        hf_create_pr: True
+        hf_token: ***REMOVED***
+    input:
+      type: spout
+        args:
+          name: http_listener
+    output:
+      type: batch
+      args:
+        bucket: geniusrise-test
+        folder: model
+```
+
+Finally run them:
+
+```bash
+genius rise
+```
+
+Or run them individually:
+
+```bash
+genius rise --spout all
+genius rise --bolt all
+```
