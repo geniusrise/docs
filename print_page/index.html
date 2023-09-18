@@ -3294,75 +3294,77 @@ The core has to be installed first, and after that selected plugins can be insta
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#guides-installation-__codelineno-2-1"></a>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>geniusrise
 </span></code></pre></div>
 <p>To verify the installation, you can check whether the geniusrise binary exists in PATH:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#guides-installation-__codelineno-3-1"></a>which<span class="w"> </span>geniusrise
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#guides-installation-__codelineno-3-1"></a>which<span class="w"> </span>genius
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#guides-installation-__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#guides-installation-__codelineno-3-3"></a>geniusrise<span class="w"> </span>--help
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#guides-installation-__codelineno-3-3"></a>genius<span class="w"> </span>--help
+</span></code></pre></div>
+<h3 id="guides-installation-docker">Docker<a class="headerlink" href="#guides-installation-docker" title="Permanent link">&para;</a></h3>
+<p>Geniusrise containers are available on Docker hub.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#guides-installation-__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>geniusrise/geniusrise:latest
 </span></code></pre></div>
 <h3 id="guides-installation-using-package-managers">Using package managers<a class="headerlink" href="#guides-installation-using-package-managers" title="Permanent link">&para;</a></h3>
 <p>Geniusrise is also available as native packages for some Linux distributions.</p>
 <h4 id="guides-installation-aur">AUR<a class="headerlink" href="#guides-installation-aur" title="Permanent link">&para;</a></h4>
 <p>Geniusrise is available on the AUR for arch and derived distros.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#guides-installation-__codelineno-4-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>geniusrise
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#guides-installation-__codelineno-5-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>geniusrise
 </span></code></pre></div>
 <p>or directly from git master:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#guides-installation-__codelineno-5-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>geniusrise-git
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#guides-installation-__codelineno-6-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>geniusrise-git
 </span></code></pre></div>
 <h4 id="guides-installation-ppa">PPA<a class="headerlink" href="#guides-installation-ppa" title="Permanent link">&para;</a></h4>
 <p>Geniusrise is also available on the PPA for debian-based distros.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#guides-installation-__codelineno-6-1"></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ixaxaar/geniusrise
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#guides-installation-__codelineno-6-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#guides-installation-__codelineno-6-3"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>geniusrise
-</span></code></pre></div>
+<p>Coming soon 😢</p>
 <h4 id="guides-installation-brew-cask">Brew (cask)<a class="headerlink" href="#guides-installation-brew-cask" title="Permanent link">&para;</a></h4>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#guides-installation-__codelineno-7-1"></a>brew<span class="w"> </span>cask<span class="w"> </span>install<span class="w"> </span>geniusrise
-</span></code></pre></div>
-<h4 id="guides-installation-docker">Docker<a class="headerlink" href="#guides-installation-docker" title="Permanent link">&para;</a></h4>
-<p>Geniusrise containers are available on Docker hub.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#guides-installation-__codelineno-8-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>geniusrise/geniusrise:latest
-</span></code></pre></div>
+<p>Coming soon 😢</p>
 <h4 id="guides-installation-nix">Nix<a class="headerlink" href="#guides-installation-nix" title="Permanent link">&para;</a></h4>
 <p>Coming soon 😢</p>
 <h2 id="guides-installation-installing-plugins">Installing Plugins<a class="headerlink" href="#guides-installation-installing-plugins" title="Permanent link">&para;</a></h2>
 <hr />
 <p>Geniusrise offers a variety of plugins that act as composable lego blocks. To install a specific plugin, use the following format:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#guides-installation-__codelineno-9-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise<span class="o">[</span>plugin-name<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#guides-installation-__codelineno-7-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise-&lt;plugin-name&gt;
 </span></code></pre></div>
-<p>Replace <code>plugin-name</code> with the name of the desired plugin.</p>
+<p>Replace <code>&lt;plugin-name&gt;</code> with the name of the desired plugin.</p>
+<p>Available plugins are:</p>
+<ol>
+<li>geniusrise-huggingface: bolts for huggingface</li>
+<li>geniusrise-openai: bolts for openai</li>
+<li>geniusrise-listeners: spouts for streaming event listeners</li>
+<li>geniusrise-databases: spouts for databases</li>
+<li>geniusrise-prompt-actions: spouts for prompt-action chaining</li>
+</ol>
+<p>Please visit <a href="https://github.com/geniusrise">https://github.com/geniusrise</a> for a complete list of available plugins.</p>
 <h2 id="guides-installation-alternative-methods">Alternative Methods<a class="headerlink" href="#guides-installation-alternative-methods" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="guides-installation-using-conda">Using Conda<a class="headerlink" href="#guides-installation-using-conda" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Activate the environment:</li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#guides-installation-__codelineno-10-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>your-env
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#guides-installation-__codelineno-8-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>your-env
 </span></code></pre></div>
 <ol>
 <li>Install Geniusrise:</li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#guides-installation-__codelineno-11-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise
-</span></code></pre></div>
-<p>For plugins:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#guides-installation-__codelineno-12-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise<span class="o">[</span>plugin-name<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#guides-installation-__codelineno-9-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise
 </span></code></pre></div>
 <h3 id="guides-installation-using-poetry">Using Poetry<a class="headerlink" href="#guides-installation-using-poetry" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Add Geniusrise as a dependency:</li>
 </ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#guides-installation-__codelineno-13-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>geniusrise
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#guides-installation-__codelineno-10-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>geniusrise
 </span></code></pre></div>
 <p>For plugins:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#guides-installation-__codelineno-14-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>geniusrise<span class="o">[</span>plugin-name<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#guides-installation-__codelineno-11-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>geniusrise-&lt;plugin-name&gt;
 </span></code></pre></div>
 <h2 id="guides-installation-development">Development<a class="headerlink" href="#guides-installation-development" title="Permanent link">&para;</a></h2>
 <hr />
 <p>For development, you may want to install from the repo:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#guides-installation-__codelineno-15-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:geniusrise/geniusrise.git
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#guides-installation-__codelineno-15-2"></a><span class="nb">cd</span><span class="w"> </span>geniusrise
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#guides-installation-__codelineno-15-3"></a>virtualenv<span class="w"> </span>venv<span class="w"> </span>-p<span class="w"> </span><span class="sb">`</span>which<span class="w"> </span>python3.10<span class="sb">`</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#guides-installation-__codelineno-15-4"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#guides-installation-__codelineno-15-5"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./requirements.txt
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#guides-installation-__codelineno-15-6"></a>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#guides-installation-__codelineno-15-7"></a>make<span class="w"> </span>install<span class="w"> </span><span class="c1"># installs in your local venv directory</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#guides-installation-__codelineno-12-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:geniusrise/geniusrise.git
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#guides-installation-__codelineno-12-2"></a><span class="nb">cd</span><span class="w"> </span>geniusrise
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#guides-installation-__codelineno-12-3"></a>virtualenv<span class="w"> </span>venv<span class="w"> </span>-p<span class="w"> </span><span class="sb">`</span>which<span class="w"> </span>python3.10<span class="sb">`</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#guides-installation-__codelineno-12-4"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#guides-installation-__codelineno-12-5"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./requirements.txt
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#guides-installation-__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#guides-installation-__codelineno-12-7"></a>make<span class="w"> </span>install<span class="w"> </span><span class="c1"># installs in your local venv directory</span>
 </span></code></pre></div>
 <hr />
 <p>That's it! You've successfully installed Geniusrise and its plugins. 🎉</p></section>
@@ -3374,105 +3376,351 @@ The core has to be installed first, and after that selected plugins can be insta
                             Guides <a class='headerlink' href='#section-guides' title='Permanent link'>↵</a>
                         </h2>
                         <section class="print-page" id="guides-local"><h1 id="guides-local-local-setup">Local setup<a class="headerlink" href="#guides-local-local-setup" title="Permanent link">&para;</a></h1>
-<p>This is probably the first thing that anyone would want to do.</p>
-<h2 id="guides-local-boilerplate">Boilerplate<a class="headerlink" href="#guides-local-boilerplate" title="Permanent link">&para;</a></h2>
+<p>Lets create a workspace for local experimentation. We will not build anything here, just try to use whatever components are available. This is what a low-code workflow could look like.</p>
+<p>Lets create a workflow in which:</p>
+<ol>
+<li>A web server listens for all kinds of HTTP events.</li>
+<li>Clients send the following information to the server:</li>
+<li>HTTP request</li>
+<li>Response and response status code</li>
+<li>The server buffers events in batches of 1000 and uploads them on to s3.</li>
+<li>Train a small LLM model on the data to be used to predict whether the request was valid.</li>
+</ol>
+<p>A representation of the process using a sequence diagram:</p>
+<div class="puml"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="421px" preserveAspectRatio="true" style="background: #ffffff" version="1.1" viewBox="0 0 1080 421" width="1080px" zoomAndPan="magnify"><defs/><g><rect fill="#0D0816" height="421" style="stroke:none;stroke-width:1.0;" width="1080" x="0" y="0"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="33" x2="33" y1="84.2969" y2="337.3594"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="111" x2="111" y1="84.2969" y2="337.3594"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="249" x2="249" y1="84.2969" y2="337.3594"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="404" x2="404" y1="84.2969" y2="337.3594"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="564.5" x2="564.5" y1="84.2969" y2="337.3594"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="700.5" x2="700.5" y1="84.2969" y2="337.3594"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="865.5" x2="865.5" y1="84.2969" y2="337.3594"/><line style="stroke:#FFFFFF;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1026" x2="1026" y1="84.2969" y2="337.3594"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="9" y="80.9951">Client</text><ellipse cx="33.5" cy="22.5" fill="#F34960" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;"/><path d="M33.5,42.5 C37.5,42.5 40.5,42.5 44.5,38.5 C52.5,38.5 60.5,46.5 60.5,54.5 L60.5,58.5 C60.5,62.5 56.5,66.5 52.5,66.5 L14.5,66.5 C10.5,66.5 6.5,62.5 6.5,58.5 L6.5,54.5 C6.5,46.5 14.5,38.5 22.5,38.5 C26.5,42.5 29.5,42.5 33.5,42.5 " fill="#F34960" style="stroke:#181818;stroke-width:1.5;"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="9" y="349.3545">Client</text><ellipse cx="33.5" cy="370.1563" fill="#F34960" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;"/><path d="M33.5,390.1563 C37.5,390.1563 40.5,390.1563 44.5,386.1563 C52.5,386.1563 60.5,394.1563 60.5,402.1563 L60.5,406.1563 C60.5,410.1563 56.5,414.1563 52.5,414.1563 L14.5,414.1563 C10.5,414.1563 6.5,410.1563 6.5,406.1563 L6.5,402.1563 C6.5,394.1563 14.5,386.1563 22.5,386.1563 C26.5,390.1563 29.5,390.1563 33.5,390.1563 " fill="#F34960" style="stroke:#181818;stroke-width:1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="72" y="80.9951">S3 Bucket</text><path d="M93.5,32 C93.5,22 111.5,22 111.5,22 C111.5,22 129.5,22 129.5,32 L129.5,58 C129.5,68 111.5,68 111.5,68 C111.5,68 93.5,68 93.5,58 L93.5,32 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;"/><path d="M93.5,32 C93.5,42 111.5,42 111.5,42 C111.5,42 129.5,42 129.5,32 " fill="none" style="stroke:#181818;stroke-width:1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="72" y="349.3545">S3 Bucket</text><path d="M93.5,362.6563 C93.5,352.6563 111.5,352.6563 111.5,352.6563 C111.5,352.6563 129.5,352.6563 129.5,362.6563 L129.5,388.6563 C129.5,398.6563 111.5,398.6563 111.5,398.6563 C111.5,398.6563 93.5,398.6563 93.5,388.6563 L93.5,362.6563 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;"/><path d="M93.5,362.6563 C93.5,372.6563 111.5,372.6563 111.5,372.6563 C111.5,372.6563 129.5,372.6563 129.5,362.6563 " fill="none" style="stroke:#181818;stroke-width:1.5;"/><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="177" x="161" y="53"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="168" y="72.9951">Listen for HTTP Events</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="177" x="161" y="336.3594"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="168" y="356.3545">Listen for HTTP Events</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="348" y="53"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="355" y="72.9951">Buffer Events</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="348" y="336.3594"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="355" y="356.3545">Buffer Events</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="105" x="512.5" y="53"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="519.5" y="72.9951">Upload to S3</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="105" x="512.5" y="336.3594"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="519.5" y="356.3545">Upload to S3</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="627.5" y="53"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="634.5" y="72.9951">Load Data from S3</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="627.5" y="336.3594"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="634.5" y="356.3545">Load Data from S3</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="784.5" y="53"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="791.5" y="72.9951">Fine-tune LLM Model</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="784.5" y="336.3594"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="791.5" y="356.3545">Fine-tune LLM Model</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="979" y="53"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="986" y="72.9951">Save Model</text><rect fill="#E667AA" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="979" y="336.3594"/><text fill="#0D0816" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="986" y="356.3545">Save Model</text><polygon fill="#FFFFFF" points="237.5,111.4297,247.5,115.4297,237.5,119.4297,241.5,115.4297" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="33.5" x2="243.5" y1="115.4297" y2="115.4297"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="40.5" y="110.3638">Send HTTP Request</text><polygon fill="#FFFFFF" points="392,140.5625,402,144.5625,392,148.5625,396,144.5625" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="249.5" x2="398" y1="144.5625" y2="144.5625"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="256.5" y="139.4966">Buffer Events</text><polygon fill="#FFFFFF" points="553,169.6953,563,173.6953,553,177.6953,557,173.6953" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="404" x2="559" y1="173.6953" y2="173.6953"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="137" x="411" y="168.6294">Batch of 1000 Events</text><polygon fill="#FFFFFF" points="122.5,198.8281,112.5,202.8281,122.5,206.8281,118.5,202.8281" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="116.5" x2="564" y1="202.8281" y2="202.8281"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="128.5" y="197.7622">Upload Data</text><polygon fill="#FFFFFF" points="689,227.9609,699,231.9609,689,235.9609,693,231.9609" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="111.5" x2="695" y1="231.9609" y2="231.9609"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70" x="118.5" y="226.895">Fetch Data</text><polygon fill="#FFFFFF" points="853.5,257.0938,863.5,261.0938,853.5,265.0938,857.5,261.0938" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="701" x2="859.5" y1="261.0938" y2="261.0938"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="708" y="256.0278">Train Model</text><polygon fill="#FFFFFF" points="1014.5,286.2266,1024.5,290.2266,1014.5,294.2266,1018.5,290.2266" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="865.5" x2="1020.5" y1="290.2266" y2="290.2266"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="137" x="872.5" y="285.1606">Upload Trained Model</text><polygon fill="#FFFFFF" points="122.5,315.3594,112.5,319.3594,122.5,323.3594,118.5,319.3594" style="stroke:#FFFFFF;stroke-width:1.0;"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="116.5" x2="1025.5" y1="319.3594" y2="319.3594"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="128.5" y="314.2935">Save Model</text></g></svg></div>
+
+<p>This model could be used to predict if a request will fail before serving it. It could also be used to classify requests as malicious etc.</p>
+<h2 id="guides-local-install">Install<a class="headerlink" href="#guides-local-install" title="Permanent link">&para;</a></h2>
+<p>Let's start by installing geniusrise and itc components in a local virtual environment.</p>
+<ol>
+<li>Create a directory:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#guides-local-__codelineno-0-1"></a>mkdir<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#guides-local-__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
+</span></code></pre></div>
+<ol>
+<li>Create a virtualenv:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#guides-local-__codelineno-1-1"></a>virtualenv<span class="w"> </span>venv
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#guides-local-__codelineno-1-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span></code></pre></div>
+<ol>
+<li>Install geniursise</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#guides-local-__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#guides-local-__codelineno-2-2"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise-listeners
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#guides-local-__codelineno-2-3"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise-huggingface
+</span></code></pre></div>
+<ol>
+<li>Save the installed package versions</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#guides-local-__codelineno-3-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+</span></code></pre></div>
+<ol>
+<li>Verify if everything is installed:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#guides-local-__codelineno-4-1"></a>$<span class="w"> </span>genius<span class="w"> </span>list
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#guides-local-__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#guides-local-__codelineno-4-3"></a>+--------------------------------------------+-------+
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#guides-local-__codelineno-4-4"></a><span class="p">|</span><span class="w"> </span>Name<span class="w">                                       </span><span class="p">|</span><span class="w"> </span>Type<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#guides-local-__codelineno-4-5"></a>+--------------------------------------------+-------+
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#guides-local-__codelineno-4-6"></a><span class="p">|</span><span class="w"> </span>TestSpoutCtlSpout<span class="w">                          </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#guides-local-__codelineno-4-7"></a><span class="p">|</span><span class="w"> </span>Kafka<span class="w">                                      </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#guides-local-__codelineno-4-8"></a><span class="p">|</span><span class="w"> </span>MQTT<span class="w">                                       </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#guides-local-__codelineno-4-9"></a><span class="p">|</span><span class="w"> </span>Quic<span class="w">                                       </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#guides-local-__codelineno-4-10"></a><span class="p">|</span><span class="w"> </span>RESTAPIPoll<span class="w">                                </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#guides-local-__codelineno-4-11"></a><span class="p">|</span><span class="w"> </span>RabbitMQ<span class="w">                                   </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#guides-local-__codelineno-4-12"></a><span class="p">|</span><span class="w"> </span>RedisPubSub<span class="w">                                </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#guides-local-__codelineno-4-13"></a><span class="p">|</span><span class="w"> </span>RedisStream<span class="w">                                </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#guides-local-__codelineno-4-14"></a><span class="p">|</span><span class="w"> </span>SNS<span class="w">                                        </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#guides-local-__codelineno-4-15"></a><span class="p">|</span><span class="w"> </span>SQS<span class="w">                                        </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#guides-local-__codelineno-4-16"></a><span class="p">|</span><span class="w"> </span>Udp<span class="w">                                        </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#guides-local-__codelineno-4-17"></a><span class="p">|</span><span class="w"> </span>Webhook<span class="w">                                    </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#guides-local-__codelineno-4-18"></a><span class="p">|</span><span class="w"> </span>Websocket<span class="w">                                  </span><span class="p">|</span><span class="w"> </span>Spout<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#guides-local-__codelineno-4-19"></a><span class="p">|</span><span class="w"> </span>TestBoltCtlBolt<span class="w">                            </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#guides-local-__codelineno-4-20"></a><span class="p">|</span><span class="w"> </span>HuggingFaceClassificationFineTuner<span class="w">         </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#guides-local-__codelineno-4-21"></a><span class="p">|</span><span class="w"> </span>HuggingFaceCommonsenseReasoningFineTuner<span class="w">   </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#guides-local-__codelineno-4-22"></a><span class="p">|</span><span class="w"> </span>HuggingFaceFineTuner<span class="w">                       </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#guides-local-__codelineno-4-23"></a><span class="p">|</span><span class="w"> </span>HuggingFaceInstructionTuningFineTuner<span class="w">      </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#guides-local-__codelineno-4-24"></a><span class="p">|</span><span class="w"> </span>HuggingFaceLanguageModelingFineTuner<span class="w">       </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#guides-local-__codelineno-4-25"></a><span class="p">|</span><span class="w"> </span>HuggingFaceNamedEntityRecognitionFineTuner<span class="w"> </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#guides-local-__codelineno-4-26"></a><span class="p">|</span><span class="w"> </span>HuggingFaceQuestionAnsweringFineTuner<span class="w">      </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#guides-local-__codelineno-4-27"></a><span class="p">|</span><span class="w"> </span>HuggingFaceSentimentAnalysisFineTuner<span class="w">      </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#guides-local-__codelineno-4-28"></a><span class="p">|</span><span class="w"> </span>HuggingFaceSummarizationFineTuner<span class="w">          </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#guides-local-__codelineno-4-29"></a><span class="p">|</span><span class="w"> </span>HuggingFaceTranslationFineTuner<span class="w">            </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#guides-local-__codelineno-4-30"></a><span class="p">|</span><span class="w"> </span>NamedEntityRecognitionFineTuner<span class="w">            </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#guides-local-__codelineno-4-31"></a><span class="p">|</span><span class="w"> </span>OpenAIClassificationFineTuner<span class="w">              </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#guides-local-__codelineno-4-32"></a><span class="p">|</span><span class="w"> </span>OpenAICommonsenseReasoningFineTuner<span class="w">        </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#guides-local-__codelineno-4-33"></a><span class="p">|</span><span class="w"> </span>OpenAIFineTuner<span class="w">                            </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#guides-local-__codelineno-4-34"></a><span class="p">|</span><span class="w"> </span>OpenAIInstructionFineTuner<span class="w">                 </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#guides-local-__codelineno-4-35"></a><span class="p">|</span><span class="w"> </span>OpenAILanguageModelFineTuner<span class="w">               </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#guides-local-__codelineno-4-36"></a><span class="p">|</span><span class="w"> </span>OpenAIQuestionAnsweringFineTuner<span class="w">           </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#guides-local-__codelineno-4-37"></a><span class="p">|</span><span class="w"> </span>OpenAISentimentAnalysisFineTuner<span class="w">           </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#guides-local-__codelineno-4-38"></a><span class="p">|</span><span class="w"> </span>OpenAISummarizationFineTuner<span class="w">               </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#guides-local-__codelineno-4-39"></a><span class="p">|</span><span class="w"> </span>OpenAITranslationFineTuner<span class="w">                 </span><span class="p">|</span><span class="w"> </span>Bolt<span class="w">  </span><span class="p">|</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#guides-local-__codelineno-4-40"></a>+--------------------------------------------+-------+
+</span></code></pre></div>
+<h2 id="guides-local-input-data">Input Data<a class="headerlink" href="#guides-local-input-data" title="Permanent link">&para;</a></h2>
+<p>Lets start with the server which has to listen for HTTP events. We can use the <code>Webhook</code> listener for this purpose.</p>
+<p>Next, we have to ask ourselves 2 things:</p>
+<ol>
+<li>Where do we want the output?</li>
+<li>A: in s3 in batches (output = stream_to_batch)</li>
+<li>Do we want monitoring?</li>
+<li>A: no (state = none)</li>
+</ol>
+<p>Let's run the listener:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#guides-local-__codelineno-5-1"></a>genius<span class="w"> </span>Webhook<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#guides-local-__codelineno-5-2"></a><span class="w">  </span>stream_to_batch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#guides-local-__codelineno-5-3"></a><span class="w">  </span>--output_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#guides-local-__codelineno-5-4"></a><span class="w">  </span>--output_s3_folder<span class="w"> </span>train<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#guides-local-__codelineno-5-5"></a><span class="w">  </span>none<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#guides-local-__codelineno-5-6"></a><span class="w">  </span>listen<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#guides-local-__codelineno-5-7"></a><span class="w">  </span>--args<span class="w"> </span><span class="nv">port</span><span class="o">=</span><span class="m">8080</span>
+</span></code></pre></div>
+<p>The server should be up with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#guides-local-__codelineno-6-1"></a><span class="w">    </span>🚀<span class="w"> </span>Initialized<span class="w"> </span>Task<span class="w"> </span>with<span class="w"> </span>ID:<span class="w"> </span>Webhookaca9cb67-5c41-420c-9445-cf0015d9d866
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#guides-local-__codelineno-6-2"></a><span class="w">    </span><span class="o">[</span><span class="m">17</span>/Sep/2023:14:00:18<span class="o">]</span><span class="w"> </span>ENGINE<span class="w"> </span>Bus<span class="w"> </span>STARTING
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#guides-local-__codelineno-6-3"></a>CherryPy<span class="w"> </span>Checker:
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#guides-local-__codelineno-6-4"></a>The<span class="w"> </span>Application<span class="w"> </span>mounted<span class="w"> </span>at<span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span>has<span class="w"> </span>an<span class="w"> </span>empty<span class="w"> </span>config.
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#guides-local-__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#guides-local-__codelineno-6-6"></a><span class="w">    </span><span class="o">[</span><span class="m">17</span>/Sep/2023:14:00:18<span class="o">]</span><span class="w"> </span>ENGINE<span class="w"> </span>Started<span class="w"> </span>monitor<span class="w"> </span>thread<span class="w"> </span><span class="s1">&#39;Autoreloader&#39;</span>.
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#guides-local-__codelineno-6-7"></a><span class="w">    </span><span class="o">[</span><span class="m">17</span>/Sep/2023:14:00:18<span class="o">]</span><span class="w"> </span>ENGINE<span class="w"> </span>Serving<span class="w"> </span>on<span class="w"> </span>http://0.0.0.0:8080
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#guides-local-__codelineno-6-8"></a><span class="w">    </span><span class="o">[</span><span class="m">17</span>/Sep/2023:14:00:18<span class="o">]</span><span class="w"> </span>ENGINE<span class="w"> </span>Bus<span class="w"> </span>STARTED
+</span></code></pre></div>
+<h2 id="guides-local-data">Data<a class="headerlink" href="#guides-local-data" title="Permanent link">&para;</a></h2>
+<p>Lets create some data for testing:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#guides-local-__codelineno-7-1"></a><span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#guides-local-__codelineno-7-2"></a><span class="w">  </span><span class="c1"># Generate a random customer ID</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#guides-local-__codelineno-7-3"></a><span class="w">  </span><span class="nv">customer_id</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span><span class="nv">RANDOM</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">10000001</span><span class="w"> </span><span class="k">))</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#guides-local-__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#guides-local-__codelineno-7-5"></a><span class="w">  </span><span class="c1"># Determine the status code based on the customer ID</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#guides-local-__codelineno-7-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$customer_id</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">10000000</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#guides-local-__codelineno-7-7"></a><span class="w">    </span><span class="nv">status_code</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#guides-local-__codelineno-7-8"></a><span class="w">  </span><span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$customer_id</span><span class="w"> </span>-le<span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#guides-local-__codelineno-7-9"></a><span class="w">    </span><span class="nv">status_code</span><span class="o">=</span><span class="s2">&quot;1&quot;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#guides-local-__codelineno-7-10"></a><span class="w">  </span><span class="k">else</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#guides-local-__codelineno-7-11"></a><span class="w">    </span><span class="nv">status_code</span><span class="o">=</span><span class="s2">&quot;0&quot;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#guides-local-__codelineno-7-12"></a><span class="w">  </span><span class="k">fi</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#guides-local-__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#guides-local-__codelineno-7-14"></a><span class="w">  </span><span class="c1"># Make the API call</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#guides-local-__codelineno-7-15"></a><span class="w">  </span>curl<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#guides-local-__codelineno-7-16"></a><span class="w">       </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#guides-local-__codelineno-7-17"></a><span class="w">       </span>--data<span class="w"> </span><span class="s2">&quot;{\&quot;text\&quot;:\&quot;GET /api/v1/customer/</span><span class="nv">$customer_id</span><span class="s2">\&quot;,\&quot;label\&quot;:\&quot;</span><span class="nv">$status_code</span><span class="s2">\&quot;}&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#guides-local-__codelineno-7-18"></a><span class="w">       </span>http://localhost:8080/application-1-tag-a-tag-b-whatever
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#guides-local-__codelineno-7-19"></a><span class="k">done</span>
+</span></code></pre></div>
+<p>Verify that the data is being dumped in the right place with the correct format:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#guides-local-__codelineno-8-1"></a>$<span class="w"> </span>aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://geniusrise-test/train/
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#guides-local-__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#guides-local-__codelineno-8-3"></a><span class="m">2023</span>-08-11<span class="w"> </span><span class="m">14</span>:02:47<span class="w">      </span><span class="m">28700</span><span class="w"> </span>DGtx4KjVZw5C2gfWmTVCmD.json
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#guides-local-__codelineno-8-4"></a><span class="m">2023</span>-08-11<span class="w"> </span><span class="m">14</span>:02:50<span class="w">      </span><span class="m">28700</span><span class="w"> </span>UYXAvn8JC2yk6pMuAjKMPq.json
+</span></code></pre></div>
+<p>The Webhook spout generates data like this:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#guides-local-__codelineno-9-1"></a><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;GET /api/v1/customer/28546&#39;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;401&#39;</span><span class="p">},</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#guides-local-__codelineno-9-2"></a>  <span class="s1">&#39;endpoint&#39;</span><span class="p">:</span> <span class="s1">&#39;http://localhost:8080/application-1-tag-a-tag-b-whatever&#39;</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#guides-local-__codelineno-9-3"></a>  <span class="s1">&#39;headers&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Remote-Addr&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#guides-local-__codelineno-9-4"></a>   <span class="s1">&#39;Host&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost:8080&#39;</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#guides-local-__codelineno-9-5"></a>   <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;curl/8.1.2&#39;</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#guides-local-__codelineno-9-6"></a>   <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;*/*&#39;</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#guides-local-__codelineno-9-7"></a>   <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#guides-local-__codelineno-9-8"></a>   <span class="s1">&#39;Content-Length&#39;</span><span class="p">:</span> <span class="s1">&#39;51&#39;</span><span class="p">}}</span>
+</span></code></pre></div>
+<p>We need to extract the <code>data</code> field from this data before training. This can be done by passing a lambda <code>lambda x: x['data']</code> to the fine tuning bolt.</p>
+<p>More info on other arguments can be found with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#guides-local-__codelineno-10-1"></a>genius<span class="w"> </span>Webhook<span class="w"> </span>rise<span class="w"> </span>--help
+</span></code></pre></div>
+<h2 id="guides-local-fine-tuning">Fine-tuning<a class="headerlink" href="#guides-local-fine-tuning" title="Permanent link">&para;</a></h2>
+<p>Now lets test the second leg of this, the model. Since we want to use the model for predicting the status code given the data, we will use classification as our task for fine-tuning the model.</p>
+<p>Lets use the <code>bert-base-uncased</code> model for now, as it is small enough to run on a CPU on a laptop.
+We also create a model on huggingface hub to store the model once it is trained: <code>ixaxaar/geniusrise-api-status-code-prediction</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#guides-local-__codelineno-11-1"></a>genius<span class="w"> </span>HuggingFaceClassificationFineTuner<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#guides-local-__codelineno-11-2"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#guides-local-__codelineno-11-3"></a><span class="w">    </span>--input_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#guides-local-__codelineno-11-4"></a><span class="w">    </span>--input_s3_folder<span class="w"> </span>train<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#guides-local-__codelineno-11-5"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#guides-local-__codelineno-11-6"></a><span class="w">    </span>--output_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#guides-local-__codelineno-11-7"></a><span class="w">    </span>--output_s3_folder<span class="w"> </span>api-prediction<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#guides-local-__codelineno-11-8"></a><span class="w">    </span>none<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#guides-local-__codelineno-11-9"></a><span class="w">    </span>fine_tune<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#guides-local-__codelineno-11-10"></a><span class="w">    </span>--args<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#guides-local-__codelineno-11-11"></a><span class="w">        </span><span class="nv">model_name</span><span class="o">=</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#guides-local-__codelineno-11-12"></a><span class="w">        </span><span class="nv">tokenizer_name</span><span class="o">=</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#guides-local-__codelineno-11-13"></a><span class="w">        </span><span class="nv">num_train_epochs</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#guides-local-__codelineno-11-14"></a><span class="w">        </span><span class="nv">per_device_train_batch_size</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#guides-local-__codelineno-11-15"></a><span class="w">        </span><span class="nv">model_class</span><span class="o">=</span>BertForSequenceClassification<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#guides-local-__codelineno-11-16"></a><span class="w">        </span><span class="nv">tokenizer_class</span><span class="o">=</span>BertTokenizer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#guides-local-__codelineno-11-17"></a><span class="w">        </span><span class="nv">data_masked</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#guides-local-__codelineno-11-18"></a><span class="w">        </span><span class="nv">data_extractor_lambda</span><span class="o">=</span><span class="s2">&quot;lambda x: x[&#39;data&#39;]&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#guides-local-__codelineno-11-19"></a><span class="w">        </span><span class="nv">hf_repo_id</span><span class="o">=</span>ixaxaar/geniusrise-api-status-code-prediction<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#guides-local-__codelineno-11-20"></a><span class="w">        </span><span class="nv">hf_commit_message</span><span class="o">=</span><span class="s2">&quot;initial local testing&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#guides-local-__codelineno-11-21"></a><span class="w">        </span><span class="nv">hf_create_pr</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#guides-local-__codelineno-11-22"></a><span class="w">        </span><span class="nv">hf_token</span><span class="o">=</span>hf_lalala
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#guides-local-__codelineno-12-1"></a>    🚀 Initialized Task with ID: HuggingFaceClassificationFineTuner772627a0-43a5-4f9d-9b0f-4362d69ba08c
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#guides-local-__codelineno-12-2"></a>    Found credentials in shared credentials file: ~/.aws/credentials
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#guides-local-__codelineno-12-3"></a>Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: [&#39;classifier.bias&#39;, &#39;classifier.weight&#39;]
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#guides-local-__codelineno-12-4"></a>You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#guides-local-__codelineno-12-5"></a>    Loading dataset from /tmp/tmp3h3wav4h/train
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#guides-local-__codelineno-12-6"></a>    New labels detected, ignore if fine-tuning
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#guides-local-__codelineno-12-7"></a>Map: 100%|██████████████████████████| 300/300 [00:00&lt;00:00, 4875.76 examples/s]
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#guides-local-__codelineno-12-8"></a>{&#39;train_runtime&#39;: 13.3748, &#39;train_samples_per_second&#39;: 44.861, &#39;train_steps_per_second&#39;: 22.43, &#39;train_loss&#39;: 0.6400579833984374, &#39;epoch&#39;: 2.0}
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#guides-local-__codelineno-12-9"></a>100%|████████████████████████████████████████| 300/300 [00:13&lt;00:00, 22.43it/s]
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#guides-local-__codelineno-12-10"></a>pytorch_model.bin: 100%|████████████████████| 438M/438M [01:29&lt;00:00, 4.88MB/s]
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#guides-local-__codelineno-12-11"></a>    Successfully executed the bolt method: fine_tune 👍
+</span></code></pre></div>
+<p>You'll see a progress bar at the bottom, on completion, a pull request will appear on huggingface hub.
+Here is the model we trained: <a href="https://huggingface.co/ixaxaar/geniusrise-api-status-code-prediction">https://huggingface.co/ixaxaar/geniusrise-api-status-code-prediction</a>.</p>
+<h2 id="guides-local-packaging">Packaging<a class="headerlink" href="#guides-local-packaging" title="Permanent link">&para;</a></h2>
+<p>Finally, lets package this workflow so that we can run it again and again.</p>
+<p>Create a <code>genius.yml</code> file, similar to the cli commands:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#guides-local-__codelineno-13-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#guides-local-__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#guides-local-__codelineno-13-3"></a><span class="nt">spouts</span><span class="p">:</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#guides-local-__codelineno-13-4"></a><span class="w">  </span><span class="nt">http_listener</span><span class="p">:</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#guides-local-__codelineno-13-5"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Webhook</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#guides-local-__codelineno-13-6"></a><span class="w">    </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">listen</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#guides-local-__codelineno-13-7"></a><span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">args</span><span class="p p-Indicator">:</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#guides-local-__codelineno-13-8"></a><span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#guides-local-__codelineno-13-9"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#guides-local-__codelineno-13-10"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#guides-local-__codelineno-13-11"></a><span class="w">    </span><span class="nt">output</span><span class="p">:</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#guides-local-__codelineno-13-12"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stream_to_batch</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#guides-local-__codelineno-13-13"></a><span class="w">      </span><span class="nt">args</span><span class="p">:</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#guides-local-__codelineno-13-14"></a><span class="w">        </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geniusrise-test</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#guides-local-__codelineno-13-15"></a><span class="w">        </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">train</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#guides-local-__codelineno-13-16"></a>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#guides-local-__codelineno-13-17"></a><span class="w">  </span><span class="nt">http_classifier</span><span class="p">:</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#guides-local-__codelineno-13-18"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HuggingFaceClassificationFineTuner</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#guides-local-__codelineno-13-19"></a><span class="w">    </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fine_tune</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#guides-local-__codelineno-13-20"></a><span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">args</span><span class="p p-Indicator">:</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#guides-local-__codelineno-13-21"></a><span class="w">        </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;bert-base-uncased&quot;</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#guides-local-__codelineno-13-22"></a><span class="w">        </span><span class="nt">tokenizer_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;bert-base-uncased&quot;</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#guides-local-__codelineno-13-23"></a><span class="w">        </span><span class="nt">num_train_epochs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#guides-local-__codelineno-13-24"></a><span class="w">        </span><span class="nt">per_device_train_batch_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#guides-local-__codelineno-13-25"></a><span class="w">        </span><span class="nt">model_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BertForSequenceClassification</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#guides-local-__codelineno-13-26"></a><span class="w">        </span><span class="nt">tokenizer_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BertTokenizer</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#guides-local-__codelineno-13-27"></a><span class="w">        </span><span class="nt">data_masked</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#guides-local-__codelineno-13-28"></a><span class="w">        </span><span class="nt">data_extractor_lambda</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;lambda</span><span class="nv"> </span><span class="s">x:</span><span class="nv"> </span><span class="s">x[&#39;data&#39;]&quot;</span>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#guides-local-__codelineno-13-29"></a><span class="w">        </span><span class="nt">hf_repo_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ixaxaar/geniusrise-api-status-code-prediction</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#guides-local-__codelineno-13-30"></a><span class="w">        </span><span class="nt">hf_commit_message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;initial</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">testing&quot;</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#guides-local-__codelineno-13-31"></a><span class="w">        </span><span class="nt">hf_create_pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#guides-local-__codelineno-13-32"></a><span class="w">        </span><span class="nt">hf_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">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</span>
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#guides-local-__codelineno-13-33"></a><span class="w">    </span><span class="nt">input</span><span class="p">:</span>
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#guides-local-__codelineno-13-34"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spout</span>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#guides-local-__codelineno-13-35"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">args</span><span class="p p-Indicator">:</span>
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#guides-local-__codelineno-13-36"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_listener</span>
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#guides-local-__codelineno-13-37"></a><span class="w">    </span><span class="nt">output</span><span class="p">:</span>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#guides-local-__codelineno-13-38"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">batch</span>
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#guides-local-__codelineno-13-39"></a><span class="w">      </span><span class="nt">args</span><span class="p">:</span>
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#guides-local-__codelineno-13-40"></a><span class="w">        </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geniusrise-test</span>
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#guides-local-__codelineno-13-41"></a><span class="w">        </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">model</span>
+</span></code></pre></div>
+<p>Finally run them:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#guides-local-__codelineno-14-1"></a>genius<span class="w"> </span>rise
+</span></code></pre></div>
+<p>Or run them individually:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#guides-local-__codelineno-15-1"></a>genius<span class="w"> </span>rise<span class="w"> </span>--spout<span class="w"> </span>all
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#guides-local-__codelineno-15-2"></a>genius<span class="w"> </span>rise<span class="w"> </span>--bolt<span class="w"> </span>all
+</span></code></pre></div></section><section class="print-page" id="guides-dev_cycle"><h1 id="guides-dev_cycle-dev-cycle">Dev Cycle<a class="headerlink" href="#guides-dev_cycle-dev-cycle" title="Permanent link">&para;</a></h1>
+<p>This document describes one full local development cycle.</p>
+<h2 id="guides-dev_cycle-boilerplate">Boilerplate<a class="headerlink" href="#guides-dev_cycle-boilerplate" title="Permanent link">&para;</a></h2>
 <p>To setup a local geniusrise project, simply use the geniusrise project creator script:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#guides-local-__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://cum.gdn/OfeQir<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#guides-dev_cycle-__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://cum.gdn/OfeQir<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </span></code></pre></div>
 <p>or</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#guides-local-__codelineno-1-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://raw.githubusercontent.com/geniusrise/geniusrise/master/scripts/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#guides-dev_cycle-__codelineno-1-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://raw.githubusercontent.com/geniusrise/geniusrise/master/scripts/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </span></code></pre></div>
-<h2 id="guides-local-existing-project">Existing project<a class="headerlink" href="#guides-local-existing-project" title="Permanent link">&para;</a></h2>
+<h2 id="guides-dev_cycle-existing-project">Existing project<a class="headerlink" href="#guides-dev_cycle-existing-project" title="Permanent link">&para;</a></h2>
 <p>If you wish to add geniusrise to an existing project:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#guides-local-__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#guides-local-__codelineno-2-2"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#guides-dev_cycle-__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>geniusrise
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#guides-dev_cycle-__codelineno-2-2"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
 </span></code></pre></div>
-<h2 id="guides-local-from-scratch">From scratch<a class="headerlink" href="#guides-local-from-scratch" title="Permanent link">&para;</a></h2>
+<h2 id="guides-dev_cycle-from-scratch">From scratch<a class="headerlink" href="#guides-dev_cycle-from-scratch" title="Permanent link">&para;</a></h2>
 <p>Here is how to set up from scratch:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#guides-local-__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#guides-local-__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#guides-local-__codelineno-3-3"></a><span class="c1"># Prompt for project details</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#guides-local-__codelineno-3-4"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your project name: &quot;</span> <span class="n">project_name</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#guides-local-__codelineno-3-5"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your name: &quot;</span> <span class="n">author_name</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#guides-local-__codelineno-3-6"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your email: &quot;</span> <span class="n">author_email</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#guides-local-__codelineno-3-7"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your GitHub username: &quot;</span> <span class="n">github_username</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#guides-local-__codelineno-3-8"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter a brief description of your project: &quot;</span> <span class="n">project_description</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#guides-local-__codelineno-3-9"></a>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#guides-local-__codelineno-3-10"></a><span class="c1"># Create project structure</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#guides-local-__codelineno-3-11"></a><span class="n">mkdir</span> <span class="err">$</span><span class="n">project_name</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#guides-local-__codelineno-3-12"></a><span class="n">cd</span> <span class="err">$</span><span class="n">project_name</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#guides-local-__codelineno-3-13"></a><span class="n">mkdir</span> <span class="err">$</span><span class="n">project_name</span> <span class="n">tests</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#guides-local-__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#guides-local-__codelineno-3-15"></a><span class="c1"># Create basic files</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#guides-local-__codelineno-3-16"></a><span class="n">touch</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#guides-local-__codelineno-3-17"></a><span class="n">touch</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#guides-local-__codelineno-3-18"></a><span class="n">touch</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#guides-local-__codelineno-3-19"></a><span class="n">touch</span> <span class="n">Makefile</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#guides-local-__codelineno-3-20"></a><span class="n">touch</span> <span class="err">$</span><span class="n">project_name</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#guides-local-__codelineno-3-21"></a><span class="n">touch</span> <span class="n">tests</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#guides-local-__codelineno-3-22"></a>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#guides-local-__codelineno-3-23"></a><span class="c1"># Populate README.md</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#guides-local-__codelineno-3-24"></a><span class="n">echo</span> <span class="s2">&quot;# $project_name&quot;</span> <span class="o">&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#guides-local-__codelineno-3-25"></a><span class="n">echo</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">$project_description&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#guides-local-__codelineno-3-26"></a>
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#guides-local-__codelineno-3-27"></a><span class="c1"># Populate setup.py</span>
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#guides-local-__codelineno-3-28"></a><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#guides-local-__codelineno-3-29"></a><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#guides-local-__codelineno-3-30"></a>
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#guides-local-__codelineno-3-31"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#guides-local-__codelineno-3-32"></a>    <span class="n">long_description</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#guides-local-__codelineno-3-33"></a>
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#guides-local-__codelineno-3-34"></a><span class="n">setup</span><span class="p">(</span>
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#guides-local-__codelineno-3-35"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;$project_name&#39;</span><span class="p">,</span>
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#guides-local-__codelineno-3-36"></a>    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1.0&#39;</span><span class="p">,</span>
-</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#guides-local-__codelineno-3-37"></a>    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span> <span class="s2">&quot;tests.*&quot;</span><span class="p">]),</span>
-</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#guides-local-__codelineno-3-38"></a>    <span class="n">install_requires</span><span class="o">=</span><span class="p">[],</span>
-</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#guides-local-__codelineno-3-39"></a>    <span class="n">python_requires</span><span class="o">=</span><span class="s1">&#39;&gt;=3.10&#39;</span><span class="p">,</span>
-</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#guides-local-__codelineno-3-40"></a>    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;$author_name&#39;</span><span class="p">,</span>
-</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#guides-local-__codelineno-3-41"></a>    <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;$author_email&#39;</span><span class="p">,</span>
-</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#guides-local-__codelineno-3-42"></a>    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$project_description&#39;</span><span class="p">,</span>
-</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#guides-local-__codelineno-3-43"></a>    <span class="n">long_description</span><span class="o">=</span><span class="n">long_description</span><span class="p">,</span>
-</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#guides-local-__codelineno-3-44"></a>    <span class="n">long_description_content_type</span><span class="o">=</span><span class="s1">&#39;text/markdown&#39;</span><span class="p">,</span>
-</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#guides-local-__codelineno-3-45"></a>    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://github.com/$github_username/$project_name&#39;</span><span class="p">,</span>
-</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#guides-local-__codelineno-3-46"></a>    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
-</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#guides-local-__codelineno-3-47"></a>        <span class="s1">&#39;Programming Language :: Python :: 3&#39;</span><span class="p">,</span>
-</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#guides-local-__codelineno-3-48"></a>        <span class="s1">&#39;License :: OSI Approved :: MIT License&#39;</span><span class="p">,</span>
-</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#guides-local-__codelineno-3-49"></a>        <span class="s1">&#39;Operating System :: OS Independent&#39;</span><span class="p">,</span>
-</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#guides-local-__codelineno-3-50"></a>    <span class="p">],</span>
-</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#guides-local-__codelineno-3-51"></a><span class="p">)</span>
-</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#guides-local-__codelineno-3-52"></a><span class="n">EOL</span>
-</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#guides-local-__codelineno-3-53"></a>
-</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#guides-local-__codelineno-3-54"></a><span class="c1"># Populate Makefile</span>
-</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#guides-local-__codelineno-3-55"></a><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="n">Makefile</span>
-</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#guides-local-__codelineno-3-56"></a><span class="n">setup</span><span class="p">:</span>
-</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#guides-local-__codelineno-3-57"></a>    <span class="nd">@pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="o">./</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#guides-local-__codelineno-3-58"></a>
-</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#guides-local-__codelineno-3-59"></a><span class="n">test</span><span class="p">:</span>
-</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#guides-local-__codelineno-3-60"></a>    <span class="nd">@coverage</span> <span class="n">run</span> <span class="o">-</span><span class="n">m</span> <span class="n">pytest</span> <span class="o">-</span><span class="n">v</span> <span class="o">./</span><span class="n">tests</span>
-</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#guides-local-__codelineno-3-61"></a>
-</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#guides-local-__codelineno-3-62"></a><span class="n">publish</span><span class="p">:</span>
-</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#guides-local-__codelineno-3-63"></a>    <span class="nd">@python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">sdist</span> <span class="n">bdist_wheel</span>
-</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#guides-local-__codelineno-3-64"></a>    <span class="nd">@twine</span> <span class="n">upload</span> <span class="n">dist</span><span class="o">/</span><span class="err">$</span><span class="n">project_name</span><span class="o">-</span>\<span class="err">$$</span><span class="p">{</span><span class="n">VERSION</span><span class="p">}</span><span class="o">-*</span> <span class="o">--</span><span class="n">verbose</span>
-</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#guides-local-__codelineno-3-65"></a><span class="n">EOL</span>
-</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#guides-local-__codelineno-3-66"></a>
-</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#guides-local-__codelineno-3-67"></a><span class="c1"># Set up the virtual environment and install necessary packages</span>
-</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#guides-local-__codelineno-3-68"></a><span class="n">virtualenv</span> <span class="n">venv</span> <span class="o">-</span><span class="n">p</span> <span class="err">`</span><span class="n">which</span> <span class="n">python3</span><span class="mf">.10</span><span class="err">`</span>
-</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#guides-local-__codelineno-3-69"></a><span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
-</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#guides-local-__codelineno-3-70"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">twine</span> <span class="n">setuptools</span> <span class="n">pytest</span> <span class="n">coverage</span>
-</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#guides-local-__codelineno-3-71"></a><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#guides-local-__codelineno-3-72"></a>
-</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#guides-local-__codelineno-3-73"></a><span class="c1"># Fetch .pre-commit-config.yaml and .gitignore from geniusrise/geniusrise</span>
-</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#guides-local-__codelineno-3-74"></a><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">master</span><span class="o">/.</span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span><span class="o">-</span><span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
-</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#guides-local-__codelineno-3-75"></a><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">master</span><span class="o">/.</span><span class="n">gitignore</span>
-</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#guides-local-__codelineno-3-76"></a>
-</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#guides-local-__codelineno-3-77"></a><span class="n">echo</span> <span class="s2">&quot;Project $project_name initialized!&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#guides-dev_cycle-__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#guides-dev_cycle-__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#guides-dev_cycle-__codelineno-3-3"></a><span class="c1"># Prompt for project details</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#guides-dev_cycle-__codelineno-3-4"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your project name: &quot;</span> <span class="n">project_name</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#guides-dev_cycle-__codelineno-3-5"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your name: &quot;</span> <span class="n">author_name</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#guides-dev_cycle-__codelineno-3-6"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your email: &quot;</span> <span class="n">author_email</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#guides-dev_cycle-__codelineno-3-7"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter your GitHub username: &quot;</span> <span class="n">github_username</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#guides-dev_cycle-__codelineno-3-8"></a><span class="n">read</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;Enter a brief description of your project: &quot;</span> <span class="n">project_description</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#guides-dev_cycle-__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#guides-dev_cycle-__codelineno-3-10"></a><span class="c1"># Create project structure</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#guides-dev_cycle-__codelineno-3-11"></a><span class="n">mkdir</span> <span class="err">$</span><span class="n">project_name</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#guides-dev_cycle-__codelineno-3-12"></a><span class="n">cd</span> <span class="err">$</span><span class="n">project_name</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#guides-dev_cycle-__codelineno-3-13"></a><span class="n">mkdir</span> <span class="err">$</span><span class="n">project_name</span> <span class="n">tests</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#guides-dev_cycle-__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#guides-dev_cycle-__codelineno-3-15"></a><span class="c1"># Create basic files</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#guides-dev_cycle-__codelineno-3-16"></a><span class="n">touch</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#guides-dev_cycle-__codelineno-3-17"></a><span class="n">touch</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#guides-dev_cycle-__codelineno-3-18"></a><span class="n">touch</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#guides-dev_cycle-__codelineno-3-19"></a><span class="n">touch</span> <span class="n">Makefile</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#guides-dev_cycle-__codelineno-3-20"></a><span class="n">touch</span> <span class="err">$</span><span class="n">project_name</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#guides-dev_cycle-__codelineno-3-21"></a><span class="n">touch</span> <span class="n">tests</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#guides-dev_cycle-__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#guides-dev_cycle-__codelineno-3-23"></a><span class="c1"># Populate README.md</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#guides-dev_cycle-__codelineno-3-24"></a><span class="n">echo</span> <span class="s2">&quot;# $project_name&quot;</span> <span class="o">&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#guides-dev_cycle-__codelineno-3-25"></a><span class="n">echo</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">$project_description&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#guides-dev_cycle-__codelineno-3-26"></a>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#guides-dev_cycle-__codelineno-3-27"></a><span class="c1"># Populate setup.py</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#guides-dev_cycle-__codelineno-3-28"></a><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#guides-dev_cycle-__codelineno-3-29"></a><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#guides-dev_cycle-__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#guides-dev_cycle-__codelineno-3-31"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#guides-dev_cycle-__codelineno-3-32"></a>    <span class="n">long_description</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#guides-dev_cycle-__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#guides-dev_cycle-__codelineno-3-34"></a><span class="n">setup</span><span class="p">(</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#guides-dev_cycle-__codelineno-3-35"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;$project_name&#39;</span><span class="p">,</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#guides-dev_cycle-__codelineno-3-36"></a>    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1.0&#39;</span><span class="p">,</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#guides-dev_cycle-__codelineno-3-37"></a>    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span> <span class="s2">&quot;tests.*&quot;</span><span class="p">]),</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#guides-dev_cycle-__codelineno-3-38"></a>    <span class="n">install_requires</span><span class="o">=</span><span class="p">[],</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#guides-dev_cycle-__codelineno-3-39"></a>    <span class="n">python_requires</span><span class="o">=</span><span class="s1">&#39;&gt;=3.10&#39;</span><span class="p">,</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#guides-dev_cycle-__codelineno-3-40"></a>    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;$author_name&#39;</span><span class="p">,</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#guides-dev_cycle-__codelineno-3-41"></a>    <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;$author_email&#39;</span><span class="p">,</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#guides-dev_cycle-__codelineno-3-42"></a>    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$project_description&#39;</span><span class="p">,</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#guides-dev_cycle-__codelineno-3-43"></a>    <span class="n">long_description</span><span class="o">=</span><span class="n">long_description</span><span class="p">,</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#guides-dev_cycle-__codelineno-3-44"></a>    <span class="n">long_description_content_type</span><span class="o">=</span><span class="s1">&#39;text/markdown&#39;</span><span class="p">,</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#guides-dev_cycle-__codelineno-3-45"></a>    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://github.com/$github_username/$project_name&#39;</span><span class="p">,</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#guides-dev_cycle-__codelineno-3-46"></a>    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#guides-dev_cycle-__codelineno-3-47"></a>        <span class="s1">&#39;Programming Language :: Python :: 3&#39;</span><span class="p">,</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#guides-dev_cycle-__codelineno-3-48"></a>        <span class="s1">&#39;License :: OSI Approved :: MIT License&#39;</span><span class="p">,</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#guides-dev_cycle-__codelineno-3-49"></a>        <span class="s1">&#39;Operating System :: OS Independent&#39;</span><span class="p">,</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#guides-dev_cycle-__codelineno-3-50"></a>    <span class="p">],</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#guides-dev_cycle-__codelineno-3-51"></a><span class="p">)</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#guides-dev_cycle-__codelineno-3-52"></a><span class="n">EOL</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#guides-dev_cycle-__codelineno-3-53"></a>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#guides-dev_cycle-__codelineno-3-54"></a><span class="c1"># Populate Makefile</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#guides-dev_cycle-__codelineno-3-55"></a><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOL</span> <span class="o">&gt;</span> <span class="n">Makefile</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#guides-dev_cycle-__codelineno-3-56"></a><span class="n">setup</span><span class="p">:</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#guides-dev_cycle-__codelineno-3-57"></a>    <span class="nd">@pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="o">./</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#guides-dev_cycle-__codelineno-3-58"></a>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#guides-dev_cycle-__codelineno-3-59"></a><span class="n">test</span><span class="p">:</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#guides-dev_cycle-__codelineno-3-60"></a>    <span class="nd">@coverage</span> <span class="n">run</span> <span class="o">-</span><span class="n">m</span> <span class="n">pytest</span> <span class="o">-</span><span class="n">v</span> <span class="o">./</span><span class="n">tests</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#guides-dev_cycle-__codelineno-3-61"></a>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#guides-dev_cycle-__codelineno-3-62"></a><span class="n">publish</span><span class="p">:</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#guides-dev_cycle-__codelineno-3-63"></a>    <span class="nd">@python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">sdist</span> <span class="n">bdist_wheel</span>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#guides-dev_cycle-__codelineno-3-64"></a>    <span class="nd">@twine</span> <span class="n">upload</span> <span class="n">dist</span><span class="o">/</span><span class="err">$</span><span class="n">project_name</span><span class="o">-</span>\<span class="err">$$</span><span class="p">{</span><span class="n">VERSION</span><span class="p">}</span><span class="o">-*</span> <span class="o">--</span><span class="n">verbose</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#guides-dev_cycle-__codelineno-3-65"></a><span class="n">EOL</span>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#guides-dev_cycle-__codelineno-3-66"></a>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#guides-dev_cycle-__codelineno-3-67"></a><span class="c1"># Set up the virtual environment and install necessary packages</span>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#guides-dev_cycle-__codelineno-3-68"></a><span class="n">virtualenv</span> <span class="n">venv</span> <span class="o">-</span><span class="n">p</span> <span class="err">`</span><span class="n">which</span> <span class="n">python3</span><span class="mf">.10</span><span class="err">`</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#guides-dev_cycle-__codelineno-3-69"></a><span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#guides-dev_cycle-__codelineno-3-70"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">twine</span> <span class="n">setuptools</span> <span class="n">pytest</span> <span class="n">coverage</span>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#guides-dev_cycle-__codelineno-3-71"></a><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#guides-dev_cycle-__codelineno-3-72"></a>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#guides-dev_cycle-__codelineno-3-73"></a><span class="c1"># Fetch .pre-commit-config.yaml and .gitignore from geniusrise/geniusrise</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#guides-dev_cycle-__codelineno-3-74"></a><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">master</span><span class="o">/.</span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span><span class="o">-</span><span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#guides-dev_cycle-__codelineno-3-75"></a><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">geniusrise</span><span class="o">/</span><span class="n">master</span><span class="o">/.</span><span class="n">gitignore</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#guides-dev_cycle-__codelineno-3-76"></a>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#guides-dev_cycle-__codelineno-3-77"></a><span class="n">echo</span> <span class="s2">&quot;Project $project_name initialized!&quot;</span>
 </span></code></pre></div>
 <p>Create a install script out of this and execute it:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#guides-local-__codelineno-4-1"></a>touch<span class="w"> </span>install.sh
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#guides-local-__codelineno-4-2"></a>chmod<span class="w"> </span>+x<span class="w"> </span>./install.sh
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#guides-local-__codelineno-4-3"></a>./install.sh
-</span></code></pre></div></section><section class="print-page" id="guides-dev_cycle"><h1 id="guides-dev_cycle-dev-cycle">Dev Cycle<a class="headerlink" href="#guides-dev_cycle-dev-cycle" title="Permanent link">&para;</a></h1>
-<p>This document describes one full local development cycle.</p></section><h1 class='nav-section-title-end'>Ended: Guides</h1><h1 class='nav-section-title-end'>Ended: Development</h1>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#guides-dev_cycle-__codelineno-4-1"></a>touch<span class="w"> </span>install.sh
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#guides-dev_cycle-__codelineno-4-2"></a>chmod<span class="w"> </span>+x<span class="w"> </span>./install.sh
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#guides-dev_cycle-__codelineno-4-3"></a>./install.sh
+</span></code></pre></div></section><h1 class='nav-section-title-end'>Ended: Guides</h1><h1 class='nav-section-title-end'>Ended: Development</h1>
                         <h1 class='nav-section-title' id='section-deployment'>
                             Deployment <a class='headerlink' href='#section-deployment' title='Permanent link'>↵</a>
                         </h1>
@@ -18853,7 +19101,7 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 
 
 <h2 id="bolts-huggingface-base-base.HuggingFaceFineTuner.fine_tune" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">fine_tune</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">tokenizer_name</span><span class="p">,</span> <span class="n">num_train_epochs</span><span class="p">,</span> <span class="n">per_device_train_batch_size</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">tokenizer_class</span><span class="o">=</span><span class="s1">&#39;AutoTokenizer&#39;</span><span class="p">,</span> <span class="nb">eval</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hf_repo_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_commit_message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_private</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hf_create_pr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">fine_tune</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">tokenizer_name</span><span class="p">,</span> <span class="n">num_train_epochs</span><span class="p">,</span> <span class="n">per_device_train_batch_size</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">tokenizer_class</span><span class="o">=</span><span class="s1">&#39;AutoTokenizer&#39;</span><span class="p">,</span> <span class="nb">eval</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hf_repo_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_commit_message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_private</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hf_create_pr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">data_extractor_lambda</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#bolts-huggingface-base-base.HuggingFaceFineTuner.fine_tune" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -19041,6 +19289,20 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
           </td>
           <td>
                 <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>data_extractor_lambda</code></td>
+          <td>
+                <code><span data-autorefs-optional="str">str</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A lambda function run on each data element to extract the actual data.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
           </td>
         </tr>
         <tr>
@@ -19342,15 +19604,8 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#bolts-huggingface-classification-__codelineno-0-4"></a><span class="w">    </span>streaming<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#bolts-huggingface-classification-__codelineno-0-5"></a><span class="w">        </span>--output_kafka_topic<span class="w"> </span>my_topic<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#bolts-huggingface-classification-__codelineno-0-6"></a><span class="w">        </span>--output_kafka_cluster_connection_string<span class="w"> </span>localhost:9094<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#bolts-huggingface-classification-__codelineno-0-7"></a><span class="w">    </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#bolts-huggingface-classification-__codelineno-0-8"></a><span class="w">        </span>--postgres_host<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#bolts-huggingface-classification-__codelineno-0-9"></a><span class="w">        </span>--postgres_port<span class="w"> </span><span class="m">5432</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#bolts-huggingface-classification-__codelineno-0-10"></a><span class="w">        </span>--postgres_user<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#bolts-huggingface-classification-__codelineno-0-11"></a><span class="w">        </span>--postgres_password<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#bolts-huggingface-classification-__codelineno-0-12"></a><span class="w">        </span>--postgres_database<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#bolts-huggingface-classification-__codelineno-0-13"></a><span class="w">        </span>--postgres_table<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#bolts-huggingface-classification-__codelineno-0-14"></a><span class="w">    </span>load_dataset<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#bolts-huggingface-classification-__codelineno-0-15"></a><span class="w">        </span>--args<span class="w"> </span><span class="nv">dataset_path</span><span class="o">=</span>my_dataset<span class="w"> </span><span class="nv">max_length</span><span class="o">=</span><span class="m">512</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#bolts-huggingface-classification-__codelineno-0-7"></a><span class="w">    </span>load_dataset<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#bolts-huggingface-classification-__codelineno-0-8"></a><span class="w">        </span>--args<span class="w"> </span><span class="nv">dataset_path</span><span class="o">=</span>my_dataset<span class="w"> </span><span class="nv">max_length</span><span class="o">=</span><span class="m">512</span>
 </span></code></pre></div>
 <h3 id="bolts-huggingface-classification-classification.HuggingFaceClassificationFineTuner--using-geniusrise-to-invoke-via-yaml-file">Using geniusrise to invoke via YAML file<a class="headerlink" href="#bolts-huggingface-classification-classification.HuggingFaceClassificationFineTuner--using-geniusrise-to-invoke-via-yaml-file" title="Permanent link">&para;</a></h3>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#bolts-huggingface-classification-__codelineno-1-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
@@ -19370,22 +19625,6 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#bolts-huggingface-classification-__codelineno-1-15"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#bolts-huggingface-classification-__codelineno-1-16"></a><span class="w">                </span><span class="nt">output_topic</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_topic&quot;</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#bolts-huggingface-classification-__codelineno-1-17"></a><span class="w">                </span><span class="nt">kafka_servers</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost:9094&quot;</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#bolts-huggingface-classification-__codelineno-1-18"></a><span class="w">        </span><span class="nt">state</span><span class="p">:</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#bolts-huggingface-classification-__codelineno-1-19"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#bolts-huggingface-classification-__codelineno-1-20"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#bolts-huggingface-classification-__codelineno-1-21"></a><span class="w">                </span><span class="nt">postgres_host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#bolts-huggingface-classification-__codelineno-1-22"></a><span class="w">                </span><span class="nt">postgres_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#bolts-huggingface-classification-__codelineno-1-23"></a><span class="w">                </span><span class="nt">postgres_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#bolts-huggingface-classification-__codelineno-1-24"></a><span class="w">                </span><span class="nt">postgres_password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#bolts-huggingface-classification-__codelineno-1-25"></a><span class="w">                </span><span class="nt">postgres_database</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;geniusrise&quot;</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#bolts-huggingface-classification-__codelineno-1-26"></a><span class="w">                </span><span class="nt">postgres_table</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;state&quot;</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#bolts-huggingface-classification-__codelineno-1-27"></a><span class="w">        </span><span class="nt">deploy</span><span class="p">:</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#bolts-huggingface-classification-__codelineno-1-28"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;k8s&quot;</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#bolts-huggingface-classification-__codelineno-1-29"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#bolts-huggingface-classification-__codelineno-1-30"></a><span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_fine_tuner&quot;</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#bolts-huggingface-classification-__codelineno-1-31"></a><span class="w">                </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;default&quot;</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#bolts-huggingface-classification-__codelineno-1-32"></a><span class="w">                </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_fine_tuner_image&quot;</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#bolts-huggingface-classification-__codelineno-1-33"></a><span class="w">                </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </span></code></pre></div>
 
 
@@ -19634,15 +19873,8 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-6"></a><span class="w">    </span>streaming<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-7"></a><span class="w">        </span>--output_kafka_topic<span class="w"> </span>commonsense_output<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-8"></a><span class="w">        </span>--output_kafka_cluster_connection_string<span class="w"> </span>localhost:9094<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-9"></a><span class="w">    </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-10"></a><span class="w">        </span>--postgres_host<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-11"></a><span class="w">        </span>--postgres_port<span class="w"> </span><span class="m">5432</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-12"></a><span class="w">        </span>--postgres_user<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-13"></a><span class="w">        </span>--postgres_password<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-14"></a><span class="w">        </span>--postgres_database<span class="w"> </span>commonsense_db<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-15"></a><span class="w">        </span>--postgres_table<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-16"></a><span class="w">    </span>load_dataset<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-17"></a><span class="w">        </span>--args<span class="w"> </span><span class="nv">dataset_path</span><span class="o">=</span>my_dataset<span class="w"> </span><span class="nv">max_length</span><span class="o">=</span><span class="m">512</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-9"></a><span class="w">    </span>load_dataset<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#bolts-huggingface-commonsense_reasoning-__codelineno-0-10"></a><span class="w">        </span>--args<span class="w"> </span><span class="nv">dataset_path</span><span class="o">=</span>my_dataset<span class="w"> </span><span class="nv">max_length</span><span class="o">=</span><span class="m">512</span>
 </span></code></pre></div>
 <h3 id="bolts-huggingface-commonsense_reasoning-commonsense_reasoning.HuggingFaceCommonsenseReasoningFineTuner--using-geniusrise-to-invoke-via-yaml-file">Using geniusrise to invoke via YAML file<a class="headerlink" href="#bolts-huggingface-commonsense_reasoning-commonsense_reasoning.HuggingFaceCommonsenseReasoningFineTuner--using-geniusrise-to-invoke-via-yaml-file" title="Permanent link">&para;</a></h3>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
@@ -19664,22 +19896,6 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-17"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-18"></a><span class="w">                </span><span class="nt">output_topic</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;commonsense_output&quot;</span>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-19"></a><span class="w">                </span><span class="nt">kafka_servers</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost:9094&quot;</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-20"></a><span class="w">        </span><span class="nt">state</span><span class="p">:</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-21"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-22"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-23"></a><span class="w">                </span><span class="nt">postgres_host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-24"></a><span class="w">                </span><span class="nt">postgres_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-25"></a><span class="w">                </span><span class="nt">postgres_user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-26"></a><span class="w">                </span><span class="nt">postgres_password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-27"></a><span class="w">                </span><span class="nt">postgres_database</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;commonsense_db&quot;</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-28"></a><span class="w">                </span><span class="nt">postgres_table</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;state&quot;</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-29"></a><span class="w">        </span><span class="nt">deploy</span><span class="p">:</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-30"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;k8s&quot;</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-31"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-32"></a><span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_commonsense_bolt&quot;</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-33"></a><span class="w">                </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;default&quot;</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-34"></a><span class="w">                </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_commonsense_bolt_image&quot;</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#bolts-huggingface-commonsense_reasoning-__codelineno-1-35"></a><span class="w">                </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </span></code></pre></div>
 
 
@@ -26781,7 +26997,7 @@ and then computes the BLEU score for evaluation.</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").</p>
+              <p>The type of state manager ("none", "redis", "postgres", or "dynamodb").</p>
             </div>
           </td>
           <td>
@@ -26916,6 +27132,84 @@ and then computes the BLEU score for evaluation.</p>
           <td>
             <div class="doc-md-description">
               <p>Command-line parser.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core-cli_boltctl-cli.boltctl.BoltCtl.deploy_bolt" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">deploy_bolt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#core-cli_boltctl-cli.boltctl.BoltCtl.deploy_bolt" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deploy a spout of a specific type.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments for initializing the spout.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#core-cli_boltctl-__codelineno-0-1"></a>Keyword Arguments:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#core-cli_boltctl-__codelineno-0-2"></a>    Batch output:
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#core-cli_boltctl-__codelineno-0-3"></a>    - output_folder (str): The directory where output files should be stored temporarily.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#core-cli_boltctl-__codelineno-0-4"></a>    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#core-cli_boltctl-__codelineno-0-5"></a>    - output_s3_folder (str): The S3 folder for output storage.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#core-cli_boltctl-__codelineno-0-6"></a>    Streaming output:
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#core-cli_boltctl-__codelineno-0-7"></a>    - output_kafka_topic (str): Kafka output topic for streaming spouts.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#core-cli_boltctl-__codelineno-0-8"></a>    - output_kafka_cluster_connection_string (str): Kafka connection string for streaming spouts.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#core-cli_boltctl-__codelineno-0-9"></a>    Stream to Batch output:
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#core-cli_boltctl-__codelineno-0-10"></a>    - output_folder (str): The directory where output files should be stored temporarily.
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#core-cli_boltctl-__codelineno-0-11"></a>    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#core-cli_boltctl-__codelineno-0-12"></a>    - output_s3_folder (str): The S3 folder for output storage.
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#core-cli_boltctl-__codelineno-0-13"></a>    - buffer_size (int): Number of messages to buffer.
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#core-cli_boltctl-__codelineno-0-14"></a>    Redis state manager config:
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#core-cli_boltctl-__codelineno-0-15"></a>    - redis_host (str): The host address for the Redis server.
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#core-cli_boltctl-__codelineno-0-16"></a>    - redis_port (int): The port number for the Redis server.
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#core-cli_boltctl-__codelineno-0-17"></a>    - redis_db (int): The Redis database to be used.
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#core-cli_boltctl-__codelineno-0-18"></a>    Postgres state manager config:
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#core-cli_boltctl-__codelineno-0-19"></a>    - postgres_host (str): The host address for the PostgreSQL server.
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#core-cli_boltctl-__codelineno-0-20"></a>    - postgres_port (int): The port number for the PostgreSQL server.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#core-cli_boltctl-__codelineno-0-21"></a>    - postgres_user (str): The username for the PostgreSQL server.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#core-cli_boltctl-__codelineno-0-22"></a>    - postgres_password (str): The password for the PostgreSQL server.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#core-cli_boltctl-__codelineno-0-23"></a>    - postgres_database (str): The PostgreSQL database to be used.
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#core-cli_boltctl-__codelineno-0-24"></a>    - postgres_table (str): The PostgreSQL table to be used.
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#core-cli_boltctl-__codelineno-0-25"></a>    DynamoDB state manager config:
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#core-cli_boltctl-__codelineno-0-26"></a>    - dynamodb_table_name (str): The name of the DynamoDB table.
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#core-cli_boltctl-__codelineno-0-27"></a>    - dynamodb_region_name (str): The AWS region for DynamoDB.
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#core-cli_boltctl-__codelineno-0-28"></a>    Prometheus state manager config:
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#core-cli_boltctl-__codelineno-0-29"></a>    - prometheus_gateway (str): The push gateway for Prometheus metrics.
+</span></code></pre></div></p>
             </div>
           </td>
           <td>
@@ -27177,15 +27471,15 @@ and then computes the BLEU score for evaluation.</p>
 
 
 
-<h3 id="core-cli_discover-cli.discover.Discover.discover_installed_extensions" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">discover_installed_extensions</span><span class="p">()</span></code>
+<h3 id="core-cli_discover-cli.discover.Discover.discover_geniusrise_installed_modules" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">discover_geniusrise_installed_modules</span><span class="p">()</span></code>
 
-<a href="#core-cli_discover-cli.discover.Discover.discover_installed_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#core-cli_discover-cli.discover.Discover.discover_geniusrise_installed_modules" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Discover installed geniusrise extensions.</p>
+      <p>Discover installed geniusrise modules from Python path directories.</p>
 
   </div>
 
@@ -28223,7 +28517,7 @@ different arguments are required.</p>
             Bases: <code><span data-autorefs-optional-hover="pydantic.BaseModel">BaseModel</span></code></p>
 
   
-      <p>This class defines the state of the spout or bolt. The state can be of type in_memory, redis, postgres, or dynamodb.</p>
+      <p>This class defines the state of the spout or bolt. The state can be of type none, redis, postgres, or dynamodb.</p>
 
 
   
@@ -28262,7 +28556,7 @@ different arguments are required.</p>
             Bases: <code><span data-autorefs-optional-hover="pydantic.BaseModel">BaseModel</span></code></p>
 
   
-      <p>This class defines the arguments for the state. Depending on the type of state (in_memory, redis, postgres, dynamodb),
+      <p>This class defines the arguments for the state. Depending on the type of state (none, redis, postgres, dynamodb),
 different arguments are required.</p>
 
 
@@ -28490,7 +28784,7 @@ different arguments are required.</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").</p>
+              <p>The type of state manager ("none", "redis", "postgres", or "dynamodb").</p>
             </div>
           </td>
           <td>
@@ -28562,6 +28856,84 @@ different arguments are required.</p>
             <div class="doc-md-description">
               <p>The created spout.</p>
             </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="core-cli_spoutctl-cli.spoutctl.SpoutCtl.deploy_spout" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">deploy_spout</span><span class="p">(</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#core-cli_spoutctl-cli.spoutctl.SpoutCtl.deploy_spout" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Deploy a spout of a specific type.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments for initializing the spout.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#core-cli_spoutctl-__codelineno-0-1"></a>Keyword Arguments:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#core-cli_spoutctl-__codelineno-0-2"></a>    Batch output:
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#core-cli_spoutctl-__codelineno-0-3"></a>    - output_folder (str): The directory where output files should be stored temporarily.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#core-cli_spoutctl-__codelineno-0-4"></a>    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#core-cli_spoutctl-__codelineno-0-5"></a>    - output_s3_folder (str): The S3 folder for output storage.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#core-cli_spoutctl-__codelineno-0-6"></a>    Streaming output:
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#core-cli_spoutctl-__codelineno-0-7"></a>    - output_kafka_topic (str): Kafka output topic for streaming spouts.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#core-cli_spoutctl-__codelineno-0-8"></a>    - output_kafka_cluster_connection_string (str): Kafka connection string for streaming spouts.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#core-cli_spoutctl-__codelineno-0-9"></a>    Stream to Batch output:
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#core-cli_spoutctl-__codelineno-0-10"></a>    - output_folder (str): The directory where output files should be stored temporarily.
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#core-cli_spoutctl-__codelineno-0-11"></a>    - output_s3_bucket (str): The name of the S3 bucket for output storage.
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#core-cli_spoutctl-__codelineno-0-12"></a>    - output_s3_folder (str): The S3 folder for output storage.
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#core-cli_spoutctl-__codelineno-0-13"></a>    - buffer_size (int): Number of messages to buffer.
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#core-cli_spoutctl-__codelineno-0-14"></a>    Redis state manager config:
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#core-cli_spoutctl-__codelineno-0-15"></a>    - redis_host (str): The host address for the Redis server.
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#core-cli_spoutctl-__codelineno-0-16"></a>    - redis_port (int): The port number for the Redis server.
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#core-cli_spoutctl-__codelineno-0-17"></a>    - redis_db (int): The Redis database to be used.
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#core-cli_spoutctl-__codelineno-0-18"></a>    Postgres state manager config:
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#core-cli_spoutctl-__codelineno-0-19"></a>    - postgres_host (str): The host address for the PostgreSQL server.
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#core-cli_spoutctl-__codelineno-0-20"></a>    - postgres_port (int): The port number for the PostgreSQL server.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#core-cli_spoutctl-__codelineno-0-21"></a>    - postgres_user (str): The username for the PostgreSQL server.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#core-cli_spoutctl-__codelineno-0-22"></a>    - postgres_password (str): The password for the PostgreSQL server.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#core-cli_spoutctl-__codelineno-0-23"></a>    - postgres_database (str): The PostgreSQL database to be used.
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#core-cli_spoutctl-__codelineno-0-24"></a>    - postgres_table (str): The PostgreSQL table to be used.
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#core-cli_spoutctl-__codelineno-0-25"></a>    DynamoDB state manager config:
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#core-cli_spoutctl-__codelineno-0-26"></a>    - dynamodb_table_name (str): The name of the DynamoDB table.
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#core-cli_spoutctl-__codelineno-0-27"></a>    - dynamodb_region_name (str): The AWS region for DynamoDB.
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#core-cli_spoutctl-__codelineno-0-28"></a>    Prometheus state manager config:
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#core-cli_spoutctl-__codelineno-0-29"></a>    - prometheus_gateway (str): The push gateway for Prometheus metrics.
+</span></code></pre></div></p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
@@ -29134,7 +29506,7 @@ Each spout and bolt is an independent entity even when connected together.</p>
 
 
 <h3 id="core-cli_yamlctl-cli.yamlctl.YamlCtl.run_bolts" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">run_bolts</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">run_bolts</span><span class="p">(</span><span class="n">executor</span><span class="p">)</span></code>
 
 <a href="#core-cli_yamlctl-cli.yamlctl.YamlCtl.run_bolts" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -29202,7 +29574,7 @@ Each spout and bolt is an independent entity even when connected together.</p>
 
 
 <h3 id="core-cli_yamlctl-cli.yamlctl.YamlCtl.run_spouts" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">run_spouts</span><span class="p">()</span></code>
+<code class="highlight language-python"><span class="n">run_spouts</span><span class="p">(</span><span class="n">executor</span><span class="p">)</span></code>
 
 <a href="#core-cli_yamlctl-cli.yamlctl.YamlCtl.run_spouts" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -29577,7 +29949,7 @@ and then creates and returns a bolt using these configurations.</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").</p>
+              <p>The type of state manager ("none", "redis", "postgres", or "dynamodb").</p>
             </div>
           </td>
           <td>
@@ -30023,7 +30395,7 @@ spout = Spout(output, state)</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The type of state manager ("in_memory", "redis", "postgres", or "dynamodb").</p>
+              <p>The type of state manager ("none", "redis", "postgres", or "dynamodb").</p>
             </div>
           </td>
           <td>
