@@ -5,11 +5,11 @@ Lets create a workspace for local experimentation. We will not build anything he
 Lets create a workflow in which:
 
 1. A web server listens for all kinds of HTTP events.
-2. Clients send the following information to the server:
-   1. HTTP request
-   2. Response and response status code
-3. The server buffers events in batches of 1000 and uploads them on to s3.
-4. Train a small LLM model on the data to be used to predict whether the request was valid.
+    1. Clients send the following information to the server:
+        1. HTTP request
+        2. Response and response status code
+    2. The server buffers events in batches of 1000 and uploads them on to s3.
+2. Train a small LLM model on the data to be used to predict whether the request was valid.
 
 A representation of the process using a sequence diagram:
 
@@ -34,23 +34,22 @@ skinparam participant {
 }
 
 actor Client
-
 database "S3 Bucket" as S3
-participant "Listen for HTTP Events" as Listen
-participant "Buffer Events" as Buffer
-participant "Upload to S3" as Upload
-participant "Load Data from S3" as LoadData
-participant "Fine-tune LLM Model" as FineTune
-participant "Save Model" as UploadModel
+participant "Webhook Spout" as webhook
+participant "Classification Bolt" as classification
 
-Client -> Listen : Send HTTP Request
-Listen -> Buffer : Buffer Events
-Buffer -> Upload : Batch of 1000 Events
-Upload -> S3 : Upload Data
-S3 -> LoadData : Fetch Data
-LoadData -> FineTune : Train Model
-FineTune -> UploadModel : Upload Trained Model
-UploadModel -> S3 : Save Model
+alt #Seagreen "Webhook Spout"
+    Client -> webhook : Send HTTP Request
+    webhook -> webhook : Buffer batch of 1000 events
+    webhook -> S3 : Upload Data
+end
+
+alt #tomato "Classification Bolt"
+    S3 -> classification : Fetch Data
+    classification -> classification : Train Model
+    classification -> classification : Upload Trained Model
+    classification -> S3 : Save Model
+end
 
 @enduml
 ```
