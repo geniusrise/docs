@@ -2714,7 +2714,7 @@ streaming.</p>
 <p><strong>{none,redis,postgres,dynamodb,prometheus}</strong>: Select the type of state manager:
 none, redis, postgres, or dynamodb.</p>
 <p><strong>method_name</strong>: The name of the method to execute on the spout.</p>
-<h1 id="options-genius-testspoutctlspout-rise">OPTIONS <code>genius TestSpoutCtlSpout rise</code><a class="headerlink" href="#options-genius-testspoutctlspout-rise" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-testspoutctlspout-rise">OPTIONS <code>genius TestSpoutCtlSpout rise</code><a class="headerlink" href="#options-genius-testspoutctlspout-rise" title="Permanent link">&para;</a></h2>
 <p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
 <p><strong>--output_folder</strong> <em>OUTPUT_FOLDER</em>: Specify the directory where output files
 should be stored temporarily.</p>
@@ -2776,7 +2776,7 @@ streaming.</p>
 none, redis, postgres, or dynamodb.</p>
 <p><strong>{k8s}</strong>: Choose the type of deployment.</p>
 <p><strong>method_name</strong>: The name of the method to execute on the spout.</p>
-<h1 id="options-genius-testspoutctlspout-deploy">OPTIONS <code>genius TestSpoutCtlSpout deploy</code><a class="headerlink" href="#options-genius-testspoutctlspout-deploy" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-testspoutctlspout-deploy">OPTIONS <code>genius TestSpoutCtlSpout deploy</code><a class="headerlink" href="#options-genius-testspoutctlspout-deploy" title="Permanent link">&para;</a></h2>
 <p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
 <p><strong>--output_folder</strong> <em>OUTPUT_FOLDER</em>: Specify the directory where output files
 should be stored temporarily.</p>
@@ -2872,7 +2872,7 @@ streaming.</p>
 <p><strong>{none,redis,postgres,dynamodb,prometheus}</strong>: Select the type of state manager:
 none, redis, postgres, or dynamodb.</p>
 <p><strong>method_name</strong>: The name of the method to execute on the bolt.</p>
-<h1 id="options-genius-testboltctlbolt-rise">OPTIONS <code>genius TestBoltCtlBolt rise</code><a class="headerlink" href="#options-genius-testboltctlbolt-rise" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-testboltctlbolt-rise">OPTIONS <code>genius TestBoltCtlBolt rise</code><a class="headerlink" href="#options-genius-testboltctlbolt-rise" title="Permanent link">&para;</a></h2>
 <p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
 <p><strong>--input_folder</strong> <em>INPUT_FOLDER</em>: Specify the directory where output files
 should be stored temporarily.</p>
@@ -2951,7 +2951,7 @@ streaming.</p>
 none, redis, postgres, or dynamodb.</p>
 <p><strong>{k8s}</strong>: Choose the type of deployment.</p>
 <p><strong>method_name</strong>: The name of the method to execute on the spout.</p>
-<h1 id="options-genius-testboltctlbolt-deploy">OPTIONS <code>genius TestBoltCtlBolt deploy</code><a class="headerlink" href="#options-genius-testboltctlbolt-deploy" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-testboltctlbolt-deploy">OPTIONS <code>genius TestBoltCtlBolt deploy</code><a class="headerlink" href="#options-genius-testboltctlbolt-deploy" title="Permanent link">&para;</a></h2>
 <p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
 <p><strong>--input_folder</strong> <em>INPUT_FOLDER</em>: Specify the directory where output files
 should be stored temporarily.</p>
@@ -3030,7 +3030,7 @@ service.</p>
 <p><strong>method</strong>: The method to execute.</p>
 <h1 id="command-genius-rise">COMMAND <code>genius rise</code><a class="headerlink" href="#command-genius-rise" title="Permanent link">&para;</a></h1>
 <p>Usage: genius rise [-h] [--spout SPOUT] [--bolt BOLT] [--file FILE]</p>
-<h1 id="options-genius-rise">OPTIONS <code>genius rise</code><a class="headerlink" href="#options-genius-rise" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-rise">OPTIONS <code>genius rise</code><a class="headerlink" href="#options-genius-rise" title="Permanent link">&para;</a></h2>
 <p><strong>--spout</strong> <em>SPOUT</em>: Name of the specific spout to run.</p>
 <p><strong>--bolt</strong> <em>BOLT</em>: Name of the specific bolt to run.</p>
 <p><strong>--file</strong> <em>FILE</em>: Path of the genius.yml file, default to .</p>
@@ -3044,7 +3044,7 @@ service.</p>
 [--os_packages [OS_PACKAGES ...]] [--env_vars ENV_VARS] image_name repository</p>
 <p><strong>image_name</strong>: Name of the Docker image.</p>
 <p><strong>repository</strong>: Container repository to upload to.</p>
-<h1 id="options-genius-docker-package">OPTIONS <code>genius docker package</code><a class="headerlink" href="#options-genius-docker-package" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-docker-package">OPTIONS <code>genius docker package</code><a class="headerlink" href="#options-genius-docker-package" title="Permanent link">&para;</a></h2>
 <p><strong>--auth</strong> <em>AUTH</em>: Authentication credentials as a JSON string.</p>
 <p><strong>--base_image</strong> <em>BASE_IMAGE</em>: The base image to use for the Docker container.</p>
 <p><strong>--workdir</strong> <em>WORKDIR</em>: The working directory in the Docker container.</p>
@@ -3068,7 +3068,7 @@ Docker container.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the Kubernetes pod.</p>
-<h1 id="options-genius-pod-status">OPTIONS <code>genius pod status</code><a class="headerlink" href="#options-genius-pod-status" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-pod-status">OPTIONS <code>genius pod status</code><a class="headerlink" href="#options-genius-pod-status" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3085,7 +3085,7 @@ string.</p>
 [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]</p>
-<h1 id="options-genius-pod-show">OPTIONS <code>genius pod show</code><a class="headerlink" href="#options-genius-pod-show" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-pod-show">OPTIONS <code>genius pod show</code><a class="headerlink" href="#options-genius-pod-show" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3103,7 +3103,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the pod.</p>
-<h1 id="options-genius-pod-describe">OPTIONS <code>genius pod describe</code><a class="headerlink" href="#options-genius-pod-describe" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-pod-describe">OPTIONS <code>genius pod describe</code><a class="headerlink" href="#options-genius-pod-describe" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3122,7 +3122,7 @@ KUBE_CONFIG_PATH] [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME]
 API_KEY] [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert
 SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the pod.</p>
-<h1 id="options-genius-pod-logs">OPTIONS <code>genius pod logs</code><a class="headerlink" href="#options-genius-pod-logs" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-pod-logs">OPTIONS <code>genius pod logs</code><a class="headerlink" href="#options-genius-pod-logs" title="Permanent link">&para;</a></h2>
 <p><strong>--follow</strong> <em>FOLLOW</em>: Whether to follow the logs.</p>
 <p><strong>--tail</strong> <em>TAIL</em>: Number of lines to show from the end of the logs.</p>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
@@ -3155,7 +3155,7 @@ string.</p>
 <p><strong>name</strong>: Name of the deployment.</p>
 <p><strong>image</strong>: Docker image for the deployment.</p>
 <p><strong>command</strong>: Command to run in the container.</p>
-<h1 id="options-genius-deployment-create">OPTIONS <code>genius deployment create</code><a class="headerlink" href="#options-genius-deployment-create" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-deployment-create">OPTIONS <code>genius deployment create</code><a class="headerlink" href="#options-genius-deployment-create" title="Permanent link">&para;</a></h2>
 <p><strong>--replicas</strong> <em>REPLICAS</em>: Number of replicas.</p>
 <p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables as a JSON string.</p>
 <p><strong>--cpu</strong> <em>CPU</em>: CPU requirements.</p>
@@ -3181,7 +3181,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 replicas</p>
 <p><strong>name</strong>: Name of the deployment.</p>
 <p><strong>replicas</strong>: Number of replicas.</p>
-<h1 id="options-genius-deployment-scale">OPTIONS <code>genius deployment scale</code><a class="headerlink" href="#options-genius-deployment-scale" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-deployment-scale">OPTIONS <code>genius deployment scale</code><a class="headerlink" href="#options-genius-deployment-scale" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3199,7 +3199,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the deployment.</p>
-<h1 id="options-genius-deployment-describe">OPTIONS <code>genius deployment describe</code><a class="headerlink" href="#options-genius-deployment-describe" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-deployment-describe">OPTIONS <code>genius deployment describe</code><a class="headerlink" href="#options-genius-deployment-describe" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3216,7 +3216,7 @@ string.</p>
 [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]</p>
-<h1 id="options-genius-deployment-show">OPTIONS <code>genius deployment show</code><a class="headerlink" href="#options-genius-deployment-show" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-deployment-show">OPTIONS <code>genius deployment show</code><a class="headerlink" href="#options-genius-deployment-show" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3234,7 +3234,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the deployment.</p>
-<h1 id="options-genius-deployment-delete">OPTIONS <code>genius deployment delete</code><a class="headerlink" href="#options-genius-deployment-delete" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-deployment-delete">OPTIONS <code>genius deployment delete</code><a class="headerlink" href="#options-genius-deployment-delete" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3252,7 +3252,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the deployment.</p>
-<h1 id="options-genius-deployment-status">OPTIONS <code>genius deployment status</code><a class="headerlink" href="#options-genius-deployment-status" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-deployment-status">OPTIONS <code>genius deployment status</code><a class="headerlink" href="#options-genius-deployment-status" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3282,7 +3282,7 @@ image command</p>
 <p><strong>name</strong>: Name of the service.</p>
 <p><strong>image</strong>: Docker image for the service.</p>
 <p><strong>command</strong>: Command to run in the container.</p>
-<h1 id="options-genius-service-create">OPTIONS <code>genius service create</code><a class="headerlink" href="#options-genius-service-create" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-service-create">OPTIONS <code>genius service create</code><a class="headerlink" href="#options-genius-service-create" title="Permanent link">&para;</a></h2>
 <p><strong>--replicas</strong> <em>REPLICAS</em>: Number of replicas.</p>
 <p><strong>--port</strong> <em>PORT</em>: Service port.</p>
 <p><strong>--target_port</strong> <em>TARGET_PORT</em>: Container target port.</p>
@@ -3308,7 +3308,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the service.</p>
-<h1 id="options-genius-service-delete">OPTIONS <code>genius service delete</code><a class="headerlink" href="#options-genius-service-delete" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-service-delete">OPTIONS <code>genius service delete</code><a class="headerlink" href="#options-genius-service-delete" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3326,7 +3326,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the service.</p>
-<h1 id="options-genius-service-describe">OPTIONS <code>genius service describe</code><a class="headerlink" href="#options-genius-service-describe" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-service-describe">OPTIONS <code>genius service describe</code><a class="headerlink" href="#options-genius-service-describe" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3343,7 +3343,7 @@ string.</p>
 [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]</p>
-<h1 id="options-genius-service-show">OPTIONS <code>genius service show</code><a class="headerlink" href="#options-genius-service-show" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-service-show">OPTIONS <code>genius service show</code><a class="headerlink" href="#options-genius-service-show" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3371,7 +3371,7 @@ image command</p>
 <p><strong>name</strong>: Name of the job.</p>
 <p><strong>image</strong>: Docker image for the job.</p>
 <p><strong>command</strong>: Command to run in the container.</p>
-<h1 id="options-genius-job-create">OPTIONS <code>genius job create</code><a class="headerlink" href="#options-genius-job-create" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-job-create">OPTIONS <code>genius job create</code><a class="headerlink" href="#options-genius-job-create" title="Permanent link">&para;</a></h2>
 <p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables as a JSON string.</p>
 <p><strong>--cpu</strong> <em>CPU</em>: CPU requirements.</p>
 <p><strong>--memory</strong> <em>MEMORY</em>: Memory requirements.</p>
@@ -3394,7 +3394,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the job.</p>
-<h1 id="options-genius-job-delete">OPTIONS <code>genius job delete</code><a class="headerlink" href="#options-genius-job-delete" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-job-delete">OPTIONS <code>genius job delete</code><a class="headerlink" href="#options-genius-job-delete" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3412,7 +3412,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the job.</p>
-<h1 id="options-genius-job-status">OPTIONS <code>genius job status</code><a class="headerlink" href="#options-genius-job-status" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-job-status">OPTIONS <code>genius job status</code><a class="headerlink" href="#options-genius-job-status" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3442,7 +3442,7 @@ SSL_CA_CERT] name image command schedule</p>
 <p><strong>image</strong>: Docker image for the cronjob.</p>
 <p><strong>command</strong>: Command to run in the container.</p>
 <p><strong>schedule</strong>: Cron schedule.</p>
-<h1 id="options-genius-cron_job-create_cronjob">OPTIONS <code>genius cron_job create_cronjob</code><a class="headerlink" href="#options-genius-cron_job-create_cronjob" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-cron_job-create_cronjob">OPTIONS <code>genius cron_job create_cronjob</code><a class="headerlink" href="#options-genius-cron_job-create_cronjob" title="Permanent link">&para;</a></h2>
 <p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables as a JSON string.</p>
 <p><strong>--cpu</strong> <em>CPU</em>: CPU requirements.</p>
 <p><strong>--memory</strong> <em>MEMORY</em>: Memory requirements.</p>
@@ -3465,7 +3465,7 @@ string.</p>
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the cronjob.</p>
-<h1 id="options-genius-cron_job-delete_cronjob">OPTIONS <code>genius cron_job delete_cronjob</code><a class="headerlink" href="#options-genius-cron_job-delete_cronjob" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-cron_job-delete_cronjob">OPTIONS <code>genius cron_job delete_cronjob</code><a class="headerlink" href="#options-genius-cron_job-delete_cronjob" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3484,7 +3484,7 @@ KUBE_CONFIG_PATH] [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME]
 API_KEY] [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert
 SSL_CA_CERT] name</p>
 <p><strong>name</strong>: Name of the cronjob.</p>
-<h1 id="options-genius-cron_job-get_cronjob_status">OPTIONS <code>genius cron_job get_cronjob_status</code><a class="headerlink" href="#options-genius-cron_job-get_cronjob_status" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-cron_job-get_cronjob_status">OPTIONS <code>genius cron_job get_cronjob_status</code><a class="headerlink" href="#options-genius-cron_job-get_cronjob_status" title="Permanent link">&para;</a></h2>
 <p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
 <p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
 <p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
@@ -3501,7 +3501,7 @@ string.</p>
 <p><strong>spout_or_bolt</strong>: The spout or bolt to print help for.</p>
 <h1 id="command-genius-list">COMMAND <code>genius list</code><a class="headerlink" href="#command-genius-list" title="Permanent link">&para;</a></h1>
 <p>Usage: genius list [-h][--verbose]</p>
-<h1 id="options-genius-list">OPTIONS <code>genius list</code><a class="headerlink" href="#options-genius-list" title="Permanent link">&para;</a></h1>
+<h2 id="options-genius-list">OPTIONS <code>genius list</code><a class="headerlink" href="#options-genius-list" title="Permanent link">&para;</a></h2>
 <p><strong>--verbose</strong>: Print verbose output.</p>
 
 
