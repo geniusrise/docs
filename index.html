@@ -2376,6 +2376,20 @@
   
   
     <li class="md-nav__item">
+      <a href="core/core_data_stream_to_batch_output/" class="md-nav__link">
+        stream_to_batch_output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="core/core_data_input/" class="md-nav__link">
         input
       </a>
@@ -2420,6 +2434,34 @@
     <li class="md-nav__item">
       <a href="core/core_data_streaming_output/" class="md-nav__link">
         streaming_output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="core/core_data_batch_to_stream_input/" class="md-nav__link">
+        batch_to_stream_input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="core/core_data_stream_to_batch_input/" class="md-nav__link">
+        stream_to_batch_input
       </a>
     </li>
   
@@ -2572,34 +2614,6 @@
     <li class="md-nav__item">
       <a href="core/core_task_base/" class="md-nav__link">
         base
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="core/core_task_ecs/" class="md-nav__link">
-        ecs
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="core/core_task_k8s/" class="md-nav__link">
-        k8s
       </a>
     </li>
   
@@ -2773,19 +2787,21 @@
 </thead>
 <tbody>
 <tr>
-<td>🟢 <a href="guides/index.md">k8s deployment</a></td>
-<td>🟤 <a href="guides/index.md">k8s service</a></td>
-<td>🟡 <a href="guides/index.md">k8s job</a></td>
-<td>🟠 <a href="guides/index.md">k8s cron job</a></td>
+<td>🟢 <a href="core/k8s_deployment/">k8s deployment</a></td>
+<td>🟤 <a href="core/k8s_service/">k8s service</a></td>
+<td>🟡 <a href="core/k8s_job/">k8s job</a></td>
+<td>🟠 <a href="core/k8s_cron_job/">k8s cron job</a></td>
 </tr>
 <tr>
-<td>🟣 <a href="guides/index.md">Apache Airflow</a></td>
-<td>🔵 <a href="guides/index.md">AWS Fargate</a></td>
-<td>🟥 <a href="guides/index.md">AWS ECS</a></td>
-<td>🟩 <a href="guides/index.md">AWS Batch</a></td>
+<td>🟧 <a href="core/k8s_base/">k8s pods</a></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<!-- |                                       | 🟣 [~Apache Airflow~](guides/index.md) | 🔵 [~AWS Fargate~](guides/index.md) | 🟥 [~AWS ECS~](guides/index.md)         | 🟩 [~AWS Batch~](guides/index.md) | | -->
+
 <h3 id="spouts">🌪️ Spouts<a class="headerlink" href="#spouts" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2978,7 +2994,6 @@
 <th>📦 <strong>core</strong></th>
 <th>📦 <strong>data</strong></th>
 <th>📦 <strong>core.state</strong></th>
-<th>📦 <strong>runners</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2987,48 +3002,41 @@
 <td>🟢 <a href="core/core_bolt/">bolt</a></td>
 <td>🟣 <a href="core/core_data_input/">input</a></td>
 <td>🔴 <a href="core/core_state_base/">base</a></td>
-<td>🔵 <a href="core/core_task_ecs/">ecs</a></td>
 </tr>
 <tr>
 <td>🟠 <a href="core/cli_yamlctl/">yamlctl</a></td>
 <td>🟢 <a href="core/core_spout/">spout</a></td>
 <td>🟣 <a href="core/core_data_output/">output</a></td>
 <td>🔴 <a href="core/core_state_dynamo/">dynamo</a></td>
-<td>🔵 <a href="core/core_task_k8s/">k8s</a></td>
 </tr>
 <tr>
 <td>🟠 <a href="core/cli_boltctl/">boltctl</a></td>
 <td>🟤 <a href="core/core_task_base/">base</a></td>
 <td>🟣 <a href="core/core_data_batch_input/">batch_input</a></td>
 <td>🔴 <a href="core/core_state_memory/">memory</a></td>
-<td></td>
 </tr>
 <tr>
 <td>🟠 <a href="core/cli_spoutctl/">spoutctl</a></td>
 <td></td>
 <td>🟣 <a href="core/core_data_batch_output/">batch_output</a></td>
 <td>🔴 <a href="core/core_state_postgres/">postgres</a></td>
-<td></td>
 </tr>
 <tr>
 <td>🟠 <a href="core/cli_schema/">schema</a></td>
 <td></td>
 <td>🟣 <a href="core/core_data_streaming_input/">streaming_input</a></td>
 <td>🔴 <a href="core/core_state_redis/">redis</a></td>
-<td></td>
 </tr>
 <tr>
 <td>🟠 <a href="core/cli_discover/">discover</a></td>
 <td></td>
 <td>🟣 <a href="core/core_data_streaming_output/">streaming_output</a></td>
 <td>🔴 <a href="core/core_state_prometheus.md">prometheus</a></td>
-<td></td>
 </tr>
 <tr>
 <td>🟠 <a href="core/cli_dockerctl/">docker</a></td>
 <td></td>
 <td>🟣 <a href="core/core_data_stream_to_batch_input/">stream_to_batch_input</a></td>
-<td></td>
 <td></td>
 </tr>
 <tr>
@@ -3036,13 +3044,11 @@
 <td></td>
 <td>🟣 <a href="core/core_data_stream_to_batch_output/">stream_to_batch_output</a></td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td>🟣 <a href="core/core_data_batch_to_stream_input/">batch_to_stream_input</a></td>
-<td></td>
 <td></td>
 </tr>
 </tbody>

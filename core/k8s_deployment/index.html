@@ -10,10 +10,8 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/core/core_task_k8s/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/core/k8s_deployment/">
       
-      
-        <link rel="prev" href="../core_task_ecs/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -21,7 +19,7 @@
     
     
       
-        <title>k8s - </title>
+        <title>Kubernetes Deployment - </title>
       
     
     
@@ -88,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kubernetes-deployment" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              k8s
+              Kubernetes Deployment
             
           </span>
         </div>
@@ -2002,18 +2005,16 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
       
       
       
@@ -2022,7 +2023,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Core Reference
@@ -2165,16 +2166,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
       
       
       
@@ -2183,7 +2182,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10_2">
           <span class="md-nav__icon md-icon"></span>
           core
@@ -2279,6 +2278,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../core_data_stream_to_batch_output/" class="md-nav__link">
+        stream_to_batch_output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../core_data_input/" class="md-nav__link">
         input
       </a>
@@ -2323,6 +2336,34 @@
     <li class="md-nav__item">
       <a href="../core_data_streaming_output/" class="md-nav__link">
         streaming_output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core_data_batch_to_stream_input/" class="md-nav__link">
+        batch_to_stream_input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core_data_stream_to_batch_input/" class="md-nav__link">
+        stream_to_batch_input
       </a>
     </li>
   
@@ -2444,16 +2485,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2_5" >
       
       
       
@@ -2462,7 +2501,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10_2_5">
           <span class="md-nav__icon md-icon"></span>
           task
@@ -2478,42 +2517,6 @@
       <a href="../core_task_base/" class="md-nav__link">
         base
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core_task_ecs/" class="md-nav__link">
-        ecs
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        k8s
-      </a>
-      
     </li>
   
 
@@ -2556,6 +2559,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.Deployment" class="md-nav__link">
+    runners.k8s.Deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.__create_deployment_spec" class="md-nav__link">
+    __create_deployment_spec()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.create" class="md-nav__link">
+    create()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.create_parser" class="md-nav__link">
+    create_parser()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.delete" class="md-nav__link">
+    delete()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.describe" class="md-nav__link">
+    describe()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.run" class="md-nav__link">
+    run()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.scale" class="md-nav__link">
+    scale()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.show" class="md-nav__link">
+    show()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.deployment.Deployment.status" class="md-nav__link">
+    status()
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2570,11 +2660,840 @@
                   
 
 
-  <h1>k8s</h1>
+<h1 id="kubernetes-deployment">Kubernetes Deployment<a class="headerlink" href="#kubernetes-deployment" title="Permanent link">&para;</a></h1>
 
-<!-- # Kubernetes Runner
 
-::: runners.k8s.k8s -->
+<div class="doc doc-object doc-class">
+
+
+<a id="runners.k8s.Deployment"></a>
+  <div class="doc doc-contents first">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="runners.k8s.base.K8sResourceManager" href="../k8s_base/#runners.k8s.K8sResourceManager">K8sResourceManager</a></code></p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.__create_deployment_spec" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">__create_deployment_spec</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">replicas</span><span class="p">,</span> <span class="n">image_pull_secret_name</span><span class="p">,</span> <span class="n">env_vars</span><span class="p">,</span> <span class="n">cpu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gpu</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.__create_deployment_spec" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>📦 Create a Kubernetes Deployment specification.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>image</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Docker image for the Deployment.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>command</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command to run in the container.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>replicas</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of replicas.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>image_pull_secret_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the image pull secret.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>env_vars</code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Environment variables for the Deployment.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cpu</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>CPU requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>memory</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Memory requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Storage requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>gpu</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>GPU requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="kubernetes.client">client</span>.<span title="kubernetes.client.V1DeploymentSpec">V1DeploymentSpec</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>client.V1DeploymentSpec: The Deployment specification.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🚀 Initialize the Deployment class for managing Kubernetes Deployments.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.create" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">registry_creds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replicas</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="p">{},</span> <span class="n">cpu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gpu</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.create" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🛠 Create a Kubernetes resource Deployment.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the resource.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>image</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Docker image for the resource.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>command</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command to run in the container.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>registry_creds</code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Credentials for Docker registry.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>replicas</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of replicas for Deployment.</p>
+            </div>
+          </td>
+          <td>
+                <code>1</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>env_vars</code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Environment variables for the resource.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cpu</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>CPU requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>memory</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Memory requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Storage requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>gpu</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>GPU requirements.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.create_parser" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_parser</span><span class="p">(</span><span class="n">parser</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.create_parser" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🎛 Create a parser for CLI commands related to Deployment functionalities.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>parser</code></td>
+          <td>
+                <code><span title="argparse.ArgumentParser">ArgumentParser</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The main parser.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>ArgumentParser</code></td>          <td>
+                <code><span title="argparse.ArgumentParser">ArgumentParser</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The parser with subparsers for each command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.delete" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.delete" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🗑 Delete a Kubernetes resource (Pod/Deployment/Service).</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the resource to delete.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.describe" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">describe</span><span class="p">(</span><span class="n">deployment_name</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.describe" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🗂 Describe a Kubernetes deployment.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>deployment_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the deployment.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>dict</code></td>          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Description of the deployment.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.run" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run</span><span class="p">(</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.run" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🚀 Run the Deployment manager.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>args</code></td>
+          <td>
+                <code><span title="argparse.Namespace">Namespace</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The parsed command line arguments.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.scale" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">scale</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">replicas</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.scale" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>📈 Scale a Kubernetes deployment.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the deployment.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>replicas</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of replicas.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.show" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">show</span><span class="p">()</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.show" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>🗂 List all deployments in the namespace.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>list</code></td>          <td>
+                <code>list</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>List of deployments.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="runners.k8s.deployment.Deployment.status" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">status</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+
+<a href="#runners.k8s.deployment.Deployment.status" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>📊 Get the status of a Kubernetes deployment.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the deployment.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>dict</code></td>          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Status of the deployment.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 

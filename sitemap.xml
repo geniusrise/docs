@@ -231,12 +231,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.geniusrise.ai/core/core_task_ecs/</loc>
+         <loc>https://docs.geniusrise.ai/core/k8s_base/</loc>
          <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.geniusrise.ai/core/core_task_k8s/</loc>
+         <loc>https://docs.geniusrise.ai/core/k8s_cron_job/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.geniusrise.ai/core/k8s_deployment/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.geniusrise.ai/core/k8s_job/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.geniusrise.ai/core/k8s_service/</loc>
          <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
