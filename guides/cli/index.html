@@ -1,0 +1,3540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="ixaxaar">
+      
+      
+        <link rel="canonical" href="https://docs.geniusrise.ai/guides/cli/">
+      
+      
+        <link rel="prev" href="../404/">
+      
+      
+        <link rel="next" href="../404/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>CLI - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Code";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings1.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../main.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#name" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../../assets/logo_with_text.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../../assets/logo_with_text.png" alt="logo">
+
+    </a>
+    
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        Concepts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        Architecture
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../local/" class="md-nav__link">
+        Local setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev_cycle/" class="md-nav__link">
+        Dev Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Packaging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Staged deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Workflow ops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Data ops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Model ops
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          Runners
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Runners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Apache Airflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        AWS ECS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        AWS Batch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Apache Storm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Apache Spark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Apache Flink
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        Apache Beam
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CLI
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404/" class="md-nav__link">
+        YAML structure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Spouts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Spouts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+          Listeners
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Listeners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/http_polling/" class="md-nav__link">
+        Http Polling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/socket.io/" class="md-nav__link">
+        Socket.io
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/grpc/" class="md-nav__link">
+        gRPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/quic/" class="md-nav__link">
+        QUIC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/udp/" class="md-nav__link">
+        UDP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/webhook/" class="md-nav__link">
+        Webhook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/websocket/" class="md-nav__link">
+        Websocket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/sns/" class="md-nav__link">
+        SNS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/sqs/" class="md-nav__link">
+        SQS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/amqp/" class="md-nav__link">
+        AMQP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/kafka/" class="md-nav__link">
+        Kafka
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/kinesis/" class="md-nav__link">
+        Kinesis Streams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/mqtt/" class="md-nav__link">
+        MQTT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/activemq/" class="md-nav__link">
+        ActiveMQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/zeromq/" class="md-nav__link">
+        ZeroMQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/redis_pubsub/" class="md-nav__link">
+        Redis Pubsub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spouts/redis_streams/" class="md-nav__link">
+        Redis Streams
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          Databases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/mysql/" class="md-nav__link">
+        MySQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/sqlite/" class="md-nav__link">
+        SQLite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/postgres/" class="md-nav__link">
+        PostgreSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/oracle/" class="md-nav__link">
+        Oracle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/sql_server/" class="md-nav__link">
+        SQLServer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/cockroach/" class="md-nav__link">
+        CockroachDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/mongodb/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/redis/" class="md-nav__link">
+        Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/elasticsearch/" class="md-nav__link">
+        Elasticsearch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/cassandra/" class="md-nav__link">
+        Cassandra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/neo4j/" class="md-nav__link">
+        Neo4j
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/couchbase/" class="md-nav__link">
+        Couchbase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/riak/" class="md-nav__link">
+        Riak
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/influxdb/" class="md-nav__link">
+        InfluxDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/timescaledb/" class="md-nav__link">
+        TimescaleDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/opentsdb/" class="md-nav__link">
+        OpenTSDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/spanner/" class="md-nav__link">
+        Spanner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/tidb/" class="md-nav__link">
+        TiDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/voltdb/" class="md-nav__link">
+        VoltDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/dynamodb/" class="md-nav__link">
+        DynamoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/firestore/" class="md-nav__link">
+        Firestore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/cosmosdb/" class="md-nav__link">
+        CosmosDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/cloud_sql/" class="md-nav__link">
+        GoogleCloudSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/ldap/" class="md-nav__link">
+        LDAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/db2/" class="md-nav__link">
+        DB2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/sybase/" class="md-nav__link">
+        Sybase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/teradata/" class="md-nav__link">
+        Teradata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/hbase/" class="md-nav__link">
+        HBase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/arangodb/" class="md-nav__link">
+        ArangoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/documentdb/" class="md-nav__link">
+        DocumentDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/presto/" class="md-nav__link">
+        Presto
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/athena/" class="md-nav__link">
+        Athena
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/kairosdb/" class="md-nav__link">
+        KairosDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/graphite/" class="md-nav__link">
+        Graphite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/nuodb/" class="md-nav__link">
+        NuoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/memsql/" class="md-nav__link">
+        MemSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/bigtable/" class="md-nav__link">
+        Bigtable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/keyspaces/" class="md-nav__link">
+        AWSKeyspaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/azure_table/" class="md-nav__link">
+        AzureTableStorage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/bigquery/" class="md-nav__link">
+        BigQuery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../databases/vertica/" class="md-nav__link">
+        Vertica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Bolts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Bolts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+          Huggingface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Huggingface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/base/" class="md-nav__link">
+        Base Fine Tuner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/classification/" class="md-nav__link">
+        Classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/commonsense_reasoning/" class="md-nav__link">
+        Commonsense Reasoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/instruction_tuning/" class="md-nav__link">
+        Instruction Tuning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/language_model/" class="md-nav__link">
+        Language Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/ner/" class="md-nav__link">
+        Named Entity Recognition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/question_answering/" class="md-nav__link">
+        Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/sentiment_analysis/" class="md-nav__link">
+        Sentiment Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/summarization/" class="md-nav__link">
+        Summarization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/huggingface/translation/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+          OpenAI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          OpenAI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/classification/" class="md-nav__link">
+        Classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/commonsense_reasoning/" class="md-nav__link">
+        Commonsense Reasoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/instruction_tuning/" class="md-nav__link">
+        Instruction Tuning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/language_model/" class="md-nav__link">
+        Language Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/ner/" class="md-nav__link">
+        Named Entity Recognition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/question_answering/" class="md-nav__link">
+        Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/sentiment_analysis/" class="md-nav__link">
+        Sentiment Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/summarization/" class="md-nav__link">
+        Summarization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bolts/openai/translation/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          Core Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Core Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+          cli
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_1">
+          <span class="md-nav__icon md-icon"></span>
+          cli
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/cli_boltctl/" class="md-nav__link">
+        boltctl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/cli_discover/" class="md-nav__link">
+        discover
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/cli_geniusctl/" class="md-nav__link">
+        geniusctl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/cli_schema/" class="md-nav__link">
+        schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/cli_spoutctl/" class="md-nav__link">
+        spoutctl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/cli_yamlctl/" class="md-nav__link">
+        yamlctl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/cli_dockerctl/" class="md-nav__link">
+        dockerctl
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          core
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_bolt/" class="md-nav__link">
+        bolt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_spout/" class="md-nav__link">
+        spout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_3" id="__nav_10_2_3_label" tabindex="0">
+          data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_data_batch_input/" class="md-nav__link">
+        batch_input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_data_batch_output/" class="md-nav__link">
+        batch_output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_data_input/" class="md-nav__link">
+        input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_data_output/" class="md-nav__link">
+        output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_data_streaming_input/" class="md-nav__link">
+        streaming_input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_data_streaming_output/" class="md-nav__link">
+        streaming_output
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_4" id="__nav_10_2_4_label" tabindex="0">
+          state
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          state
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_state_base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_state_dynamo/" class="md-nav__link">
+        dynamo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_state_memory/" class="md-nav__link">
+        memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_state_postgres/" class="md-nav__link">
+        postgres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_state_redis/" class="md-nav__link">
+        redis
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_5" id="__nav_10_2_5_label" tabindex="0">
+          task
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          task
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_task_base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_task_ecs/" class="md-nav__link">
+        ecs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/core_task_k8s/" class="md-nav__link">
+        k8s
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<ul>
+<li><a href="#name">NAME</a></li>
+<li><a href="#synopsis">SYNOPSIS</a></li>
+<li><a href="#description">DESCRIPTION</a></li>
+<li><a href="#positional-arguments">POSITIONAL ARGUMENTS</a></li>
+<li><a href="#command-genius-testspoutctlspout">COMMAND <code>genius TestSpoutCtlSpout</code></a></li>
+<li><a href="#positional-arguments-genius-testspoutctlspout">POSITIONAL ARGUMENTS <em><code>genius TestSpoutCtlSpout</code></em></a></li>
+<li><a href="#command-genius-testspoutctlspout-rise">COMMAND <code>genius TestSpoutCtlSpout rise</code></a></li>
+<li><a href="#options-genius-testspoutctlspout-rise">OPTIONS <code>genius TestSpoutCtlSpout rise</code></a></li>
+<li><a href="#command-genius-testspoutctlspout-deploy">COMMAND <code>genius TestSpoutCtlSpout deploy</code></a></li>
+<li><a href="#options-genius-testspoutctlspout-deploy">OPTIONS <code>genius TestSpoutCtlSpout deploy</code></a></li>
+<li><a href="#command-genius-testspoutctlspout-help">COMMAND <code>genius TestSpoutCtlSpout help</code></a></li>
+<li><a href="#command-genius-testboltctlbolt">COMMAND <code>genius TestBoltCtlBolt</code></a></li>
+<li><a href="#positional-arguments-genius-testboltctlbolt">POSITIONAL ARGUMENTS <em><code>genius TestBoltCtlBolt</code></em></a></li>
+<li><a href="#command-genius-testboltctlbolt-rise">COMMAND <code>genius TestBoltCtlBolt rise</code></a></li>
+<li><a href="#options-genius-testboltctlbolt-rise">OPTIONS <code>genius TestBoltCtlBolt rise</code></a></li>
+<li><a href="#command-genius-testboltctlbolt-deploy">COMMAND <code>genius TestBoltCtlBolt deploy</code></a></li>
+<li><a href="#options-genius-testboltctlbolt-deploy">OPTIONS <code>genius TestBoltCtlBolt deploy</code></a></li>
+<li><a href="#command-genius-testboltctlbolt-help">COMMAND <code>genius TestBoltCtlBolt help</code></a></li>
+<li><a href="#command-genius-rise">COMMAND <code>genius rise</code></a></li>
+<li><a href="#options-genius-rise">OPTIONS <code>genius rise</code></a></li>
+<li><a href="#command-genius-docker">COMMAND <code>genius docker</code></a></li>
+<li><a href="#positional-arguments-genius-docker">POSITIONAL ARGUMENTS <em><code>genius docker</code></em></a></li>
+<li><a href="#command-genius-docker-package">COMMAND <code>genius docker package</code></a></li>
+<li><a href="#options-genius-docker-package">OPTIONS <code>genius docker package</code></a></li>
+<li><a href="#command-genius-pod">COMMAND <code>genius pod</code></a></li>
+<li><a href="#positional-arguments-genius-pod">POSITIONAL ARGUMENTS <em><code>genius pod</code></em></a></li>
+<li><a href="#command-genius-pod-status">COMMAND <code>genius pod status</code></a></li>
+<li><a href="#options-genius-pod-status">OPTIONS <code>genius pod status</code></a></li>
+<li><a href="#command-genius-pod-show">COMMAND <code>genius pod show</code></a></li>
+<li><a href="#options-genius-pod-show">OPTIONS <code>genius pod show</code></a></li>
+<li><a href="#command-genius-pod-describe">COMMAND <code>genius pod describe</code></a></li>
+<li><a href="#options-genius-pod-describe">OPTIONS <code>genius pod describe</code></a></li>
+<li><a href="#command-genius-pod-logs">COMMAND <code>genius pod logs</code></a></li>
+<li><a href="#options-genius-pod-logs">OPTIONS <code>genius pod logs</code></a></li>
+<li><a href="#command-genius-deployment">COMMAND <code>genius deployment</code></a></li>
+<li><a href="#positional-arguments-genius-deployment">POSITIONAL ARGUMENTS <em><code>genius deployment</code></em></a></li>
+<li><a href="#command-genius-deployment-create">COMMAND <code>genius deployment create</code></a></li>
+<li><a href="#options-genius-deployment-create">OPTIONS <code>genius deployment create</code></a></li>
+<li><a href="#command-genius-deployment-scale">COMMAND <code>genius deployment scale</code></a></li>
+<li><a href="#options-genius-deployment-scale">OPTIONS <code>genius deployment scale</code></a></li>
+<li><a href="#command-genius-deployment-describe">COMMAND <code>genius deployment describe</code></a></li>
+<li><a href="#options-genius-deployment-describe">OPTIONS <code>genius deployment describe</code></a></li>
+<li><a href="#command-genius-deployment-show">COMMAND <code>genius deployment show</code></a></li>
+<li><a href="#options-genius-deployment-show">OPTIONS <code>genius deployment show</code></a></li>
+<li><a href="#command-genius-deployment-delete">COMMAND <code>genius deployment delete</code></a></li>
+<li><a href="#options-genius-deployment-delete">OPTIONS <code>genius deployment delete</code></a></li>
+<li><a href="#command-genius-deployment-status">COMMAND <code>genius deployment status</code></a></li>
+<li><a href="#options-genius-deployment-status">OPTIONS <code>genius deployment status</code></a></li>
+<li><a href="#command-genius-service">COMMAND <code>genius service</code></a></li>
+<li><a href="#positional-arguments-genius-service">POSITIONAL ARGUMENTS <em><code>genius service</code></em></a></li>
+<li><a href="#command-genius-service-create">COMMAND <code>genius service create</code></a></li>
+<li><a href="#options-genius-service-create">OPTIONS <code>genius service create</code></a></li>
+<li><a href="#command-genius-service-delete">COMMAND <code>genius service delete</code></a></li>
+<li><a href="#options-genius-service-delete">OPTIONS <code>genius service delete</code></a></li>
+<li><a href="#command-genius-service-describe">COMMAND <code>genius service describe</code></a></li>
+<li><a href="#options-genius-service-describe">OPTIONS <code>genius service describe</code></a></li>
+<li><a href="#command-genius-service-show">COMMAND <code>genius service show</code></a></li>
+<li><a href="#options-genius-service-show">OPTIONS <code>genius service show</code></a></li>
+<li><a href="#command-genius-job">COMMAND <code>genius job</code></a></li>
+<li><a href="#positional-arguments-genius-job">POSITIONAL ARGUMENTS <em><code>genius job</code></em></a></li>
+<li><a href="#command-genius-job-create">COMMAND <code>genius job create</code></a></li>
+<li><a href="#options-genius-job-create">OPTIONS <code>genius job create</code></a></li>
+<li><a href="#command-genius-job-delete">COMMAND <code>genius job delete</code></a></li>
+<li><a href="#options-genius-job-delete">OPTIONS <code>genius job delete</code></a></li>
+<li><a href="#command-genius-job-status">COMMAND <code>genius job status</code></a></li>
+<li><a href="#options-genius-job-status">OPTIONS <code>genius job status</code></a></li>
+<li><a href="#command-genius-cron_job">COMMAND <code>genius cron_job</code></a></li>
+<li><a href="#positional-arguments-genius-cron_job">POSITIONAL ARGUMENTS <em><code>genius cron_job</code></em></a></li>
+<li><a href="#command-genius-cron_job-create_cronjob">COMMAND <code>genius cron_job create_cronjob</code></a></li>
+<li><a href="#options-genius-cron_job-create_cronjob">OPTIONS <code>genius cron_job create_cronjob</code></a></li>
+<li><a href="#command-genius-cron_job-delete_cronjob">COMMAND <code>genius cron_job delete_cronjob</code></a></li>
+<li><a href="#options-genius-cron_job-delete_cronjob">OPTIONS <code>genius cron_job delete_cronjob</code></a></li>
+<li><a href="#command-genius-cron_job-get_cronjob_status">COMMAND <code>genius cron_job get_cronjob_status</code></a></li>
+<li><a href="#options-genius-cron_job-get_cronjob_status">OPTIONS <code>genius cron_job get_cronjob_status</code></a></li>
+<li><a href="#command-genius-plugins">COMMAND <code>genius plugins</code></a></li>
+<li><a href="#command-genius-list">COMMAND <code>genius list</code></a></li>
+<li><a href="#options-genius-list">OPTIONS <code>genius list</code></a></li>
+</ul>
+<h1 id="name">NAME<a class="headerlink" href="#name" title="Permanent link">&para;</a></h1>
+<p>genius</p>
+<h1 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h1>
+<p><strong>genius</strong> [-h]
+{TestSpoutCtlSpout,TestBoltCtlBolt,rise,docker,pod,deployment,service,job,cron_job,plugins,list}
+...</p>
+<h1 id="description">DESCRIPTION<a class="headerlink" href="#description" title="Permanent link">&para;</a></h1>
+<p>Geniusrise</p>
+<h1 id="positional-arguments">POSITIONAL ARGUMENTS<a class="headerlink" href="#positional-arguments" title="Permanent link">&para;</a></h1>
+<p><strong>genius</strong> <em>TestSpoutCtlSpout</em>: Manage spout TestSpoutCtlSpout.</p>
+<p><strong>genius</strong> <em>TestBoltCtlBolt</em>: Manage bolt TestBoltCtlBolt.</p>
+<p><strong>genius</strong> <em>rise</em>: Manage spouts and bolts with a YAML file.</p>
+<p><strong>genius</strong> <em>docker</em>: Package this application into a Docker image.</p>
+<p><strong>genius</strong> <em>pod</em>: Manage spouts and bolts as kubernetes pod</p>
+<p><strong>genius</strong> <em>deployment</em>: Manage spouts and bolts as kubernetes deployment</p>
+<p><strong>genius</strong> <em>service</em>: Manage spouts and bolts as kubernetes service</p>
+<p><strong>genius</strong> <em>job</em>: Manage spouts and bolts as kubernetes job</p>
+<p><strong>genius</strong> <em>cron_job</em>: Manage spouts and bolts as kubernetes cron_job</p>
+<p><strong>genius</strong> <em>plugins</em>: Print help for all spouts and bolts.</p>
+<p><strong>genius</strong> <em>list</em>: List all discovered spouts and bolts.</p>
+<h1 id="command-genius-testspoutctlspout">COMMAND <code>genius TestSpoutCtlSpout</code><a class="headerlink" href="#command-genius-testspoutctlspout" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestSpoutCtlSpout [-h] {rise,deploy,help} ...</p>
+<h1 id="positional-arguments-genius-testspoutctlspout">POSITIONAL ARGUMENTS <em><code>genius TestSpoutCtlSpout</code></em><a class="headerlink" href="#positional-arguments-genius-testspoutctlspout" title="Permanent link">&para;</a></h1>
+<p><strong>genius TestSpoutCtlSpout</strong> <em>rise</em>: Run a spout locally.</p>
+<p><strong>genius TestSpoutCtlSpout</strong> <em>deploy</em>: Run a spout remotely.</p>
+<p><strong>genius TestSpoutCtlSpout</strong> <em>help</em>: Print help for the spout.</p>
+<h1 id="command-genius-testspoutctlspout-rise">COMMAND <code>genius TestSpoutCtlSpout rise</code><a class="headerlink" href="#command-genius-testspoutctlspout-rise" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestSpoutCtlSpout rise [-h] [--buffer_size BUFFER_SIZE]
+[--output_folder OUTPUT_FOLDER] [--output_kafka_topic OUTPUT_KAFKA_TOPIC]
+[--output_kafka_cluster_connection_string
+OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING] [--output_s3_bucket OUTPUT_S3_BUCKET]
+[--output_s3_folder OUTPUT_S3_FOLDER] [--redis_host REDIS_HOST] [--redis_port
+REDIS_PORT] [--redis_db REDIS_DB] [--postgres_host POSTGRES_HOST]
+[--postgres_port POSTGRES_PORT] [--postgres_user POSTGRES_USER]
+[--postgres_password POSTGRES_PASSWORD] [--postgres_database POSTGRES_DATABASE]
+[--postgres_table POSTGRES_TABLE] [--dynamodb_table_name DYNAMODB_TABLE_NAME]
+[--dynamodb_region_name DYNAMODB_REGION_NAME] [--prometheus_gateway
+PROMETHEUS_GATEWAY] [--args ...] {batch,streaming,stream_to_batch}
+{none,redis,postgres,dynamodb,prometheus} method_name</p>
+<p><strong>{batch,streaming,stream_to_batch}</strong>: Choose the type of output data: batch or
+streaming.</p>
+<p><strong>{none,redis,postgres,dynamodb,prometheus}</strong>: Select the type of state manager:
+none, redis, postgres, or dynamodb.</p>
+<p><strong>method_name</strong>: The name of the method to execute on the spout.</p>
+<h1 id="options-genius-testspoutctlspout-rise">OPTIONS <code>genius TestSpoutCtlSpout rise</code><a class="headerlink" href="#options-genius-testspoutctlspout-rise" title="Permanent link">&para;</a></h1>
+<p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
+<p><strong>--output_folder</strong> <em>OUTPUT_FOLDER</em>: Specify the directory where output files
+should be stored temporarily.</p>
+<p><strong>--output_kafka_topic</strong> <em>OUTPUT_KAFKA_TOPIC</em>: Kafka output topic for streaming
+spouts.</p>
+<p><strong>--output_kafka_cluster_connection_string</strong>
+<em>OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING</em>: Kafka connection string for streaming
+spouts.</p>
+<p><strong>--output_s3_bucket</strong> <em>OUTPUT_S3_BUCKET</em>: Provide the name of the S3 bucket for
+output storage.</p>
+<p><strong>--output_s3_folder</strong> <em>OUTPUT_S3_FOLDER</em>: Indicate the S3 folder for output
+storage.</p>
+<p><strong>--redis_host</strong> <em>REDIS_HOST</em>: Enter the host address for the Redis server.</p>
+<p><strong>--redis_port</strong> <em>REDIS_PORT</em>: Enter the port number for the Redis server.</p>
+<p><strong>--redis_db</strong> <em>REDIS_DB</em>: Specify the Redis database to be used.</p>
+<p><strong>--postgres_host</strong> <em>POSTGRES_HOST</em>: Enter the host address for the PostgreSQL
+server.</p>
+<p><strong>--postgres_port</strong> <em>POSTGRES_PORT</em>: Enter the port number for the PostgreSQL
+server.</p>
+<p><strong>--postgres_user</strong> <em>POSTGRES_USER</em>: Provide the username for the PostgreSQL
+server.</p>
+<p><strong>--postgres_password</strong> <em>POSTGRES_PASSWORD</em>: Provide the password for the
+PostgreSQL server.</p>
+<p><strong>--postgres_database</strong> <em>POSTGRES_DATABASE</em>: Specify the PostgreSQL database to
+be used.</p>
+<p><strong>--postgres_table</strong> <em>POSTGRES_TABLE</em>: Specify the PostgreSQL table to be used.</p>
+<p><strong>--dynamodb_table_name</strong> <em>DYNAMODB_TABLE_NAME</em>: Provide the name of the
+DynamoDB table.</p>
+<p><strong>--dynamodb_region_name</strong> <em>DYNAMODB_REGION_NAME</em>: Specify the AWS region for
+DynamoDB.</p>
+<p><strong>--prometheus_gateway</strong> <em>PROMETHEUS_GATEWAY</em>: Specify the prometheus gateway
+URL.</p>
+<p><strong>--args</strong> <em>...</em>: Additional keyword arguments to pass to the spout.</p>
+<h1 id="command-genius-testspoutctlspout-deploy">COMMAND <code>genius TestSpoutCtlSpout deploy</code><a class="headerlink" href="#command-genius-testspoutctlspout-deploy" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestSpoutCtlSpout deploy [-h] [--buffer_size BUFFER_SIZE]
+[--output_folder OUTPUT_FOLDER] [--output_kafka_topic OUTPUT_KAFKA_TOPIC]
+[--output_kafka_cluster_connection_string
+OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING] [--output_s3_bucket OUTPUT_S3_BUCKET]
+[--output_s3_folder OUTPUT_S3_FOLDER] [--redis_host REDIS_HOST] [--redis_port
+REDIS_PORT] [--redis_db REDIS_DB] [--postgres_host POSTGRES_HOST]
+[--postgres_port POSTGRES_PORT] [--postgres_user POSTGRES_USER]
+[--postgres_password POSTGRES_PASSWORD] [--postgres_database POSTGRES_DATABASE]
+[--postgres_table POSTGRES_TABLE] [--dynamodb_table_name DYNAMODB_TABLE_NAME]
+[--dynamodb_region_name DYNAMODB_REGION_NAME] [--prometheus_gateway
+PROMETHEUS_GATEWAY] [--k8s_kind {deployment,service,job,cron_job}] [--k8s_name
+K8S_NAME] [--k8s_image K8S_IMAGE] [--k8s_replicas K8S_REPLICAS] [--k8s_env_vars
+K8S_ENV_VARS] [--k8s_cpu K8S_CPU] [--k8s_memory K8S_MEMORY] [--k8s_storage
+K8S_STORAGE] [--k8s_gpu K8S_GPU] [--k8s_kube_config_path K8S_KUBE_CONFIG_PATH]
+[--k8s_api_key K8S_API_KEY] [--k8s_api_host K8S_API_HOST] [--k8s_verify_ssl
+K8S_VERIFY_SSL] [--k8s_ssl_ca_cert K8S_SSL_CA_CERT] [--k8s_cluster_name
+K8S_CLUSTER_NAME] [--k8s_context_name K8S_CONTEXT_NAME] [--k8s_namespace
+K8S_NAMESPACE] [--k8s_labels K8S_LABELS] [--k8s_annotations K8S_ANNOTATIONS]
+[--k8s_port K8S_PORT] [--k8s_target_port K8S_TARGET_PORT] [--k8s_schedule
+K8S_SCHEDULE] [--args ...] {batch,streaming,stream_to_batch}
+{none,redis,postgres,dynamodb,prometheus} {k8s} method_name</p>
+<p><strong>{batch,streaming,stream_to_batch}</strong>: Choose the type of output data: batch or
+streaming.</p>
+<p><strong>{none,redis,postgres,dynamodb,prometheus}</strong>: Select the type of state manager:
+none, redis, postgres, or dynamodb.</p>
+<p><strong>{k8s}</strong>: Choose the type of deployment.</p>
+<p><strong>method_name</strong>: The name of the method to execute on the spout.</p>
+<h1 id="options-genius-testspoutctlspout-deploy">OPTIONS <code>genius TestSpoutCtlSpout deploy</code><a class="headerlink" href="#options-genius-testspoutctlspout-deploy" title="Permanent link">&para;</a></h1>
+<p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
+<p><strong>--output_folder</strong> <em>OUTPUT_FOLDER</em>: Specify the directory where output files
+should be stored temporarily.</p>
+<p><strong>--output_kafka_topic</strong> <em>OUTPUT_KAFKA_TOPIC</em>: Kafka output topic for streaming
+spouts.</p>
+<p><strong>--output_kafka_cluster_connection_string</strong>
+<em>OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING</em>: Kafka connection string for streaming
+spouts.</p>
+<p><strong>--output_s3_bucket</strong> <em>OUTPUT_S3_BUCKET</em>: Provide the name of the S3 bucket for
+output storage.</p>
+<p><strong>--output_s3_folder</strong> <em>OUTPUT_S3_FOLDER</em>: Indicate the S3 folder for output
+storage.</p>
+<p><strong>--redis_host</strong> <em>REDIS_HOST</em>: Enter the host address for the Redis server.</p>
+<p><strong>--redis_port</strong> <em>REDIS_PORT</em>: Enter the port number for the Redis server.</p>
+<p><strong>--redis_db</strong> <em>REDIS_DB</em>: Specify the Redis database to be used.</p>
+<p><strong>--postgres_host</strong> <em>POSTGRES_HOST</em>: Enter the host address for the PostgreSQL
+server.</p>
+<p><strong>--postgres_port</strong> <em>POSTGRES_PORT</em>: Enter the port number for the PostgreSQL
+server.</p>
+<p><strong>--postgres_user</strong> <em>POSTGRES_USER</em>: Provide the username for the PostgreSQL
+server.</p>
+<p><strong>--postgres_password</strong> <em>POSTGRES_PASSWORD</em>: Provide the password for the
+PostgreSQL server.</p>
+<p><strong>--postgres_database</strong> <em>POSTGRES_DATABASE</em>: Specify the PostgreSQL database to
+be used.</p>
+<p><strong>--postgres_table</strong> <em>POSTGRES_TABLE</em>: Specify the PostgreSQL table to be used.</p>
+<p><strong>--dynamodb_table_name</strong> <em>DYNAMODB_TABLE_NAME</em>: Provide the name of the
+DynamoDB table.</p>
+<p><strong>--dynamodb_region_name</strong> <em>DYNAMODB_REGION_NAME</em>: Specify the AWS region for
+DynamoDB.</p>
+<p><strong>--prometheus_gateway</strong> <em>PROMETHEUS_GATEWAY</em>: Specify the prometheus gateway
+URL.</p>
+<p><strong>--k8s_kind</strong> <em>{deployment,service,job,cron_job}</em>: Choose the type of
+kubernetes resource.</p>
+<p><strong>--k8s_name</strong> <em>K8S_NAME</em>: Name of the Kubernetes resource.</p>
+<p><strong>--k8s_image</strong> <em>K8S_IMAGE</em>: Docker image for the Kubernetes resource.</p>
+<p><strong>--k8s_replicas</strong> <em>K8S_REPLICAS</em>: Number of replicas.</p>
+<p><strong>--k8s_env_vars</strong> <em>K8S_ENV_VARS</em>: Environment variables as a JSON string.</p>
+<p><strong>--k8s_cpu</strong> <em>K8S_CPU</em>: CPU requirements.</p>
+<p><strong>--k8s_memory</strong> <em>K8S_MEMORY</em>: Memory requirements.</p>
+<p><strong>--k8s_storage</strong> <em>K8S_STORAGE</em>: Storage requirements.</p>
+<p><strong>--k8s_gpu</strong> <em>K8S_GPU</em>: GPU requirements.</p>
+<p><strong>--k8s_kube_config_path</strong> <em>K8S_KUBE_CONFIG_PATH</em>: Name of the Kubernetes
+cluster local config.</p>
+<p><strong>--k8s_api_key</strong> <em>K8S_API_KEY</em>: GPU requirements.</p>
+<p><strong>--k8s_api_host</strong> <em>K8S_API_HOST</em>: GPU requirements.</p>
+<p><strong>--k8s_verify_ssl</strong> <em>K8S_VERIFY_SSL</em>: GPU requirements.</p>
+<p><strong>--k8s_ssl_ca_cert</strong> <em>K8S_SSL_CA_CERT</em>: GPU requirements.</p>
+<p><strong>--k8s_cluster_name</strong> <em>K8S_CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--k8s_context_name</strong> <em>K8S_CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--k8s_namespace</strong> <em>K8S_NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--k8s_labels</strong> <em>K8S_LABELS</em>: Labels for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--k8s_annotations</strong> <em>K8S_ANNOTATIONS</em>: Annotations for Kubernetes resources,
+as a JSON string.</p>
+<p><strong>--k8s_port</strong> <em>K8S_PORT</em>: Port to run the spout on as a service.</p>
+<p><strong>--k8s_target_port</strong> <em>K8S_TARGET_PORT</em>: Port to expose the spout on as a
+service.</p>
+<p><strong>--k8s_schedule</strong> <em>K8S_SCHEDULE</em>: Schedule to run the spout on as a cron job.</p>
+<p><strong>--args</strong> <em>...</em>: Additional keyword arguments to pass to the spout.</p>
+<h1 id="command-genius-testspoutctlspout-help">COMMAND <code>genius TestSpoutCtlSpout help</code><a class="headerlink" href="#command-genius-testspoutctlspout-help" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestSpoutCtlSpout help [-h] method</p>
+<p><strong>method</strong>: The method to execute.</p>
+<h1 id="command-genius-testboltctlbolt">COMMAND <code>genius TestBoltCtlBolt</code><a class="headerlink" href="#command-genius-testboltctlbolt" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestBoltCtlBolt [-h] {rise,deploy,help} ...</p>
+<h1 id="positional-arguments-genius-testboltctlbolt">POSITIONAL ARGUMENTS <em><code>genius TestBoltCtlBolt</code></em><a class="headerlink" href="#positional-arguments-genius-testboltctlbolt" title="Permanent link">&para;</a></h1>
+<p><strong>genius TestBoltCtlBolt</strong> <em>rise</em>: Run a bolt locally.</p>
+<p><strong>genius TestBoltCtlBolt</strong> <em>deploy</em>: Run a spout remotely.</p>
+<p><strong>genius TestBoltCtlBolt</strong> <em>help</em>: Print help for the bolt.</p>
+<h1 id="command-genius-testboltctlbolt-rise">COMMAND <code>genius TestBoltCtlBolt rise</code><a class="headerlink" href="#command-genius-testboltctlbolt-rise" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestBoltCtlBolt rise [-h] [--buffer_size BUFFER_SIZE]
+[--input_folder INPUT_FOLDER] [--input_kafka_topic INPUT_KAFKA_TOPIC]
+[--input_kafka_cluster_connection_string INPUT_KAFKA_CLUSTER_CONNECTION_STRING]
+[--input_kafka_consumer_group_id INPUT_KAFKA_CONSUMER_GROUP_ID]
+[--input_s3_bucket INPUT_S3_BUCKET] [--input_s3_folder INPUT_S3_FOLDER]
+[--output_folder OUTPUT_FOLDER] [--output_kafka_topic OUTPUT_KAFKA_TOPIC]
+[--output_kafka_cluster_connection_string
+OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING] [--output_s3_bucket OUTPUT_S3_BUCKET]
+[--output_s3_folder OUTPUT_S3_FOLDER] [--redis_host REDIS_HOST] [--redis_port
+REDIS_PORT] [--redis_db REDIS_DB] [--postgres_host POSTGRES_HOST]
+[--postgres_port POSTGRES_PORT] [--postgres_user POSTGRES_USER]
+[--postgres_password POSTGRES_PASSWORD] [--postgres_database POSTGRES_DATABASE]
+[--postgres_table POSTGRES_TABLE] [--dynamodb_table_name DYNAMODB_TABLE_NAME]
+[--dynamodb_region_name DYNAMODB_REGION_NAME] [--prometheus_gateway
+PROMETHEUS_GATEWAY] [--args ...]
+{batch,streaming,batch_to_stream,stream_to_batch}
+{batch,streaming,stream_to_batch} {none,redis,postgres,dynamodb,prometheus}
+method_name</p>
+<p><strong>{batch,streaming,batch_to_stream,stream_to_batch}</strong>: Choose the type of input
+data: batch or streaming.</p>
+<p><strong>{batch,streaming,stream_to_batch}</strong>: Choose the type of output data: batch or
+streaming.</p>
+<p><strong>{none,redis,postgres,dynamodb,prometheus}</strong>: Select the type of state manager:
+none, redis, postgres, or dynamodb.</p>
+<p><strong>method_name</strong>: The name of the method to execute on the bolt.</p>
+<h1 id="options-genius-testboltctlbolt-rise">OPTIONS <code>genius TestBoltCtlBolt rise</code><a class="headerlink" href="#options-genius-testboltctlbolt-rise" title="Permanent link">&para;</a></h1>
+<p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
+<p><strong>--input_folder</strong> <em>INPUT_FOLDER</em>: Specify the directory where output files
+should be stored temporarily.</p>
+<p><strong>--input_kafka_topic</strong> <em>INPUT_KAFKA_TOPIC</em>: Kafka output topic for streaming
+spouts.</p>
+<p><strong>--input_kafka_cluster_connection_string</strong>
+<em>INPUT_KAFKA_CLUSTER_CONNECTION_STRING</em>: Kafka connection string for streaming
+spouts.</p>
+<p><strong>--input_kafka_consumer_group_id</strong> <em>INPUT_KAFKA_CONSUMER_GROUP_ID</em>: Kafka
+consumer group id to use.</p>
+<p><strong>--input_s3_bucket</strong> <em>INPUT_S3_BUCKET</em>: Provide the name of the S3 bucket for
+output storage.</p>
+<p><strong>--input_s3_folder</strong> <em>INPUT_S3_FOLDER</em>: Indicate the S3 folder for output
+storage.</p>
+<p><strong>--output_folder</strong> <em>OUTPUT_FOLDER</em>: Specify the directory where output files
+should be stored temporarily.</p>
+<p><strong>--output_kafka_topic</strong> <em>OUTPUT_KAFKA_TOPIC</em>: Kafka output topic for streaming
+spouts.</p>
+<p><strong>--output_kafka_cluster_connection_string</strong>
+<em>OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING</em>: Kafka connection string for streaming
+spouts.</p>
+<p><strong>--output_s3_bucket</strong> <em>OUTPUT_S3_BUCKET</em>: Provide the name of the S3 bucket for
+output storage.</p>
+<p><strong>--output_s3_folder</strong> <em>OUTPUT_S3_FOLDER</em>: Indicate the S3 folder for output
+storage.</p>
+<p><strong>--redis_host</strong> <em>REDIS_HOST</em>: Enter the host address for the Redis server.</p>
+<p><strong>--redis_port</strong> <em>REDIS_PORT</em>: Enter the port number for the Redis server.</p>
+<p><strong>--redis_db</strong> <em>REDIS_DB</em>: Specify the Redis database to be used.</p>
+<p><strong>--postgres_host</strong> <em>POSTGRES_HOST</em>: Enter the host address for the PostgreSQL
+server.</p>
+<p><strong>--postgres_port</strong> <em>POSTGRES_PORT</em>: Enter the port number for the PostgreSQL
+server.</p>
+<p><strong>--postgres_user</strong> <em>POSTGRES_USER</em>: Provide the username for the PostgreSQL
+server.</p>
+<p><strong>--postgres_password</strong> <em>POSTGRES_PASSWORD</em>: Provide the password for the
+PostgreSQL server.</p>
+<p><strong>--postgres_database</strong> <em>POSTGRES_DATABASE</em>: Specify the PostgreSQL database to
+be used.</p>
+<p><strong>--postgres_table</strong> <em>POSTGRES_TABLE</em>: Specify the PostgreSQL table to be used.</p>
+<p><strong>--dynamodb_table_name</strong> <em>DYNAMODB_TABLE_NAME</em>: Provide the name of the
+DynamoDB table.</p>
+<p><strong>--dynamodb_region_name</strong> <em>DYNAMODB_REGION_NAME</em>: Specify the AWS region for
+DynamoDB.</p>
+<p><strong>--prometheus_gateway</strong> <em>PROMETHEUS_GATEWAY</em>: Specify the prometheus gateway
+URL.</p>
+<p><strong>--args</strong> <em>...</em>: Additional keyword arguments to pass to the bolt.</p>
+<h1 id="command-genius-testboltctlbolt-deploy">COMMAND <code>genius TestBoltCtlBolt deploy</code><a class="headerlink" href="#command-genius-testboltctlbolt-deploy" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestBoltCtlBolt deploy [-h] [--buffer_size BUFFER_SIZE]
+[--input_folder INPUT_FOLDER] [--input_kafka_topic INPUT_KAFKA_TOPIC]
+[--input_kafka_cluster_connection_string INPUT_KAFKA_CLUSTER_CONNECTION_STRING]
+[--input_kafka_consumer_group_id INPUT_KAFKA_CONSUMER_GROUP_ID]
+[--input_s3_bucket INPUT_S3_BUCKET] [--input_s3_folder INPUT_S3_FOLDER]
+[--output_folder OUTPUT_FOLDER] [--output_kafka_topic OUTPUT_KAFKA_TOPIC]
+[--output_kafka_cluster_connection_string
+OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING] [--output_s3_bucket OUTPUT_S3_BUCKET]
+[--output_s3_folder OUTPUT_S3_FOLDER] [--redis_host REDIS_HOST] [--redis_port
+REDIS_PORT] [--redis_db REDIS_DB] [--postgres_host POSTGRES_HOST]
+[--postgres_port POSTGRES_PORT] [--postgres_user POSTGRES_USER]
+[--postgres_password POSTGRES_PASSWORD] [--postgres_database POSTGRES_DATABASE]
+[--postgres_table POSTGRES_TABLE] [--dynamodb_table_name DYNAMODB_TABLE_NAME]
+[--dynamodb_region_name DYNAMODB_REGION_NAME] [--prometheus_gateway
+PROMETHEUS_GATEWAY] [--k8s_kind {deployment,service,job,cron_job}] [--k8s_name
+K8S_NAME] [--k8s_image K8S_IMAGE] [--k8s_replicas K8S_REPLICAS] [--k8s_env_vars
+K8S_ENV_VARS] [--k8s_cpu K8S_CPU] [--k8s_memory K8S_MEMORY] [--k8s_storage
+K8S_STORAGE] [--k8s_gpu K8S_GPU] [--k8s_kube_config_path K8S_KUBE_CONFIG_PATH]
+[--k8s_api_key K8S_API_KEY] [--k8s_api_host K8S_API_HOST] [--k8s_verify_ssl
+K8S_VERIFY_SSL] [--k8s_ssl_ca_cert K8S_SSL_CA_CERT] [--k8s_cluster_name
+K8S_CLUSTER_NAME] [--k8s_context_name K8S_CONTEXT_NAME] [--k8s_namespace
+K8S_NAMESPACE] [--k8s_labels K8S_LABELS] [--k8s_annotations K8S_ANNOTATIONS]
+[--k8s_port K8S_PORT] [--k8s_target_port K8S_TARGET_PORT] [--k8s_schedule
+K8S_SCHEDULE] [--args ...] {batch,streaming,stream_to_batch}
+{none,redis,postgres,dynamodb,prometheus} {k8s} method_name</p>
+<p><strong>{batch,streaming,stream_to_batch}</strong>: Choose the type of output data: batch or
+streaming.</p>
+<p><strong>{none,redis,postgres,dynamodb,prometheus}</strong>: Select the type of state manager:
+none, redis, postgres, or dynamodb.</p>
+<p><strong>{k8s}</strong>: Choose the type of deployment.</p>
+<p><strong>method_name</strong>: The name of the method to execute on the spout.</p>
+<h1 id="options-genius-testboltctlbolt-deploy">OPTIONS <code>genius TestBoltCtlBolt deploy</code><a class="headerlink" href="#options-genius-testboltctlbolt-deploy" title="Permanent link">&para;</a></h1>
+<p><strong>--buffer_size</strong> <em>BUFFER_SIZE</em>: Specify the size of the buffer.</p>
+<p><strong>--input_folder</strong> <em>INPUT_FOLDER</em>: Specify the directory where output files
+should be stored temporarily.</p>
+<p><strong>--input_kafka_topic</strong> <em>INPUT_KAFKA_TOPIC</em>: Kafka output topic for streaming
+spouts.</p>
+<p><strong>--input_kafka_cluster_connection_string</strong>
+<em>INPUT_KAFKA_CLUSTER_CONNECTION_STRING</em>: Kafka connection string for streaming
+spouts.</p>
+<p><strong>--input_kafka_consumer_group_id</strong> <em>INPUT_KAFKA_CONSUMER_GROUP_ID</em>: Kafka
+consumer group id to use.</p>
+<p><strong>--input_s3_bucket</strong> <em>INPUT_S3_BUCKET</em>: Provide the name of the S3 bucket for
+output storage.</p>
+<p><strong>--input_s3_folder</strong> <em>INPUT_S3_FOLDER</em>: Indicate the S3 folder for output
+storage.</p>
+<p><strong>--output_folder</strong> <em>OUTPUT_FOLDER</em>: Specify the directory where output files
+should be stored temporarily.</p>
+<p><strong>--output_kafka_topic</strong> <em>OUTPUT_KAFKA_TOPIC</em>: Kafka output topic for streaming
+spouts.</p>
+<p><strong>--output_kafka_cluster_connection_string</strong>
+<em>OUTPUT_KAFKA_CLUSTER_CONNECTION_STRING</em>: Kafka connection string for streaming
+spouts.</p>
+<p><strong>--output_s3_bucket</strong> <em>OUTPUT_S3_BUCKET</em>: Provide the name of the S3 bucket for
+output storage.</p>
+<p><strong>--output_s3_folder</strong> <em>OUTPUT_S3_FOLDER</em>: Indicate the S3 folder for output
+storage.</p>
+<p><strong>--redis_host</strong> <em>REDIS_HOST</em>: Enter the host address for the Redis server.</p>
+<p><strong>--redis_port</strong> <em>REDIS_PORT</em>: Enter the port number for the Redis server.</p>
+<p><strong>--redis_db</strong> <em>REDIS_DB</em>: Specify the Redis database to be used.</p>
+<p><strong>--postgres_host</strong> <em>POSTGRES_HOST</em>: Enter the host address for the PostgreSQL
+server.</p>
+<p><strong>--postgres_port</strong> <em>POSTGRES_PORT</em>: Enter the port number for the PostgreSQL
+server.</p>
+<p><strong>--postgres_user</strong> <em>POSTGRES_USER</em>: Provide the username for the PostgreSQL
+server.</p>
+<p><strong>--postgres_password</strong> <em>POSTGRES_PASSWORD</em>: Provide the password for the
+PostgreSQL server.</p>
+<p><strong>--postgres_database</strong> <em>POSTGRES_DATABASE</em>: Specify the PostgreSQL database to
+be used.</p>
+<p><strong>--postgres_table</strong> <em>POSTGRES_TABLE</em>: Specify the PostgreSQL table to be used.</p>
+<p><strong>--dynamodb_table_name</strong> <em>DYNAMODB_TABLE_NAME</em>: Provide the name of the
+DynamoDB table.</p>
+<p><strong>--dynamodb_region_name</strong> <em>DYNAMODB_REGION_NAME</em>: Specify the AWS region for
+DynamoDB.</p>
+<p><strong>--prometheus_gateway</strong> <em>PROMETHEUS_GATEWAY</em>: Specify the prometheus gateway
+URL.</p>
+<p><strong>--k8s_kind</strong> <em>{deployment,service,job,cron_job}</em>: Choose the type of
+kubernetes resource.</p>
+<p><strong>--k8s_name</strong> <em>K8S_NAME</em>: Name of the Kubernetes resource.</p>
+<p><strong>--k8s_image</strong> <em>K8S_IMAGE</em>: Docker image for the Kubernetes resource.</p>
+<p><strong>--k8s_replicas</strong> <em>K8S_REPLICAS</em>: Number of replicas.</p>
+<p><strong>--k8s_env_vars</strong> <em>K8S_ENV_VARS</em>: Environment variables as a JSON string.</p>
+<p><strong>--k8s_cpu</strong> <em>K8S_CPU</em>: CPU requirements.</p>
+<p><strong>--k8s_memory</strong> <em>K8S_MEMORY</em>: Memory requirements.</p>
+<p><strong>--k8s_storage</strong> <em>K8S_STORAGE</em>: Storage requirements.</p>
+<p><strong>--k8s_gpu</strong> <em>K8S_GPU</em>: GPU requirements.</p>
+<p><strong>--k8s_kube_config_path</strong> <em>K8S_KUBE_CONFIG_PATH</em>: Name of the Kubernetes
+cluster local config.</p>
+<p><strong>--k8s_api_key</strong> <em>K8S_API_KEY</em>: GPU requirements.</p>
+<p><strong>--k8s_api_host</strong> <em>K8S_API_HOST</em>: GPU requirements.</p>
+<p><strong>--k8s_verify_ssl</strong> <em>K8S_VERIFY_SSL</em>: GPU requirements.</p>
+<p><strong>--k8s_ssl_ca_cert</strong> <em>K8S_SSL_CA_CERT</em>: GPU requirements.</p>
+<p><strong>--k8s_cluster_name</strong> <em>K8S_CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--k8s_context_name</strong> <em>K8S_CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--k8s_namespace</strong> <em>K8S_NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--k8s_labels</strong> <em>K8S_LABELS</em>: Labels for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--k8s_annotations</strong> <em>K8S_ANNOTATIONS</em>: Annotations for Kubernetes resources,
+as a JSON string.</p>
+<p><strong>--k8s_port</strong> <em>K8S_PORT</em>: Port to run the spout on as a service.</p>
+<p><strong>--k8s_target_port</strong> <em>K8S_TARGET_PORT</em>: Port to expose the spout on as a
+service.</p>
+<p><strong>--k8s_schedule</strong> <em>K8S_SCHEDULE</em>: Schedule to run the spout on as a cron job.</p>
+<p><strong>--args</strong> <em>...</em>: Additional keyword arguments to pass to the spout.</p>
+<h1 id="command-genius-testboltctlbolt-help">COMMAND <code>genius TestBoltCtlBolt help</code><a class="headerlink" href="#command-genius-testboltctlbolt-help" title="Permanent link">&para;</a></h1>
+<p>Usage: genius TestBoltCtlBolt help [-h] method</p>
+<p><strong>method</strong>: The method to execute.</p>
+<h1 id="command-genius-rise">COMMAND <code>genius rise</code><a class="headerlink" href="#command-genius-rise" title="Permanent link">&para;</a></h1>
+<p>Usage: genius rise [-h] [--spout SPOUT] [--bolt BOLT] [--file FILE]</p>
+<h1 id="options-genius-rise">OPTIONS <code>genius rise</code><a class="headerlink" href="#options-genius-rise" title="Permanent link">&para;</a></h1>
+<p><strong>--spout</strong> <em>SPOUT</em>: Name of the specific spout to run.</p>
+<p><strong>--bolt</strong> <em>BOLT</em>: Name of the specific bolt to run.</p>
+<p><strong>--file</strong> <em>FILE</em>: Path of the genius.yml file, default to .</p>
+<h1 id="command-genius-docker">COMMAND <code>genius docker</code><a class="headerlink" href="#command-genius-docker" title="Permanent link">&para;</a></h1>
+<p>usage: genius docker [-h] {package} ...</p>
+<h1 id="positional-arguments-genius-docker">POSITIONAL ARGUMENTS <em><code>genius docker</code></em><a class="headerlink" href="#positional-arguments-genius-docker" title="Permanent link">&para;</a></h1>
+<p><strong>genius docker</strong> <em>package</em>: Build and upload a Docker image.</p>
+<h1 id="command-genius-docker-package">COMMAND <code>genius docker package</code><a class="headerlink" href="#command-genius-docker-package" title="Permanent link">&para;</a></h1>
+<p>Usage: genius docker package [-h] [--auth AUTH] [--base_image BASE_IMAGE]
+[--workdir WORKDIR] [--local_dir LOCAL_DIR] [--packages [PACKAGES ...]]
+[--os_packages [OS_PACKAGES ...]] [--env_vars ENV_VARS] image_name repository</p>
+<p><strong>image_name</strong>: Name of the Docker image.</p>
+<p><strong>repository</strong>: Container repository to upload to.</p>
+<h1 id="options-genius-docker-package">OPTIONS <code>genius docker package</code><a class="headerlink" href="#options-genius-docker-package" title="Permanent link">&para;</a></h1>
+<p><strong>--auth</strong> <em>AUTH</em>: Authentication credentials as a JSON string.</p>
+<p><strong>--base_image</strong> <em>BASE_IMAGE</em>: The base image to use for the Docker container.</p>
+<p><strong>--workdir</strong> <em>WORKDIR</em>: The working directory in the Docker container.</p>
+<p><strong>--local_dir</strong> <em>LOCAL_DIR</em>: The local directory to copy into the Docker
+container.</p>
+<p><strong>--packages</strong> <em>[PACKAGES ...]</em>: List of Python packages to install in the
+Docker container.</p>
+<p><strong>--os_packages</strong> <em>[OS_PACKAGES ...]</em>: List of OS packages to install in the
+Docker container.</p>
+<p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables to set in the Docker container.</p>
+<h1 id="command-genius-pod">COMMAND <code>genius pod</code><a class="headerlink" href="#command-genius-pod" title="Permanent link">&para;</a></h1>
+<p>usage: genius pod [-h] {status,show,describe,logs} ...</p>
+<h1 id="positional-arguments-genius-pod">POSITIONAL ARGUMENTS <em><code>genius pod</code></em><a class="headerlink" href="#positional-arguments-genius-pod" title="Permanent link">&para;</a></h1>
+<p><strong>genius pod</strong> <em>status</em>: Get the status of the Kubernetes pod.</p>
+<p><strong>genius pod</strong> <em>show</em>: List all pods.</p>
+<p><strong>genius pod</strong> <em>describe</em>: Describe a pod.</p>
+<p><strong>genius pod</strong> <em>logs</em>: Get the logs of a pod.</p>
+<h1 id="command-genius-pod-status">COMMAND <code>genius pod status</code><a class="headerlink" href="#command-genius-pod-status" title="Permanent link">&para;</a></h1>
+<p>usage: genius pod status [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the Kubernetes pod.</p>
+<h1 id="options-genius-pod-status">OPTIONS <code>genius pod status</code><a class="headerlink" href="#options-genius-pod-status" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-pod-show">COMMAND <code>genius pod show</code><a class="headerlink" href="#command-genius-pod-show" title="Permanent link">&para;</a></h1>
+<p>usage: genius pod show [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]</p>
+<h1 id="options-genius-pod-show">OPTIONS <code>genius pod show</code><a class="headerlink" href="#options-genius-pod-show" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-pod-describe">COMMAND <code>genius pod describe</code><a class="headerlink" href="#command-genius-pod-describe" title="Permanent link">&para;</a></h1>
+<p>usage: genius pod describe [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the pod.</p>
+<h1 id="options-genius-pod-describe">OPTIONS <code>genius pod describe</code><a class="headerlink" href="#options-genius-pod-describe" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-pod-logs">COMMAND <code>genius pod logs</code><a class="headerlink" href="#command-genius-pod-logs" title="Permanent link">&para;</a></h1>
+<p>usage: genius pod logs [-h] [--follow FOLLOW] [--tail TAIL] [--kube_config_path
+KUBE_CONFIG_PATH] [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME]
+[--namespace NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key
+API_KEY] [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert
+SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the pod.</p>
+<h1 id="options-genius-pod-logs">OPTIONS <code>genius pod logs</code><a class="headerlink" href="#options-genius-pod-logs" title="Permanent link">&para;</a></h1>
+<p><strong>--follow</strong> <em>FOLLOW</em>: Whether to follow the logs.</p>
+<p><strong>--tail</strong> <em>TAIL</em>: Number of lines to show from the end of the logs.</p>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-deployment">COMMAND <code>genius deployment</code><a class="headerlink" href="#command-genius-deployment" title="Permanent link">&para;</a></h1>
+<p>usage: genius deployment [-h] {create,scale,describe,show,delete,status} ...</p>
+<h1 id="positional-arguments-genius-deployment">POSITIONAL ARGUMENTS <em><code>genius deployment</code></em><a class="headerlink" href="#positional-arguments-genius-deployment" title="Permanent link">&para;</a></h1>
+<p><strong>genius deployment</strong> <em>create</em>: Create a new deployment.</p>
+<p><strong>genius deployment</strong> <em>scale</em>: Scale a deployment.</p>
+<p><strong>genius deployment</strong> <em>describe</em>: Describe a deployment.</p>
+<p><strong>genius deployment</strong> <em>show</em>: List all deployments.</p>
+<p><strong>genius deployment</strong> <em>delete</em>: Delete a deployment.</p>
+<p><strong>genius deployment</strong> <em>status</em>: Get the status of a deployment.</p>
+<h1 id="command-genius-deployment-create">COMMAND <code>genius deployment create</code><a class="headerlink" href="#command-genius-deployment-create" title="Permanent link">&para;</a></h1>
+<p>usage: genius deployment create [-h] [--replicas REPLICAS] [--env_vars ENV_VARS]
+[--cpu CPU] [--memory MEMORY] [--storage STORAGE] [--gpu GPU]
+[--kube_config_path KUBE_CONFIG_PATH] [--cluster_name CLUSTER_NAME]
+[--context_name CONTEXT_NAME] [--namespace NAMESPACE] [--labels LABELS]
+[--annotations ANNOTATIONS] [--api_key API_KEY] [--api_host API_HOST]
+[--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name image command</p>
+<p><strong>name</strong>: Name of the deployment.</p>
+<p><strong>image</strong>: Docker image for the deployment.</p>
+<p><strong>command</strong>: Command to run in the container.</p>
+<h1 id="options-genius-deployment-create">OPTIONS <code>genius deployment create</code><a class="headerlink" href="#options-genius-deployment-create" title="Permanent link">&para;</a></h1>
+<p><strong>--replicas</strong> <em>REPLICAS</em>: Number of replicas.</p>
+<p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables as a JSON string.</p>
+<p><strong>--cpu</strong> <em>CPU</em>: CPU requirements.</p>
+<p><strong>--memory</strong> <em>MEMORY</em>: Memory requirements.</p>
+<p><strong>--storage</strong> <em>STORAGE</em>: Storage requirements.</p>
+<p><strong>--gpu</strong> <em>GPU</em>: GPU requirements.</p>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-deployment-scale">COMMAND <code>genius deployment scale</code><a class="headerlink" href="#command-genius-deployment-scale" title="Permanent link">&para;</a></h1>
+<p>usage: genius deployment scale [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name
+replicas</p>
+<p><strong>name</strong>: Name of the deployment.</p>
+<p><strong>replicas</strong>: Number of replicas.</p>
+<h1 id="options-genius-deployment-scale">OPTIONS <code>genius deployment scale</code><a class="headerlink" href="#options-genius-deployment-scale" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-deployment-describe">COMMAND <code>genius deployment describe</code><a class="headerlink" href="#command-genius-deployment-describe" title="Permanent link">&para;</a></h1>
+<p>usage: genius deployment describe [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the deployment.</p>
+<h1 id="options-genius-deployment-describe">OPTIONS <code>genius deployment describe</code><a class="headerlink" href="#options-genius-deployment-describe" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-deployment-show">COMMAND <code>genius deployment show</code><a class="headerlink" href="#command-genius-deployment-show" title="Permanent link">&para;</a></h1>
+<p>usage: genius deployment show [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]</p>
+<h1 id="options-genius-deployment-show">OPTIONS <code>genius deployment show</code><a class="headerlink" href="#options-genius-deployment-show" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-deployment-delete">COMMAND <code>genius deployment delete</code><a class="headerlink" href="#command-genius-deployment-delete" title="Permanent link">&para;</a></h1>
+<p>usage: genius deployment delete [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the deployment.</p>
+<h1 id="options-genius-deployment-delete">OPTIONS <code>genius deployment delete</code><a class="headerlink" href="#options-genius-deployment-delete" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-deployment-status">COMMAND <code>genius deployment status</code><a class="headerlink" href="#command-genius-deployment-status" title="Permanent link">&para;</a></h1>
+<p>usage: genius deployment status [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the deployment.</p>
+<h1 id="options-genius-deployment-status">OPTIONS <code>genius deployment status</code><a class="headerlink" href="#options-genius-deployment-status" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-service">COMMAND <code>genius service</code><a class="headerlink" href="#command-genius-service" title="Permanent link">&para;</a></h1>
+<p>usage: genius service [-h] {create,delete,describe,show} ...</p>
+<h1 id="positional-arguments-genius-service">POSITIONAL ARGUMENTS <em><code>genius service</code></em><a class="headerlink" href="#positional-arguments-genius-service" title="Permanent link">&para;</a></h1>
+<p><strong>genius service</strong> <em>create</em>: Create a new service.</p>
+<p><strong>genius service</strong> <em>delete</em>: Delete a service.</p>
+<p><strong>genius service</strong> <em>describe</em>: Describe a service.</p>
+<p><strong>genius service</strong> <em>show</em>: List all services.</p>
+<h1 id="command-genius-service-create">COMMAND <code>genius service create</code><a class="headerlink" href="#command-genius-service-create" title="Permanent link">&para;</a></h1>
+<p>usage: genius service create [-h] [--replicas REPLICAS] [--port PORT]
+[--target_port TARGET_PORT] [--env_vars ENV_VARS] [--cpu CPU] [--memory MEMORY]
+[--storage STORAGE] [--gpu GPU] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name
+image command</p>
+<p><strong>name</strong>: Name of the service.</p>
+<p><strong>image</strong>: Docker image for the service.</p>
+<p><strong>command</strong>: Command to run in the container.</p>
+<h1 id="options-genius-service-create">OPTIONS <code>genius service create</code><a class="headerlink" href="#options-genius-service-create" title="Permanent link">&para;</a></h1>
+<p><strong>--replicas</strong> <em>REPLICAS</em>: Number of replicas.</p>
+<p><strong>--port</strong> <em>PORT</em>: Service port.</p>
+<p><strong>--target_port</strong> <em>TARGET_PORT</em>: Container target port.</p>
+<p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables as a JSON string.</p>
+<p><strong>--cpu</strong> <em>CPU</em>: CPU requirements.</p>
+<p><strong>--memory</strong> <em>MEMORY</em>: Memory requirements.</p>
+<p><strong>--storage</strong> <em>STORAGE</em>: Storage requirements.</p>
+<p><strong>--gpu</strong> <em>GPU</em>: GPU requirements.</p>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-service-delete">COMMAND <code>genius service delete</code><a class="headerlink" href="#command-genius-service-delete" title="Permanent link">&para;</a></h1>
+<p>usage: genius service delete [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the service.</p>
+<h1 id="options-genius-service-delete">OPTIONS <code>genius service delete</code><a class="headerlink" href="#options-genius-service-delete" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-service-describe">COMMAND <code>genius service describe</code><a class="headerlink" href="#command-genius-service-describe" title="Permanent link">&para;</a></h1>
+<p>usage: genius service describe [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the service.</p>
+<h1 id="options-genius-service-describe">OPTIONS <code>genius service describe</code><a class="headerlink" href="#options-genius-service-describe" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-service-show">COMMAND <code>genius service show</code><a class="headerlink" href="#command-genius-service-show" title="Permanent link">&para;</a></h1>
+<p>usage: genius service show [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]</p>
+<h1 id="options-genius-service-show">OPTIONS <code>genius service show</code><a class="headerlink" href="#options-genius-service-show" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-job">COMMAND <code>genius job</code><a class="headerlink" href="#command-genius-job" title="Permanent link">&para;</a></h1>
+<p>usage: genius job [-h] {create,delete,status} ...</p>
+<h1 id="positional-arguments-genius-job">POSITIONAL ARGUMENTS <em><code>genius job</code></em><a class="headerlink" href="#positional-arguments-genius-job" title="Permanent link">&para;</a></h1>
+<p><strong>genius job</strong> <em>create</em>: Create a new job.</p>
+<p><strong>genius job</strong> <em>delete</em>: Delete a job.</p>
+<p><strong>genius job</strong> <em>status</em>: Get the status of a job.</p>
+<h1 id="command-genius-job-create">COMMAND <code>genius job create</code><a class="headerlink" href="#command-genius-job-create" title="Permanent link">&para;</a></h1>
+<p>usage: genius job create [-h] [--env_vars ENV_VARS] [--cpu CPU] [--memory
+MEMORY] [--storage STORAGE] [--gpu GPU] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name
+image command</p>
+<p><strong>name</strong>: Name of the job.</p>
+<p><strong>image</strong>: Docker image for the job.</p>
+<p><strong>command</strong>: Command to run in the container.</p>
+<h1 id="options-genius-job-create">OPTIONS <code>genius job create</code><a class="headerlink" href="#options-genius-job-create" title="Permanent link">&para;</a></h1>
+<p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables as a JSON string.</p>
+<p><strong>--cpu</strong> <em>CPU</em>: CPU requirements.</p>
+<p><strong>--memory</strong> <em>MEMORY</em>: Memory requirements.</p>
+<p><strong>--storage</strong> <em>STORAGE</em>: Storage requirements.</p>
+<p><strong>--gpu</strong> <em>GPU</em>: GPU requirements.</p>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-job-delete">COMMAND <code>genius job delete</code><a class="headerlink" href="#command-genius-job-delete" title="Permanent link">&para;</a></h1>
+<p>usage: genius job delete [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the job.</p>
+<h1 id="options-genius-job-delete">OPTIONS <code>genius job delete</code><a class="headerlink" href="#options-genius-job-delete" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-job-status">COMMAND <code>genius job status</code><a class="headerlink" href="#command-genius-job-status" title="Permanent link">&para;</a></h1>
+<p>usage: genius job status [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the job.</p>
+<h1 id="options-genius-job-status">OPTIONS <code>genius job status</code><a class="headerlink" href="#options-genius-job-status" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-cron_job">COMMAND <code>genius cron_job</code><a class="headerlink" href="#command-genius-cron_job" title="Permanent link">&para;</a></h1>
+<p>usage: genius cron_job [-h] {create_cronjob,delete_cronjob,get_cronjob_status}
+...</p>
+<h1 id="positional-arguments-genius-cron_job">POSITIONAL ARGUMENTS <em><code>genius cron_job</code></em><a class="headerlink" href="#positional-arguments-genius-cron_job" title="Permanent link">&para;</a></h1>
+<p><strong>genius cron_job</strong> <em>create_cronjob</em>: Create a new cronjob.</p>
+<p><strong>genius cron_job</strong> <em>delete_cronjob</em>: Delete a cronjob.</p>
+<p><strong>genius cron_job</strong> <em>get_cronjob_status</em>: Get the status of a cronjob.</p>
+<h1 id="command-genius-cron_job-create_cronjob">COMMAND <code>genius cron_job create_cronjob</code><a class="headerlink" href="#command-genius-cron_job-create_cronjob" title="Permanent link">&para;</a></h1>
+<p>usage: genius cron_job create_cronjob [-h] [--env_vars ENV_VARS] [--cpu CPU]
+[--memory MEMORY] [--storage STORAGE] [--gpu GPU] [--kube_config_path
+KUBE_CONFIG_PATH] [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME]
+[--namespace NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key
+API_KEY] [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert
+SSL_CA_CERT] name image command schedule</p>
+<p><strong>name</strong>: Name of the cronjob.</p>
+<p><strong>image</strong>: Docker image for the cronjob.</p>
+<p><strong>command</strong>: Command to run in the container.</p>
+<p><strong>schedule</strong>: Cron schedule.</p>
+<h1 id="options-genius-cron_job-create_cronjob">OPTIONS <code>genius cron_job create_cronjob</code><a class="headerlink" href="#options-genius-cron_job-create_cronjob" title="Permanent link">&para;</a></h1>
+<p><strong>--env_vars</strong> <em>ENV_VARS</em>: Environment variables as a JSON string.</p>
+<p><strong>--cpu</strong> <em>CPU</em>: CPU requirements.</p>
+<p><strong>--memory</strong> <em>MEMORY</em>: Memory requirements.</p>
+<p><strong>--storage</strong> <em>STORAGE</em>: Storage requirements.</p>
+<p><strong>--gpu</strong> <em>GPU</em>: GPU requirements.</p>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-cron_job-delete_cronjob">COMMAND <code>genius cron_job delete_cronjob</code><a class="headerlink" href="#command-genius-cron_job-delete_cronjob" title="Permanent link">&para;</a></h1>
+<p>usage: genius cron_job delete_cronjob [-h] [--kube_config_path KUBE_CONFIG_PATH]
+[--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME] [--namespace
+NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
+[--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the cronjob.</p>
+<h1 id="options-genius-cron_job-delete_cronjob">OPTIONS <code>genius cron_job delete_cronjob</code><a class="headerlink" href="#options-genius-cron_job-delete_cronjob" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-cron_job-get_cronjob_status">COMMAND <code>genius cron_job get_cronjob_status</code><a class="headerlink" href="#command-genius-cron_job-get_cronjob_status" title="Permanent link">&para;</a></h1>
+<p>usage: genius cron_job get_cronjob_status [-h] [--kube_config_path
+KUBE_CONFIG_PATH] [--cluster_name CLUSTER_NAME] [--context_name CONTEXT_NAME]
+[--namespace NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key
+API_KEY] [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert
+SSL_CA_CERT] name</p>
+<p><strong>name</strong>: Name of the cronjob.</p>
+<h1 id="options-genius-cron_job-get_cronjob_status">OPTIONS <code>genius cron_job get_cronjob_status</code><a class="headerlink" href="#options-genius-cron_job-get_cronjob_status" title="Permanent link">&para;</a></h1>
+<p><strong>--kube_config_path</strong> <em>KUBE_CONFIG_PATH</em>: Path to the kubeconfig file.</p>
+<p><strong>--cluster_name</strong> <em>CLUSTER_NAME</em>: Name of the Kubernetes cluster.</p>
+<p><strong>--context_name</strong> <em>CONTEXT_NAME</em>: Name of the kubeconfig context.</p>
+<p><strong>--namespace</strong> <em>NAMESPACE</em>: Kubernetes namespace.</p>
+<p><strong>--labels</strong> <em>LABELS</em>: Labels for Kubernetes resources, as a JSON string.</p>
+<p><strong>--annotations</strong> <em>ANNOTATIONS</em>: Annotations for Kubernetes resources, as a JSON
+string.</p>
+<p><strong>--api_key</strong> <em>API_KEY</em>: API key for Kubernetes cluster.</p>
+<p><strong>--api_host</strong> <em>API_HOST</em>: API host for Kubernetes cluster.</p>
+<p><strong>--verify_ssl</strong> <em>VERIFY_SSL</em>: Whether to verify SSL certificates.</p>
+<p><strong>--ssl_ca_cert</strong> <em>SSL_CA_CERT</em>: Path to the SSL CA certificate.</p>
+<h1 id="command-genius-plugins">COMMAND <code>genius plugins</code><a class="headerlink" href="#command-genius-plugins" title="Permanent link">&para;</a></h1>
+<p>Usage: genius plugins [-h][spout_or_bolt]</p>
+<p><strong>spout_or_bolt</strong>: The spout or bolt to print help for.</p>
+<h1 id="command-genius-list">COMMAND <code>genius list</code><a class="headerlink" href="#command-genius-list" title="Permanent link">&para;</a></h1>
+<p>Usage: genius list [-h][--verbose]</p>
+<h1 id="options-genius-list">OPTIONS <code>genius list</code><a class="headerlink" href="#options-genius-list" title="Permanent link">&para;</a></h1>
+<p><strong>--verbose</strong>: Print verbose output.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.sections", "header.autohide", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../js/print-site.js"></script>
+        
+      
+    
+  </body>
+</html>
