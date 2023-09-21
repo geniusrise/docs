@@ -42,10 +42,13 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 
 ### 🏃 Runners
 
-| 🌐 **Runners**                       |                                  |                              |                                   |
-| ----------------------------------- | -------------------------------- | ---------------------------- | --------------------------------- |
-| 🟢 [k8s deployment](guides/index.md) | 🟤 [k8s service](guides/index.md) | 🟡 [k8s job](guides/index.md) | 🟠 [k8s cron job](guides/index.md) |
-| 🟣 [Apache Airflow](guides/index.md) | 🔵 [AWS Fargate](guides/index.md) | 🟥 [AWS ECS](guides/index.md) | 🟩 [AWS Batch](guides/index.md)    |
+| 🌐 **Runners**                              |                                      |                              |                                        |
+| ------------------------------------------ | ------------------------------------ | ---------------------------- | -------------------------------------- |
+| 🟢 [k8s deployment](core/k8s_deployment.md) | 🟤 [k8s service](core/k8s_service.md) | 🟡 [k8s job](core/k8s_job.md) | 🟠 [k8s cron job](core/k8s_cron_job.md) |
+| 🟧 [k8s pods](core/k8s_base.md)             |                                      |                              |                                        |
+
+
+<!-- |                                       | 🟣 [~Apache Airflow~](guides/index.md) | 🔵 [~AWS Fargate~](guides/index.md) | 🟥 [~AWS ECS~](guides/index.md)         | 🟩 [~AWS Batch~](guides/index.md) | | -->
 
 
 ### 🌪️ Spouts
@@ -90,14 +93,14 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 
 ### 📚 Library
 
-| 📦 **cli**                            | 📦 **core**                       | 📦 **data**                                                           | 📦 **core.state**                              | 📦 **runners**                  |
-| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------- | ------------------------------ |
-| 🟠 [geniusctl](core/cli_geniusctl.md) | 🟢 [bolt](core/core_bolt.md)      | 🟣 [input](core/core_data_input.md)                                   | 🔴 [base](core/core_state_base.md)             | 🔵 [ecs](core/core_task_ecs.md) |
-| 🟠 [yamlctl](core/cli_yamlctl.md)     | 🟢 [spout](core/core_spout.md)    | 🟣 [output](core/core_data_output.md)                                 | 🔴 [dynamo](core/core_state_dynamo.md)         | 🔵 [k8s](core/core_task_k8s.md) |
-| 🟠 [boltctl](core/cli_boltctl.md)     | 🟤 [base](core/core_task_base.md) | 🟣 [batch_input](core/core_data_batch_input.md)                       | 🔴 [memory](core/core_state_memory.md)         |                                |
-| 🟠 [spoutctl](core/cli_spoutctl.md)   |                                  | 🟣 [batch_output](core/core_data_batch_output.md)                     | 🔴 [postgres](core/core_state_postgres.md)     |                                |
-| 🟠 [schema](core/cli_schema.md)       |                                  | 🟣 [streaming_input](core/core_data_streaming_input.md)               | 🔴 [redis](core/core_state_redis.md)           |                                |
-| 🟠 [discover](core/cli_discover.md)   |                                  | 🟣 [streaming_output](core/core_data_streaming_output.md)             | 🔴 [prometheus](core/core_state_prometheus.md) |                                |
-|                                      |                                  | 🟣 [stream_to_batch_input](core/core_data_stream_to_batch_input.md)   |                                               |                                |
-|                                      |                                  | 🟣 [stream_to_batch_output](core/core_data_stream_to_batch_output.md) |                                               |                                |
-|                                      |                                  | 🟣 [batch_to_stream_input](core/core_data_batch_to_stream_input.md)   |                                               |                                |
+| 📦 **cli**                            | 📦 **core**                       | 📦 **data**                                                           | 📦 **core.state**                              |
+| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------- |
+| 🟠 [geniusctl](core/cli_geniusctl.md) | 🟢 [bolt](core/core_bolt.md)      | 🟣 [input](core/core_data_input.md)                                   | 🔴 [base](core/core_state_base.md)             |
+| 🟠 [yamlctl](core/cli_yamlctl.md)     | 🟢 [spout](core/core_spout.md)    | 🟣 [output](core/core_data_output.md)                                 | 🔴 [dynamo](core/core_state_dynamo.md)         |
+| 🟠 [boltctl](core/cli_boltctl.md)     | 🟤 [base](core/core_task_base.md) | 🟣 [batch_input](core/core_data_batch_input.md)                       | 🔴 [memory](core/core_state_memory.md)         |
+| 🟠 [spoutctl](core/cli_spoutctl.md)   |                                  | 🟣 [batch_output](core/core_data_batch_output.md)                     | 🔴 [postgres](core/core_state_postgres.md)     |
+| 🟠 [schema](core/cli_schema.md)       |                                  | 🟣 [streaming_input](core/core_data_streaming_input.md)               | 🔴 [redis](core/core_state_redis.md)           |
+| 🟠 [discover](core/cli_discover.md)   |                                  | 🟣 [streaming_output](core/core_data_streaming_output.md)             | 🔴 [prometheus](core/core_state_prometheus.md) |
+| 🟠 [docker](core/cli_dockerctl.md)    |                                  | 🟣 [stream_to_batch_input](core/core_data_stream_to_batch_input.md)   |                                               |
+|                                      |                                  | 🟣 [stream_to_batch_output](core/core_data_stream_to_batch_output.md) |                                               |
+|                                      |                                  | 🟣 [batch_to_stream_input](core/core_data_batch_to_stream_input.md)   |                                               |

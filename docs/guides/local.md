@@ -288,8 +288,8 @@ spouts:
   http_listener:
     name: Webhook
     method: listen
-      args:
-        port: 8080
+    args:
+      port: 8080
     state:
       type: none
     output:
@@ -336,4 +336,61 @@ Or run them individually:
 ```bash
 genius rise --spout all
 genius rise --bolt all
+```
+
+Package this entire workspace into a docker container and upload to ECR:
+
+```bash
+genius docker package geniusrise ecr \
+    --auth '{"aws_region": "ap-south-1"}' \
+    --packages geniusrise-listeners geniusrise-huggingface
+```
+
+## Deployment
+
+Delpoy the spout and bolt to kubernetes. We could use the command line to deploy:
+
+```bash
+genius Webhook deploy \
+  stream_to_batch \
+  --output_s3_bucket geniusrise-test \
+  --output_s3_folder train \
+  none \
+  k8s \
+  --k8s_kind service \
+  --k8s_namespace geniusrise \
+  --k8s_cluster_name geniusrise-dev \
+  --k8s_context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev \
+  --k8s_name webhook \
+  --k8s_image "143601010266.dkr.ecr.ap-south-1.amazonaws.com/geniusrise" \
+  --k8s_env_vars '{"AWS_DEFAULT_REGION": "ap-south-1", "AWS_SECRET_ACCESS_KEY": "AKIASC32JQZNCFC5ZRNL", "AWS_ACCESS_KEY_ID": "X4R5cipoERVbU+FmuQV6oFaijzbdnLGpoDCHZmas"}' \
+  --k8s_port 8080 \
+  --k8s_target_port 8080 \
+  listen \
+  --args port=8080
+```
+
+Or we could simply use the yaml we created in the previous step:
+
+```bash
+genius rise deploy
+```
+
+See the status of the deployment:
+
+```bash
+genius pod describe \
+  webhook-75c4bff67d-hbhts \
+  --namespace geniusrise \
+  --context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev
+
+genius deployment describe \
+  webhook \
+  --namespace geniusrise \
+  --context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev
+
+genius service describe \
+  webhook \
+  --namespace geniusrise \
+  --context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev
 ```
