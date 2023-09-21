@@ -5,76 +5,76 @@
 - [COMMAND `genius TestSpoutCtlSpout`](#command-genius-testspoutctlspout)
 - [POSITIONAL ARGUMENTS _`genius TestSpoutCtlSpout`_](#positional-arguments-genius-testspoutctlspout)
 - [COMMAND `genius TestSpoutCtlSpout rise`](#command-genius-testspoutctlspout-rise)
-- [OPTIONS `genius TestSpoutCtlSpout rise`](#options-genius-testspoutctlspout-rise)
+    - [OPTIONS `genius TestSpoutCtlSpout rise`](#options-genius-testspoutctlspout-rise)
 - [COMMAND `genius TestSpoutCtlSpout deploy`](#command-genius-testspoutctlspout-deploy)
-- [OPTIONS `genius TestSpoutCtlSpout deploy`](#options-genius-testspoutctlspout-deploy)
+    - [OPTIONS `genius TestSpoutCtlSpout deploy`](#options-genius-testspoutctlspout-deploy)
 - [COMMAND `genius TestSpoutCtlSpout help`](#command-genius-testspoutctlspout-help)
 - [COMMAND `genius TestBoltCtlBolt`](#command-genius-testboltctlbolt)
 - [POSITIONAL ARGUMENTS _`genius TestBoltCtlBolt`_](#positional-arguments-genius-testboltctlbolt)
 - [COMMAND `genius TestBoltCtlBolt rise`](#command-genius-testboltctlbolt-rise)
-- [OPTIONS `genius TestBoltCtlBolt rise`](#options-genius-testboltctlbolt-rise)
+    - [OPTIONS `genius TestBoltCtlBolt rise`](#options-genius-testboltctlbolt-rise)
 - [COMMAND `genius TestBoltCtlBolt deploy`](#command-genius-testboltctlbolt-deploy)
-- [OPTIONS `genius TestBoltCtlBolt deploy`](#options-genius-testboltctlbolt-deploy)
+    - [OPTIONS `genius TestBoltCtlBolt deploy`](#options-genius-testboltctlbolt-deploy)
 - [COMMAND `genius TestBoltCtlBolt help`](#command-genius-testboltctlbolt-help)
 - [COMMAND `genius rise`](#command-genius-rise)
-- [OPTIONS `genius rise`](#options-genius-rise)
+    - [OPTIONS `genius rise`](#options-genius-rise)
 - [COMMAND `genius docker`](#command-genius-docker)
 - [POSITIONAL ARGUMENTS _`genius docker`_](#positional-arguments-genius-docker)
 - [COMMAND `genius docker package`](#command-genius-docker-package)
-- [OPTIONS `genius docker package`](#options-genius-docker-package)
+    - [OPTIONS `genius docker package`](#options-genius-docker-package)
 - [COMMAND `genius pod`](#command-genius-pod)
 - [POSITIONAL ARGUMENTS _`genius pod`_](#positional-arguments-genius-pod)
 - [COMMAND `genius pod status`](#command-genius-pod-status)
-- [OPTIONS `genius pod status`](#options-genius-pod-status)
+    - [OPTIONS `genius pod status`](#options-genius-pod-status)
 - [COMMAND `genius pod show`](#command-genius-pod-show)
-- [OPTIONS `genius pod show`](#options-genius-pod-show)
+    - [OPTIONS `genius pod show`](#options-genius-pod-show)
 - [COMMAND `genius pod describe`](#command-genius-pod-describe)
-- [OPTIONS `genius pod describe`](#options-genius-pod-describe)
+    - [OPTIONS `genius pod describe`](#options-genius-pod-describe)
 - [COMMAND `genius pod logs`](#command-genius-pod-logs)
-- [OPTIONS `genius pod logs`](#options-genius-pod-logs)
+    - [OPTIONS `genius pod logs`](#options-genius-pod-logs)
 - [COMMAND `genius deployment`](#command-genius-deployment)
 - [POSITIONAL ARGUMENTS _`genius deployment`_](#positional-arguments-genius-deployment)
 - [COMMAND `genius deployment create`](#command-genius-deployment-create)
-- [OPTIONS `genius deployment create`](#options-genius-deployment-create)
+    - [OPTIONS `genius deployment create`](#options-genius-deployment-create)
 - [COMMAND `genius deployment scale`](#command-genius-deployment-scale)
-- [OPTIONS `genius deployment scale`](#options-genius-deployment-scale)
+    - [OPTIONS `genius deployment scale`](#options-genius-deployment-scale)
 - [COMMAND `genius deployment describe`](#command-genius-deployment-describe)
-- [OPTIONS `genius deployment describe`](#options-genius-deployment-describe)
+    - [OPTIONS `genius deployment describe`](#options-genius-deployment-describe)
 - [COMMAND `genius deployment show`](#command-genius-deployment-show)
-- [OPTIONS `genius deployment show`](#options-genius-deployment-show)
+    - [OPTIONS `genius deployment show`](#options-genius-deployment-show)
 - [COMMAND `genius deployment delete`](#command-genius-deployment-delete)
-- [OPTIONS `genius deployment delete`](#options-genius-deployment-delete)
+    - [OPTIONS `genius deployment delete`](#options-genius-deployment-delete)
 - [COMMAND `genius deployment status`](#command-genius-deployment-status)
-- [OPTIONS `genius deployment status`](#options-genius-deployment-status)
+    - [OPTIONS `genius deployment status`](#options-genius-deployment-status)
 - [COMMAND `genius service`](#command-genius-service)
 - [POSITIONAL ARGUMENTS _`genius service`_](#positional-arguments-genius-service)
 - [COMMAND `genius service create`](#command-genius-service-create)
-- [OPTIONS `genius service create`](#options-genius-service-create)
+    - [OPTIONS `genius service create`](#options-genius-service-create)
 - [COMMAND `genius service delete`](#command-genius-service-delete)
-- [OPTIONS `genius service delete`](#options-genius-service-delete)
+    - [OPTIONS `genius service delete`](#options-genius-service-delete)
 - [COMMAND `genius service describe`](#command-genius-service-describe)
-- [OPTIONS `genius service describe`](#options-genius-service-describe)
+    - [OPTIONS `genius service describe`](#options-genius-service-describe)
 - [COMMAND `genius service show`](#command-genius-service-show)
-- [OPTIONS `genius service show`](#options-genius-service-show)
+    - [OPTIONS `genius service show`](#options-genius-service-show)
 - [COMMAND `genius job`](#command-genius-job)
 - [POSITIONAL ARGUMENTS _`genius job`_](#positional-arguments-genius-job)
 - [COMMAND `genius job create`](#command-genius-job-create)
-- [OPTIONS `genius job create`](#options-genius-job-create)
+    - [OPTIONS `genius job create`](#options-genius-job-create)
 - [COMMAND `genius job delete`](#command-genius-job-delete)
-- [OPTIONS `genius job delete`](#options-genius-job-delete)
+    - [OPTIONS `genius job delete`](#options-genius-job-delete)
 - [COMMAND `genius job status`](#command-genius-job-status)
-- [OPTIONS `genius job status`](#options-genius-job-status)
+    - [OPTIONS `genius job status`](#options-genius-job-status)
 - [COMMAND `genius cron_job`](#command-genius-cron_job)
 - [POSITIONAL ARGUMENTS _`genius cron_job`_](#positional-arguments-genius-cron_job)
 - [COMMAND `genius cron_job create_cronjob`](#command-genius-cron_job-create_cronjob)
-- [OPTIONS `genius cron_job create_cronjob`](#options-genius-cron_job-create_cronjob)
+    - [OPTIONS `genius cron_job create_cronjob`](#options-genius-cron_job-create_cronjob)
 - [COMMAND `genius cron_job delete_cronjob`](#command-genius-cron_job-delete_cronjob)
-- [OPTIONS `genius cron_job delete_cronjob`](#options-genius-cron_job-delete_cronjob)
+    - [OPTIONS `genius cron_job delete_cronjob`](#options-genius-cron_job-delete_cronjob)
 - [COMMAND `genius cron_job get_cronjob_status`](#command-genius-cron_job-get_cronjob_status)
-- [OPTIONS `genius cron_job get_cronjob_status`](#options-genius-cron_job-get_cronjob_status)
+    - [OPTIONS `genius cron_job get_cronjob_status`](#options-genius-cron_job-get_cronjob_status)
 - [COMMAND `genius plugins`](#command-genius-plugins)
 - [COMMAND `genius list`](#command-genius-list)
-- [OPTIONS `genius list`](#options-genius-list)
+    - [OPTIONS `genius list`](#options-genius-list)
 
 # NAME
 
@@ -149,7 +149,7 @@ none, redis, postgres, or dynamodb.
 
 **method_name**: The name of the method to execute on the spout.
 
-# OPTIONS `genius TestSpoutCtlSpout rise`
+## OPTIONS `genius TestSpoutCtlSpout rise`
 
 **--buffer_size** _BUFFER_SIZE_: Specify the size of the buffer.
 
@@ -237,7 +237,7 @@ none, redis, postgres, or dynamodb.
 
 **method_name**: The name of the method to execute on the spout.
 
-# OPTIONS `genius TestSpoutCtlSpout deploy`
+## OPTIONS `genius TestSpoutCtlSpout deploy`
 
 **--buffer_size** _BUFFER_SIZE_: Specify the size of the buffer.
 
@@ -390,7 +390,7 @@ none, redis, postgres, or dynamodb.
 
 **method_name**: The name of the method to execute on the bolt.
 
-# OPTIONS `genius TestBoltCtlBolt rise`
+## OPTIONS `genius TestBoltCtlBolt rise`
 
 **--buffer_size** _BUFFER_SIZE_: Specify the size of the buffer.
 
@@ -501,7 +501,7 @@ none, redis, postgres, or dynamodb.
 
 **method_name**: The name of the method to execute on the spout.
 
-# OPTIONS `genius TestBoltCtlBolt deploy`
+## OPTIONS `genius TestBoltCtlBolt deploy`
 
 **--buffer_size** _BUFFER_SIZE_: Specify the size of the buffer.
 
@@ -633,7 +633,7 @@ Usage: genius TestBoltCtlBolt help [-h] method
 
 Usage: genius rise [-h] [--spout SPOUT] [--bolt BOLT] [--file FILE]
 
-# OPTIONS `genius rise`
+## OPTIONS `genius rise`
 
 **--spout** _SPOUT_: Name of the specific spout to run.
 
@@ -659,7 +659,7 @@ Usage: genius docker package [-h] [--auth AUTH] [--base_image BASE_IMAGE]
 
 **repository**: Container repository to upload to.
 
-# OPTIONS `genius docker package`
+## OPTIONS `genius docker package`
 
 **--auth** _AUTH_: Authentication credentials as a JSON string.
 
@@ -701,7 +701,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the Kubernetes pod.
 
-# OPTIONS `genius pod status`
+## OPTIONS `genius pod status`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -731,7 +731,7 @@ usage: genius pod show [-h] [--kube_config_path KUBE_CONFIG_PATH]
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]
 
-# OPTIONS `genius pod show`
+## OPTIONS `genius pod show`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -763,7 +763,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the pod.
 
-# OPTIONS `genius pod describe`
+## OPTIONS `genius pod describe`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -796,7 +796,7 @@ SSL_CA_CERT] name
 
 **name**: Name of the pod.
 
-# OPTIONS `genius pod logs`
+## OPTIONS `genius pod logs`
 
 **--follow** _FOLLOW_: Whether to follow the logs.
 
@@ -856,7 +856,7 @@ usage: genius deployment create [-h] [--replicas REPLICAS] [--env_vars ENV_VARS]
 
 **command**: Command to run in the container.
 
-# OPTIONS `genius deployment create`
+## OPTIONS `genius deployment create`
 
 **--replicas** _REPLICAS_: Number of replicas.
 
@@ -903,7 +903,7 @@ replicas
 
 **replicas**: Number of replicas.
 
-# OPTIONS `genius deployment scale`
+## OPTIONS `genius deployment scale`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -935,7 +935,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the deployment.
 
-# OPTIONS `genius deployment describe`
+## OPTIONS `genius deployment describe`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -965,7 +965,7 @@ usage: genius deployment show [-h] [--kube_config_path KUBE_CONFIG_PATH]
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]
 
-# OPTIONS `genius deployment show`
+## OPTIONS `genius deployment show`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -997,7 +997,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the deployment.
 
-# OPTIONS `genius deployment delete`
+## OPTIONS `genius deployment delete`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1029,7 +1029,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the deployment.
 
-# OPTIONS `genius deployment status`
+## OPTIONS `genius deployment status`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1082,7 +1082,7 @@ image command
 
 **command**: Command to run in the container.
 
-# OPTIONS `genius service create`
+## OPTIONS `genius service create`
 
 **--replicas** _REPLICAS_: Number of replicas.
 
@@ -1130,7 +1130,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the service.
 
-# OPTIONS `genius service delete`
+## OPTIONS `genius service delete`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1162,7 +1162,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the service.
 
-# OPTIONS `genius service describe`
+## OPTIONS `genius service describe`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1192,7 +1192,7 @@ usage: genius service show [-h] [--kube_config_path KUBE_CONFIG_PATH]
 NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 [--api_host API_HOST] [--verify_ssl VERIFY_SSL] [--ssl_ca_cert SSL_CA_CERT]
 
-# OPTIONS `genius service show`
+## OPTIONS `genius service show`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1242,7 +1242,7 @@ image command
 
 **command**: Command to run in the container.
 
-# OPTIONS `genius job create`
+## OPTIONS `genius job create`
 
 **--env_vars** _ENV_VARS_: Environment variables as a JSON string.
 
@@ -1284,7 +1284,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the job.
 
-# OPTIONS `genius job delete`
+## OPTIONS `genius job delete`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1316,7 +1316,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the job.
 
-# OPTIONS `genius job status`
+## OPTIONS `genius job status`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1369,7 +1369,7 @@ SSL_CA_CERT] name image command schedule
 
 **schedule**: Cron schedule.
 
-# OPTIONS `genius cron_job create_cronjob`
+## OPTIONS `genius cron_job create_cronjob`
 
 **--env_vars** _ENV_VARS_: Environment variables as a JSON string.
 
@@ -1411,7 +1411,7 @@ NAMESPACE] [--labels LABELS] [--annotations ANNOTATIONS] [--api_key API_KEY]
 
 **name**: Name of the cronjob.
 
-# OPTIONS `genius cron_job delete_cronjob`
+## OPTIONS `genius cron_job delete_cronjob`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1444,7 +1444,7 @@ SSL_CA_CERT] name
 
 **name**: Name of the cronjob.
 
-# OPTIONS `genius cron_job get_cronjob_status`
+## OPTIONS `genius cron_job get_cronjob_status`
 
 **--kube_config_path** _KUBE_CONFIG_PATH_: Path to the kubeconfig file.
 
@@ -1477,6 +1477,6 @@ Usage: genius plugins [-h] [spout_or_bolt]
 
 Usage: genius list [-h] [--verbose]
 
-# OPTIONS `genius list`
+## OPTIONS `genius list`
 
 **--verbose**: Print verbose output.
