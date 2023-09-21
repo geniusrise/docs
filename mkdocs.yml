@@ -28,6 +28,7 @@ nav:
                 - Apache Flink: guides/404.md
                 - Apache Beam: guides/404.md
     - Reference:
+          - CLI: guides/cli.md
           - YAML structure: guides/404.md
     - Spouts:
           - Listeners:
@@ -90,8 +91,8 @@ nav:
                 - AzureTableStorage: databases/azure_table.md
                 - BigQuery: databases/bigquery.md
                 - Vertica: databases/vertica.md
-          - OpenAPI:
-                - TODO
+          #   - OpenAPI:
+          #         - TODO
     - Bolts:
           - Huggingface:
                 - Base Fine Tuner: bolts/huggingface/base.md
@@ -114,10 +115,10 @@ nav:
                 - Sentiment Analysis: bolts/openai/sentiment_analysis.md
                 - Summarization: bolts/openai/summarization.md
                 - Translation: bolts/openai/translation.md
-          - Indexing:
-                - TODO
-          - OpenAPI:
-                - TODO
+          #   - Indexing:
+          #         - TODO
+          #   - OpenAPI:
+          #         - TODO
     - Core Reference:
           - cli:
                 - boltctl: core/cli_boltctl.md
@@ -126,16 +127,20 @@ nav:
                 - schema: core/cli_schema.md
                 - spoutctl: core/cli_spoutctl.md
                 - yamlctl: core/cli_yamlctl.md
+                - dockerctl: core/cli_dockerctl.md
           - core:
                 - bolt: core/core_bolt.md
                 - spout: core/core_spout.md
                 - data:
                       - batch_input: core/core_data_batch_input.md
                       - batch_output: core/core_data_batch_output.md
+                      - stream_to_batch_output: core/core_data_stream_to_batch_output.md
                       - input: core/core_data_input.md
                       - output: core/core_data_output.md
                       - streaming_input: core/core_data_streaming_input.md
                       - streaming_output: core/core_data_streaming_output.md
+                      - batch_to_stream_input: core/core_data_batch_to_stream_input.md
+                      - stream_to_batch_input: core/core_data_stream_to_batch_input.md
                 - state:
                       - base: core/core_state_base.md
                       - dynamo: core/core_state_dynamo.md
@@ -144,8 +149,6 @@ nav:
                       - redis: core/core_state_redis.md
                 - task:
                       - base: core/core_task_base.md
-                      - ecs: core/core_task_ecs.md
-                      - k8s: core/core_task_k8s.md
 
 theme:
     name: material

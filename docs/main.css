@@ -22,6 +22,10 @@ strong {
   color: #df2572;
 }
 
+em {
+  color: #96ee96;
+}
+
 .md-nav--primary .md-nav__title {
   background: #f34960;
   padding-left: 10px;
