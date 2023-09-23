@@ -37,7 +37,7 @@ We use the knowledge graph search results to not only annotate each node seen in
 To setup a local geniusrise project, simply use the geniusrise project creator script:
 
 ```bash
-curl -L https://geniusrise.new | bash
+curl -L https://geniusrise.new | bash # TODO: host this or create a template github repo
 ```
 
 ## Existing project
@@ -163,3 +163,4 @@ Unzip the file
 unzip SnomedCT_InternationalRF2_PRODUCTION_20230901T120000Z.zip
 ```
 
+## TODO 😢

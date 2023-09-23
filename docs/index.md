@@ -26,18 +26,18 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 
 1. 🏠 [**Local Experimentation**](guides/local.md) - <span style="color:#e667aa">Local setup and project creation.</span>
 2. 🔄 [**Dev Cycle**](guides/dev_cycle.md) - <span style="color:#e667aa">Describes one full local development cycle.</span>
-3. 📦 [**Packaging**](guides/index.md) - <span style="color:#e667aa">Packaging your application.</span>
-4. 🚀 [**Deployment**](guides/index.md) - <span style="color:#e667aa">Deploying parts or whole of your application.</span>
-5. ⚙️ [**Workflow Ops**](guides/index.md) - <span style="color:#e667aa">Operations and management of workflows.</span>
+3. 📦 [**Packaging**](guides/packaging.md) - <span style="color:#e667aa">Packaging your application.</span>
+4. 🚀 [**Deployment**](guides/deployment.md) - <span style="color:#e667aa">Deploying parts or whole of your application.</span>
+<!-- 5. ⚙️ [**Workflow Ops**](guides/index.md) - <span style="color:#e667aa">Operations and management of workflows.</span>
 6. 📊 [**Data Ops**](guides/index.md) - <span style="color:#e667aa">Operations and management of data.</span>
-7. 🤖 [**Model Ops**](guides/index.md) - <span style="color:#e667aa">Operations and management of models.</span>
+7. 🤖 [**Model Ops**](guides/index.md) - <span style="color:#e667aa">Operations and management of models.</span> -->
 
 ### 📚 <span style="color:#f34960">Reference</span>
 
 ---
 
-1. 📄 [**YAML Structure**](guides/index.md) - <span style="color:#e667aa">Geniusfile structure and configuration.</span>
-2. 🌐 [**Community Plugins**](guides/plugins.md) - <span style="color:#e667aa">Building and shipping community plugins (spouts and bolts).</span>
+1. 📄 [**YAML Structure**](guides/yaml.md) - <span style="color:#e667aa">Geniusfile structure and configuration.</span>
+2. 🌐 [**CLI reference**](guides/cli.md) - <span style="color:#e667aa">Command line reference.</span>
 3. 🎨 [**Project Templates**](guides/index.md) - <span style="color:#e667aa">Project templates for community plugins.</span>
 
 ### 🏃 Runners

@@ -43,38 +43,6 @@ Geniusrise containers are available on Docker hub.
 docker run -it --rm geniusrise/geniusrise:latest
 ```
 
-### Using package managers
-
-Geniusrise is also available as native packages for some Linux distributions.
-
-#### AUR
-
-Geniusrise is available on the AUR for arch and derived distros.
-
-```bash
-yay -S geniusrise
-```
-
-or directly from git master:
-
-```bash
-yay -S geniusrise-git
-```
-
-#### PPA
-
-Geniusrise is also available on the PPA for debian-based distros.
-
-Coming soon 😢
-
-#### Brew (cask)
-
-Coming soon 😢
-
-#### Nix
-
-Coming soon 😢
-
 ## Installing Plugins
 
 ---
@@ -97,11 +65,7 @@ Available plugins are:
 
 Please visit [https://github.com/geniusrise](https://github.com/geniusrise) for a complete list of available plugins.
 
-## Alternative Methods
-
----
-
-### Using Conda
+## Using Conda
 
 1. Activate the environment:
 
@@ -115,7 +79,7 @@ conda activate your-env
 pip install geniusrise
 ```
 
-### Using Poetry
+## Using Poetry
 
 1. Add Geniusrise as a dependency:
 
@@ -148,3 +112,41 @@ make install # installs in your local venv directory
 ---
 
 That's it! You've successfully installed Geniusrise and its plugins. 🎉
+
+
+## Alternative Methods: TODO 😭
+
+---
+
+### Using package managers
+
+Geniusrise is also available as native packages for some Linux distributions.
+
+#### AUR
+
+Geniusrise is available on the AUR for arch and derived distros.
+
+```bash
+yay -S geniusrise
+```
+
+or directly from git master:
+
+```bash
+yay -S geniusrise-git
+```
+
+#### PPA
+
+Geniusrise is also available on the PPA for debian-based distros.
+
+Coming soon 😢
+
+#### Brew (cask)
+
+Coming soon 😢
+
+#### Nix
+
+Coming soon 😢
+
