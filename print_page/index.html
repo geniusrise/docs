@@ -3109,6 +3109,7 @@ The core has to be installed first, and after that selected plugins can be insta
 <p>Geniusrise containers are available on Docker hub.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#guides-installation-__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>geniusrise/geniusrise:latest
 </span></code></pre></div>
+<h1 id="guides-installation-todo">TODO 😭<a class="headerlink" href="#guides-installation-todo" title="Permanent link">&para;</a></h1>
 <h3 id="guides-installation-using-package-managers">Using package managers<a class="headerlink" href="#guides-installation-using-package-managers" title="Permanent link">&para;</a></h3>
 <p>Geniusrise is also available as native packages for some Linux distributions.</p>
 <h4 id="guides-installation-aur">AUR<a class="headerlink" href="#guides-installation-aur" title="Permanent link">&para;</a></h4>
@@ -3504,7 +3505,7 @@ Here is the model we trained: <a href="https://huggingface.co/ixaxaar/geniusrise
 <p>We use the knowledge graph search results to not only annotate each node seen in the EHR document, but also add additional information about those nodes derived from its adjacent nodes. But first, we also need to make sure that we query the right information instead of simply vectorized chunks and throwing it at semantic search. We would need a "traditional" pipeline for this - lemmatization followed by POS tagging. We use both proper nouns and out of vocabulary words as search query terms.</p>
 <h2 id="guides-dev_cycle-boilerplate">Boilerplate<a class="headerlink" href="#guides-dev_cycle-boilerplate" title="Permanent link">&para;</a></h2>
 <p>To setup a local geniusrise project, simply use the geniusrise project creator script:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#guides-dev_cycle-__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://geniusrise.new<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#guides-dev_cycle-__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://geniusrise.new<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span><span class="c1"># TODO: host this or create a template github repo</span>
 </span></code></pre></div>
 <h2 id="guides-dev_cycle-existing-project">Existing project<a class="headerlink" href="#guides-dev_cycle-existing-project" title="Permanent link">&para;</a></h2>
 <p>If you wish to add geniusrise to an existing project:</p>
@@ -3606,7 +3607,8 @@ Here is the model we trained: <a href="https://huggingface.co/ixaxaar/geniusrise
 <p><img alt="snomed" src="../assets/snomed.png" /></p>
 <p>Unzip the file</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#guides-dev_cycle-__codelineno-5-1"></a>unzip<span class="w"> </span>SnomedCT_InternationalRF2_PRODUCTION_20230901T120000Z.zip
-</span></code></pre></div></section><section class="print-page" id="guides-packaging"><h1 id="guides-packaging-packaging">Packaging<a class="headerlink" href="#guides-packaging-packaging" title="Permanent link">&para;</a></h1>
+</span></code></pre></div>
+<h2 id="guides-dev_cycle-todo">TODO 😢<a class="headerlink" href="#guides-dev_cycle-todo" title="Permanent link">&para;</a></h2></section><section class="print-page" id="guides-packaging"><h1 id="guides-packaging-packaging">Packaging<a class="headerlink" href="#guides-packaging-packaging" title="Permanent link">&para;</a></h1>
 <h2 id="guides-packaging-overview">Overview<a class="headerlink" href="#guides-packaging-overview" title="Permanent link">&para;</a></h2>
 <p>Geniusrise uses docker for packaging and delivering modules.</p>
 <h2 id="guides-packaging-capabilities">Capabilities<a class="headerlink" href="#guides-packaging-capabilities" title="Permanent link">&para;</a></h2>
