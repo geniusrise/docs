@@ -10,20 +10,20 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/databases/cosmosdb/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/guides/packaging/">
       
       
-        <link rel="prev" href="../firestore/">
+        <link rel="prev" href="../dev_cycle/">
       
       
-        <link rel="next" href="../cloud_sql/">
+        <link rel="next" href="../deployment/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>CosmosDB - </title>
+        <title>Packaging - </title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cosmosdb" class="md-skip">
+        <a href="#packaging" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CosmosDB
+              Packaging
             
           </span>
         </div>
@@ -227,7 +227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/concepts/" class="md-nav__link">
+      <a href="../concepts/" class="md-nav__link">
         Concepts
       </a>
     </li>
@@ -242,7 +242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         Architecture
       </a>
     </li>
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -270,16 +270,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -288,7 +290,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -299,14 +301,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
       
       
       
@@ -315,7 +319,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
           Guides
@@ -328,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/local/" class="md-nav__link">
+      <a href="../local/" class="md-nav__link">
         Local setup
       </a>
     </li>
@@ -342,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/dev_cycle/" class="md-nav__link">
+      <a href="../dev_cycle/" class="md-nav__link">
         Dev Cycle
       </a>
     </li>
@@ -354,11 +358,210 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../guides/packaging/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Packaging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Packaging
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capabilities" class="md-nav__link">
+    Capabilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command-Line Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-Line Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-details" class="md-nav__link">
+    Authentication Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-ecr-amazon-elastic-container-registry" class="md-nav__link">
+    Uploading to ECR (Amazon Elastic Container Registry)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-dockerhub" class="md-nav__link">
+    Uploading to DockerHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-acr-azure-container-registry" class="md-nav__link">
+    Uploading to ACR (Azure Container Registry)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-gcr-google-container-registry" class="md-nav__link">
+    Uploading to GCR (Google Container Registry)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-quay" class="md-nav__link">
+    Uploading to Quay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-with-custom-packages-and-os-packages" class="md-nav__link">
+    Uploading with Custom Packages and OS Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-with-environment-variables" class="md-nav__link">
+    Uploading with Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-examples" class="md-nav__link">
+    Complex Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Complex Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-uploading-to-ecr-with-custom-base-image-and-packages" class="md-nav__link">
+    1. Uploading to ECR with Custom Base Image and Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-uploading-to-dockerhub-with-environment-variables-and-working-directory" class="md-nav__link">
+    2. Uploading to DockerHub with Environment Variables and Working Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-uploading-to-acr-with-multiple-local-directories" class="md-nav__link">
+    3. Uploading to ACR with Multiple Local Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-uploading-to-gcr-with-custom-base-image-packages-and-os-packages" class="md-nav__link">
+    4. Uploading to GCR with Custom Base Image, Packages, and OS Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-uploading-to-quay-with-all-customizations" class="md-nav__link">
+    5. Uploading to Quay with All Customizations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -370,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/deployment/" class="md-nav__link">
+      <a href="../deployment/" class="md-nav__link">
         Deployment
       </a>
     </li>
@@ -455,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
     </li>
@@ -539,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
+      <a href="../404/" class="md-nav__link">
         Apache Airflow
       </a>
     </li>
@@ -597,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         CLI
       </a>
     </li>
@@ -611,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/yaml/" class="md-nav__link">
+      <a href="../yaml/" class="md-nav__link">
         YAML
       </a>
     </li>
@@ -631,18 +834,16 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
@@ -651,7 +852,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Spouts
@@ -934,16 +1135,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
       
       
       
@@ -952,7 +1151,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_2">
           <span class="md-nav__icon md-icon"></span>
           Databases
@@ -965,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mysql/" class="md-nav__link">
+      <a href="../../databases/mysql/" class="md-nav__link">
         MySQL
       </a>
     </li>
@@ -979,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sqlite/" class="md-nav__link">
+      <a href="../../databases/sqlite/" class="md-nav__link">
         SQLite
       </a>
     </li>
@@ -993,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../postgres/" class="md-nav__link">
+      <a href="../../databases/postgres/" class="md-nav__link">
         PostgreSQL
       </a>
     </li>
@@ -1007,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oracle/" class="md-nav__link">
+      <a href="../../databases/oracle/" class="md-nav__link">
         Oracle
       </a>
     </li>
@@ -1021,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql_server/" class="md-nav__link">
+      <a href="../../databases/sql_server/" class="md-nav__link">
         SQLServer
       </a>
     </li>
@@ -1035,7 +1234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cockroach/" class="md-nav__link">
+      <a href="../../databases/cockroach/" class="md-nav__link">
         CockroachDB
       </a>
     </li>
@@ -1049,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mongodb/" class="md-nav__link">
+      <a href="../../databases/mongodb/" class="md-nav__link">
         MongoDB
       </a>
     </li>
@@ -1063,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis/" class="md-nav__link">
+      <a href="../../databases/redis/" class="md-nav__link">
         Redis
       </a>
     </li>
@@ -1077,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elasticsearch/" class="md-nav__link">
+      <a href="../../databases/elasticsearch/" class="md-nav__link">
         Elasticsearch
       </a>
     </li>
@@ -1091,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cassandra/" class="md-nav__link">
+      <a href="../../databases/cassandra/" class="md-nav__link">
         Cassandra
       </a>
     </li>
@@ -1105,7 +1304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../neo4j/" class="md-nav__link">
+      <a href="../../databases/neo4j/" class="md-nav__link">
         Neo4j
       </a>
     </li>
@@ -1119,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../couchbase/" class="md-nav__link">
+      <a href="../../databases/couchbase/" class="md-nav__link">
         Couchbase
       </a>
     </li>
@@ -1133,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../riak/" class="md-nav__link">
+      <a href="../../databases/riak/" class="md-nav__link">
         Riak
       </a>
     </li>
@@ -1147,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../influxdb/" class="md-nav__link">
+      <a href="../../databases/influxdb/" class="md-nav__link">
         InfluxDB
       </a>
     </li>
@@ -1161,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../timescaledb/" class="md-nav__link">
+      <a href="../../databases/timescaledb/" class="md-nav__link">
         TimescaleDB
       </a>
     </li>
@@ -1175,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../opentsdb/" class="md-nav__link">
+      <a href="../../databases/opentsdb/" class="md-nav__link">
         OpenTSDB
       </a>
     </li>
@@ -1189,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spanner/" class="md-nav__link">
+      <a href="../../databases/spanner/" class="md-nav__link">
         Spanner
       </a>
     </li>
@@ -1203,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tidb/" class="md-nav__link">
+      <a href="../../databases/tidb/" class="md-nav__link">
         TiDB
       </a>
     </li>
@@ -1217,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../voltdb/" class="md-nav__link">
+      <a href="../../databases/voltdb/" class="md-nav__link">
         VoltDB
       </a>
     </li>
@@ -1231,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dynamodb/" class="md-nav__link">
+      <a href="../../databases/dynamodb/" class="md-nav__link">
         DynamoDB
       </a>
     </li>
@@ -1245,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../firestore/" class="md-nav__link">
+      <a href="../../databases/firestore/" class="md-nav__link">
         Firestore
       </a>
     </li>
@@ -1257,86 +1456,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          CosmosDB
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../databases/cosmosdb/" class="md-nav__link">
         CosmosDB
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB" class="md-nav__link">
-    geniusrise_databases.cosmosdb.CosmosDB
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-    <nav class="md-nav" aria-label="__init__()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-command-line" class="md-nav__link">
-    Using geniusrise to invoke via command line
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-yaml-file" class="md-nav__link">
-    Using geniusrise to invoke via YAML file
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.fetch" class="md-nav__link">
-    fetch()
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1348,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud_sql/" class="md-nav__link">
+      <a href="../../databases/cloud_sql/" class="md-nav__link">
         GoogleCloudSQL
       </a>
     </li>
@@ -1362,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ldap/" class="md-nav__link">
+      <a href="../../databases/ldap/" class="md-nav__link">
         LDAP
       </a>
     </li>
@@ -1376,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db2/" class="md-nav__link">
+      <a href="../../databases/db2/" class="md-nav__link">
         DB2
       </a>
     </li>
@@ -1390,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sybase/" class="md-nav__link">
+      <a href="../../databases/sybase/" class="md-nav__link">
         Sybase
       </a>
     </li>
@@ -1404,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../teradata/" class="md-nav__link">
+      <a href="../../databases/teradata/" class="md-nav__link">
         Teradata
       </a>
     </li>
@@ -1418,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hbase/" class="md-nav__link">
+      <a href="../../databases/hbase/" class="md-nav__link">
         HBase
       </a>
     </li>
@@ -1432,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arangodb/" class="md-nav__link">
+      <a href="../../databases/arangodb/" class="md-nav__link">
         ArangoDB
       </a>
     </li>
@@ -1446,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentdb/" class="md-nav__link">
+      <a href="../../databases/documentdb/" class="md-nav__link">
         DocumentDB
       </a>
     </li>
@@ -1460,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../presto/" class="md-nav__link">
+      <a href="../../databases/presto/" class="md-nav__link">
         Presto
       </a>
     </li>
@@ -1474,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../athena/" class="md-nav__link">
+      <a href="../../databases/athena/" class="md-nav__link">
         Athena
       </a>
     </li>
@@ -1488,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kairosdb/" class="md-nav__link">
+      <a href="../../databases/kairosdb/" class="md-nav__link">
         KairosDB
       </a>
     </li>
@@ -1502,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../graphite/" class="md-nav__link">
+      <a href="../../databases/graphite/" class="md-nav__link">
         Graphite
       </a>
     </li>
@@ -1516,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nuodb/" class="md-nav__link">
+      <a href="../../databases/nuodb/" class="md-nav__link">
         NuoDB
       </a>
     </li>
@@ -1530,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../memsql/" class="md-nav__link">
+      <a href="../../databases/memsql/" class="md-nav__link">
         MemSQL
       </a>
     </li>
@@ -1544,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bigtable/" class="md-nav__link">
+      <a href="../../databases/bigtable/" class="md-nav__link">
         Bigtable
       </a>
     </li>
@@ -1558,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../keyspaces/" class="md-nav__link">
+      <a href="../../databases/keyspaces/" class="md-nav__link">
         AWSKeyspaces
       </a>
     </li>
@@ -1572,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../azure_table/" class="md-nav__link">
+      <a href="../../databases/azure_table/" class="md-nav__link">
         AzureTableStorage
       </a>
     </li>
@@ -1586,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bigquery/" class="md-nav__link">
+      <a href="../../databases/bigquery/" class="md-nav__link">
         BigQuery
       </a>
     </li>
@@ -1600,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vertica/" class="md-nav__link">
+      <a href="../../databases/vertica/" class="md-nav__link">
         Vertica
       </a>
     </li>
@@ -2562,30 +2686,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB" class="md-nav__link">
-    geniusrise_databases.cosmosdb.CosmosDB
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.__init__" class="md-nav__link">
-    __init__()
+  <a href="#capabilities" class="md-nav__link">
+    Capabilities
   </a>
   
-    <nav class="md-nav" aria-label="__init__()">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command-Line Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-Line Interface">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-command-line" class="md-nav__link">
-    Using geniusrise to invoke via command line
+  <a href="#syntax" class="md-nav__link">
+    Syntax
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-yaml-file" class="md-nav__link">
-    Using geniusrise to invoke via YAML file
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
   </a>
   
 </li>
@@ -2596,9 +2734,119 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#geniusrise_databases.cosmosdb.CosmosDB.fetch" class="md-nav__link">
-    fetch()
+  <a href="#authentication-details" class="md-nav__link">
+    Authentication Details
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-ecr-amazon-elastic-container-registry" class="md-nav__link">
+    Uploading to ECR (Amazon Elastic Container Registry)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-dockerhub" class="md-nav__link">
+    Uploading to DockerHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-acr-azure-container-registry" class="md-nav__link">
+    Uploading to ACR (Azure Container Registry)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-gcr-google-container-registry" class="md-nav__link">
+    Uploading to GCR (Google Container Registry)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-to-quay" class="md-nav__link">
+    Uploading to Quay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-with-custom-packages-and-os-packages" class="md-nav__link">
+    Uploading with Custom Packages and OS Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-with-environment-variables" class="md-nav__link">
+    Uploading with Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-examples" class="md-nav__link">
+    Complex Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Complex Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-uploading-to-ecr-with-custom-base-image-and-packages" class="md-nav__link">
+    1. Uploading to ECR with Custom Base Image and Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-uploading-to-dockerhub-with-environment-variables-and-working-directory" class="md-nav__link">
+    2. Uploading to DockerHub with Environment Variables and Working Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-uploading-to-acr-with-multiple-local-directories" class="md-nav__link">
+    3. Uploading to ACR with Multiple Local Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-uploading-to-gcr-with-custom-base-image-packages-and-os-packages" class="md-nav__link">
+    4. Uploading to GCR with Custom Base Image, Packages, and OS Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-uploading-to-quay-with-all-customizations" class="md-nav__link">
+    5. Uploading to Quay with All Customizations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2617,242 +2865,111 @@
                   
 
 
-<h1 id="cosmosdb">CosmosDB<a class="headerlink" href="#cosmosdb" title="Permanent link">&para;</a></h1>
-
-
-<div class="doc doc-object doc-class">
-
-
-<a id="geniusrise_databases.cosmosdb.CosmosDB"></a>
-  <div class="doc doc-contents first">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="geniusrise.Spout">Spout</span></code></p>
-
-
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="geniusrise_databases.cosmosdb.CosmosDB.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-<a href="#geniusrise_databases.cosmosdb.CosmosDB.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Initialize the Cosmos DB class.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>output</code></td>
-          <td>
-                <code><span title="geniusrise.BatchOutput">BatchOutput</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An instance of the BatchOutput class for saving the data.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>state</code></td>
-          <td>
-                <code><span title="geniusrise.State">State</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An instance of the State class for maintaining the state.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional keyword arguments.</p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-      <h4 id="geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-command-line">Using geniusrise to invoke via command line<a class="headerlink" href="#geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-command-line" title="Permanent link">&para;</a></h4>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius<span class="w"> </span>CosmosDB<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span>--output_folder<span class="w"> </span>/path/to/output<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span>--bucket<span class="w"> </span>my_bucket<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span>--s3_folder<span class="w"> </span>s3/folder<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span>none<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span>fetch<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span>--args<span class="w"> </span><span class="nv">endpoint</span><span class="o">=</span>https://mycosmosdb.documents.azure.com:443/<span class="w"> </span>my_database<span class="w"> </span>my_collection
+<h1 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Geniusrise uses docker for packaging and delivering modules.</p>
+<h2 id="capabilities">Capabilities<a class="headerlink" href="#capabilities" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Docker Image Creation</strong>: Create Docker images with custom base images, working directories, and local directories.</li>
+<li><strong>Package Installation</strong>: Install both OS-level and Python packages during the Docker image creation.</li>
+<li><strong>Environment Variables</strong>: Set environment variables in the Docker container.</li>
+<li><strong>Multi-Repository Support</strong>: Upload Docker images to multiple types of container repositories.</li>
+<li><strong>Authentication</strong>: Supports various authentication methods for different container repositories.</li>
+</ul>
+<h2 id="command-line-interface">Command-Line Interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h2>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>&lt;image_name&gt;<span class="w"> </span>&lt;repository&gt;<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
-<h4 id="geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-yaml-file">Using geniusrise to invoke via YAML file<a class="headerlink" href="#geniusrise_databases.cosmosdb.CosmosDB.__init__--using-geniusrise-to-invoke-via-yaml-file" title="Permanent link">&para;</a></h4>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">spouts</span><span class="p">:</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">my_cosmosdb_spout</span><span class="p">:</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;CosmosDB&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fetch&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mycosmosdb.documents.azure.com:443/&quot;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_database&quot;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="nt">collection</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_collection&quot;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">output</span><span class="p">:</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;batch&quot;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                </span><span class="nt">output_folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/path/to/output&quot;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_bucket&quot;</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                </span><span class="nt">s3_folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;s3/folder&quot;</span>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;image_name&gt;</code>: The name of the Docker image to build and upload.</li>
+<li><code>&lt;repository&gt;</code>: The container repository to upload to (e.g., "ECR", "DockerHub", "Quay", "ACR", "GCR").</li>
+</ul>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>--auth</code>: Authentication credentials as a JSON string. Default is an empty JSON object.</li>
+<li><code>--base_image</code>: The base image to use for the Docker container. Default is "nvidia/cuda:12.2.0-runtime-ubuntu20.04".</li>
+<li><code>--workdir</code>: The working directory in the Docker container. Default is "/app".</li>
+<li><code>--local_dir</code>: The local directory to copy into the Docker container. Default is ".".</li>
+<li><code>--packages</code>: List of Python packages to install in the Docker container. Default is an empty list.</li>
+<li><code>--os_packages</code>: List of OS packages to install in the Docker container. Default is an empty list.</li>
+<li><code>--env_vars</code>: Environment variables to set in the Docker container. Default is an empty dictionary.</li>
+</ul>
+<h2 id="authentication-details">Authentication Details<a class="headerlink" href="#authentication-details" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>ECR</strong>: <code>{"aws_region": "ap-south-1", "aws_secret_access_key": "aws_key", "aws_access_key_id": "aws_secret"}</code></li>
+<li><strong>DockerHub</strong>: <code>{"dockerhub_username": "username", "dockerhub_password": "password"}</code></li>
+<li><strong>ACR</strong>: <code>{"acr_username": "username", "acr_password": "password", "acr_login_server": "login_server"}</code></li>
+<li><strong>GCR</strong>: <code>{"gcr_key_file_path": "/path/to/keyfile.json", "gcr_repository": "repository"}</code></li>
+<li><strong>Quay</strong>: <code>{"quay_username": "username", "quay_password": "password"}</code></li>
+</ul>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="uploading-to-ecr-amazon-elastic-container-registry">Uploading to ECR (Amazon Elastic Container Registry)<a class="headerlink" href="#uploading-to-ecr-amazon-elastic-container-registry" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>geniusrise<span class="w"> </span>ecr<span class="w"> </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;aws_region&quot;: &quot;ap-south-1&quot;}&#39;</span>
 </span></code></pre></div>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="geniusrise_databases.cosmosdb.CosmosDB.fetch" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">fetch</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">database</span><span class="p">,</span> <span class="n">collection</span><span class="p">)</span></code>
-
-<a href="#geniusrise_databases.cosmosdb.CosmosDB.fetch" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>📖 Fetch data from a Cosmos DB collection and save it in batch.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>endpoint</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The Cosmos DB endpoint URL.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>database</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The Cosmos DB database name.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>collection</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The Cosmos DB collection name.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>Exception</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If unable to connect to the Cosmos DB server or execute the query.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-</div>
+<h3 id="uploading-to-dockerhub">Uploading to DockerHub<a class="headerlink" href="#uploading-to-dockerhub" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>geniusrise<span class="w"> </span>dockerhub<span class="w"> </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;dockerhub_username&quot;: &quot;username&quot;, &quot;dockerhub_password&quot;: &quot;password&quot;}&#39;</span>
+</span></code></pre></div>
+<h3 id="uploading-to-acr-azure-container-registry">Uploading to ACR (Azure Container Registry)<a class="headerlink" href="#uploading-to-acr-azure-container-registry" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>geniusrise<span class="w"> </span>acr<span class="w"> </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;acr_username&quot;: &quot;username&quot;, &quot;acr_password&quot;: &quot;password&quot;, &quot;acr_login_server&quot;: &quot;login_server&quot;}&#39;</span>
+</span></code></pre></div>
+<h3 id="uploading-to-gcr-google-container-registry">Uploading to GCR (Google Container Registry)<a class="headerlink" href="#uploading-to-gcr-google-container-registry" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>geniusrise<span class="w"> </span>gcr<span class="w"> </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;gcr_key_file_path&quot;: &quot;/path/to/keyfile.json&quot;, &quot;gcr_repository&quot;: &quot;repository&quot;}&#39;</span>
+</span></code></pre></div>
+<h3 id="uploading-to-quay">Uploading to Quay<a class="headerlink" href="#uploading-to-quay" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>geniusrise<span class="w"> </span>quay<span class="w"> </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;quay_username&quot;: &quot;username&quot;, &quot;quay_password&quot;: &quot;password&quot;}&#39;</span>
+</span></code></pre></div>
+<h3 id="uploading-with-custom-packages-and-os-packages">Uploading with Custom Packages and OS Packages<a class="headerlink" href="#uploading-with-custom-packages-and-os-packages" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>geniusrise<span class="w"> </span>dockerhub<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>--packages<span class="w"> </span>geniusrise-listeners<span class="w"> </span>geniusrise-databases<span class="w"> </span>geniusrise-huggingface<span class="w"> </span>geniusrise-openai<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span>--os_packages<span class="w"> </span>libmysqlclient-dev<span class="w"> </span>libldap2-dev<span class="w"> </span>libsasl2-dev<span class="w"> </span>libssl-dev
+</span></code></pre></div>
+<h3 id="uploading-with-environment-variables">Uploading with Environment Variables<a class="headerlink" href="#uploading-with-environment-variables" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>geniusrise<span class="w"> </span>dockerhub<span class="w"> </span>--env_vars<span class="w"> </span><span class="s1">&#39;{&quot;API_KEY&quot;: &quot;123456&quot;, &quot;ENV&quot;: &quot;production&quot;}&#39;</span>
+</span></code></pre></div>
+<h2 id="complex-examples">Complex Examples<a class="headerlink" href="#complex-examples" title="Permanent link">&para;</a></h2>
+<h3 id="1-uploading-to-ecr-with-custom-base-image-and-packages">1. Uploading to ECR with Custom Base Image and Packages<a class="headerlink" href="#1-uploading-to-ecr-with-custom-base-image-and-packages" title="Permanent link">&para;</a></h3>
+<p>This example demonstrates how to upload a Docker image to ECR with a custom base image and additional Python packages.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>my_custom_image<span class="w"> </span>ecr<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;aws_region&quot;: &quot;us-west-2&quot;, &quot;aws_secret_access_key&quot;: &quot;aws_key&quot;, &quot;aws_access_key_id&quot;: &quot;aws_secret&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>--base_image<span class="w"> </span><span class="s2">&quot;python:3.9-slim&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>--packages<span class="w"> </span><span class="s2">&quot;numpy pandas scikit-learn&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span>--os_packages<span class="w"> </span><span class="s2">&quot;gcc g++&quot;</span>
+</span></code></pre></div>
+<h3 id="2-uploading-to-dockerhub-with-environment-variables-and-working-directory">2. Uploading to DockerHub with Environment Variables and Working Directory<a class="headerlink" href="#2-uploading-to-dockerhub-with-environment-variables-and-working-directory" title="Permanent link">&para;</a></h3>
+<p>This example shows how to upload a Docker image to DockerHub with custom environment variables and a specific working directory.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>my_app<span class="w"> </span>dockerhub<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;dockerhub_username&quot;: &quot;username&quot;, &quot;dockerhub_password&quot;: &quot;password&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span>--env_vars<span class="w"> </span><span class="s1">&#39;{&quot;DEBUG&quot;: &quot;True&quot;, &quot;SECRET_KEY&quot;: &quot;mysecret&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span>--workdir<span class="w"> </span><span class="s2">&quot;/my_app&quot;</span>
+</span></code></pre></div>
+<h3 id="3-uploading-to-acr-with-multiple-local-directories">3. Uploading to ACR with Multiple Local Directories<a class="headerlink" href="#3-uploading-to-acr-with-multiple-local-directories" title="Permanent link">&para;</a></h3>
+<p>In this example, we upload a Docker image to Azure Container Registry (ACR) and specify multiple local directories to be copied into the Docker container.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># First, create a Dockerfile that copies multiple directories</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1"># Then use the following command</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>multi_dir_app<span class="w"> </span>acr<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;acr_username&quot;: &quot;username&quot;, &quot;acr_password&quot;: &quot;password&quot;, &quot;acr_login_server&quot;: &quot;login_server&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span>--local_dir<span class="w"> </span><span class="s2">&quot;./app ./config&quot;</span>
+</span></code></pre></div>
+<h3 id="4-uploading-to-gcr-with-custom-base-image-packages-and-os-packages">4. Uploading to GCR with Custom Base Image, Packages, and OS Packages<a class="headerlink" href="#4-uploading-to-gcr-with-custom-base-image-packages-and-os-packages" title="Permanent link">&para;</a></h3>
+<p>This example demonstrates how to upload a Docker image to Google Container Registry (GCR) with a custom base image, Python packages, and OS packages.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>my_ml_model<span class="w"> </span>gcr<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;gcr_key_file_path&quot;: &quot;/path/to/keyfile.json&quot;, &quot;gcr_repository&quot;: &quot;repository&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>--base_image<span class="w"> </span><span class="s2">&quot;tensorflow/tensorflow:latest-gpu&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span>--packages<span class="w"> </span><span class="s2">&quot;scipy keras&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span>--os_packages<span class="w"> </span><span class="s2">&quot;libsm6 libxext6 libxrender-dev&quot;</span>
+</span></code></pre></div>
+<h3 id="5-uploading-to-quay-with-all-customizations">5. Uploading to Quay with All Customizations<a class="headerlink" href="#5-uploading-to-quay-with-all-customizations" title="Permanent link">&para;</a></h3>
+<p>This example shows how to upload a Docker image to Quay with all available customizations like base image, working directory, local directory, Python packages, OS packages, and environment variables.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>genius<span class="w"> </span>docker<span class="w"> </span>package<span class="w"> </span>full_custom<span class="w"> </span>quay<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span>--auth<span class="w"> </span><span class="s1">&#39;{&quot;quay_username&quot;: &quot;username&quot;, &quot;quay_password&quot;: &quot;password&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span>--base_image<span class="w"> </span><span class="s2">&quot;alpine:latest&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span>--workdir<span class="w"> </span><span class="s2">&quot;/custom_app&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span>--local_dir<span class="w"> </span><span class="s2">&quot;./src&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span>--packages<span class="w"> </span><span class="s2">&quot;flask gunicorn&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span>--os_packages<span class="w"> </span><span class="s2">&quot;bash curl&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span>--env_vars<span class="w"> </span><span class="s1">&#39;{&quot;FLASK_ENV&quot;: &quot;production&quot;, &quot;PORT&quot;: &quot;8000&quot;}&#39;</span>
+</span></code></pre></div>
 
 
 

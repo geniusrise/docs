@@ -10,20 +10,20 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/guides/kubernetes/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/guides/deployment/">
       
       
-        <link rel="prev" href="../deployment/">
+        <link rel="prev" href="../packaging/">
       
       
-        <link rel="next" href="../../core/k8s_deployment/">
+        <link rel="next" href="../kubernetes/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Kubernetes - </title>
+        <title>Deployment - </title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubernetes-runner" class="md-skip">
+        <a href="#deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes
+              Deployment
             
           </span>
         </div>
@@ -270,16 +270,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -288,7 +290,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -299,14 +301,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
       
       
       
@@ -315,7 +319,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
           Guides
@@ -368,95 +372,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../deployment/" class="md-nav__link">
-        Deployment
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          Deployment
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Deployment
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
-          Runners
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_6_1">
-          <span class="md-nav__icon md-icon"></span>
-          Runners
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
     
   
   
@@ -469,12 +384,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Kubernetes
+          Deployment
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Kubernetes
+        Deployment
       </a>
       
         
@@ -493,72 +408,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-line-interface" class="md-nav__link">
-    Command-Line Interface
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Command-Line Interface">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-a-kubernetes-cluster" class="md-nav__link">
+    Connecting to a Kubernetes Cluster
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting to a Kubernetes Cluster">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-arguments" class="md-nav__link">
-    Common Arguments
+  <a href="#using-kubeconfig-and-context-name" class="md-nav__link">
+    Using Kubeconfig and Context Name
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create_resource" class="md-nav__link">
-    create_resource
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_resource" class="md-nav__link">
-    delete_resource
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get_status" class="md-nav__link">
-    get_status
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get_logs" class="md-nav__link">
-    get_logs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scale" class="md-nav__link">
-    scale
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_pods-list_services-list_deployments" class="md-nav__link">
-    list_pods, list_services, list_deployments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#describe_pod-describe_service-describe_deployment" class="md-nav__link">
-    describe_pod, describe_service, describe_deployment
+  <a href="#using-api-key-and-api-host" class="md-nav__link">
+    Using API Key and API Host
   </a>
   
 </li>
@@ -569,9 +449,288 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#yaml-configuration" class="md-nav__link">
-    YAML Configuration
+  <a href="#managing-pods" class="md-nav__link">
+    Managing Pods
   </a>
+  
+    <nav class="md-nav" aria-label="Managing Pods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-pod-status" class="md-nav__link">
+    Checking Pod Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-pods" class="md-nav__link">
+    Listing All Pods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-a-pod" class="md-nav__link">
+    Describing a Pod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetching-pod-logs" class="md-nav__link">
+    Fetching Pod Logs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-deployments" class="md-nav__link">
+    Managing Deployments
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Deployments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-deployment" class="md-nav__link">
+    Creating a New Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-a-deployment" class="md-nav__link">
+    Scaling a Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-deployments" class="md-nav__link">
+    Listing All Deployments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-a-deployment" class="md-nav__link">
+    Describing a Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-deployment" class="md-nav__link">
+    Deleting a Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-deployment-status" class="md-nav__link">
+    Checking Deployment Status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    Advanced Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-requirements" class="md-nav__link">
+    Resource Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-support" class="md-nav__link">
+    GPU Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-services" class="md-nav__link">
+    Managing Services
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-service" class="md-nav__link">
+    Creating a New Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-service" class="md-nav__link">
+    Deleting a Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-a-service" class="md-nav__link">
+    Describing a Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-services" class="md-nav__link">
+    Listing All Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-jobs" class="md-nav__link">
+    Managing Jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-job" class="md-nav__link">
+    Creating a New Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-job" class="md-nav__link">
+    Deleting a Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-job-status" class="md-nav__link">
+    Checking Job Status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-cron-jobs" class="md-nav__link">
+    Managing Cron Jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Cron Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-cron-job" class="md-nav__link">
+    Creating a New Cron Job
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a New Cron Job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-options" class="md-nav__link">
+    Additional Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-cron-job" class="md-nav__link">
+    Deleting a Cron Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-cron-job-status" class="md-nav__link">
+    Checking Cron Job Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-features-for-cron-jobs" class="md-nav__link">
+    Advanced Features for Cron Jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features for Cron Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables_1" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-requirements_1" class="md-nav__link">
+    Resource Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-support_1" class="md-nav__link">
+    GPU Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -579,6 +738,91 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          Runners
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Runners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
     </li>
   
 
@@ -2604,72 +2848,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-line-interface" class="md-nav__link">
-    Command-Line Interface
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Command-Line Interface">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-a-kubernetes-cluster" class="md-nav__link">
+    Connecting to a Kubernetes Cluster
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting to a Kubernetes Cluster">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-arguments" class="md-nav__link">
-    Common Arguments
+  <a href="#using-kubeconfig-and-context-name" class="md-nav__link">
+    Using Kubeconfig and Context Name
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create_resource" class="md-nav__link">
-    create_resource
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_resource" class="md-nav__link">
-    delete_resource
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get_status" class="md-nav__link">
-    get_status
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get_logs" class="md-nav__link">
-    get_logs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scale" class="md-nav__link">
-    scale
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_pods-list_services-list_deployments" class="md-nav__link">
-    list_pods, list_services, list_deployments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#describe_pod-describe_service-describe_deployment" class="md-nav__link">
-    describe_pod, describe_service, describe_deployment
+  <a href="#using-api-key-and-api-host" class="md-nav__link">
+    Using API Key and API Host
   </a>
   
 </li>
@@ -2680,9 +2889,288 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#yaml-configuration" class="md-nav__link">
-    YAML Configuration
+  <a href="#managing-pods" class="md-nav__link">
+    Managing Pods
   </a>
+  
+    <nav class="md-nav" aria-label="Managing Pods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-pod-status" class="md-nav__link">
+    Checking Pod Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-pods" class="md-nav__link">
+    Listing All Pods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-a-pod" class="md-nav__link">
+    Describing a Pod
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetching-pod-logs" class="md-nav__link">
+    Fetching Pod Logs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-deployments" class="md-nav__link">
+    Managing Deployments
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Deployments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-deployment" class="md-nav__link">
+    Creating a New Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-a-deployment" class="md-nav__link">
+    Scaling a Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-deployments" class="md-nav__link">
+    Listing All Deployments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-a-deployment" class="md-nav__link">
+    Describing a Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-deployment" class="md-nav__link">
+    Deleting a Deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-deployment-status" class="md-nav__link">
+    Checking Deployment Status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    Advanced Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-requirements" class="md-nav__link">
+    Resource Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-support" class="md-nav__link">
+    GPU Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-services" class="md-nav__link">
+    Managing Services
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-service" class="md-nav__link">
+    Creating a New Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-service" class="md-nav__link">
+    Deleting a Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describing-a-service" class="md-nav__link">
+    Describing a Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-services" class="md-nav__link">
+    Listing All Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-jobs" class="md-nav__link">
+    Managing Jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-job" class="md-nav__link">
+    Creating a New Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-job" class="md-nav__link">
+    Deleting a Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-job-status" class="md-nav__link">
+    Checking Job Status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-cron-jobs" class="md-nav__link">
+    Managing Cron Jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing Cron Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-cron-job" class="md-nav__link">
+    Creating a New Cron Job
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a New Cron Job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-options" class="md-nav__link">
+    Additional Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-cron-job" class="md-nav__link">
+    Deleting a Cron Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-cron-job-status" class="md-nav__link">
+    Checking Cron Job Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-features-for-cron-jobs" class="md-nav__link">
+    Advanced Features for Cron Jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features for Cron Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables_1" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-requirements_1" class="md-nav__link">
+    Resource Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-support_1" class="md-nav__link">
+    GPU Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2701,136 +3189,178 @@
                   
 
 
-<h1 id="kubernetes-runner">Kubernetes Runner<a class="headerlink" href="#kubernetes-runner" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This runner module enables running spouts or bolts on Kubernetes. It provides the ability to:</p>
+<h1 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>This guide provides comprehensive instructions on how to deploy and manage resources in a Kubernetes cluster using the Geniusrise platform. The guide covers the following functionalities:</p>
+<ul>
+<li>Connecting to a Kubernetes cluster</li>
+<li>Managing Pods</li>
+<li>Managing Deployments</li>
+<li>Managing Services</li>
+<li>Managing Jobs</li>
+<li>Managing Cron jobs</li>
+</ul>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A working Kubernetes cluster</li>
+<li>Kubeconfig file for cluster access</li>
+<li>Python 3.x installed</li>
+<li>Geniusrise CLI installed</li>
+</ul>
+<h2 id="connecting-to-a-kubernetes-cluster">Connecting to a Kubernetes Cluster<a class="headerlink" href="#connecting-to-a-kubernetes-cluster" title="Permanent link">&para;</a></h2>
+<p>Before performing any operations, you need to connect to your Kubernetes cluster. You can do this in two ways:</p>
 <ol>
-<li>create</li>
-<li>delete</li>
-<li>scale</li>
-<li>describe</li>
+<li>Using a kubeconfig file and context name</li>
+<li>Using an API key and API host</li>
 </ol>
-<p>various Kubernetes resources like</p>
-<ol>
-<li>Pods</li>
-<li>Deployments</li>
-<li>Services</li>
-</ol>
-<h2 id="command-line-interface">Command-Line Interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h2>
-<p>The following commands are available:</p>
-<ol>
-<li><code>create</code>: Create a Kubernetes resource.</li>
-<li><code>delete</code>: Delete a Kubernetes resource.</li>
-<li><code>status</code>: Get the status of a Kubernetes resource.</li>
-<li><code>logs</code>: Get logs of a Kubernetes resource.</li>
-<li><code>pod</code>: Describe a Kubernetes pod.</li>
-<li><code>pods</code>: List all pods.</li>
-<li><code>service</code>: Describe a Kubernetes service.</li>
-<li><code>services</code>: List all services.</li>
-<li><code>deployment</code>: Describe a Kubernetes deployment.</li>
-<li><code>deployments</code>: List all deployments.</li>
-<li><code>scale</code>: Scale a Kubernetes deployment.</li>
-</ol>
-<h3 id="common-arguments">Common Arguments<a class="headerlink" href="#common-arguments" title="Permanent link">&para;</a></h3>
-<p>These arguments are common to all commands:</p>
+<h3 id="using-kubeconfig-and-context-name">Using Kubeconfig and Context Name<a class="headerlink" href="#using-kubeconfig-and-context-name" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius<span class="w"> </span>k8s<span class="w"> </span>&lt;command&gt;<span class="w"> </span>--kube_config_path<span class="w"> </span>/path/to/kubeconfig.yaml<span class="w"> </span>--context_name<span class="w"> </span>my-context
+</span></code></pre></div>
+<h3 id="using-api-key-and-api-host">Using API Key and API Host<a class="headerlink" href="#using-api-key-and-api-host" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>genius<span class="w"> </span>k8s<span class="w"> </span>&lt;command&gt;<span class="w"> </span>--api_key<span class="w"> </span>my-api-key<span class="w"> </span>--api_host<span class="w"> </span>https://api.k8s.my-cluster.com<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h2 id="managing-pods">Managing Pods<a class="headerlink" href="#managing-pods" title="Permanent link">&para;</a></h2>
+<h3 id="checking-pod-status">Checking Pod Status<a class="headerlink" href="#checking-pod-status" title="Permanent link">&para;</a></h3>
+<p>To get the status of a specific pod:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>genius<span class="w"> </span>k8s<span class="w"> </span>status<span class="w"> </span>my-pod-name<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="listing-all-pods">Listing All Pods<a class="headerlink" href="#listing-all-pods" title="Permanent link">&para;</a></h3>
+<p>To list all the pods in the current namespace:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>genius<span class="w"> </span>k8s<span class="w"> </span>show<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="describing-a-pod">Describing a Pod<a class="headerlink" href="#describing-a-pod" title="Permanent link">&para;</a></h3>
+<p>To get detailed information about a specific pod:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>genius<span class="w"> </span>k8s<span class="w"> </span>describe<span class="w"> </span>my-pod-name<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="fetching-pod-logs">Fetching Pod Logs<a class="headerlink" href="#fetching-pod-logs" title="Permanent link">&para;</a></h3>
+<p>To get the logs of a specific pod:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>genius<span class="w"> </span>k8s<span class="w"> </span>logs<span class="w"> </span>my-pod-name<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h2 id="managing-deployments">Managing Deployments<a class="headerlink" href="#managing-deployments" title="Permanent link">&para;</a></h2>
+<h3 id="creating-a-new-deployment">Creating a New Deployment<a class="headerlink" href="#creating-a-new-deployment" title="Permanent link">&para;</a></h3>
+<p>To create a new deployment:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my-deployment<span class="w"> </span>--image<span class="w"> </span>my-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="scaling-a-deployment">Scaling a Deployment<a class="headerlink" href="#scaling-a-deployment" title="Permanent link">&para;</a></h3>
+<p>To scale a deployment:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>scale<span class="w"> </span>--name<span class="w"> </span>my-deployment<span class="w"> </span>--replicas<span class="w"> </span><span class="m">3</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="listing-all-deployments">Listing All Deployments<a class="headerlink" href="#listing-all-deployments" title="Permanent link">&para;</a></h3>
+<p>To list all deployments:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>show
+</span></code></pre></div>
+<h3 id="describing-a-deployment">Describing a Deployment<a class="headerlink" href="#describing-a-deployment" title="Permanent link">&para;</a></h3>
+<p>To describe a specific deployment:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>describe<span class="w"> </span>my-deployment<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="deleting-a-deployment">Deleting a Deployment<a class="headerlink" href="#deleting-a-deployment" title="Permanent link">&para;</a></h3>
+<p>To delete a deployment:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>delete<span class="w"> </span>my-deployment<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="checking-deployment-status">Checking Deployment Status<a class="headerlink" href="#checking-deployment-status" title="Permanent link">&para;</a></h3>
+<p>To check the status of a deployment:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>status<span class="w"> </span>my-deployment<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h2>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>You can pass environment variables to your pods and deployments like so:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my-deployment<span class="w"> </span>--image<span class="w"> </span>my-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--env_vars<span class="w"> </span><span class="s1">&#39;{&quot;MY_VAR&quot;: &quot;value&quot;}&#39;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="resource-requirements">Resource Requirements<a class="headerlink" href="#resource-requirements" title="Permanent link">&para;</a></h3>
+<p>You can specify resource requirements for your pods and deployments:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my-deployment<span class="w"> </span>--image<span class="w"> </span>my-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--cpu<span class="w"> </span><span class="s2">&quot;100m&quot;</span><span class="w"> </span>--memory<span class="w"> </span><span class="s2">&quot;256Mi&quot;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="gpu-support">GPU Support<a class="headerlink" href="#gpu-support" title="Permanent link">&para;</a></h3>
+<p>To allocate GPUs to your pods:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>genius<span class="w"> </span>deployment<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my-deployment<span class="w"> </span>--image<span class="w"> </span>my-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--gpu<span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h2 id="managing-services">Managing Services<a class="headerlink" href="#managing-services" title="Permanent link">&para;</a></h2>
+<h3 id="creating-a-new-service">Creating a New Service<a class="headerlink" href="#creating-a-new-service" title="Permanent link">&para;</a></h3>
+<p>To create a new service:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>genius<span class="w"> </span>service<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>example-service<span class="w"> </span>--image<span class="w"> </span>example-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span><span class="w"> </span>--target_port<span class="w"> </span><span class="m">8080</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="deleting-a-service">Deleting a Service<a class="headerlink" href="#deleting-a-service" title="Permanent link">&para;</a></h3>
+<p>To delete a service:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>genius<span class="w"> </span>service<span class="w"> </span>delete<span class="w"> </span>--name<span class="w"> </span>example-service<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="describing-a-service">Describing a Service<a class="headerlink" href="#describing-a-service" title="Permanent link">&para;</a></h3>
+<p>To describe a specific service:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>genius<span class="w"> </span>service<span class="w"> </span>describe<span class="w"> </span>--name<span class="w"> </span>example-service<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="listing-all-services">Listing All Services<a class="headerlink" href="#listing-all-services" title="Permanent link">&para;</a></h3>
+<p>To list all services:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>genius<span class="w"> </span>service<span class="w"> </span>show<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h2 id="managing-jobs">Managing Jobs<a class="headerlink" href="#managing-jobs" title="Permanent link">&para;</a></h2>
+<h3 id="creating-a-new-job">Creating a New Job<a class="headerlink" href="#creating-a-new-job" title="Permanent link">&para;</a></h3>
+<p>To create a new job:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>genius<span class="w"> </span>job<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>example-job<span class="w"> </span>--image<span class="w"> </span>example-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--cpu<span class="w"> </span><span class="s2">&quot;100m&quot;</span><span class="w"> </span>--memory<span class="w"> </span><span class="s2">&quot;256Mi&quot;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="deleting-a-job">Deleting a Job<a class="headerlink" href="#deleting-a-job" title="Permanent link">&para;</a></h3>
+<p>To delete a job:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>genius<span class="w"> </span>job<span class="w"> </span>delete<span class="w"> </span>--name<span class="w"> </span>example-job<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h3 id="checking-job-status">Checking Job Status<a class="headerlink" href="#checking-job-status" title="Permanent link">&para;</a></h3>
+<p>To check the status of a job:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>genius<span class="w"> </span>job<span class="w"> </span>status<span class="w"> </span>--name<span class="w"> </span>example-job<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h2 id="managing-cron-jobs">Managing Cron Jobs<a class="headerlink" href="#managing-cron-jobs" title="Permanent link">&para;</a></h2>
+<h3 id="creating-a-new-cron-job">Creating a New Cron Job<a class="headerlink" href="#creating-a-new-cron-job" title="Permanent link">&para;</a></h3>
+<p>To create a new cron job, you can use the <code>create_cronjob</code> sub-command. You'll need to specify the name, Docker image, command to run, and the cron schedule.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>genius<span class="w"> </span>cronjob<span class="w"> </span>create_cronjob<span class="w"> </span>--name<span class="w"> </span>example-cronjob<span class="w"> </span>--image<span class="w"> </span>example-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--schedule<span class="w"> </span><span class="s2">&quot;*/5 * * * *&quot;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
+</span></code></pre></div>
+<h4 id="additional-options">Additional Options<a class="headerlink" href="#additional-options" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>--kube_config_path</code>: Path to the kubeconfig file.</li>
-<li><code>--cluster_name</code>: Name of the Kubernetes cluster.</li>
-<li><code>--context_name</code>: Name of the kubeconfig context.</li>
-<li><code>--namespace</code>: Kubernetes namespace (default is "default").</li>
-<li><code>--labels</code>: Labels for Kubernetes resources, as a JSON string.</li>
-<li><code>--annotations</code>: Annotations for Kubernetes resources, as a JSON string.</li>
-<li><code>--api_key</code>: API key for Kubernetes cluster.</li>
-<li><code>--api_host</code>: API host for Kubernetes cluster.</li>
-<li><code>--verify_ssl</code>: Whether to verify SSL certificates (default is True).</li>
-<li><code>--ssl_ca_cert</code>: Path to the SSL CA certificate.</li>
+<li><code>--env_vars</code>: To set environment variables, pass them as a JSON string.</li>
+<li><code>--cpu</code>, <code>--memory</code>, <code>--storage</code>, <code>--gpu</code>: To set resource requirements.</li>
 </ul>
-<h3 id="create_resource"><code>create_resource</code><a class="headerlink" href="#create_resource" title="Permanent link">&para;</a></h3>
-<p>Create a Kubernetes resource.</p>
-<ul>
-<li><code>name</code>: Name of the resource.</li>
-<li><code>image</code>: Docker image for the resource.</li>
-<li><code>command</code>: Command to run in the container.</li>
-<li><code>--registry_creds</code>: Credentials for Docker registry, as a JSON string.</li>
-<li><code>--is_service</code>: Whether this is a service (default is False).</li>
-<li><code>--replicas</code>: Number of replicas (default is 1).</li>
-<li><code>--port</code>: Service port (default is 80).</li>
-<li><code>--target_port</code>: Container target port (default is 8080).</li>
-<li><code>--env_vars</code>: Environment variables, as a JSON string.</li>
-</ul>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>create_resource<span class="w"> </span>my_resource<span class="w"> </span>nginx<span class="w"> </span><span class="s2">&quot;nginx -g &#39;daemon off;&#39;&quot;</span><span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span>
+<h3 id="deleting-a-cron-job">Deleting a Cron Job<a class="headerlink" href="#deleting-a-cron-job" title="Permanent link">&para;</a></h3>
+<p>To delete a cron job, use the <code>delete_cronjob</code> sub-command and specify the name of the cron job.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>genius<span class="w"> </span>cronjob<span class="w"> </span>delete_cronjob<span class="w"> </span>--name<span class="w"> </span>example-cronjob<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 </span></code></pre></div>
-<h3 id="delete_resource"><code>delete_resource</code><a class="headerlink" href="#delete_resource" title="Permanent link">&para;</a></h3>
-<p>Delete a Kubernetes resource.</p>
-<ul>
-<li><code>name</code>: Name of the resource.</li>
-<li><code>--is_service</code>: Whether this is a service (default is False).</li>
-</ul>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>delete_resource<span class="w"> </span>my_resource
+<h3 id="checking-cron-job-status">Checking Cron Job Status<a class="headerlink" href="#checking-cron-job-status" title="Permanent link">&para;</a></h3>
+<p>To check the status of a cron job, use the <code>get_cronjob_status</code> sub-command and specify the name of the cron job.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>genius<span class="w"> </span>cronjob<span class="w"> </span>get_cronjob_status<span class="w"> </span>--name<span class="w"> </span>example-cronjob<span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 </span></code></pre></div>
-<h3 id="get_status"><code>get_status</code><a class="headerlink" href="#get_status" title="Permanent link">&para;</a></h3>
-<p>Get the status of a Kubernetes resource.</p>
-<ul>
-<li><code>name</code>: Name of the resource.</li>
-</ul>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>get_status<span class="w"> </span>my_resource
+<h3 id="advanced-features-for-cron-jobs">Advanced Features for Cron Jobs<a class="headerlink" href="#advanced-features-for-cron-jobs" title="Permanent link">&para;</a></h3>
+<h4 id="environment-variables_1">Environment Variables<a class="headerlink" href="#environment-variables_1" title="Permanent link">&para;</a></h4>
+<p>You can pass environment variables to your cron jobs like so:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>genius<span class="w"> </span>cronjob<span class="w"> </span>create_cronjob<span class="w"> </span>--name<span class="w"> </span>example-cronjob<span class="w"> </span>--image<span class="w"> </span>example-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--schedule<span class="w"> </span><span class="s2">&quot;*/5 * * * *&quot;</span><span class="w"> </span>--env_vars<span class="w"> </span><span class="s1">&#39;{&quot;MY_VAR&quot;: &quot;value&quot;}&#39;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 </span></code></pre></div>
-<h3 id="get_logs"><code>get_logs</code><a class="headerlink" href="#get_logs" title="Permanent link">&para;</a></h3>
-<p>Get logs of a Kubernetes resource.</p>
-<ul>
-<li><code>name</code>: Name of the resource.</li>
-<li><code>--tail_lines</code>: Number of lines to tail (default is 10).</li>
-</ul>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>get_logs<span class="w"> </span>my_resource<span class="w"> </span>--tail_lines<span class="o">=</span><span class="m">20</span>
+<h4 id="resource-requirements_1">Resource Requirements<a class="headerlink" href="#resource-requirements_1" title="Permanent link">&para;</a></h4>
+<p>You can specify resource requirements for your cron jobs:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>genius<span class="w"> </span>cronjob<span class="w"> </span>create_cronjob<span class="w"> </span>--name<span class="w"> </span>example-cronjob<span class="w"> </span>--image<span class="w"> </span>example-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--schedule<span class="w"> </span><span class="s2">&quot;*/5 * * * *&quot;</span><span class="w"> </span>--cpu<span class="w"> </span><span class="s2">&quot;100m&quot;</span><span class="w"> </span>--memory<span class="w"> </span><span class="s2">&quot;256Mi&quot;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 </span></code></pre></div>
-<h3 id="scale"><code>scale</code><a class="headerlink" href="#scale" title="Permanent link">&para;</a></h3>
-<p>Scale a Kubernetes deployment.</p>
-<ul>
-<li><code>name</code>: Name of the deployment.</li>
-<li><code>replicas</code>: Number of replicas.</li>
-</ul>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>scale<span class="w"> </span>my_resource<span class="w"> </span><span class="m">5</span>
+<h4 id="gpu-support_1">GPU Support<a class="headerlink" href="#gpu-support_1" title="Permanent link">&para;</a></h4>
+<p>To allocate GPUs to your cron jobs:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>genius<span class="w"> </span>cronjob<span class="w"> </span>create_cronjob<span class="w"> </span>--name<span class="w"> </span>example-cronjob<span class="w"> </span>--image<span class="w"> </span>example-image<span class="w"> </span>--command<span class="w"> </span><span class="s2">&quot;echo hello&quot;</span><span class="w"> </span>--schedule<span class="w"> </span><span class="s2">&quot;*/5 * * * *&quot;</span><span class="w"> </span>--gpu<span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="w"> </span>--namespace<span class="w"> </span>geniusrise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span>--context_name<span class="w"> </span>arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 </span></code></pre></div>
-<h3 id="list_pods-list_services-list_deployments"><code>list_pods</code>, <code>list_services</code>, <code>list_deployments</code><a class="headerlink" href="#list_pods-list_services-list_deployments" title="Permanent link">&para;</a></h3>
-<p>List all pods, services, or deployments.</p>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>list_pods
-</span></code></pre></div>
-<h3 id="describe_pod-describe_service-describe_deployment"><code>describe_pod</code>, <code>describe_service</code>, <code>describe_deployment</code><a class="headerlink" href="#describe_pod-describe_service-describe_deployment" title="Permanent link">&para;</a></h3>
-<p>Describe a pod, service, or deployment.</p>
-<ul>
-<li><code>name</code>: Name of the resource.</li>
-</ul>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>describe_pod<span class="w"> </span>my_pod
-</span></code></pre></div>
-<h2 id="yaml-configuration">YAML Configuration<a class="headerlink" href="#yaml-configuration" title="Permanent link">&para;</a></h2>
-<p>You can also use a YAML configuration file to specify the common arguments. The command-specific arguments will still come from the command line.</p>
-<p>Example YAML:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">deploy</span><span class="p">:</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;k8s&quot;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">kube_config_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">cluster_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;geniusrise&quot;</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">context_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;eks&quot;</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;geniusrise_k8s_test&quot;</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="s">&quot;tag1&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;lol&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;tag2&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;lel&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">annotations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nt">api_key</span><span class="p">:</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="nt">api_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="nt">verify_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">ssl_ca_cert</span><span class="p">:</span>
-</span></code></pre></div>
-<p>To use the YAML configuration, you can read it in your Python script and pass the arguments to the <code>K8sResourceManager</code> methods.</p>
-<p>Example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>script.py<span class="w"> </span>--config<span class="o">=</span>my_config.yaml<span class="w"> </span>create_resource<span class="w"> </span>my_resource<span class="w"> </span>nginx<span class="w"> </span><span class="s2">&quot;nginx -g &#39;daemon off;&#39;&quot;</span><span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span>
-</span></code></pre></div>
-<p>In this example, the <code>--config=my_config.yaml</code> would be used to read the common arguments from the YAML file, and the rest of the arguments would be taken from the command line.</p>
 
 
 

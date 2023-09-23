@@ -13,13 +13,17 @@
         <link rel="canonical" href="https://docs.geniusrise.ai/core/k8s_base/">
       
       
+        <link rel="prev" href="../k8s_cron_job/">
+      
+      
+        <link rel="next" href="../../guides/404/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Kubernetes - </title>
+        <title>Kubernetes pods - </title>
       
     
     
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes
+              Kubernetes pods
             
           </span>
         </div>
@@ -352,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
+      <a href="../../guides/packaging/" class="md-nav__link">
         Packaging
       </a>
     </li>
@@ -366,50 +370,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Staged deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Workflow ops
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Data ops
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Model ops
+      <a href="../../guides/deployment/" class="md-nav__link">
+        Deployment
       </a>
     </li>
   
@@ -435,16 +397,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
       
       
       
@@ -453,7 +417,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Deployment
@@ -464,14 +428,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
       
       
       
@@ -480,7 +446,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
           Runners
@@ -507,8 +473,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Apache Airflow
+      <a href="../k8s_deployment/" class="md-nav__link">
+        Kubernetes deployment
       </a>
     </li>
   
@@ -521,8 +487,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        AWS ECS
+      <a href="../k8s_service/" class="md-nav__link">
+        Kubernetes service
       </a>
     </li>
   
@@ -535,8 +501,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        AWS Batch
+      <a href="../k8s_job/" class="md-nav__link">
+        Kubernetes job
       </a>
     </li>
   
@@ -549,16 +515,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Apache Storm
+      <a href="../k8s_cron_job/" class="md-nav__link">
+        Kubernetes cron job
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -566,40 +525,117 @@
           
             
               
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kubernetes pods
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Kubernetes pods
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
-          Library
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Library
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.K8sResourceManager" class="md-nav__link">
+    runners.k8s.K8sResourceManager
+  </a>
   
-    <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Apache Spark
-      </a>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.__create_image_pull_secret" class="md-nav__link">
+    __create_image_pull_secret()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.__wait_for_pod_completion" class="md-nav__link">
+    __wait_for_pod_completion()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.connect" class="md-nav__link">
+    connect()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.describe" class="md-nav__link">
+    describe()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.logs" class="md-nav__link">
+    logs()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.run" class="md-nav__link">
+    run()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.show" class="md-nav__link">
+    show()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runners.k8s.base.K8sResourceManager.status" class="md-nav__link">
+    status()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -612,21 +648,7 @@
   
     <li class="md-nav__item">
       <a href="../../guides/404/" class="md-nav__link">
-        Apache Flink
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        Apache Beam
+        Apache Airflow
       </a>
     </li>
   
@@ -697,8 +719,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/404/" class="md-nav__link">
-        YAML structure
+      <a href="../../guides/yaml/" class="md-nav__link">
+        YAML
       </a>
     </li>
   
