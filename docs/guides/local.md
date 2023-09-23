@@ -360,10 +360,10 @@ genius Webhook deploy \
   --k8s_kind service \
   --k8s_namespace geniusrise \
   --k8s_cluster_name geniusrise-dev \
-  --k8s_context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev \
+  --k8s_context_name arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev \
   --k8s_name webhook \
-  --k8s_image "143601010266.dkr.ecr.ap-south-1.amazonaws.com/geniusrise" \
-  --k8s_env_vars '{"AWS_DEFAULT_REGION": "ap-south-1", "AWS_SECRET_ACCESS_KEY": "AKIASC32JQZNCFC5ZRNL", "AWS_ACCESS_KEY_ID": "X4R5cipoERVbU+FmuQV6oFaijzbdnLGpoDCHZmas"}' \
+  --k8s_image "genius-dev.dkr.ecr.ap-south-1.amazonaws.com/geniusrise" \
+  --k8s_env_vars '{"AWS_DEFAULT_REGION": "ap-south-1", "AWS_SECRET_ACCESS_KEY": "your-key", "AWS_ACCESS_KEY_ID": "your-secret"}' \
   --k8s_port 8080 \
   --k8s_target_port 8080 \
   listen \
@@ -373,24 +373,29 @@ genius Webhook deploy \
 Or we could simply use the yaml we created in the previous step:
 
 ```bash
-genius rise deploy
+genius rise up
 ```
 
 See the status of the deployment:
 
 ```bash
+# Find the pod id
+genius pod show \
+  --namespace geniusrise \
+  --context_name arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev 2>&1 | grep Running
+
 genius pod describe \
   webhook-75c4bff67d-hbhts \
   --namespace geniusrise \
-  --context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev
+  --context_name arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 
 genius deployment describe \
   webhook \
   --namespace geniusrise \
-  --context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev
+  --context_name arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 
 genius service describe \
   webhook \
   --namespace geniusrise \
-  --context_name arn:aws:eks:us-east-1:143601010266:cluster/geniusrise-dev
+  --context_name arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev
 ```
