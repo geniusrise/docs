@@ -1,3 +1,0 @@
-# Encironment Configuration
-
-::: config

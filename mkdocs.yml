@@ -3,243 +3,276 @@ site_url: https://docs.geniusrise.ai
 site_author: ixaxaar
 
 nav:
-      - Home: index.md
-      - Concepts: guides/concepts.md
-      - Architecture: guides/architecture.md
-      - Installation: guides/installation.md
-      - Development:
-              - Guides:
-                      - Local setup: guides/local.md
-                      - Dev Cycle: guides/dev_cycle.md
-                      - Packaging: guides/packaging.md
-                      - Deployment: guides/deployment.md
-                      #     - Workflow ops: guides/404.md
-                      #     - Data ops: guides/404.md
-                      #     - Model ops: guides/404.md
-      - Deployment:
-              - Runners:
-                      - Kubernetes: guides/kubernetes.md
-                      - Kubernetes deployment: core/k8s_deployment.md
-                      - Kubernetes service: core/k8s_service.md
-                      - Kubernetes job: core/k8s_job.md
-                      - Kubernetes cron job: core/k8s_cron_job.md
-                      - Kubernetes pods: core/k8s_base.md
-                      - Apache Airflow: guides/404.md
-              #         - AWS ECS: guides/404.md
-              #         - AWS Batch: guides/404.md
-              #         - Apache Storm: guides/404.md
-              #   - Library:
-              #         - Apache Spark: guides/404.md
-              #         - Apache Flink: guides/404.md
-              #         - Apache Beam: guides/404.md
-      - Reference:
-              - CLI: guides/cli.md
-              - YAML: guides/yaml.md
-      - Spouts:
-              - Listeners:
-                      - Http Polling: spouts/http_polling.md
-                      - Socket.io: spouts/socket.io.md
-                      - gRPC: spouts/grpc.md
-                      - QUIC: spouts/quic.md
-                      - UDP: spouts/udp.md
-                      - Webhook: spouts/webhook.md
-                      - Websocket: spouts/websocket.md
-                      - SNS: spouts/sns.md
-                      - SQS: spouts/sqs.md
-                      - AMQP: spouts/amqp.md
-                      - Kafka: spouts/kafka.md
-                      - Kinesis Streams: spouts/kinesis.md
-                      - MQTT: spouts/mqtt.md
-                      - ActiveMQ: spouts/activemq.md
-                      - ZeroMQ: spouts/zeromq.md
-                      - Redis Pubsub: spouts/redis_pubsub.md
-                      - Redis Streams: spouts/redis_streams.md
-              - Databases:
-                      - MySQL: databases/mysql.md
-                      - SQLite: databases/sqlite.md
-                      - PostgreSQL: databases/postgres.md
-                      - Oracle: databases/oracle.md
-                      - SQLServer: databases/sql_server.md
-                      - CockroachDB: databases/cockroach.md
-                      - MongoDB: databases/mongodb.md
-                      - Redis: databases/redis.md
-                      - Elasticsearch: databases/elasticsearch.md
-                      - Cassandra: databases/cassandra.md
-                      - Neo4j: databases/neo4j.md
-                      - Couchbase: databases/couchbase.md
-                      - Riak: databases/riak.md
-                      - InfluxDB: databases/influxdb.md
-                      - TimescaleDB: databases/timescaledb.md
-                      - OpenTSDB: databases/opentsdb.md
-                      - Spanner: databases/spanner.md
-                      - TiDB: databases/tidb.md
-                      - VoltDB: databases/voltdb.md
-                      - DynamoDB: databases/dynamodb.md
-                      - Firestore: databases/firestore.md
-                      - CosmosDB: databases/cosmosdb.md
-                      - GoogleCloudSQL: databases/cloud_sql.md
-                      - LDAP: databases/ldap.md
-                      - DB2: databases/db2.md
-                      - Sybase: databases/sybase.md
-                      - Teradata: databases/teradata.md
-                      - HBase: databases/hbase.md
-                      - ArangoDB: databases/arangodb.md
-                      - DocumentDB: databases/documentdb.md
-                      - Presto: databases/presto.md
-                      - Athena: databases/athena.md
-                      - KairosDB: databases/kairosdb.md
-                      - Graphite: databases/graphite.md
-                      - NuoDB: databases/nuodb.md
-                      - MemSQL: databases/memsql.md
-                      - Bigtable: databases/bigtable.md
-                      - AWSKeyspaces: databases/keyspaces.md
-                      - AzureTableStorage: databases/azure_table.md
-                      - BigQuery: databases/bigquery.md
-                      - Vertica: databases/vertica.md
-              #   - OpenAPI:
-              #         - TODO
-      - Bolts:
-              - Huggingface:
-                      - Base Fine Tuner: bolts/huggingface/base.md
-                      - Classification: bolts/huggingface/classification.md
-                      - Commonsense Reasoning: bolts/huggingface/commonsense_reasoning.md
-                      - Instruction Tuning: bolts/huggingface/instruction_tuning.md
-                      - Language Model: bolts/huggingface/language_model.md
-                      - Named Entity Recognition: bolts/huggingface/ner.md
-                      - Question Answering: bolts/huggingface/question_answering.md
-                      - Sentiment Analysis: bolts/huggingface/sentiment_analysis.md
-                      - Summarization: bolts/huggingface/summarization.md
-                      - Translation: bolts/huggingface/translation.md
-              - OpenAI:
-                      - Classification: bolts/openai/classification.md
-                      - Commonsense Reasoning: bolts/openai/commonsense_reasoning.md
-                      - Instruction Tuning: bolts/openai/instruction_tuning.md
-                      - Language Model: bolts/openai/language_model.md
-                      - Named Entity Recognition: bolts/openai/ner.md
-                      - Question Answering: bolts/openai/question_answering.md
-                      - Sentiment Analysis: bolts/openai/sentiment_analysis.md
-                      - Summarization: bolts/openai/summarization.md
-                      - Translation: bolts/openai/translation.md
-              #   - Indexing:
-              #         - TODO
-              #   - OpenAPI:
-              #         - TODO
-      - Core Reference:
-              - cli:
-                      - boltctl: core/cli_boltctl.md
-                      - discover: core/cli_discover.md
-                      - geniusctl: core/cli_geniusctl.md
-                      - schema: core/cli_schema.md
-                      - spoutctl: core/cli_spoutctl.md
-                      - yamlctl: core/cli_yamlctl.md
-                      - dockerctl: core/cli_dockerctl.md
-              - core:
-                      - bolt: core/core_bolt.md
-                      - spout: core/core_spout.md
-                      - data:
-                              - batch_input: core/core_data_batch_input.md
-                              - batch_output: core/core_data_batch_output.md
-                              - stream_to_batch_output: core/core_data_stream_to_batch_output.md
-                              - input: core/core_data_input.md
-                              - output: core/core_data_output.md
-                              - streaming_input: core/core_data_streaming_input.md
-                              - streaming_output: core/core_data_streaming_output.md
-                              - batch_to_stream_input: core/core_data_batch_to_stream_input.md
-                              - stream_to_batch_input: core/core_data_stream_to_batch_input.md
-                      - state:
-                              - base: core/core_state_base.md
-                              - dynamo: core/core_state_dynamo.md
-                              - memory: core/core_state_memory.md
-                              - postgres: core/core_state_postgres.md
-                              - redis: core/core_state_redis.md
-                      - task:
-                              - base: core/core_task_base.md
+  - Home: index.md
+  - Concepts: guides/concepts.md
+  - Architecture: guides/architecture.md
+  - Installation: guides/installation.md
+  - Development:
+      - Guides:
+          - Local setup: guides/local.md
+          - Dev Cycle: guides/dev_cycle.md
+          - Packaging: guides/packaging.md
+          - Deployment: guides/deployment.md
+          #     - Workflow ops: guides/404.md
+          #     - Data ops: guides/404.md
+          #     - Model ops: guides/404.md
+  - Deployment:
+      - Runners:
+          - Kubernetes: guides/kubernetes.md
+          - Kubernetes deployment: core/k8s_deployment.md
+          - Kubernetes service: core/k8s_service.md
+          - Kubernetes job: core/k8s_job.md
+          - Kubernetes cron job: core/k8s_cron_job.md
+          - Kubernetes pods: core/k8s_base.md
+          - Apache Airflow: core/airflow.md
+          - Docker: core/docker.md
+          - Docker Swarm: core/docker_swarm.md
+      #     - AWS ECS: guides/404.md
+      #     - AWS Batch: guides/404.md
+      #     - Apache Storm: guides/404.md
+      #   - Library:
+      #     - Apache Spark: guides/404.md
+      #     - Apache Flink: guides/404.md
+      #     - Apache Beam: guides/404.md
+  - Reference:
+      - CLI: guides/cli.md
+      - YAML: guides/yaml.md
+  - Components:
+      - Inference APIs:
+          - Base API: text/api/base.md
+          - Classification: text/api/classification.md
+          - NLI: text/api/nli.md
+          - Chat: text/api/instruction_tuning.md
+          - Language Model: text/api/language_model.md
+          - NER: text/api/ner.md
+          - Question Answering: text/api/question_answering.md
+          - Summarization: text/api/summarization.md
+          - Translation: text/api/translation.md
+      - Bulk Inference:
+          - Base: text/bulk/base.md
+          - Classification: text/bulk/classification.md
+          - NLI: text/bulk/nli.md
+          - Chat: text/bulk/instruction_tuning.md
+          - Language Model: text/bulk/language_model.md
+          - NER: text/bulk/ner.md
+          - Question Answering: text/bulk/question_answering.md
+          - Summarization: text/bulk/summarization.md
+          - Translation: text/bulk/translation.md
+      - Fine-Tuners:
+          - Classification: text/fine_tune/classification.md
+          - NLI: text/fine_tune/nli.md
+          - Chat: text/fine_tune/instruction_tuning.md
+          - Language Model: text/fine_tune/language_model.md
+          - NER: text/fine_tune/ner.md
+          - Question Answering: text/fine_tune/question_answering.md
+          - Summarization: text/fine_tune/summarization.md
+          - Translation: text/fine_tune/translation.md
+      - OpenAI Fine-Tuners:
+          - Classification: bolts/openai/classification.md
+          - NLI: bolts/openai/commonsense_reasoning.md
+          - Chat: bolts/openai/instruction_tuning.md
+          - Language Model: bolts/openai/language_model.md
+          - NER: bolts/openai/ner.md
+          - Question Answering: bolts/openai/question_answering.md
+          - Sentiment Analysis: bolts/openai/sentiment_analysis.md
+          - Summarization: bolts/openai/summarization.md
+          - Translation: bolts/openai/translation.md
+      - Streaming Sources:
+          - Http Polling: listeners/http_polling.md
+          - Socket.io: listeners/socket.io.md
+          - gRPC: listeners/grpc.md
+          - QUIC: listeners/quic.md
+          - UDP: listeners/udp.md
+          - Webhook: listeners/webhook.md
+          - Websocket: listeners/websocket.md
+          - SNS: listeners/sns.md
+          - SQS: listeners/sqs.md
+          - AMQP: listeners/amqp.md
+          - Kafka: listeners/kafka.md
+          - Kinesis Streams: listeners/kinesis.md
+          - MQTT: listeners/mqtt.md
+          - ActiveMQ: listeners/activemq.md
+          - ZeroMQ: listeners/zeromq.md
+          - Redis Pubsub: listeners/redis_pubsub.md
+          - Redis Streams: listeners/redis_streams.md
+      - Database Ingestion:
+          - MySQL: databases/mysql.md
+          - SQLite: databases/sqlite.md
+          - PostgreSQL: databases/postgres.md
+          - Oracle: databases/oracle.md
+          - SQLServer: databases/sql_server.md
+          - CockroachDB: databases/cockroach.md
+          - MongoDB: databases/mongodb.md
+          - Redis: databases/redis.md
+          - Elasticsearch: databases/elasticsearch.md
+          - Cassandra: databases/cassandra.md
+          - Neo4j: databases/neo4j.md
+          - Couchbase: databases/couchbase.md
+          - Riak: databases/riak.md
+          - InfluxDB: databases/influxdb.md
+          - TimescaleDB: databases/timescaledb.md
+          - OpenTSDB: databases/opentsdb.md
+          - Spanner: databases/spanner.md
+          - TiDB: databases/tidb.md
+          - VoltDB: databases/voltdb.md
+          - DynamoDB: databases/dynamodb.md
+          - Firestore: databases/firestore.md
+          - CosmosDB: databases/cosmosdb.md
+          - GoogleCloudSQL: databases/cloud_sql.md
+          - LDAP: databases/ldap.md
+          - DB2: databases/db2.md
+          - Sybase: databases/sybase.md
+          - Teradata: databases/teradata.md
+          - HBase: databases/hbase.md
+          - ArangoDB: databases/arangodb.md
+          - DocumentDB: databases/documentdb.md
+          - Presto: databases/presto.md
+          - Athena: databases/athena.md
+          - KairosDB: databases/kairosdb.md
+          - Graphite: databases/graphite.md
+          - NuoDB: databases/nuodb.md
+          - MemSQL: databases/memsql.md
+          - Bigtable: databases/bigtable.md
+          - AWSKeyspaces: databases/keyspaces.md
+          - AzureTableStorage: databases/azure_table.md
+          - BigQuery: databases/bigquery.md
+          - Vertica: databases/vertica.md
+      - Preprocessing:
+          - Parse PDF files: ocr/ParsePdf.md
+          - Parse CBZCBR files: ocr/ParseCBZCBR.md
+          - Parse Djvu files: ocr/ParseDjvu.md
+          - Parse Epub files: ocr/ParseEpub.md
+          - Parse MOBI files: ocr/ParseMOBI.md
+          - Parse PostScript files: ocr/ParsePostScript.md
+          - Parse XPS files: ocr/ParseXPS.md
+          - Convert Images: ocr/ConvertImage.md
+          - Predict image classes: ocr/ImageClassPredictor.md
+          - Train image classifier: ocr/TrainImageClassifier.md
+          - OCR using trocr: ocr/TROCRImageOCR.md
+          - OCR API using trocr: ocr/TROCRImageOCRAPI.md
+          - Fine-tune trocr: ocr/FineTuneTROCR.md
+          - OCR using pix2struct: ocr/Pix2StructImageOCR.md
+          - OCR API using pix2struct: ocr/Pix2StructImageOCRAPI.md
+          - Fine-tune pix2struct: ocr/FineTunePix2Struct.md
+  - Core Reference:
+      - cli:
+          - boltctl: core/cli_boltctl.md
+          - discover: core/cli_discover.md
+          - geniusctl: core/cli_geniusctl.md
+          - schema: core/cli_schema.md
+          - spoutctl: core/cli_spoutctl.md
+          - yamlctl: core/cli_yamlctl.md
+          - dockerctl: core/cli_dockerctl.md
+      - core:
+          - bolt: core/core_bolt.md
+          - spout: core/core_spout.md
+          - data:
+              - batch_input: core/core_data_batch_input.md
+              - batch_output: core/core_data_batch_output.md
+              - stream_to_batch_output: core/core_data_stream_to_batch_output.md
+              - input: core/core_data_input.md
+              - output: core/core_data_output.md
+              - streaming_input: core/core_data_streaming_input.md
+              - streaming_output: core/core_data_streaming_output.md
+              - batch_to_stream_input: core/core_data_batch_to_stream_input.md
+              - stream_to_batch_input: core/core_data_stream_to_batch_input.md
+          - state:
+              - base: core/core_state_base.md
+              - dynamo: core/core_state_dynamo.md
+              - memory: core/core_state_memory.md
+              - postgres: core/core_state_postgres.md
+              - redis: core/core_state_redis.md
+          - task:
+              - base: core/core_task_base.md
 
 theme:
-      name: material
-      palette:
-            scheme: slate
-            primary: pink
-            accent: deep purple
-      font:
-            text: Fira Code
-            code: Source Code Pro
-      logo: assets/logo_with_text.png
-      features:
-            - navigation.instant
-            - navigation.instant.prefetch
-            - navigation.tracking
-            - navigation.sections
-            # - navigation.expand
-            - header.autohide
-            - content.code.copy
-            - content.code.select
+  name: material
+  palette:
+    scheme: slate
+    primary: pink
+    accent: deep purple
+  font:
+    text: Fira Code
+    code: Source Code Pro
+  logo: assets/logo_with_text.png
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.sections
+    # - navigation.expand
+    - header.autohide
+    - content.code.copy
+    - content.code.select
 
 markdown_extensions:
-      - toc:
-              permalink: true
-      - pymdownx.highlight:
-              anchor_linenums: true
-              line_spans: __span
-              pygments_lang_class: true
-      - pymdownx.inlinehilite
-      - pymdownx.snippets
-      - pymdownx.superfences
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 plugins:
-      - search
-      - mkdocstrings:
-              default_handler: python
-              handlers:
-                    python:
-                          paths:
-                                [
-                                      ../geniusrise/geniusrise,
-                                      ../geniusrise-listeners/geniusrise_listeners,
-                                      ../geniusrise-huggingface/geniusrise_huggingface,
-                                      ../geniusrise-openai/,
-                                      ../geniusrise-databases/,
-                                ]
-                          options:
-                                show_source: false
-      - print-site:
-              add_print_site_banner: true
-              print_site_banner_template: "docs/assets/templates/banner.tpl"
-      - plantuml:
-              puml_url: https://www.plantuml.com/plantuml/
+  - search
+  - autorefs
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths:
+            [
+              ../geniusrise/geniusrise,
+              ../geniusrise-listeners/geniusrise_listeners,
+              ../geniusrise-huggingface/geniusrise_huggingface,
+              ../geniusrise-openai/,
+              ../geniusrise-databases/,
+              ../geniusrise-ocr/,
+              ../geniusrise-text/,
+            ]
+          options:
+            show_source: false
+  - print-site:
+      add_print_site_banner: true
+      print_site_banner_template: "docs/assets/templates/banner.tpl"
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
 
-      # - build_plantuml:
-      #     render: 'server' # or "local" for local rendering
-      #     bin_path: '/usr/local/bin/plantuml' # ignored when render: server
-      #     server: 'http://www.plantuml.com/plantuml' # official plantuml server
-      #     disable_ssl_certificate_validation: true # for self-signed and invalid certs
-      #     output_format: 'svg' # or "png"
-      #     diagram_root: 'docs/diagrams' # should reside under docs_dir
-      #     output_folder: 'out'
-      #     input_folder: 'src'
-      #     input_extensions: '' # comma separated list of extensions to parse, by default every file is parsed
-      # - plantuml_markdown:
-      #     server: http://www.plantuml.com/plantuml  # PlantUML server, for remote rendering
-      #     # other global options
-      #     insecure: False                           # set to True if the server uses self-signed certificates
-      #     cachedir: /tmp                            # set a non-empty value to enable caching
-      #     base_dir: .                               # where to search for diagrams to include
-      #     config:                                   # PlantUML config file, relative to base_dir (a PlantUML file included in every diagram)
-      #     format: png                               # default diagram image format
-      #     classes: class1,class2                    # default diagram classes
-      #     encoding: utf-8                           # character encoding for external files (default utf-8)
-      #     title: UML diagram                        # default title (tooltip) for diagram images
-      #     alt: UML diagram image                    # default `alt` attribute for diagram images
-      #     image_maps: True                          # generate image maps when the format is png and there are hyperlinks
-      #     priority: 30                              # plugin priority; the higher, the sooner will be applied (default 30)
-      #     http_method: GET                          # GET or POST  - note that plantuml.com only supports GET (default GET)
-      #     fallback_to_get: True                     # When using POST, should GET be used as fallback (POST will fail if @startuml/@enduml tags not used) (default True)
-      #     theme: bluegray                           # theme to be set, can be overridden inside puml files, (default none)
-      #     puml_notheme_cmdlist: [
-      #                             'version',
-      #                             'listfonts',
-      #                             'stdlib',
-      #                             'license'
-      #                           ]                   # theme will not be set if listed commands present (default as listed)
+  # - build_plantuml:
+  #     render: 'server' # or "local" for local rendering
+  #     bin_path: '/usr/local/bin/plantuml' # ignored when render: server
+  #     server: 'http://www.plantuml.com/plantuml' # official plantuml server
+  #     disable_ssl_certificate_validation: true # for self-signed and invalid certs
+  #     output_format: 'svg' # or "png"
+  #     diagram_root: 'docs/diagrams' # should reside under docs_dir
+  #     output_folder: 'out'
+  #     input_folder: 'src'
+  #     input_extensions: '' # comma separated list of extensions to parse, by default every file is parsed
+  # - plantuml_markdown:
+  #     server: http://www.plantuml.com/plantuml  # PlantUML server, for remote rendering
+  #     # other global options
+  #     insecure: False               # set to True if the server uses self-signed certificates
+  #     cachedir: /tmp                # set a non-empty value to enable caching
+  #     base_dir: .                   # where to search for diagrams to include
+  #     config:                   # PlantUML config file, relative to base_dir (a PlantUML file included in every diagram)
+  #     format: png                   # default diagram image format
+  #     classes: class1,class2            # default diagram classes
+  #     encoding: utf-8               # character encoding for external files (default utf-8)
+  #     title: UML diagram            # default title (tooltip) for diagram images
+  #     alt: UML diagram image            # default `alt` attribute for diagram images
+  #     image_maps: True              # generate image maps when the format is png and there are hyperlinks
+  #     priority: 30                  # plugin priority; the higher, the sooner will be applied (default 30)
+  #     http_method: GET              # GET or POST  - note that plantuml.com only supports GET (default GET)
+  #     fallback_to_get: True             # When using POST, should GET be used as fallback (POST will fail if @startuml/@enduml tags not used) (default True)
+  #     theme: bluegray               # theme to be set, can be overridden inside puml files, (default none)
+  #     puml_notheme_cmdlist: [
+  #                 'version',
+  #                 'listfonts',
+  #                 'stdlib',
+  #                 'license'
+  #               ]           # theme will not be set if listed commands present (default as listed)
 extra_css:
-      - "main.css"
+  - "main.css"
