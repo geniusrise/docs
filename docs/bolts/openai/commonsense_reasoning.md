@@ -1,3 +1,3 @@
-# Commonsense Reasoning Fine Tuner
+# Natural Language Inference Fine Tuner
 
 ::: geniusrise_openai.OpenAICommonsenseReasoningFineTuner
