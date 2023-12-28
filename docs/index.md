@@ -2,7 +2,7 @@
 
 ---
 
-# Geniusrise Agent Ecosystem
+# Geniusrise Ecosystem
 
 Geniusrise is a modular, loosely-coupled AgentOps / MLOps framework designed for the era of Large Language Models, offering flexibility, inclusivity, and standardization in designing networks of AI agents.
 
