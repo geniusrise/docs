@@ -867,8 +867,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.summarization.api.SummarizationAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.summarization.api.SummarizationAPI.summarize" class="md-nav__link">
     summarize()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.summarization.api.SummarizationAPI.summarize_pipeline" class="md-nav__link">
+    summarize_pipeline()
   </a>
   
 </li>
@@ -3097,8 +3111,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.summarization.api.SummarizationAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.summarization.api.SummarizationAPI.summarize" class="md-nav__link">
     summarize()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.summarization.api.SummarizationAPI.summarize_pipeline" class="md-nav__link">
+    summarize_pipeline()
   </a>
   
 </li>
@@ -3149,7 +3177,7 @@ text summarization.</p>
         <tr>
           <td><code>model</code></td>
           <td>
-                <code>AutoModelForSeq2SeqLM</code>
+                <code><span title="transformers.AutoModelForSeq2SeqLM">AutoModelForSeq2SeqLM</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3160,7 +3188,7 @@ text summarization.</p>
         <tr>
           <td><code>tokenizer</code></td>
           <td>
-                <code>AutoTokenizer</code>
+                <code><span title="transformers.AutoTokenizer">AutoTokenizer</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3318,6 +3346,25 @@ text summarization.</p>
 
 
 
+<h2 id="geniusrise_text.summarization.api.SummarizationAPI.initialize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_pipeline</span><span class="p">()</span></code>
+
+<a href="#geniusrise_text.summarization.api.SummarizationAPI.initialize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Lazy initialization of the summarization Hugging Face pipeline.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
 <h2 id="geniusrise_text.summarization.api.SummarizationAPI.summarize" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">summarize</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
@@ -3416,6 +3463,81 @@ accepts parameters via a POST request and returns the summarized text.</p>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="s1">        &quot;num_beams&quot;: 4</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s1">    }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
 </span></code></pre></div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.summarization.api.SummarizationAPI.summarize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">summarize_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.summarization.api.SummarizationAPI.summarize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Summarizes the input text using the Hugging Face pipeline based on given parameters.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Keyword arguments containing parameters for summarization.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A dictionary containing the input text and its summary.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example CURL Request for summarization:
+<code>curl -X POST localhost:3000/api/v1/summarize_pipeline -H "Content-Type: application/json" -d '{"text": "Your long text here"}'</code></p>
 
   </div>
 

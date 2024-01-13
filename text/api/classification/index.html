@@ -783,8 +783,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.classification.api.TextClassificationAPI.classification_pipeline" class="md-nav__link">
+    classification_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.classification.api.TextClassificationAPI.classify" class="md-nav__link">
     classify()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.classification.api.TextClassificationAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
   </a>
   
 </li>
@@ -3097,8 +3111,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.classification.api.TextClassificationAPI.classification_pipeline" class="md-nav__link">
+    classification_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.classification.api.TextClassificationAPI.classify" class="md-nav__link">
     classify()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.classification.api.TextClassificationAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
   </a>
   
 </li>
@@ -3130,9 +3158,8 @@
             Bases: <code><a class="autorefs autorefs-internal" title="geniusrise_text.base.TextAPI" href="../base/#geniusrise_text.base.TextAPI">TextAPI</a></code></p>
 
   
-      <p>TextClassificationAPI is a text classification service leveraging Hugging Face's transformers to provide an API
-for text classification tasks. It supports various models for sequence classification tasks, including sentiment
-analysis, topic classification, intent recognition, etc.</p>
+      <p>TextClassificationAPI leveraging Hugging Face's transformers for text classification tasks.
+This API provides an interface to classify text into various categories like sentiment, topic, intent, etc.</p>
 
 
 
@@ -3149,28 +3176,45 @@ analysis, topic classification, intent recognition, etc.</p>
         <tr>
           <td><code>model</code></td>
           <td>
-                <code>AutoModelForSequenceClassification</code>
+                <code><span title="transformers.AutoModelForSequenceClassification">AutoModelForSequenceClassification</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A Hugging Face model for sequence classification tasks.</p>
+              <p>A Hugging Face model for sequence classification.</p>
             </div>
           </td>
         </tr>
         <tr>
           <td><code>tokenizer</code></td>
           <td>
-                <code>AutoTokenizer</code>
+                <code><span title="transformers.AutoTokenizer">AutoTokenizer</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A tokenizer that preprocesses text for the model.</p>
+              <p>A tokenizer for preprocessing text.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hf_pipeline</code></td>
+          <td>
+                <code>Pipeline</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A Hugging Face pipeline for text classification.</p>
             </div>
           </td>
         </tr>
     </tbody>
   </table>
-      <p>Example CLI Usage:
+
+<details class="methods" open>
+  <summary>Methods</summary>
+  <p>classify(self): Classifies text using the model and tokenizer.
+classification_pipeline(self): Classifies text using the Hugging Face pipeline.
+initialize_pipeline(self): Lazy initialization of the classification pipeline.</p>
+</details>      <p>Example CLI Usage:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius<span class="w"> </span>TextClassificationAPI<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span>--input_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
@@ -3312,6 +3356,54 @@ analysis, topic classification, intent recognition, etc.</p>
 
 
 
+<h2 id="geniusrise_text.classification.api.TextClassificationAPI.classification_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">classification_pipeline</span><span class="p">()</span></code>
+
+<a href="#geniusrise_text.classification.api.TextClassificationAPI.classification_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Accepts text input and returns classification results using the Hugging Face pipeline.</p>
+<p>This method uses the Hugging Face pipeline for efficient and robust text classification. It's suitable for various
+classification tasks such as sentiment analysis, topic classification, and intent recognition.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: A dictionary containing the original input text and the classification results.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example CURL Request for text classification:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/usr/bin/curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>localhost:3000/api/v1/classification_pipeline<span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;text&quot;: &quot;The movie was fantastic, with great acting and plot.&quot;}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</span></code></pre></div></p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
 <h2 id="geniusrise_text.classification.api.TextClassificationAPI.classify" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">classify</span><span class="p">()</span></code>
 
@@ -3351,6 +3443,25 @@ and provide the likelihood of each class label.</p>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s1">        &quot;text&quot;: &quot;tata sons lost a major contract to its rival mahindra motors&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s1">    }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
 </span></code></pre></div></p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.classification.api.TextClassificationAPI.initialize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_pipeline</span><span class="p">()</span></code>
+
+<a href="#geniusrise_text.classification.api.TextClassificationAPI.initialize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Lazy initialization of the Hugging Face pipeline for classification.</p>
 
   </div>
 

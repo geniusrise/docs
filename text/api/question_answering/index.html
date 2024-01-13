@@ -867,8 +867,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.qa.api.QAAPI.answer_pipeline" class="md-nav__link">
+    answer_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.qa.api.QAAPI.answer_table_question" class="md-nav__link">
     answer_table_question()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.qa.api.QAAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
   </a>
   
 </li>
@@ -3125,8 +3139,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.qa.api.QAAPI.answer_pipeline" class="md-nav__link">
+    answer_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.qa.api.QAAPI.answer_table_question" class="md-nav__link">
     answer_table_question()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.qa.api.QAAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
   </a>
   
 </li>
@@ -3536,6 +3564,82 @@ and provides answers accordingly.</p>
 
 
 
+<h2 id="geniusrise_text.qa.api.QAAPI.answer_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">answer_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.qa.api.QAAPI.answer_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Answers questions using the Hugging Face pipeline based on the provided context.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Arbitrary keyword arguments, typically containing 'question' and 'data'.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: A dictionary containing the question, context, and the answer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example CURL Request for QA:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>localhost:3000/api/v1/answer_pipeline<span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;question&quot;: &quot;Who is the CEO of Tesla?&quot;, &quot;data&quot;: &quot;Elon Musk is the CEO of Tesla.&quot;}&#39;</span>
+</span></code></pre></div></p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
 <h2 id="geniusrise_text.qa.api.QAAPI.answer_table_question" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">answer_table_question</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">question</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span></code>
 
@@ -3627,6 +3731,25 @@ and provides answers accordingly.</p>
         </tr>
     </tbody>
   </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.qa.api.QAAPI.initialize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_pipeline</span><span class="p">()</span></code>
+
+<a href="#geniusrise_text.qa.api.QAAPI.initialize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Lazy initialization of the QA Hugging Face pipeline.</p>
 
   </div>
 

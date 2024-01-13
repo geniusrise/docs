@@ -825,6 +825,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.nli.api.NLIAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.nli.api.NLIAPI.question_answering" class="md-nav__link">
     question_answering()
   </a>
@@ -834,6 +841,13 @@
         <li class="md-nav__item">
   <a href="#geniusrise_text.nli.api.NLIAPI.textual_similarity" class="md-nav__link">
     textual_similarity()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.nli.api.NLIAPI.zero_shot_classification" class="md-nav__link">
+    zero_shot_classification()
   </a>
   
 </li>
@@ -3160,6 +3174,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.nli.api.NLIAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.nli.api.NLIAPI.question_answering" class="md-nav__link">
     question_answering()
   </a>
@@ -3169,6 +3190,13 @@
         <li class="md-nav__item">
   <a href="#geniusrise_text.nli.api.NLIAPI.textual_similarity" class="md-nav__link">
     textual_similarity()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.nli.api.NLIAPI.zero_shot_classification" class="md-nav__link">
+    zero_shot_classification()
   </a>
   
 </li>
@@ -3219,7 +3247,7 @@ API endpoints that can be interacted with via standard HTTP requests.</p>
         <tr>
           <td><code>model</code></td>
           <td>
-                <code>AutoModelForSequenceClassification</code>
+                <code><span title="transformers.AutoModelForSequenceClassification">AutoModelForSequenceClassification</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3230,7 +3258,7 @@ API endpoints that can be interacted with via standard HTTP requests.</p>
         <tr>
           <td><code>tokenizer</code></td>
           <td>
-                <code>AutoTokenizer</code>
+                <code><span title="transformers.AutoTokenizer">AutoTokenizer</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3741,6 +3769,25 @@ scores across possible labels like entailment, contradiction, and neutral.</p>
 
 
 
+<h2 id="geniusrise_text.nli.api.NLIAPI.initialize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_pipeline</span><span class="p">()</span></code>
+
+<a href="#geniusrise_text.nli.api.NLIAPI.initialize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Lazy initialization of the NLI Hugging Face pipeline.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
 <h2 id="geniusrise_text.nli.api.NLIAPI.question_answering" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">question_answering</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
@@ -3920,6 +3967,86 @@ scores across possible labels like entailment, contradiction, and neutral.</p>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s1">        &quot;text1&quot;: &quot;Theres something magical about Recurrent Neural Networks (RNNs). I still remember when I trained my first recurrent network for Image Captioning. Within a few dozen minutes of training my first baby model (with rather arbitrarily-chosen hyperparameters) started to generate very nice looking descriptions of images that were on the edge of making sense. Sometimes the ratio of how simple your model is to the quality of the results you get out of it blows past your expectations, and this was one of those times. What made this result so shocking at the time was that the common wisdom was that RNNs were supposed to be difficult to train (with more experience Ive in fact reached the opposite conclusion). Fast forward about a year: Im training RNNs all the time and Ive witnessed their power and robustness many times, and yet their magical outputs still find ways of amusing me.&quot;,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s1">        &quot;text2&quot;: &quot;There is something magical about training neural networks. Their simplicity coupled with their power is astonishing.&quot;</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s1">    }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</span></code></pre></div></p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.nli.api.NLIAPI.zero_shot_classification" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">zero_shot_classification</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.nli.api.NLIAPI.zero_shot_classification" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Performs zero-shot classification using the Hugging Face pipeline.
+It allows classification of text without explicitly provided labels.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Arbitrary keyword arguments, typically containing 'premise' and 'hypothesis'.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: A dictionary containing the premise, hypothesis, and their classification scores.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example CURL Request for zero-shot classification:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>localhost:3000/api/v1/zero_shot_classification<span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s1">        &quot;premise&quot;: &quot;A new study shows that the Mediterranean diet is good for heart health.&quot;,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s1">        &quot;hypothesis&quot;: &quot;The study is related to diet and health.&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s1">    }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
 </span></code></pre></div></p>
 
   </div>

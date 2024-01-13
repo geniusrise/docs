@@ -839,6 +839,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.ner_pipeline" class="md-nav__link">
+    ner_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.recognize_entities" class="md-nav__link">
     recognize_entities()
   </a>
@@ -3097,6 +3111,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.ner_pipeline" class="md-nav__link">
+    ner_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.recognize_entities" class="md-nav__link">
     recognize_entities()
   </a>
@@ -3303,6 +3331,103 @@ organizations, locations, expressions of times, quantities, monetary values, per
         </tr>
     </tbody>
   </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.ner.api.NamedEntityRecognitionAPI.initialize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_pipeline</span><span class="p">()</span></code>
+
+<a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.initialize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Lazy initialization of the NER Hugging Face pipeline.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.ner.api.NamedEntityRecognitionAPI.ner_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ner_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.ner.api.NamedEntityRecognitionAPI.ner_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Recognizes named entities in the input text using the Hugging Face pipeline.</p>
+<p>This method leverages a pre-trained NER model to identify and classify entities in text into categories such as
+names, organizations, locations, etc. It's suitable for processing various types of text content.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Arbitrary keyword arguments, typically containing 'text' for the input text.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: A dictionary containing the original input text and a list of recognized entities.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example CURL Request for NER:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>localhost:3000/api/v1/ner_pipeline<span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;text&quot;: &quot;John Doe works at OpenAI in San Francisco.&quot;}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</span></code></pre></div></p>
 
   </div>
 

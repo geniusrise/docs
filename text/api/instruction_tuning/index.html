@@ -811,8 +811,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.api.InstructionAPI.chat" class="md-nav__link">
+    chat()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.instruction.api.InstructionAPI.complete" class="md-nav__link">
     complete()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.api.InstructionAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
   </a>
   
 </li>
@@ -3097,8 +3111,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.api.InstructionAPI.chat" class="md-nav__link">
+    chat()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_text.instruction.api.InstructionAPI.complete" class="md-nav__link">
     complete()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.api.InstructionAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
   </a>
   
 </li>
@@ -3323,6 +3351,86 @@ for input, output, and state.</p>
 
 
 
+<h2 id="geniusrise_text.instruction.api.InstructionAPI.chat" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">chat</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.instruction.api.InstructionAPI.chat" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Handles chat interaction using the Hugging Face pipeline. This method enables conversational text generation,
+simulating a chat-like interaction based on user and system prompts.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Arbitrary keyword arguments containing 'user_prompt' and 'system_prompt'.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: A dictionary containing the user prompt, system prompt, and chat interaction results.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example CURL Request for chat interaction:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/usr/bin/curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>localhost:3001/api/v1/chat<span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s1">        &quot;user_prompt&quot;: &quot;What is the capital of France?&quot;,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s1">        &quot;system_prompt&quot;: &quot;The capital of France is&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s1">    }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</span></code></pre></div></p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
 <h2 id="geniusrise_text.instruction.api.InstructionAPI.complete" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">complete</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
@@ -3357,6 +3465,25 @@ How do I sort a list in Python?&lt;|end|&gt;
                 "top_p": 0.95
             }' | jq
         ```</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.instruction.api.InstructionAPI.initialize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_pipeline</span><span class="p">()</span></code>
+
+<a href="#geniusrise_text.instruction.api.InstructionAPI.initialize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Lazy initialization of the Hugging Face pipeline for chat interaction.</p>
 
   </div>
 
