@@ -58,7 +58,7 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 | 🟢 [Language Model](text/api/language_model.md)         | 🟣 [Named Entity Recognition](text/api/ner.md)                     | 🟡 [Question Answering](text/api/question_answering.md) |
 | 🟠 [Sentiment Analysis](text/api/sentiment_analysis.md) | 🟤 [Summarization](text/api/summarization.md)                      | 🟦 [Translation](text/api/translation.md)               |
 | 🔵 [Classification](text/api/classification.md)         | 🔴 [Natural Language Inference](text/api/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/api/instruction_tuning.md) |
-| 🟧 [Base Fine Tuner](text/api/base.md)                  |                                                                    |                                                         |
+| 🟧 [Base](text/api/base.md)                             |                                                                    |                                                         |
 
 #### Bulk Inference
 
@@ -67,7 +67,7 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 | 🟢 [Language Model](text/bulk/language_model.md)         | 🟣 [Named Entity Recognition](text/bulk/ner.md)                     | 🟡 [Question Answering](text/bulk/question_answering.md) |
 | 🟠 [Sentiment Analysis](text/bulk/sentiment_analysis.md) | 🟤 [Summarization](text/bulk/summarization.md)                      | 🟦 [Translation](text/bulk/translation.md)               |
 | 🔵 [Classification](text/bulk/classification.md)         | 🔴 [Natural Language Inference](text/bulk/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/bulk/instruction_tuning.md) |
-| 🟧 [Base Fine Tuner](text/bulk/base.md)                  |                                                                     |                                                          |
+| 🟧 [Base](text/bulk/base.md)                             |                                                                     |                                                          |
 
 #### Fine-tuning
 
@@ -76,14 +76,14 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 | 🟢 [Language Model](text/fine_tune/language_model.md)         | 🟣 [Named Entity Recognition](text/fine_tune/ner.md)                     | 🟡 [Question Answering](text/fine_tune/question_answering.md) |
 | 🟠 [Sentiment Analysis](text/fine_tune/sentiment_analysis.md) | 🟤 [Summarization](text/fine_tune/summarization.md)                      | 🟦 [Translation](text/fine_tune/translation.md)               |
 | 🔵 [Classification](text/fine_tune/classification.md)         | 🔴 [Natural Language Inference](text/fine_tune/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/fine_tune/instruction_tuning.md) |
-| 🟧 [Base Fine Tuner](text/fine_tune/base.md)                  |                                                                          |                                                               |
+| 🟧 [Base](text/fine_tune/base.md)                             |                                                                          |                                                               |
 
 | 🌐 **OpenAI**                                               |                                                                        |                                                             |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------- |
 | 🟢 [Classification](bolts/openai/classification.md)         | 🟣 [Natural Language Inference](bolts/openai/commonsense_reasoning.md) | 🟡 [Instruction Tuning](bolts/openai/instruction_tuning.md) |
 | 🟠 [Language Model](bolts/openai/language_model.md)         | 🟤 [Named Entity Recognition](bolts/openai/ner.md)                     | 🟦 [Question Answering](bolts/openai/question_answering.md) |
 | 🔵 [Sentiment Analysis](bolts/openai/sentiment_analysis.md) | 🔴 [Summarization](bolts/openai/summarization.md)                      | 🟧 [Translation](bolts/openai/translation.md)               |
-| 🟧 [Base Fine Tuner](bolts/openai/base.md)                  |                                                                        |                                                             |
+| 🟧 [Base](bolts/openai/base.md)                             |                                                                        |                                                             |
 
 ### ⚡ Data
 
