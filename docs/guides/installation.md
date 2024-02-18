@@ -57,11 +57,12 @@ Replace `<plugin-name>` with the name of the desired plugin.
 
 Available plugins are:
 
-1. geniusrise-huggingface: bolts for huggingface
-2. geniusrise-openai: bolts for openai
-3. geniusrise-listeners: spouts for streaming event listeners
-4. geniusrise-databases: spouts for databases
-5. geniusrise-prompt-actions: spouts for prompt-action chaining
+1. geniusrise-text: bolts for text models
+2. geniusrise-vision: bolts for vision models
+3. geniusrise-audio: bolts for audio models
+4. geniusrise-openai: bolts for openai
+5. geniusrise-listeners: spouts for streaming event listeners
+6. geniusrise-databases: spouts for databases
 
 Please visit [https://github.com/geniusrise](https://github.com/geniusrise) for a complete list of available plugins.
 
@@ -113,7 +114,6 @@ make install # installs in your local venv directory
 
 That's it! You've successfully installed Geniusrise and its plugins. 🎉
 
-
 ## Alternative Methods: TODO 😭
 
 ---
@@ -149,4 +149,3 @@ Coming soon 😢
 #### Nix
 
 Coming soon 😢
-
