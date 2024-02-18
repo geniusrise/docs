@@ -1,3 +1,0 @@
-# Classification
-
-::: classification.HuggingFaceClassificationFineTuner

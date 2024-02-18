@@ -1,3 +1,0 @@
-# Summarization
-
-::: summarization.HuggingFaceSummarizationFineTuner
