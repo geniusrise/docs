@@ -69,7 +69,15 @@ nav:
           - Question Answering: text/fine_tune/question_answering.md
           - Summarization: text/fine_tune/summarization.md
           - Translation: text/fine_tune/translation.md
-      - Text OpenAI Fine-Tuners:
+      - Audio Inference APIs:
+          - Base API: audio/api/base.md
+          - Text to Speech: audio/api/t2s.md
+          - Speech to Text: audio/api/s2t.md
+      - Audio Bulk Inference:
+          - Base: audio/bulk/base.md
+          - Text to Speech: audio/bulk/t2s.md
+          - Speech to Text: audio/bulk/s2t.md
+      - OpenAI Fine-Tuners:
           - Classification: bolts/openai/classification.md
           - NLI: bolts/openai/commonsense_reasoning.md
           - Chat: bolts/openai/instruction_tuning.md
@@ -79,14 +87,6 @@ nav:
           - Sentiment Analysis: bolts/openai/sentiment_analysis.md
           - Summarization: bolts/openai/summarization.md
           - Translation: bolts/openai/translation.md
-      - Audio Inference APIs:
-          - Base API: audio/api/base.md
-          - Text to Speech: audio/api/t2s.md
-          - Speech to Text: audio/api/s2t.md
-      - Audio Bulk Inference:
-          - Base: audio/bulk/base.md
-          - Text to Speech: audio/bulk/t2s.md
-          - Speech to Text: audio/bulk/s2t.md
       - Streaming Sources:
           - Http Polling: listeners/http_polling.md
           - Socket.io: listeners/socket.io.md
