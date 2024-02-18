@@ -10,16 +10,20 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/bolts/huggingface/base/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/audio/api/t2s/">
       
       
+        <link rel="prev" href="../base/">
+      
+      
+        <link rel="next" href="../s2t/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Base Fine Tuner - </title>
+        <title>Text to Speech - </title>
       
     
     
@@ -37,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Fira Code";--md-code-font:"Source Code Pro"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:300,300i,400,400i,700,700i%7CKode+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inconsolata";--md-code-font:"Kode Mono"}</style>
       
     
     
@@ -87,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#base-fine-tuner" class="md-skip">
+        <a href="#text-to-speech" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Base Fine Tuner
+              Text to Speech
             
           </span>
         </div>
@@ -655,16 +659,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
       
       
       
@@ -673,7 +679,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Components
@@ -696,14 +702,14 @@
       
       
         <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
-          Inference APIs
+          Text Inference APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
-          Inference APIs
+          Text Inference APIs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -856,14 +862,265 @@
       
       
         <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
-          Bulk Inference
+          Vision Inference APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_2">
           <span class="md-nav__icon md-icon"></span>
-          Bulk Inference
+          Vision Inference APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vision/api/base/" class="md-nav__link">
+        Base API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vision/api/imgclass/" class="md-nav__link">
+        Image Classsification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vision/api/segment/" class="md-nav__link">
+        Image Segmentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vision/api/ocr/" class="md-nav__link">
+        OCR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vision/api/vqa/" class="md-nav__link">
+        Visual Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          Audio Inference APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Audio Inference APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base/" class="md-nav__link">
+        Base API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Text to Speech
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Text to Speech
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_audio.TextToSpeechAPI" class="md-nav__link">
+    geniusrise_audio.TextToSpeechAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.synthesize" class="md-nav__link">
+    synthesize()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.tts_pipeline" class="md-nav__link">
+    tts_pipeline()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s2t/" class="md-nav__link">
+        Speech to Text
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+          Text Bulk Inference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Text Bulk Inference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1011,21 +1268,111 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
-          Fine-Tuners
+        <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+          Audio Bulk Inference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_5">
           <span class="md-nav__icon md-icon"></span>
-          Fine-Tuners
+          Audio Bulk Inference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bulk/base/" class="md-nav__link">
+        Base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bulk/t2s/" class="md-nav__link">
+        Text to Speech
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bulk/s2t/" class="md-nav__link">
+        Speech to Text
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+          Text Fine-Tuners
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          Text Fine-Tuners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/fine_tune/base/" class="md-nav__link">
+        Base
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1157,17 +1504,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
           OpenAI Fine-Tuners
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_7">
           <span class="md-nav__icon md-icon"></span>
           OpenAI Fine-Tuners
         </label>
@@ -1179,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/classification/" class="md-nav__link">
+      <a href="../../../bolts/openai/classification/" class="md-nav__link">
         Classification
       </a>
     </li>
@@ -1193,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/commonsense_reasoning/" class="md-nav__link">
+      <a href="../../../bolts/openai/commonsense_reasoning/" class="md-nav__link">
         NLI
       </a>
     </li>
@@ -1207,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/instruction_tuning/" class="md-nav__link">
+      <a href="../../../bolts/openai/instruction_tuning/" class="md-nav__link">
         Chat
       </a>
     </li>
@@ -1221,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/language_model/" class="md-nav__link">
+      <a href="../../../bolts/openai/language_model/" class="md-nav__link">
         Language Model
       </a>
     </li>
@@ -1235,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/ner/" class="md-nav__link">
+      <a href="../../../bolts/openai/ner/" class="md-nav__link">
         NER
       </a>
     </li>
@@ -1249,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/question_answering/" class="md-nav__link">
+      <a href="../../../bolts/openai/question_answering/" class="md-nav__link">
         Question Answering
       </a>
     </li>
@@ -1263,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/sentiment_analysis/" class="md-nav__link">
+      <a href="../../../bolts/openai/sentiment_analysis/" class="md-nav__link">
         Sentiment Analysis
       </a>
     </li>
@@ -1277,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/summarization/" class="md-nav__link">
+      <a href="../../../bolts/openai/summarization/" class="md-nav__link">
         Summarization
       </a>
     </li>
@@ -1291,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/translation/" class="md-nav__link">
+      <a href="../../../bolts/openai/translation/" class="md-nav__link">
         Translation
       </a>
     </li>
@@ -1317,17 +1664,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
           Streaming Sources
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_8">
           <span class="md-nav__icon md-icon"></span>
           Streaming Sources
         </label>
@@ -1589,17 +1936,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
           Database Ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_9">
           <span class="md-nav__icon md-icon"></span>
           Database Ingestion
         </label>
@@ -2197,17 +2544,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
           Preprocessing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_10">
           <span class="md-nav__icon md-icon"></span>
           Preprocessing
         </label>
@@ -3020,57 +3367,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner" class="md-nav__link">
-    base.HuggingFaceFineTuner
+  <a href="#geniusrise_audio.TextToSpeechAPI" class="md-nav__link">
+    geniusrise_audio.TextToSpeechAPI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner.__init__" class="md-nav__link">
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.__init__" class="md-nav__link">
     __init__()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner.compute_metrics" class="md-nav__link">
-    compute_metrics()
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.initialize_pipeline" class="md-nav__link">
+    initialize_pipeline()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner.fine_tune" class="md-nav__link">
-    fine_tune()
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.synthesize" class="md-nav__link">
+    synthesize()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner.load_dataset" class="md-nav__link">
-    load_dataset()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner.load_models" class="md-nav__link">
-    load_models()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner.preprocess_data" class="md-nav__link">
-    preprocess_data()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#base.HuggingFaceFineTuner.upload_to_hf_hub" class="md-nav__link">
-    upload_to_hf_hub()
+  <a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.tts_pipeline" class="md-nav__link">
+    tts_pipeline()
   </a>
   
 </li>
@@ -3090,21 +3416,95 @@
                   
 
 
-<h1 id="base-fine-tuner">Base Fine Tuner<a class="headerlink" href="#base-fine-tuner" title="Permanent link">&para;</a></h1>
+<h1 id="text-to-speech">Text to Speech<a class="headerlink" href="#text-to-speech" title="Permanent link">&para;</a></h1>
 
 
 <div class="doc doc-object doc-class">
 
 
-<a id="base.HuggingFaceFineTuner"></a>
+<a id="geniusrise_audio.TextToSpeechAPI"></a>
   <div class="doc doc-contents first">
           <p class="doc doc-class-bases">
-            Bases: <code><span title="geniusrise.Bolt">Bolt</span></code></p>
+            Bases: <code><a class="autorefs autorefs-internal" title="geniusrise_audio.base.AudioAPI" href="../base/#geniusrise_audio.AudioAPI">AudioAPI</a></code></p>
 
   
-      <p>A bolt for fine-tuning Hugging Face models.</p>
-<p>This bolt uses the Hugging Face Transformers library to fine-tune a pre-trained model.
-It uses the <code>Trainer</code> class from the Transformers library to handle the training.</p>
+      <p>TextToSpeechAPI for converting text to speech using various TTS models.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+                <code><span title="transformers.AutoModelForSeq2SeqLM">AutoModelForSeq2SeqLM</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The text-to-speech model.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer</code></td>
+          <td>
+                <code><span title="transformers.AutoTokenizer">AutoTokenizer</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The tokenizer for the model.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="methods" open>
+  <summary>Methods</summary>
+  <p>synthesize(text_input: str) -&gt; bytes:
+    Converts the given text input to speech using the text-to-speech model.</p>
+</details>      <p>Example CLI Usage:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius TextToSpeechAPI rise \
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    batch \
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        --input_s3_bucket geniusrise-test \
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        --input_s3_folder none \
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    batch \
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        --output_s3_bucket geniusrise-test \
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        --output_s3_folder none \
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    postgres \
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        --postgres_host 127.0.0.1 \
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        --postgres_port 5432 \
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        --postgres_user postgres \
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        --postgres_password postgres \
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        --postgres_database geniusrise\
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        --postgres_table state \
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    --id facebook/mms-tts-eng \
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    listen \
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        --args \
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>            model_name=&quot;facebook/mms-tts-eng&quot; \
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            model_class=&quot;VitsModel&quot; \
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>            processor_class=&quot;VitsTokenizer&quot; \
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            use_cuda=True \
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            precision=&quot;float32&quot; \
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>            quantization=0 \
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>            device_map=&quot;cuda:0&quot; \
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>            max_memory=None \
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>            torchscript=False \
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>            compile=False \
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>            endpoint=&quot;*&quot; \
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>            port=3000 \
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            cors_domain=&quot;http://localhost:3000&quot; \
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>            username=&quot;user&quot; \
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>            password=&quot;password&quot;
+</span></code></pre></div>
 
 
   
@@ -3124,15 +3524,15 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 
 
 
-<h2 id="base.HuggingFaceFineTuner.__init__" class="doc doc-heading">
+<h2 id="geniusrise_audio.t2s.api.TextToSpeechAPI.__init__" class="doc doc-heading">
 <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
-<a href="#base.HuggingFaceFineTuner.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Initialize the bolt.</p>
+      <p>Initializes the TextToSpeechAPI with configurations for text-to-speech processing.</p>
 
 
 
@@ -3154,7 +3554,7 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The batch input data.</p>
+              <p>The input data configuration.</p>
             </div>
           </td>
           <td>
@@ -3164,11 +3564,11 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
         <tr>
           <td><code>output</code></td>
           <td>
-                <code>OutputConfig</code>
+                <code><span title="geniusrise.BatchOutput">BatchOutput</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The output data.</p>
+              <p>The output data configuration.</p>
             </div>
           </td>
           <td>
@@ -3182,7 +3582,7 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The state manager.</p>
+              <p>The state configuration.</p>
             </div>
           </td>
           <td>
@@ -3214,45 +3614,35 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 
 
 
-<h2 id="base.HuggingFaceFineTuner.compute_metrics" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">compute_metrics</span><span class="p">(</span><span class="n">eval_pred</span><span class="p">)</span></code>
+<h2 id="geniusrise_audio.t2s.api.TextToSpeechAPI.initialize_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">initialize_pipeline</span><span class="p">()</span></code>
 
-<a href="#base.HuggingFaceFineTuner.compute_metrics" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.initialize_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Compute metrics for evaluation. This class implements a simple classification evaluation, tasks should ideally override this.</p>
+      <p>Lazy initialization of the TTS Hugging Face pipeline.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
 
 
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>eval_pred</code></td>
-          <td>
-                <code><span title="transformers.EvalPrediction">EvalPrediction</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The evaluation predictions.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+<h2 id="geniusrise_audio.t2s.api.TextToSpeechAPI.synthesize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">synthesize</span><span class="p">()</span></code>
+
+<a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.synthesize" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>API endpoint to convert text input to speech using the text-to-speech model.
+Expects a JSON input with 'text' as a key containing the text to be synthesized.</p>
 
 
 
@@ -3260,23 +3650,24 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
   <table>
     <thead>
       <tr>
-<th>Name</th>        <th>Type</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-<td><code>dict</code></td>          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, float]] | <span title="typing.Dict">Dict</span>[str, float]</code>
+          <td>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The computed metrics.</p>
+              <p>Dict[str, str]: A dictionary containing the base64 encoded audio data.</p>
             </div>
           </td>
         </tr>
     </tbody>
   </table>
+      <p>Example CURL Request for synthesis:
+... [Provide example CURL request] ...</p>
 
   </div>
 
@@ -3287,15 +3678,15 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
 
 
 
-<h2 id="base.HuggingFaceFineTuner.fine_tune" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">fine_tune</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">tokenizer_name</span><span class="p">,</span> <span class="n">num_train_epochs</span><span class="p">,</span> <span class="n">per_device_train_batch_size</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">tokenizer_class</span><span class="o">=</span><span class="s1">&#39;AutoTokenizer&#39;</span><span class="p">,</span> <span class="nb">eval</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hf_repo_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_commit_message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hf_private</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hf_create_pr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">data_extractor_lambda</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<h2 id="geniusrise_audio.t2s.api.TextToSpeechAPI.tts_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">tts_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
-<a href="#base.HuggingFaceFineTuner.fine_tune" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#geniusrise_audio.t2s.api.TextToSpeechAPI.tts_pipeline" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Fine-tune the model.</p>
+      <p>Converts text to speech using the Hugging Face pipeline.</p>
 
 
 
@@ -3311,284 +3702,13 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
     </thead>
     <tbody>
         <tr>
-          <td><code>model_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained model name.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pre-trained tokenizer name.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>num_train_epochs</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Total number of training epochs to perform.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>per_device_train_batch_size</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Batch size per device during training.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>model_class</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The model class to use. Defaults to "AutoModel".</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;AutoModel&#39;</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tokenizer_class</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The tokenizer class to use. Defaults to "AutoTokenizer".</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;AutoTokenizer&#39;</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>eval</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to evaluate the model after training. Defaults to False.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>hf_repo_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The Hugging Face repo ID. Defaults to None.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>hf_commit_message</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The Hugging Face commit message. Defaults to None.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>hf_token</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The Hugging Face token. Defaults to None.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>hf_private</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to make the repo private. Defaults to True.</p>
-            </div>
-          </td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>hf_create_pr</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to create a pull request. Defaults to False.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>data_extractor_lambda</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A lambda function run on each data element to extract the actual data.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
           <td><code>**kwargs</code></td>
           <td>
+                <code><span title="typing.Any">Any</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Additional keyword arguments for training.</p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>Exception</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If any step in the fine-tuning process fails.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="base.HuggingFaceFineTuner.load_dataset" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">load_dataset</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
-  </span>
-
-<a href="#base.HuggingFaceFineTuner.load_dataset" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Load a dataset from a file.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>dataset_path</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The path to the dataset file.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional keyword arguments to pass to the <code>load_dataset</code> method.</p>
+              <p>Arbitrary keyword arguments, typically containing 'text' for the input text.</p>
             </div>
           </td>
           <td>
@@ -3604,30 +3724,6 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
   <table>
     <thead>
       <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>Dataset</code></td>          <td>
-                <code><span title="datasets.Dataset">Dataset</span> | <span title="datasets.DatasetDict">DatasetDict</span> | <span title="typing.Optional">Optional</span>[<span title="datasets.Dataset">Dataset</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The loaded dataset.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
         <th>Type</th>
         <th>Description</th>
       </tr>
@@ -3635,73 +3731,18 @@ It uses the <code>Trainer</code> class from the Transformers library to handle t
     <tbody>
         <tr>
           <td>
-                <code>NotImplementedError</code>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>This method should be overridden by subclasses.</p>
+              <p>Dict[str, Any]: A dictionary containing the base64 encoded audio data.</p>
             </div>
           </td>
         </tr>
     </tbody>
   </table>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="base.HuggingFaceFineTuner.load_models" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">load_models</span><span class="p">()</span></code>
-
-<a href="#base.HuggingFaceFineTuner.load_models" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Load the model and tokenizer</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="base.HuggingFaceFineTuner.preprocess_data" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">preprocess_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-<a href="#base.HuggingFaceFineTuner.preprocess_data" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Load and preprocess the dataset</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="base.HuggingFaceFineTuner.upload_to_hf_hub" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">upload_to_hf_hub</span><span class="p">()</span></code>
-
-<a href="#base.HuggingFaceFineTuner.upload_to_hf_hub" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Upload the model and tokenizer to Hugging Face Hub.</p>
+      <p>Example CURL Request for synthesis:
+... [Provide example CURL request] ...</p>
 
   </div>
 

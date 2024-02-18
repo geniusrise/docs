@@ -10,16 +10,20 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/bolts/huggingface/classification/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/vision/api/base/">
       
       
+        <link rel="prev" href="../../../text/api/translation/">
+      
+      
+        <link rel="next" href="../imgclass/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Classification - </title>
+        <title>Base API - </title>
       
     
     
@@ -37,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Fira Code";--md-code-font:"Source Code Pro"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:300,300i,400,400i,700,700i%7CKode+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inconsolata";--md-code-font:"Kode Mono"}</style>
       
     
     
@@ -87,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#classification" class="md-skip">
+        <a href="#vision-base" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Classification
+              Base API
             
           </span>
         </div>
@@ -655,16 +659,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
       
       
       
@@ -673,7 +679,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Components
@@ -696,14 +702,14 @@
       
       
         <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
-          Inference APIs
+          Text Inference APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
-          Inference APIs
+          Text Inference APIs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -844,6 +850,174 @@
               
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          Vision Inference APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Vision Inference APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Base API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Base API
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.VisionAPI" class="md-nav__link">
+    geniusrise_vision.VisionAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.base.api.VisionAPI.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.base.api.VisionAPI.listen" class="md-nav__link">
+    listen()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.base.api.VisionAPI.validate_password" class="md-nav__link">
+    validate_password()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imgclass/" class="md-nav__link">
+        Image Classsification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../segment/" class="md-nav__link">
+        Image Segmentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ocr/" class="md-nav__link">
+        OCR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vqa/" class="md-nav__link">
+        Visual Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     
     <li class="md-nav__item md-nav__item--nested">
@@ -851,19 +1025,95 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
-          Bulk Inference
+        <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          Audio Inference APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_3">
           <span class="md-nav__icon md-icon"></span>
-          Bulk Inference
+          Audio Inference APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/api/base/" class="md-nav__link">
+        Base API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/api/t2s/" class="md-nav__link">
+        Text to Speech
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/api/s2t/" class="md-nav__link">
+        Speech to Text
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+          Text Bulk Inference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Text Bulk Inference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1011,21 +1261,111 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
-          Fine-Tuners
+        <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+          Audio Bulk Inference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_5">
           <span class="md-nav__icon md-icon"></span>
-          Fine-Tuners
+          Audio Bulk Inference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/bulk/base/" class="md-nav__link">
+        Base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/bulk/t2s/" class="md-nav__link">
+        Text to Speech
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/bulk/s2t/" class="md-nav__link">
+        Speech to Text
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+          Text Fine-Tuners
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          Text Fine-Tuners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/fine_tune/base/" class="md-nav__link">
+        Base
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1157,17 +1497,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
           OpenAI Fine-Tuners
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_7">
           <span class="md-nav__icon md-icon"></span>
           OpenAI Fine-Tuners
         </label>
@@ -1179,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/classification/" class="md-nav__link">
+      <a href="../../../bolts/openai/classification/" class="md-nav__link">
         Classification
       </a>
     </li>
@@ -1193,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/commonsense_reasoning/" class="md-nav__link">
+      <a href="../../../bolts/openai/commonsense_reasoning/" class="md-nav__link">
         NLI
       </a>
     </li>
@@ -1207,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/instruction_tuning/" class="md-nav__link">
+      <a href="../../../bolts/openai/instruction_tuning/" class="md-nav__link">
         Chat
       </a>
     </li>
@@ -1221,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/language_model/" class="md-nav__link">
+      <a href="../../../bolts/openai/language_model/" class="md-nav__link">
         Language Model
       </a>
     </li>
@@ -1235,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/ner/" class="md-nav__link">
+      <a href="../../../bolts/openai/ner/" class="md-nav__link">
         NER
       </a>
     </li>
@@ -1249,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/question_answering/" class="md-nav__link">
+      <a href="../../../bolts/openai/question_answering/" class="md-nav__link">
         Question Answering
       </a>
     </li>
@@ -1263,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/sentiment_analysis/" class="md-nav__link">
+      <a href="../../../bolts/openai/sentiment_analysis/" class="md-nav__link">
         Sentiment Analysis
       </a>
     </li>
@@ -1277,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/summarization/" class="md-nav__link">
+      <a href="../../../bolts/openai/summarization/" class="md-nav__link">
         Summarization
       </a>
     </li>
@@ -1291,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/translation/" class="md-nav__link">
+      <a href="../../../bolts/openai/translation/" class="md-nav__link">
         Translation
       </a>
     </li>
@@ -1317,17 +1657,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
           Streaming Sources
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_8">
           <span class="md-nav__icon md-icon"></span>
           Streaming Sources
         </label>
@@ -1589,17 +1929,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
           Database Ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_9">
           <span class="md-nav__icon md-icon"></span>
           Database Ingestion
         </label>
@@ -2197,17 +2537,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
           Preprocessing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_10">
           <span class="md-nav__icon md-icon"></span>
           Preprocessing
         </label>
@@ -3020,105 +3360,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner" class="md-nav__link">
-    classification.HuggingFaceClassificationFineTuner
+  <a href="#geniusrise_vision.VisionAPI" class="md-nav__link">
+    geniusrise_vision.VisionAPI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset" class="md-nav__link">
-    load_dataset()
-  </a>
-  
-    <nav class="md-nav" aria-label="load_dataset()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--supported-data-formats-and-structures" class="md-nav__link">
-    Supported Data Formats and Structures:
-  </a>
-  
-    <nav class="md-nav" aria-label="Supported Data Formats and Structures:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--jsonl" class="md-nav__link">
-    JSONL
+  <a href="#geniusrise_vision.base.api.VisionAPI.__init__" class="md-nav__link">
+    __init__()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--csv" class="md-nav__link">
-    CSV
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.base.api.VisionAPI.listen" class="md-nav__link">
+    listen()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--parquet" class="md-nav__link">
-    Parquet
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.base.api.VisionAPI.validate_password" class="md-nav__link">
+    validate_password()
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--json" class="md-nav__link">
-    JSON
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--xml" class="md-nav__link">
-    XML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--yaml" class="md-nav__link">
-    YAML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--tsv" class="md-nav__link">
-    TSV
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--excel-xls-xlsx" class="md-nav__link">
-    Excel (.xls, .xlsx)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--sqlite-db" class="md-nav__link">
-    SQLite (.db)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#classification.HuggingFaceClassificationFineTuner.load_dataset--feather" class="md-nav__link">
-    Feather
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3137,138 +3402,22 @@
                   
 
 
-<h1 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h1>
+<h1 id="vision-base">Vision Base<a class="headerlink" href="#vision-base" title="Permanent link">&para;</a></h1>
 
 
 <div class="doc doc-object doc-class">
 
 
-<a id="classification.HuggingFaceClassificationFineTuner"></a>
+<a id="geniusrise_vision.VisionAPI"></a>
   <div class="doc doc-contents first">
           <p class="doc doc-class-bases">
-            Bases: <code><span title="geniusrise_huggingface.base.HuggingFaceFineTuner">HuggingFaceFineTuner</span></code></p>
+            Bases: <code><span title="geniusrise_vision.base.bulk.VisionBulk">VisionBulk</span></code></p>
 
   
-      <p>A bolt for fine-tuning Hugging Face models for text classification tasks.</p>
-<p>This class extends the <code>HuggingFaceFineTuner</code> and specializes in fine-tuning models for text classification.
-It provides additional functionalities for loading and preprocessing text classification datasets in various formats.</p>
+      <p>The VisionAPI class inherits from VisionBulk and is designed to facilitate
+the handling of vision-based tasks using a pre-trained machine learning model.
+It sets up a server to process image-related requests using a specified model.</p>
 
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>input</code></td>
-          <td>
-                <code>BatchInput</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The batch input data.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>output</code></td>
-          <td>
-                <code>OutputConfig</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The output data.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>state</code></td>
-          <td>
-                <code>State</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The state manager.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-      <p>CLI Usage:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span>genius<span class="w"> </span>HuggingFaceClassificationFineTuner<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span>batch<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span>--input_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span>--input_s3_folder<span class="w"> </span>train<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span>batch<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span>--output_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span>--output_s3_folder<span class="w"> </span>model<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span>fine_tune<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span>--args<span class="w"> </span><span class="nv">model_name</span><span class="o">=</span>my_model<span class="w"> </span><span class="nv">tokenizer_name</span><span class="o">=</span>my_tokenizer<span class="w"> </span><span class="nv">num_train_epochs</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="nv">per_device_train_batch_size</span><span class="o">=</span><span class="m">8</span><span class="w"> </span><span class="nv">data_max_length</span><span class="o">=</span><span class="m">512</span>
-</span></code></pre></div>
-<p>YAML Configuration:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">bolts</span><span class="p">:</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">my_fine_tuner</span><span class="p">:</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HuggingFaceClassificationFineTuner&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fine_tune&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_model&quot;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                </span><span class="nt">tokenizer_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_tokenizer&quot;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                </span><span class="nt">num_train_epochs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                </span><span class="nt">per_device_train_batch_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">                </span><span class="nt">data_max_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nt">input</span><span class="p">:</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;batch&quot;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                    </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_bucket&quot;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                    </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_dataset&quot;</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="nt">output</span><span class="p">:</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;batch&quot;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">                    </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_bucket&quot;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">                    </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_model&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">            </span><span class="nt">deploy</span><span class="p">:</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">                </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">                    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deployment</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">                    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_fine_tuner</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">                    </span><span class="nt">context_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">                    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geniusrise</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">                    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geniusrise/geniusrise</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">                    </span><span class="nt">kube_config_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.kube/config</span>
-</span></code></pre></div>
-
-<details class="supported-data-formats" open>
-  <summary>Supported Data Formats</summary>
-  <ul>
-<li>JSONL</li>
-<li>CSV</li>
-<li>Parquet</li>
-<li>JSON</li>
-<li>XML</li>
-<li>YAML</li>
-<li>TSV</li>
-<li>Excel (.xls, .xlsx)</li>
-<li>SQLite (.db)</li>
-<li>Feather</li>
-</ul>
-</details>
 
   
 
@@ -3287,15 +3436,15 @@ It provides additional functionalities for loading and preprocessing text classi
 
 
 
-<h2 id="classification.HuggingFaceClassificationFineTuner.load_dataset" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">load_dataset</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<h2 id="geniusrise_vision.base.api.VisionAPI.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span></code>
 
-<a href="#classification.HuggingFaceClassificationFineTuner.load_dataset" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#geniusrise_vision.base.api.VisionAPI.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Load a classification dataset from a directory.</p>
+      <p>Initializes the VisionAPI object with batch input, output, and state.</p>
 
 
 
@@ -3311,13 +3460,13 @@ It provides additional functionalities for loading and preprocessing text classi
     </thead>
     <tbody>
         <tr>
-          <td><code>dataset_path</code></td>
+          <td><code>input</code></td>
           <td>
-                <code>str</code>
+                <code><span title="geniusrise.BatchInput">BatchInput</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The path to the dataset directory.</p>
+              <p>Object to handle batch input operations.</p>
             </div>
           </td>
           <td>
@@ -3325,17 +3474,381 @@ It provides additional functionalities for loading and preprocessing text classi
           </td>
         </tr>
         <tr>
-          <td><code>max_length</code></td>
+          <td><code>output</code></td>
+          <td>
+                <code><span title="geniusrise.BatchOutput">BatchOutput</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Object to handle batch output operations.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state</code></td>
+          <td>
+                <code><span title="geniusrise.State">State</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Object to maintain the state of the API.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_vision.base.api.VisionAPI.listen" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">listen</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">processor_class</span><span class="o">=</span><span class="s1">&#39;AutoProcessor&#39;</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flash_attention</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">better_transformers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">cors_domain</span><span class="o">=</span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
+
+<a href="#geniusrise_vision.base.api.VisionAPI.listen" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Configures and starts a CherryPy server to listen for image processing requests.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the pre-trained vision model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>model_class</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The class of the pre-trained vision model. Defaults to "AutoModel".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;AutoModel&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>processor_class</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The class of the processor for input image preprocessing. Defaults to "AutoProcessor".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;AutoProcessor&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>device_map</code></td>
+          <td>
+                <code>str | <span title="typing.Dict">Dict</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Device mapping for model inference. Defaults to "auto".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_memory</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[int, str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum memory allocation for model inference. Defaults to {0: "24GB"}.</p>
+            </div>
+          </td>
+          <td>
+                <code>{0: &#39;24GB&#39;}</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>precision</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The floating-point precision to be used by the model. Options are 'float32', 'float16', 'bfloat16'.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;float16&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>quantization</code></td>
           <td>
                 <code>int</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The maximum length for tokenization. Defaults to 512.</p>
+              <p>The bit level for model quantization (0 for none, 8 for 8-bit quantization).</p>
             </div>
           </td>
           <td>
-                <code>512</code>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>torchscript</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use TorchScript for model optimization. Defaults to True.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>compile</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to compile the model before fine-tuning. Defaults to False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>flash_attention</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use flash attention 2. Default is False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>better_transformers</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Flag to enable Better Transformers optimization for faster processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>endpoint</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The network endpoint for the server. Defaults to "*".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;*&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>port</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The network port for the server. Defaults to 3000.</p>
+            </div>
+          </td>
+          <td>
+                <code>3000</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cors_domain</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The domain to allow for CORS requests. Defaults to "http://localhost:3000".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;http://localhost:3000&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>username</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Username for server authentication. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>password</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Password for server authentication. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**model_args</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional arguments for the vision model.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_vision.base.api.VisionAPI.validate_password" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validate_password</span><span class="p">(</span><span class="n">realm</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span></code>
+
+<a href="#geniusrise_vision.base.api.VisionAPI.validate_password" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Validate the username and password against expected values.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>realm</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The authentication realm.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>username</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The provided username.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>password</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The provided password.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
@@ -3353,77 +3866,16 @@ It provides additional functionalities for loading and preprocessing text classi
     </thead>
     <tbody>
         <tr>
-<td><code>Dataset</code></td>          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="datasets.Dataset">Dataset</span>]</code>
+<td><code>bool</code></td>          <td>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The loaded dataset.</p>
+              <p>True if credentials are valid, False otherwise.</p>
             </div>
           </td>
         </tr>
     </tbody>
   </table>
-
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>Exception</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If there was an error loading the dataset.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-      <h4 id="classification.HuggingFaceClassificationFineTuner.load_dataset--supported-data-formats-and-structures">Supported Data Formats and Structures:<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--supported-data-formats-and-structures" title="Permanent link">&para;</a></h4>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--jsonl">JSONL<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--jsonl" title="Permanent link">&para;</a></h5>
-<p>Each line is a JSON object representing an example.
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The text content&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The label&quot;</span><span class="p">}</span>
-</span></code></pre></div></p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--csv">CSV<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--csv" title="Permanent link">&para;</a></h5>
-<p>Should contain 'text' and 'label' columns.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>text,label
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;The text content&quot;,&quot;The label&quot;
-</span></code></pre></div></p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--parquet">Parquet<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--parquet" title="Permanent link">&para;</a></h5>
-<p>Should contain 'text' and 'label' columns.</p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--json">JSON<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--json" title="Permanent link">&para;</a></h5>
-<p>An array of dictionaries with 'text' and 'label' keys.
-<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">[{</span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The text content&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The label&quot;</span><span class="p">}]</span>
-</span></code></pre></div></p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--xml">XML<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--xml" title="Permanent link">&para;</a></h5>
-<p>Each 'record' element should contain 'text' and 'label' child elements.
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;record&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nt">&lt;text&gt;</span>The<span class="w"> </span>text<span class="w"> </span>content<span class="nt">&lt;/text&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&lt;label&gt;</span>The<span class="w"> </span>label<span class="nt">&lt;/label&gt;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nt">&lt;/record&gt;</span>
-</span></code></pre></div></p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--yaml">YAML<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--yaml" title="Permanent link">&para;</a></h5>
-<p>Each document should be a dictionary with 'text' and 'label' keys.
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">content&quot;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">label&quot;</span>
-</span></code></pre></div></p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--tsv">TSV<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--tsv" title="Permanent link">&para;</a></h5>
-<p>Should contain 'text' and 'label' columns separated by tabs.</p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--excel-xls-xlsx">Excel (.xls, .xlsx)<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--excel-xls-xlsx" title="Permanent link">&para;</a></h5>
-<p>Should contain 'text' and 'label' columns.</p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--sqlite-db">SQLite (.db)<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--sqlite-db" title="Permanent link">&para;</a></h5>
-<p>Should contain a table with 'text' and 'label' columns.</p>
-<h5 id="classification.HuggingFaceClassificationFineTuner.load_dataset--feather">Feather<a class="headerlink" href="#classification.HuggingFaceClassificationFineTuner.load_dataset--feather" title="Permanent link">&para;</a></h5>
-<p>Should contain 'text' and 'label' columns.</p>
 
   </div>
 

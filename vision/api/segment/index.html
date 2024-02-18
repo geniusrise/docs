@@ -10,16 +10,20 @@
         <meta name="author" content="ixaxaar">
       
       
-        <link rel="canonical" href="https://docs.geniusrise.ai/bolts/huggingface/ner/">
+        <link rel="canonical" href="https://docs.geniusrise.ai/vision/api/segment/">
       
       
+        <link rel="prev" href="../imgclass/">
+      
+      
+        <link rel="next" href="../ocr/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Named Entity Recognition - </title>
+        <title>Image Segmentation - </title>
       
     
     
@@ -37,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Fira Code";--md-code-font:"Source Code Pro"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:300,300i,400,400i,700,700i%7CKode+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inconsolata";--md-code-font:"Kode Mono"}</style>
       
     
     
@@ -87,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#named-entity-recognition" class="md-skip">
+        <a href="#image-segmentation-api" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Named Entity Recognition
+              Image Segmentation
             
           </span>
         </div>
@@ -655,16 +659,18 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
       
       
       
@@ -673,7 +679,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Components
@@ -696,14 +702,14 @@
       
       
         <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
-          Inference APIs
+          Text Inference APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
-          Inference APIs
+          Text Inference APIs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -844,6 +850,167 @@
               
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          Vision Inference APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Vision Inference APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base/" class="md-nav__link">
+        Base API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imgclass/" class="md-nav__link">
+        Image Classsification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Image Segmentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Image Segmentation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.VisionSegmentationAPI" class="md-nav__link">
+    geniusrise_vision.VisionSegmentationAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.segment.api.VisionSegmentationAPI.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_vision.segment.api.VisionSegmentationAPI.segment_image" class="md-nav__link">
+    segment_image()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ocr/" class="md-nav__link">
+        OCR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vqa/" class="md-nav__link">
+        Visual Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     
     <li class="md-nav__item md-nav__item--nested">
@@ -851,19 +1018,95 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
-          Bulk Inference
+        <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          Audio Inference APIs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_3">
           <span class="md-nav__icon md-icon"></span>
-          Bulk Inference
+          Audio Inference APIs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/api/base/" class="md-nav__link">
+        Base API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/api/t2s/" class="md-nav__link">
+        Text to Speech
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/api/s2t/" class="md-nav__link">
+        Speech to Text
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+          Text Bulk Inference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Text Bulk Inference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1011,21 +1254,111 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
-          Fine-Tuners
+        <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+          Audio Bulk Inference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_5">
           <span class="md-nav__icon md-icon"></span>
-          Fine-Tuners
+          Audio Bulk Inference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/bulk/base/" class="md-nav__link">
+        Base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/bulk/t2s/" class="md-nav__link">
+        Text to Speech
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../audio/bulk/s2t/" class="md-nav__link">
+        Speech to Text
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+          Text Fine-Tuners
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          Text Fine-Tuners
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/fine_tune/base/" class="md-nav__link">
+        Base
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1157,17 +1490,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
           OpenAI Fine-Tuners
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_7">
           <span class="md-nav__icon md-icon"></span>
           OpenAI Fine-Tuners
         </label>
@@ -1179,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/classification/" class="md-nav__link">
+      <a href="../../../bolts/openai/classification/" class="md-nav__link">
         Classification
       </a>
     </li>
@@ -1193,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/commonsense_reasoning/" class="md-nav__link">
+      <a href="../../../bolts/openai/commonsense_reasoning/" class="md-nav__link">
         NLI
       </a>
     </li>
@@ -1207,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/instruction_tuning/" class="md-nav__link">
+      <a href="../../../bolts/openai/instruction_tuning/" class="md-nav__link">
         Chat
       </a>
     </li>
@@ -1221,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/language_model/" class="md-nav__link">
+      <a href="../../../bolts/openai/language_model/" class="md-nav__link">
         Language Model
       </a>
     </li>
@@ -1235,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/ner/" class="md-nav__link">
+      <a href="../../../bolts/openai/ner/" class="md-nav__link">
         NER
       </a>
     </li>
@@ -1249,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/question_answering/" class="md-nav__link">
+      <a href="../../../bolts/openai/question_answering/" class="md-nav__link">
         Question Answering
       </a>
     </li>
@@ -1263,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/sentiment_analysis/" class="md-nav__link">
+      <a href="../../../bolts/openai/sentiment_analysis/" class="md-nav__link">
         Sentiment Analysis
       </a>
     </li>
@@ -1277,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/summarization/" class="md-nav__link">
+      <a href="../../../bolts/openai/summarization/" class="md-nav__link">
         Summarization
       </a>
     </li>
@@ -1291,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openai/translation/" class="md-nav__link">
+      <a href="../../../bolts/openai/translation/" class="md-nav__link">
         Translation
       </a>
     </li>
@@ -1317,17 +1650,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
           Streaming Sources
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_8">
           <span class="md-nav__icon md-icon"></span>
           Streaming Sources
         </label>
@@ -1589,17 +1922,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
           Database Ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_9">
           <span class="md-nav__icon md-icon"></span>
           Database Ingestion
         </label>
@@ -2197,17 +2530,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
           Preprocessing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8_10">
           <span class="md-nav__icon md-icon"></span>
           Preprocessing
         </label>
@@ -3020,125 +3353,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner" class="md-nav__link">
-    ner.HuggingFaceNamedEntityRecognitionFineTuner
+  <a href="#geniusrise_vision.VisionSegmentationAPI" class="md-nav__link">
+    geniusrise_vision.VisionSegmentationAPI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.data_collator" class="md-nav__link">
-    data_collator()
+  <a href="#geniusrise_vision.segment.api.VisionSegmentationAPI.__init__" class="md-nav__link">
+    __init__()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset" class="md-nav__link">
-    load_dataset()
-  </a>
-  
-    <nav class="md-nav" aria-label="load_dataset()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--supported-data-formats-and-structures" class="md-nav__link">
-    Supported Data Formats and Structures:
-  </a>
-  
-    <nav class="md-nav" aria-label="Supported Data Formats and Structures:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--hugging-face-dataset" class="md-nav__link">
-    Hugging Face Dataset
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--jsonl" class="md-nav__link">
-    JSONL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--csv" class="md-nav__link">
-    CSV
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--parquet" class="md-nav__link">
-    Parquet
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--json" class="md-nav__link">
-    JSON
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--xml" class="md-nav__link">
-    XML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--yaml" class="md-nav__link">
-    YAML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--tsv" class="md-nav__link">
-    TSV
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--excel-xls-xlsx" class="md-nav__link">
-    Excel (.xls, .xlsx)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--sqlite-db" class="md-nav__link">
-    SQLite (.db)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--feather" class="md-nav__link">
-    Feather
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.prepare_train_features" class="md-nav__link">
-    prepare_train_features()
+  <a href="#geniusrise_vision.segment.api.VisionSegmentationAPI.segment_image" class="md-nav__link">
+    segment_image()
   </a>
   
 </li>
@@ -3158,136 +3388,61 @@
                   
 
 
-<h1 id="named-entity-recognition">Named Entity Recognition<a class="headerlink" href="#named-entity-recognition" title="Permanent link">&para;</a></h1>
+<h1 id="image-segmentation-api">Image Segmentation API<a class="headerlink" href="#image-segmentation-api" title="Permanent link">&para;</a></h1>
 
 
 <div class="doc doc-object doc-class">
 
 
-<a id="ner.HuggingFaceNamedEntityRecognitionFineTuner"></a>
+<a id="geniusrise_vision.VisionSegmentationAPI"></a>
   <div class="doc doc-contents first">
           <p class="doc doc-class-bases">
-            Bases: <code><span title="geniusrise_huggingface.base.HuggingFaceFineTuner">HuggingFaceFineTuner</span></code></p>
+            Bases: <code><a class="autorefs autorefs-internal" title="geniusrise_vision.base.VisionAPI" href="../base/#geniusrise_vision.VisionAPI">VisionAPI</a></code></p>
 
   
-      <p>A bolt for fine-tuning Hugging Face models on named entity recognition tasks.</p>
+      <p>VisionSegmentationAPI extends VisionAPI to provide image segmentation functionalities, including panoptic,
+instance, and semantic segmentation. This API supports different segmentation tasks based on the model's
+capabilities and the specified subtask in the request.</p>
 
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>input</code></td>
-          <td>
-                <code>BatchInput</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The batch input data.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>output</code></td>
-          <td>
-                <code>OutputConfig</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The output data.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>state</code></td>
-          <td>
-                <code>State</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The state manager.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-      <p>CLI Usage:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span>genius<span class="w"> </span>HuggingFaceNamedEntityRecognitionFineTuner<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span>batch<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span>--input_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span>--input_s3_folder<span class="w"> </span>train<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span>batch<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span>--output_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span>--output_s3_folder<span class="w"> </span>model<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span>fine_tune<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span>--args<span class="w"> </span><span class="nv">model_name</span><span class="o">=</span>my_model<span class="w"> </span><span class="nv">tokenizer_name</span><span class="o">=</span>my_tokenizer<span class="w"> </span><span class="nv">num_train_epochs</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="nv">per_device_train_batch_size</span><span class="o">=</span><span class="m">8</span>
-</span></code></pre></div>
-<p>YAML Configuration:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">bolts</span><span class="p">:</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">my_fine_tuner</span><span class="p">:</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HuggingFaceNamedEntityRecognitionFineTuner&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;fine_tune&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_model&quot;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                </span><span class="nt">tokenizer_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_tokenizer&quot;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                </span><span class="nt">num_train_epochs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                </span><span class="nt">per_device_train_batch_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">                </span><span class="nt">data_max_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nt">input</span><span class="p">:</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;batch&quot;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                    </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_bucket&quot;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                    </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_dataset&quot;</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="nt">output</span><span class="p">:</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;batch&quot;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">                    </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_bucket&quot;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">                    </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my_model&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">            </span><span class="nt">deploy</span><span class="p">:</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">                </span><span class="nt">args</span><span class="p">:</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">                    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deployment</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">                    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_fine_tuner</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">                    </span><span class="nt">context_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arn:aws:eks:us-east-1:genius-dev:cluster/geniusrise-dev</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">                    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geniusrise</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">                    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geniusrise/geniusrise</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">                    </span><span class="nt">kube_config_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.kube/config</span>
+<details class="methods" open>
+  <summary>Methods</summary>
+  <p>segment_image(self): Processes an image for segmentation and returns the segmentation masks along with labels.</p>
+</details>      <p>Example CLI Usage:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>genius<span class="w"> </span>VisionSegmentationAPI<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span>--input_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span>--input_s3_folder<span class="w"> </span>none<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span>--output_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span>--output_s3_folder<span class="w"> </span>none<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span>postgres<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span>--postgres_host<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span>--postgres_port<span class="w"> </span><span class="m">5432</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span>--postgres_user<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span>--postgres_password<span class="w"> </span>postgres<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span>--postgres_database<span class="w"> </span>geniusrise<span class="se">\</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span>--postgres_table<span class="w"> </span>state<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span>listen<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span>--args<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="nv">model_name</span><span class="o">=</span><span class="s2">&quot;facebook/mask2former-swin-large-mapillary-vistas-semantic&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="nv">model_class</span><span class="o">=</span><span class="s2">&quot;Mask2FormerForUniversalSegmentation&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="nv">processor_class</span><span class="o">=</span><span class="s2">&quot;AutoImageProcessor&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span><span class="nv">device_map</span><span class="o">=</span><span class="s2">&quot;cuda:0&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="nv">use_cuda</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">            </span><span class="nv">precision</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">            </span><span class="nv">quantization</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="nv">max_memory</span><span class="o">=</span>None<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">            </span><span class="nv">torchscript</span><span class="o">=</span>False<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="nv">compile</span><span class="o">=</span>False<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">            </span><span class="nv">flash_attention</span><span class="o">=</span>False<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="nv">better_transformers</span><span class="o">=</span>False<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">            </span><span class="nv">endpoint</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">            </span><span class="nv">port</span><span class="o">=</span><span class="m">3000</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">            </span><span class="nv">cors_domain</span><span class="o">=</span><span class="s2">&quot;http://localhost:3000&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">            </span><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">            </span><span class="nv">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span>
 </span></code></pre></div>
 
-<details class="supported-data-formats" open>
-  <summary>Supported Data Formats</summary>
-  <ul>
-<li>JSONL</li>
-<li>CSV</li>
-<li>Parquet</li>
-<li>JSON</li>
-<li>XML</li>
-<li>YAML</li>
-<li>TSV</li>
-<li>Excel (.xls, .xlsx)</li>
-<li>SQLite (.db)</li>
-<li>Feather</li>
-</ul>
-</details>
 
   
 
@@ -3306,15 +3461,16 @@
 
 
 
-<h2 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.data_collator" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">data_collator</span><span class="p">(</span><span class="n">examples</span><span class="p">)</span></code>
+<h2 id="geniusrise_vision.segment.api.VisionSegmentationAPI.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
-<a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.data_collator" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#geniusrise_vision.segment.api.VisionSegmentationAPI.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Customize the data collator.</p>
+      <p>Initializes the VisionSegmentationAPI with configurations for input, output, and state management, along
+with any model-specific parameters for segmentation tasks.</p>
 
 
 
@@ -3330,41 +3486,58 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>examples</code></td>
+          <td><code>input</code></td>
           <td>
-                <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, torch.<span title="torch.Tensor">Tensor</span>]]</code>
+                <code><span title="geniusrise.BatchInput">BatchInput</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The examples to collate.</p>
+              <p>Configuration for the input data.</p>
             </div>
           </td>
           <td>
               <em>required</em>
           </td>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
         <tr>
+          <td><code>output</code></td>
           <td>
-                <code><span title="typing.Dict">Dict</span>[str, torch.<span title="torch.Tensor">Tensor</span>]</code>
+                <code><span title="geniusrise.BatchOutput">BatchOutput</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Dict[str, torch.Tensor]: The collated data.</p>
+              <p>Configuration for the output data.</p>
             </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>state</code></td>
+          <td>
+                <code><span title="geniusrise.State">State</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>State management for the API.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments for extended functionality.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
           </td>
         </tr>
     </tbody>
@@ -3379,59 +3552,19 @@
 
 
 
-<h2 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">load_dataset</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">,</span> <span class="n">label_list</span><span class="o">=</span><span class="p">[],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<h2 id="geniusrise_vision.segment.api.VisionSegmentationAPI.segment_image" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">segment_image</span><span class="p">()</span></code>
 
-<a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#geniusrise_vision.segment.api.VisionSegmentationAPI.segment_image" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Load a named entity recognition dataset from a directory.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>dataset_path</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The path to the dataset directory.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>label_list</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of labels for named entity recognition. Defaults to [].</p>
-            </div>
-          </td>
-          <td>
-                <code>[]</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      <p>Endpoint for segmenting an image according to the specified subtask (panoptic, instance, or semantic segmentation).
+It decodes the base64-encoded image, processes it through the model, and returns the segmentation masks along with
+labels and scores (if applicable) in base64 format.</p>
+<p>The method supports dynamic task inputs for models requiring specific task descriptions and applies different
+post-processing techniques based on the subtask.</p>
 
 
 
@@ -3439,18 +3572,28 @@
   <table>
     <thead>
       <tr>
-<th>Name</th>        <th>Type</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-<td><code>DatasetDict</code></td>          <td>
-                <code><span title="typing.Union">Union</span>[<span title="datasets.Dataset">Dataset</span>, <span title="datasets.DatasetDict">DatasetDict</span>, None]</code>
+          <td>
+                <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The loaded dataset.</p>
+              <p>List[Dict[str, Any]]: A list of dictionaries where each dictionary contains a 'label', a 'score' (if applicable),</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>and a 'mask' (base64-encoded image of the segmentation mask).</p>
             </div>
           </td>
         </tr>
@@ -3474,123 +3617,19 @@
           </td>
           <td>
             <div class="doc-md-description">
-              <p>If there was an error loading the dataset.</p>
+              <p>If an error occurs during image processing or segmentation.</p>
             </div>
           </td>
         </tr>
     </tbody>
   </table>
-      <h4 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--supported-data-formats-and-structures">Supported Data Formats and Structures:<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--supported-data-formats-and-structures" title="Permanent link">&para;</a></h4>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--hugging-face-dataset">Hugging Face Dataset<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--hugging-face-dataset" title="Permanent link">&para;</a></h5>
-<p>Dataset files saved by the Hugging Face datasets library.</p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--jsonl">JSONL<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--jsonl" title="Permanent link">&para;</a></h5>
-<p>Each line is a JSON object representing an example.
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="nt">&quot;tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;token1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;token2&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;ner_tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="p">]}</span>
+      <p>Example CURL Request:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>localhost:3000/api/v1/segment_image<span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;image_base64&quot;: &quot;&lt;base64-encoded-image&gt;&quot;, &quot;subtask&quot;: &quot;panoptic&quot;}&#39;</span>
 </span></code></pre></div></p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--csv">CSV<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--csv" title="Permanent link">&para;</a></h5>
-<p>Should contain 'tokens' and 'ner_tags' columns.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tokens,ner_tags
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&quot;[&#39;token1&#39;, &#39;token2&#39;, ...]&quot;, &quot;[0, 1, ...]&quot;
-</span></code></pre></div></p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--parquet">Parquet<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--parquet" title="Permanent link">&para;</a></h5>
-<p>Should contain 'tokens' and 'ner_tags' columns.</p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--json">JSON<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--json" title="Permanent link">&para;</a></h5>
-<p>An array of dictionaries with 'tokens' and 'ner_tags' keys.
-<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">[{</span><span class="nt">&quot;tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;token1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;token2&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;ner_tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="p">]}]</span>
-</span></code></pre></div></p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--xml">XML<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--xml" title="Permanent link">&para;</a></h5>
-<p>Each 'record' element should contain 'tokens' and 'ner_tags' child elements.
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;record&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nt">&lt;tokens&gt;</span>token1<span class="w"> </span>token2<span class="w"> </span>...<span class="nt">&lt;/tokens&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&lt;ner_tags&gt;</span>0<span class="w"> </span>1<span class="w"> </span>...<span class="nt">&lt;/ner_tags&gt;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nt">&lt;/record&gt;</span>
-</span></code></pre></div></p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--yaml">YAML<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--yaml" title="Permanent link">&para;</a></h5>
-<p>Each document should be a dictionary with 'tokens' and 'ner_tags' keys.
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">tokens</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;token1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;token2&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">...</span><span class="p p-Indicator">]</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">ner_tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">...</span><span class="p p-Indicator">]</span>
-</span></code></pre></div></p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--tsv">TSV<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--tsv" title="Permanent link">&para;</a></h5>
-<p>Should contain 'tokens' and 'ner_tags' columns separated by tabs.</p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--excel-xls-xlsx">Excel (.xls, .xlsx)<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--excel-xls-xlsx" title="Permanent link">&para;</a></h5>
-<p>Should contain 'tokens' and 'ner_tags' columns.</p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--sqlite-db">SQLite (.db)<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--sqlite-db" title="Permanent link">&para;</a></h5>
-<p>Should contain a table with 'tokens' and 'ner_tags' columns.</p>
-<h5 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--feather">Feather<a class="headerlink" href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.load_dataset--feather" title="Permanent link">&para;</a></h5>
-<p>Should contain 'tokens' and 'ner_tags' columns.</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="ner.HuggingFaceNamedEntityRecognitionFineTuner.prepare_train_features" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">prepare_train_features</span><span class="p">(</span><span class="n">examples</span><span class="p">)</span></code>
-
-<a href="#ner.HuggingFaceNamedEntityRecognitionFineTuner.prepare_train_features" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Tokenize the examples and prepare the features for training.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>examples</code></td>
-          <td>
-                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Union">Union</span>[<span title="typing.List">List</span>[str], <span title="typing.List">List</span>[int]]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary of examples.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Union">Union</span>[<span title="typing.List">List</span>[str], <span title="typing.List">List</span>[int]]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Dict[str, Union[List[str], List[int]]]: The processed features.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+<p>or to save all masks:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">(</span>base64<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span><span class="w"> </span>guy.jpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print &quot;{&quot;image_base64&quot;: &quot;&quot;$0&quot;&quot;, &quot;subtask&quot;: &quot;semantic&quot;}&quot;}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/image_payload.json<span class="o">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:3000/api/v1/segment_image<span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-u<span class="w"> </span>user:password<span class="w">             </span>-d<span class="w"> </span>@/tmp/image_payload.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.[] | .mask + &quot; &quot; + .label&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>mask<span class="w"> </span>label<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$mask</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">label</span><span class="si">}</span><span class="s2">.jpg&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
 
   </div>
 
