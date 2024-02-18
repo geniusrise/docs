@@ -8,7 +8,18 @@ Geniusrise is a modular, loosely-coupled AI-Ops framework.
 
 It can be used to perform various tasks, including hosting inference endpoints, performing bulk inference, fine tune etc with open source models or closed source APIs.
 
-The modular ecosystem aims to provide a layer of abstraction over the myriad of tools, parameters and optimizations underlying the operationalization of modern AI models.
+- **The framework** provides structure for modules and operates and orchestrates them.
+- **The modular ecosystem** provides a layer of abstraction over the myriad of models, libraries, tools, parameters and optimizations underlying the operationalization of modern AI models.
+
+Together the framework and ecosystem can be used for:
+
+1. **Rapid prototyping** by hosting APIs on a wide range of models
+    - Host and experiment on local and iterate fast
+    - Deploy on kubernetes to production
+2. Building **AI-side components** using the framework
+    - Build complex AI microservices using multiple models
+    - Iterate fast from development to production
+    - Manage, scale and monitor deployments in production
 
 ## Guides
 
