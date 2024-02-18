@@ -51,7 +51,7 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 
 ### 🤖 Models
 
-#### Inference APIs
+#### Text Inference APIs
 
 | 🌐 **Local & Huggingface**                              |                                                                    |                                                         |
 | ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
@@ -60,7 +60,7 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 | 🔵 [Classification](text/api/classification.md)         | 🔴 [Natural Language Inference](text/api/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/api/instruction_tuning.md) |
 | 🟧 [Base](text/api/base.md)                             |                                                                    |                                                         |
 
-#### Bulk Inference
+#### Text Bulk Inference
 
 | 🌐 **Local & Huggingface**                               |                                                                     |                                                          |
 | -------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -69,7 +69,7 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 | 🔵 [Classification](text/bulk/classification.md)         | 🔴 [Natural Language Inference](text/bulk/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/bulk/instruction_tuning.md) |
 | 🟧 [Base](text/bulk/base.md)                             |                                                                     |                                                          |
 
-#### Fine-tuning
+#### Text Fine-tuning
 
 | 🌐 **Local & Huggingface**                                    |                                                                          |                                                               |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------- |
@@ -84,6 +84,18 @@ It seamlessly integrates tasks, state management, data handling, and model versi
 | 🟠 [Language Model](bolts/openai/language_model.md)         | 🟤 [Named Entity Recognition](bolts/openai/ner.md)                     | 🟦 [Question Answering](bolts/openai/question_answering.md) |
 | 🔵 [Sentiment Analysis](bolts/openai/sentiment_analysis.md) | 🔴 [Summarization](bolts/openai/summarization.md)                      | 🟧 [Translation](bolts/openai/translation.md)               |
 | 🟧 [Base](bolts/openai/base.md)                             |                                                                        |                                                             |
+
+#### Audio Inference APIs
+
+| 🌐 **Local & Huggingface**            |                                       |                              |
+| ------------------------------------- | ------------------------------------- | ---------------------------- |
+| 🟢 [Text to Speech](audio/api/s2t.md) | 🟣 [Speech to Text](audio/api/t2s.md) | 🟧 [Base](audio/api/base.md) |
+
+#### Audio Bulk Inference
+
+| 🌐 **Local & Huggingface**             |                                        |                               |
+| -------------------------------------- | -------------------------------------- | ----------------------------- |
+| 🟢 [Text to Speech](audio/bulk/s2t.md) | 🟣 [Speech to Text](audio/bulk/t2s.md) | 🟧 [Base](audio/bulk/base.md) |
 
 ### ⚡ Data
 
