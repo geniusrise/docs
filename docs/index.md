@@ -14,16 +14,16 @@ It can be used to perform various tasks, including hosting inference endpoints, 
 Together the framework and ecosystem can be used for:
 
 1. **Rapid prototyping** by hosting APIs on a wide range of models
-    - Host and experiment on local and iterate fast
-    - Deploy on kubernetes to production
-2. Building **AI-side components** using the framework
-    - Build complex AI microservices using multiple models
-    - Iterate fast from development to production
-    - Manage, scale and monitor deployments in production
+    1. Host and experiment on local and iterate fast
+    2. Deploy on kubernetes to production
+2. Building **AI-side components** using the framework and CLI
+    1. Build complex AI microservices using multiple models
+    2. Iterate fast from development to production
+    3. Manage, scale and monitor deployments in production
 3. Using the **ecosystem as a library**: Many interesting applications can be built using this, e.g.:
-    - An AI cloud (think openstack for AI), see [geniusrise.com](https://geniusrise.com)
-    - Local model pipeline server for personal IOT devices
-    - Desktop and CLI applications
+    1. A multi-cloud AI cloud, see [geniusrise.com](https://geniusrise.com)
+    2. Local model pipeline server for personal or home IOT devices (e.g. a personal AI pin connected to voice-LLM pipeline hosted on desktop)
+    3. Desktop and CLI applications
 
 ## Guides
 
@@ -60,7 +60,7 @@ Together the framework and ecosystem can be used for:
 ### 🏃 Runners
 
 | 🌐 **Runners**                              |                                       |                               |                                         |
-| ------------------------------------------- | ------------------------------------- | ----------------------------- | --------------------------------------- |
+|---------------------------------------------|---------------------------------------|-------------------------------|-----------------------------------------|
 | 🟢 [k8s deployment](core/k8s_deployment.md) | 🟤 [k8s service](core/k8s_service.md) | 🟡 [k8s job](core/k8s_job.md) | 🟠 [k8s cron job](core/k8s_cron_job.md) |
 | 🟧 [k8s pods](core/k8s_base.md)             | 🟦 [Apache Airflow](core/airflow.md)  | 🔴 [Docker](core/docker.md)   | 🟣 [Docker Swarm](core/docker_swarm.md) |
 
@@ -71,7 +71,7 @@ Together the framework and ecosystem can be used for:
 #### Text Inference APIs
 
 | 🌐 **Local & Huggingface**                              |                                                                    |                                                         |
-| ------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
+|---------------------------------------------------------|--------------------------------------------------------------------|---------------------------------------------------------|
 | 🟢 [Language Model](text/api/language_model.md)         | 🟣 [Named Entity Recognition](text/api/ner.md)                     | 🟡 [Question Answering](text/api/question_answering.md) |
 | 🟠 [Sentiment Analysis](text/api/sentiment_analysis.md) | 🟤 [Summarization](text/api/summarization.md)                      | 🟦 [Translation](text/api/translation.md)               |
 | 🔵 [Classification](text/api/classification.md)         | 🔴 [Natural Language Inference](text/api/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/api/instruction_tuning.md) |
@@ -80,7 +80,7 @@ Together the framework and ecosystem can be used for:
 #### Text Bulk Inference
 
 | 🌐 **Local & Huggingface**                               |                                                                     |                                                          |
-| -------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------- |
+|----------------------------------------------------------|---------------------------------------------------------------------|----------------------------------------------------------|
 | 🟢 [Language Model](text/bulk/language_model.md)         | 🟣 [Named Entity Recognition](text/bulk/ner.md)                     | 🟡 [Question Answering](text/bulk/question_answering.md) |
 | 🟠 [Sentiment Analysis](text/bulk/sentiment_analysis.md) | 🟤 [Summarization](text/bulk/summarization.md)                      | 🟦 [Translation](text/bulk/translation.md)               |
 | 🔵 [Classification](text/bulk/classification.md)         | 🔴 [Natural Language Inference](text/bulk/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/bulk/instruction_tuning.md) |
@@ -89,29 +89,36 @@ Together the framework and ecosystem can be used for:
 #### Text Fine-tuning
 
 | 🌐 **Local & Huggingface**                                    |                                                                          |                                                               |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+|---------------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------|
 | 🟢 [Language Model](text/fine_tune/language_model.md)         | 🟣 [Named Entity Recognition](text/fine_tune/ner.md)                     | 🟡 [Question Answering](text/fine_tune/question_answering.md) |
 | 🟠 [Sentiment Analysis](text/fine_tune/sentiment_analysis.md) | 🟤 [Summarization](text/fine_tune/summarization.md)                      | 🟦 [Translation](text/fine_tune/translation.md)               |
 | 🔵 [Classification](text/fine_tune/classification.md)         | 🔴 [Natural Language Inference](text/fine_tune/commonsense_reasoning.md) | 🟧 [Instruction Tuning](text/fine_tune/instruction_tuning.md) |
 | 🟧 [Base](text/fine_tune/base.md)                             |                                                                          |                                                               |
 
 | 🌐 **OpenAI**                                               |                                                                        |                                                             |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------- |
+|-------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------|
 | 🟢 [Classification](bolts/openai/classification.md)         | 🟣 [Natural Language Inference](bolts/openai/commonsense_reasoning.md) | 🟡 [Instruction Tuning](bolts/openai/instruction_tuning.md) |
 | 🟠 [Language Model](bolts/openai/language_model.md)         | 🟤 [Named Entity Recognition](bolts/openai/ner.md)                     | 🟦 [Question Answering](bolts/openai/question_answering.md) |
 | 🔵 [Sentiment Analysis](bolts/openai/sentiment_analysis.md) | 🔴 [Summarization](bolts/openai/summarization.md)                      | 🟧 [Translation](bolts/openai/translation.md)               |
 | 🟧 [Base](bolts/openai/base.md)                             |                                                                        |                                                             |
 
+#### Vision Inference APIs
+
+| 🌐 **Local & Huggingface**                        |                             |                                                |                                                   |
+|---------------------------------------------------|-----------------------------|------------------------------------------------|---------------------------------------------------|
+| 🟢 [Image Classification](vision/api/imgclass.md) | 🟣 [OCR](vision/api/ocr.md) | 🟡 [Image Segmentation](vision/api/segment.md) | 🟠 [Visual Question Answering](vision/api/vqa.md) |
+| 🟤 [Base](vision/api/base.md)                     |                             |                                                |                                                   |
+
 #### Audio Inference APIs
 
 | 🌐 **Local & Huggingface**            |                                       |                              |
-| ------------------------------------- | ------------------------------------- | ---------------------------- |
+|---------------------------------------|---------------------------------------|------------------------------|
 | 🟢 [Text to Speech](audio/api/s2t.md) | 🟣 [Speech to Text](audio/api/t2s.md) | 🟧 [Base](audio/api/base.md) |
 
 #### Audio Bulk Inference
 
 | 🌐 **Local & Huggingface**             |                                        |                               |
-| -------------------------------------- | -------------------------------------- | ----------------------------- |
+|----------------------------------------|----------------------------------------|-------------------------------|
 | 🟢 [Text to Speech](audio/bulk/s2t.md) | 🟣 [Speech to Text](audio/bulk/t2s.md) | 🟧 [Base](audio/bulk/base.md) |
 
 ### ⚡ Data
@@ -119,7 +126,7 @@ Together the framework and ecosystem can be used for:
 #### Ingestion
 
 | 🌐 **Streaming**                                   |                                        |                                        |                                              |
-| -------------------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------------- |
+|----------------------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------------|
 | 🟢 [Http Polling](listeners/http_polling.md)       | 🟣 [Socket.io](listeners/socket.io.md) | 🟡 [gRPC](listeners/grpc.md)           | 🟠 [QUIC](listeners/quic.md)                 |
 | 🟤 [UDP](listeners/udp.md)                         | 🔵 [Webhook](listeners/webhook.md)     | 🟥 [Websocket](listeners/websocket.md) | 🟩 [SNS](listeners/sns.md)                   |
 | 🟧 [SQS](listeners/sqs.md)                         | 🟨 [AMQP](listeners/amqp.md)           | 🟫 [Kafka](listeners/kafka.md)         | 🟪 [Kinesis Streams](listeners/kinesis.md)   |
@@ -127,7 +134,7 @@ Together the framework and ecosystem can be used for:
 | 🟧 [Redis Streams](listeners/redis_streams.md{}{}) |                                        |                                        |                                              |
 
 | 📦 **Databases**                           |                                                    |                                                |                                        |
-| ------------------------------------------ | -------------------------------------------------- | ---------------------------------------------- | -------------------------------------- |
+|--------------------------------------------|----------------------------------------------------|------------------------------------------------|----------------------------------------|
 | 🟢 [HBase](databases/hbase.md)             | 🟣 [PostgreSQL](databases/postgres.md)             | 🔵 [MySQL](databases/mysql.md)                 | 🟠 [MongoDB](databases/mongodb.md)     |
 | 🟢 [Cassandra](databases/cassandra.md)     | 🟣 [Redis](databases/redis.md)                     | 🔵 [Elasticsearch](databases/elasticsearch.md) | 🟠 [Oracle](databases/oracle.md)       |
 | 🟢 [SQL Server](databases/sql_server.md)   | 🟣 [SQLite](databases/sqlite.md)                   | 🔵 [Neo4j](databases/neo4j.md)                 | 🟠 [Bigtable](databases/bigtable.md)   |
@@ -143,7 +150,7 @@ Together the framework and ecosystem can be used for:
 #### Preprocessing
 
 | 🌐 **Document Processing**                   | 🌐 **Image Processing**                                  | 🌐 **OCR**                                               |
-| -------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+|----------------------------------------------|----------------------------------------------------------|----------------------------------------------------------|
 | 🟣 [Parse PDF](ocr/ParsePdf.md)              | 🟡 [Predict image classes](ocr/ImageClassPredictor.md)   | 🔵 [TROCRImageOCR](ocr/TROCRImageOCR.md)                 |
 | 🟣 [ParseCBZCBR](ocr/ParseCBZCBR.md)         | 🟡 [Train image classifier](ocr/TrainImageClassifier.md) | 🔵 [FineTuneTROCR](ocr/FineTuneTROCR.md)                 |
 | 🟣 [ParseDjvu](ocr/ParseDjvu.md)             | 🟡 [Convert Images](ocr/ConvertImage.md)                 | 🔵 [TROCRImageOCRAPI](ocr/TROCRImageOCRAPI.md)           |
@@ -155,7 +162,7 @@ Together the framework and ecosystem can be used for:
 ### 📚 Library
 
 | 📦 **cli**                            | 📦 **core**                       | 📦 **data**                                               | 📦 **core.state**                          |
-| ------------------------------------- | --------------------------------- | --------------------------------------------------------- | ------------------------------------------ |
+|---------------------------------------|-----------------------------------|-----------------------------------------------------------|--------------------------------------------|
 | 🟠 [geniusctl](core/cli_geniusctl.md) | 🟢 [bolt](core/core_bolt.md)      | 🟣 [input](core/core_data_input.md)                       | 🔴 [base](core/core_state_base.md)         |
 | 🟠 [yamlctl](core/cli_yamlctl.md)     | 🟢 [spout](core/core_spout.md)    | 🟣 [output](core/core_data_output.md)                     | 🔴 [dynamo](core/core_state_dynamo.md)     |
 | 🟠 [boltctl](core/cli_boltctl.md)     | 🟤 [base](core/core_task_base.md) | 🟣 [batch_input](core/core_data_batch_input.md)           | 🔴 [memory](core/core_state_memory.md)     |
