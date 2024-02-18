@@ -11,12 +11,12 @@ nav:
       - Guides:
           - Local setup: guides/local.md
           - Dev Cycle: guides/dev_cycle.md
-          - Example - AI Pin: guides/pin.md
           - Packaging: guides/packaging.md
           - Deployment: guides/deployment.md
-          #     - Workflow ops: guides/404.md
-          #     - Data ops: guides/404.md
-          #     - Model ops: guides/404.md
+        #   - Example - AI Pin: guides/pin.md
+        #     - Workflow ops: guides/404.md
+        #     - Data ops: guides/404.md
+        #     - Model ops: guides/404.md
   - Deployment:
       - Runners:
           - Kubernetes: guides/kubernetes.md
