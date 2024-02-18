@@ -4,9 +4,11 @@
 
 # Geniusrise Ecosystem
 
-Geniusrise is a modular, loosely-coupled AgentOps / MLOps framework designed for the era of Large Language Models, offering flexibility, inclusivity, and standardization in designing networks of AI agents.
+Geniusrise is a modular, loosely-coupled AI-Ops framework.
 
-It seamlessly integrates tasks, state management, data handling, and model versioning, all while supporting diverse infrastructures and user expertise levels. With its plug-and-play architecture, Geniusrise empowers teams to build, share, and deploy AI agent workflows across various platforms efficiently.
+It can be used to perform various tasks, including hosting inference endpoints, performing bulk inference, fine tune etc with open source models or closed source APIs.
+
+The modular ecosystem aims to provide a layer of abstraction over the myriad of tools, parameters and optimizations underlying the operationalization of modern AI models.
 
 ## Guides
 

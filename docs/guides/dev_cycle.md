@@ -147,7 +147,6 @@ Lets prepare the knowledge graph by vectorizing each node's knowledge into a vec
 
 We use the international version of SNOMED-CT from [https://www.nlm.nih.gov/healthit/snomedct/international.html](https://www.nlm.nih.gov/healthit/snomedct/international.html).
 
-
 ```bash
 mkdir data
 cd data
@@ -164,3 +163,5 @@ unzip SnomedCT_InternationalRF2_PRODUCTION_20230901T120000Z.zip
 ```
 
 ## TODO 😢
+
+Need to document https://github.com/geniusrise/geniusrise-healthcare
