@@ -237,7 +237,6 @@ plugins:
             [
               ../geniusrise/geniusrise,
               ../geniusrise-listeners/geniusrise_listeners,
-              ../geniusrise-huggingface/geniusrise_huggingface,
               ../geniusrise-openai/,
               ../geniusrise-databases/,
               ../geniusrise-ocr/,
