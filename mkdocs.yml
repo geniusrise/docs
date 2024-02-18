@@ -49,6 +49,16 @@ nav:
           - Question Answering: text/api/question_answering.md
           - Summarization: text/api/summarization.md
           - Translation: text/api/translation.md
+      - Vision Inference APIs:
+          - Base API: vision/api/base.md
+          - Image Classsification: vision/api/imgclass.md
+          - Image Segmentation: vision/api/segment.md
+          - OCR: vision/api/ocr.md
+          - Visual Question Answering: vision/api/vqa.md
+      - Audio Inference APIs:
+          - Base API: audio/api/base.md
+          - Text to Speech: audio/api/t2s.md
+          - Speech to Text: audio/api/s2t.md
       - Text Bulk Inference:
           - Base: text/bulk/base.md
           - Classification: text/bulk/classification.md
@@ -59,6 +69,14 @@ nav:
           - Question Answering: text/bulk/question_answering.md
           - Summarization: text/bulk/summarization.md
           - Translation: text/bulk/translation.md
+      #   - Vision Bulk Inference:
+      #       - Base: audio/bulk/base.md
+      #       - Text to Speech: audio/bulk/t2s.md
+      #       - Speech to Text: audio/bulk/s2t.md
+      - Audio Bulk Inference:
+          - Base: audio/bulk/base.md
+          - Text to Speech: audio/bulk/t2s.md
+          - Speech to Text: audio/bulk/s2t.md
       - Text Fine-Tuners:
           - Base: text/fine_tune/base.md
           - Classification: text/fine_tune/classification.md
@@ -69,14 +87,6 @@ nav:
           - Question Answering: text/fine_tune/question_answering.md
           - Summarization: text/fine_tune/summarization.md
           - Translation: text/fine_tune/translation.md
-      - Audio Inference APIs:
-          - Base API: audio/api/base.md
-          - Text to Speech: audio/api/t2s.md
-          - Speech to Text: audio/api/s2t.md
-      - Audio Bulk Inference:
-          - Base: audio/bulk/base.md
-          - Text to Speech: audio/bulk/t2s.md
-          - Speech to Text: audio/bulk/s2t.md
       - OpenAI Fine-Tuners:
           - Classification: bolts/openai/classification.md
           - NLI: bolts/openai/commonsense_reasoning.md
@@ -242,6 +252,7 @@ plugins:
               ../geniusrise-ocr/,
               ../geniusrise-text/,
               ../geniusrise-audio/,
+              ../geniusrise-vision/,
             ]
           options:
             show_source: false
