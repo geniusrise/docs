@@ -2,822 +2,827 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.geniusrise.ai/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/audio/api/base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/audio/api/s2t/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/audio/api/t2s/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/audio/bulk/base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/audio/bulk/s2t/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/audio/bulk/t2s/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/classification/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/commonsense_reasoning/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/instruction_tuning/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/language_model/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/ner/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/question_answering/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/sentiment_analysis/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/summarization/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/bolts/openai/translation/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/airflow/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/cli_boltctl/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/cli_discover/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/cli_dockerctl/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/cli_geniusctl/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/cli_schema/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/cli_spoutctl/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/cli_yamlctl/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_bolt/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_data_batch_input/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_data_batch_output/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_data_input/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_data_output/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_data_streaming_input/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_data_streaming_output/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_spout/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_state_base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_state_dynamo/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_state_memory/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_state_postgres/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_state_redis/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/core_task_base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/docker/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/docker_swarm/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/k8s_base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/k8s_cron_job/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/k8s_deployment/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/k8s_job/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/core/k8s_service/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/arangodb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/athena/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/azure_table/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/bigquery/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/bigtable/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/cassandra/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/cloud_sql/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/cockroach/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/cosmosdb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/couchbase/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/db2/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/documentdb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/dynamodb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/elasticsearch/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/firestore/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/graphite/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/hbase/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/influxdb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/kairosdb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/keyspaces/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/ldap/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/memsql/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/mongodb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/mysql/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/neo4j/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/nuodb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/opentsdb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/oracle/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/postgres/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/presto/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/redis/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/riak/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/spanner/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/sql_server/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/sqlite/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/sybase/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/teradata/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/tidb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/timescaledb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/vertica/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/databases/voltdb/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/404/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/architecture/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/cli/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/concepts/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/deployment/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/dev_cycle/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/installation/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/kubernetes/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/local/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/packaging/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/pin/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.geniusrise.ai/guides/usage/</loc>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/guides/yaml/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/activemq/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/amqp/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/grpc/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/http_polling/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/kafka/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/kinesis/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/mqtt/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/quic/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/redis_pubsub/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/redis_streams/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/sns/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/socket.io/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/sqs/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/udp/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/webhook/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/websocket/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/listeners/zeromq/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ConvertImage/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/FineTunePix2Struct/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/FineTuneTROCR/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ImageClassPredictor/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ParseCBZCBR/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ParseDjvu/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ParseEpub/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ParseMOBI/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ParsePdf/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ParsePostScript/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/ParseXPS/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/Pix2StructImageOCR/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/Pix2StructImageOCRAPI/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/TROCRImageOCR/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/TROCRImageOCRAPI/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/ocr/TrainImageClassifier/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/classification/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/instruction_tuning/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/language_model/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/ner/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/nli/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/question_answering/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/summarization/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/api/translation/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/classification/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/instruction_tuning/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/language_model/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/ner/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/nli/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/question_answering/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/summarization/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/bulk/translation/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/classification/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/instruction_tuning/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/language_model/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/ner/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/nli/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/question_answering/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/summarization/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/text/fine_tune/translation/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/vision/api/base/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/vision/api/imgclass/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/vision/api/ocr/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/vision/api/segment/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.geniusrise.ai/vision/api/vqa/</loc>
-         <lastmod>2024-02-18</lastmod>
+         <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
