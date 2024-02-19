@@ -4,6 +4,7 @@ site_author: ixaxaar
 
 nav:
   - Home: index.md
+  - TLDR Usage: guides/usage.md
   - Concepts: guides/concepts.md
   - Architecture: guides/architecture.md
   - Installation: guides/installation.md

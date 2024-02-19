@@ -33,9 +33,10 @@ Together the framework and ecosystem can be used for:
 
 ---
 
-1. 📘 [**Concepts**](guides/concepts.md) - <span style="color:#e667aa">Concepts of the framework, start here.</span>
-2. 🏗️ [**Architecture**](guides/architecture.md) - <span style="color:#e667aa">Design and architecture of the framework.</span>
-3. 🛠️ [**Installation**](guides/installation.md) - <span style="color:#e667aa">Installation and setup.</span>
+0. 💥 [**Usage**](guides/usage.md) - <span style="color:#e667aa">TLDR Usage.</span>
+1. 🛠️ [**Installation**](guides/installation.md) - <span style="color:#e667aa">Installation and setup.</span>
+2. 📘 [**Concepts**](guides/concepts.md) - <span style="color:#e667aa">Concepts of the framework, start here.</span>
+3. 🏗️ [**Architecture**](guides/architecture.md) - <span style="color:#e667aa">Design and architecture of the framework.</span>
 
 ### 💻 <span style="color:#f34960">Development</span>
 

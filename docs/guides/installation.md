@@ -34,14 +34,14 @@ which genius
 
 genius --help
 ```
-
+<!--
 ### Docker
 
 Geniusrise containers are available on Docker hub.
 
 ```bash
 docker run -it --rm geniusrise/geniusrise:latest
-```
+``` -->
 
 ## Installing Plugins
 
