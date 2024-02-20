@@ -20,6 +20,7 @@ Together the framework and ecosystem can be used for:
     1. Build complex AI microservices using multiple models
     2. Iterate fast from development to production
     3. Manage, scale and monitor deployments in production
+    4. Build once, run anywhere
 3. Using the **ecosystem as a library**: Many interesting applications can be built using this, e.g.:
     1. A multi-cloud AI cloud, see [geniusrise.com](https://geniusrise.com)
     2. Local model pipeline server for personal or home IOT devices (e.g. a personal AI pin connected to voice-LLM pipeline hosted on desktop)
