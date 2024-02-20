@@ -3873,7 +3873,7 @@ Parameters: num_beams, max_length, constraints, pad_token_id, eos_token_id, outp
 
 
 <h2 id="geniusrise_text.base.bulk.TextBulk.load_models" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">load_models</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">tokenizer_name</span><span class="p">,</span> <span class="n">model_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tokenizer_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModelForCausalLM&#39;</span><span class="p">,</span> <span class="n">tokenizer_class</span><span class="o">=</span><span class="s1">&#39;AutoTokenizer&#39;</span><span class="p">,</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">awq_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flash_attention</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">load_models</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">tokenizer_name</span><span class="p">,</span> <span class="n">model_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tokenizer_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModelForCausalLM&#39;</span><span class="p">,</span> <span class="n">tokenizer_class</span><span class="o">=</span><span class="s1">&#39;AutoTokenizer&#39;</span><span class="p">,</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">awq_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flash_attention</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">better_transformers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
 
 <a href="#geniusrise_text.base.bulk.TextBulk.load_models" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -4074,7 +4074,7 @@ Parameters: num_beams, max_length, constraints, pad_token_id, eos_token_id, outp
             </div>
           </td>
           <td>
-                <code>True</code>
+                <code>False</code>
           </td>
         </tr>
         <tr>
@@ -4099,6 +4099,20 @@ Parameters: num_beams, max_length, constraints, pad_token_id, eos_token_id, outp
           <td>
             <div class="doc-md-description">
               <p>Flag to enable Flash Attention optimization for faster processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>better_transformers</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Flag to enable Better Transformers optimization for faster processing.</p>
             </div>
           </td>
           <td>
