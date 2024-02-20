@@ -2,13 +2,13 @@
 
 ---
 
-# Geniusrise Ecosystem
+# Geniusrise Microservices Ecosystem
 
-Geniusrise is a modular, loosely-coupled AI-Ops framework.
+<span style="color:#e4e48c">Geniusrise</span> is a modular, loosely-coupled AI-microservices framework.
 
 It can be used to perform various tasks, including hosting inference endpoints, performing bulk inference, fine tune etc with open source models or closed source APIs.
 
-- **The framework** provides structure for modules and operates and orchestrates them.
+- **The framework** provides structure for modules and operationalizes and orchestrates them.
 - **The modular ecosystem** provides a layer of abstraction over the myriad of models, libraries, tools, parameters and optimizations underlying the operationalization of modern AI models.
 
 Together the framework and ecosystem can be used for:
