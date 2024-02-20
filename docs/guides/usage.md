@@ -58,6 +58,55 @@ curl -X POST http://localhost:3000/api/v1/answer_question \
     -d @/tmp/image_payload.json | jq
 ```
 
+### 4. Save your work
+
+Save what you did to be replicated later as `genius.yml` file:
+
+```yaml
+version: '1'
+
+bolts:
+    my_bolt:
+        name: VisualQAAPI
+        state:
+            type: none
+        input:
+            type: batch
+            args:
+                input_folder: ./input
+        output:
+            type: batch
+            args:
+                output_folder: ./output
+        method: listen
+        args:
+            model_name: 'llava-hf/bakLlava-v1-hf'
+            model_class: 'LlavaForConditionalGeneration'
+            processor_class: 'AutoProcessor'
+            device_map: 'cuda:0'
+            use_cuda: True
+            precision: 'bfloat16'
+            quantization: 0
+            max_memory: None
+            torchscript: False
+            compile: False
+            flash_attention: False
+            better_transformers: False
+            endpoint: '*'
+            port: 3000
+            cors_domain: 'http://localhost:3000'
+            username: 'user'
+            password: 'password'
+```
+
+To later re-run the same, simply navigate to the directory of this file and do:
+
+```bash
+genius rise
+```
+
+(like docker-compose etc).
+
 ## Run on Remote
 
 If we are running on a remote machine instead, perhaps we want to use our own model stored in S3?
@@ -69,7 +118,7 @@ genius VisualQAAPI rise \
         --input_s3_folder model \
     batch \
         --output_s3_bucket my-s3-bucket \
-        --output_s3_folder output-todays-date \
+        --output_s3_folder output-<partition/keys> \
     none \
     listen \
         --args \
@@ -92,6 +141,47 @@ genius VisualQAAPI rise \
             password="password"
 ```
 
+or in YAML:
+
+```yaml
+version: '1'
+
+bolts:
+    my_bolt:
+        name: VisualQAAPI
+        state:
+            type: none
+        input:
+            type: batch
+            args:
+                bucket: my-s3-bucket
+                folder: model
+        output:
+            type: batch
+            args:
+                bucket: my-s3-bucket
+                folder: output-<partition/keys>
+        method: listen
+        args:
+            model_name: 'llava-hf/bakLlava-v1-hf'
+            model_class: 'LlavaForConditionalGeneration'
+            processor_class: 'AutoProcessor'
+            device_map: 'cuda:0'
+            use_cuda: True
+            precision: 'bfloat16'
+            quantization: 0
+            max_memory: None
+            torchscript: False
+            compile: False
+            flash_attention: False
+            better_transformers: False
+            endpoint: '*'
+            port: 3000
+            cors_domain: 'http://localhost:3000'
+            username: 'user'
+            password: 'password'
+```
+
 ## Docker packaging
 
 Perhaps we also want to now use docker to package?
@@ -107,3 +197,4 @@ Refer [**Deployment**](guides/deployment.md)
 ## Observability
 
 We have prometheus integrated, just integrate with your prometheus cluster!
+Prometheus runs on `PROMETHEUS_PORT` ENV variable or `8282` by default.
