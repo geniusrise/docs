@@ -23,6 +23,7 @@ nav:
                 - Question Answering: blog/huggingface/qa.md
                 - Table Question Answering: blog/huggingface/table_qa.md
                 - Natural Language Inference: blog/huggingface/nli.md
+                - Translation: blog/huggingface/trans.md
     - Deployment:
           - Runners:
                 - Kubernetes: guides/kubernetes.md
