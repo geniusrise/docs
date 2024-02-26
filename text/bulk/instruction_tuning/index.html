@@ -400,6 +400,110 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Blogs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Blogs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/txtclass/" class="md-nav__link">
+        Text classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/qa/" class="md-nav__link">
+        Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/table_qa/" class="md-nav__link">
+        Table Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/nli/" class="md-nav__link">
+        Natural Language Inference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/trans/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1264,6 +1368,20 @@
         <li class="md-nav__item">
   <a href="#geniusrise_text.instruction.bulk.InstructionBulk.perform" class="md-nav__link">
     perform()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.bulk.InstructionBulk.perform_llama_cpp" class="md-nav__link">
+    perform_llama_cpp()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.bulk.InstructionBulk.perform_vllm" class="md-nav__link">
+    perform_vllm()
   </a>
   
 </li>
@@ -3538,6 +3656,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.bulk.InstructionBulk.perform_llama_cpp" class="md-nav__link">
+    perform_llama_cpp()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.instruction.bulk.InstructionBulk.perform_vllm" class="md-nav__link">
+    perform_vllm()
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3642,6 +3774,31 @@ models for generating text based on a set of instructions or prompts.</p>
 </span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">            </span><span class="nv">decoding_strategy</span><span class="o">=</span><span class="s2">&quot;generate&quot;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="nv">generation_max_new_tokens</span><span class="o">=</span><span class="m">100</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">            </span><span class="nv">generation_do_sample</span><span class="o">=</span><span class="nb">true</span>
+</span></code></pre></div></p>
+<p>or via VLLM:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>genius<span class="w"> </span>InstructionBulk<span class="w"> </span>rise<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span>--input_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span>--input_s3_folder<span class="w"> </span>input/chat<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span>batch<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span>--output_s3_bucket<span class="w"> </span>geniusrise-test<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span>--output_s3_folder<span class="w"> </span>output/chat<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span>none<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span>--id<span class="w"> </span>mistralai/Mistral-7B-Instruct-v0.1<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span>perform_vllm<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span>--args<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="nv">model_name</span><span class="o">=</span><span class="s2">&quot;mistralai/Mistral-7B-Instruct-v0.1&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="nv">use_cuda</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="nv">precision</span><span class="o">=</span><span class="s2">&quot;bfloat16&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="nv">quantization</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="nv">device_map</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="nv">generation_temperature</span><span class="o">=</span><span class="m">0</span>.7<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="nv">generation_top_p</span><span class="o">=</span><span class="m">1</span>.0<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">            </span><span class="nv">generation_n</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">            </span><span class="nv">generation_max_tokens</span><span class="o">=</span><span class="m">50</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">            </span><span class="nv">generation_stream</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">            </span><span class="nv">generation_presence_penalty</span><span class="o">=</span><span class="m">0</span>.0<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">            </span><span class="nv">generation_frequency_penalty</span><span class="o">=</span><span class="m">0</span>.0
 </span></code></pre></div></p>
 
 
@@ -4139,6 +4296,1089 @@ process, including model loading, prompt processing, text generation, and saving
   <summary>Note</summary>
   <p>Additional arguments are passed directly to the model and tokenizer initialization and the generation method.</p>
 </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.instruction.bulk.InstructionBulk.perform_llama_cpp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">perform_llama_cpp</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">local_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_gpu_layers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">split_mode</span><span class="o">=</span><span class="n">llama_cpp</span><span class="o">.</span><span class="n">LLAMA_SPLIT_LAYER</span><span class="p">,</span> <span class="n">main_gpu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tensor_split</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vocab_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_mmap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_mlock</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">kv_overrides</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">llama_cpp</span><span class="o">.</span><span class="n">LLAMA_DEFAULT_SEED</span><span class="p">,</span> <span class="n">n_ctx</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">n_batch</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">n_threads</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_threads_batch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rope_scaling_type</span><span class="o">=</span><span class="n">llama_cpp</span><span class="o">.</span><span class="n">LLAMA_ROPE_SCALING_UNSPECIFIED</span><span class="p">,</span> <span class="n">rope_freq_base</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">rope_freq_scale</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">yarn_ext_factor</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">yarn_attn_factor</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">yarn_beta_fast</span><span class="o">=</span><span class="mf">32.0</span><span class="p">,</span> <span class="n">yarn_beta_slow</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">yarn_orig_ctx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mul_mat_q</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">logits_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">embedding</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">offload_kqv</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">last_n_tokens_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">lora_base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lora_scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">lora_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">numa</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">chat_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">chat_handler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">draft_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.instruction.bulk.InstructionBulk.perform_llama_cpp" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Performs bulk text generation using the LLaMA model with llama.cpp backend. This method handles the entire
+process, including model loading, prompt processing, text generation, and saving the results.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path or identifier for the LLaMA model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Optional filename or glob pattern to match the model file.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>local_dir</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[str, os.<span title="os.PathLike">PathLike</span>[str]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Local directory to save the model files.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_gpu_layers</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of layers to offload to GPU.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>split_mode</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Split mode for distributing model across GPUs.</p>
+            </div>
+          </td>
+          <td>
+                <code>llama_cpp.<span title="llama_cpp.LLAMA_SPLIT_LAYER">LLAMA_SPLIT_LAYER</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>main_gpu</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Main GPU index.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tensor_split</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[float]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Configuration for tensor splitting across GPUs.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vocab_only</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to load only the vocabulary.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_mmap</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Use memory-mapped files for model loading.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_mlock</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Lock model data in RAM to prevent swapping.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>kv_overrides</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Union">Union</span>[bool, int, float]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Key-value pairs for overriding model config.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>seed</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Seed for random number generation.</p>
+            </div>
+          </td>
+          <td>
+                <code>llama_cpp.<span title="llama_cpp.LLAMA_DEFAULT_SEED">LLAMA_DEFAULT_SEED</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_ctx</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of context tokens for generation.</p>
+            </div>
+          </td>
+          <td>
+                <code>512</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_batch</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Batch size for processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>512</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_threads</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of threads for generation.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_threads_batch</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of threads for batch processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>rope_scaling_type</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Scaling type for RoPE.</p>
+            </div>
+          </td>
+          <td>
+                <code>llama_cpp.<span title="llama_cpp.LLAMA_ROPE_SCALING_UNSPECIFIED">LLAMA_ROPE_SCALING_UNSPECIFIED</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>rope_freq_base</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Base frequency for RoPE.</p>
+            </div>
+          </td>
+          <td>
+                <code>0.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>rope_freq_scale</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Frequency scaling for RoPE.</p>
+            </div>
+          </td>
+          <td>
+                <code>0.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_ext_factor</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN extrapolation factor.</p>
+            </div>
+          </td>
+          <td>
+                <code>-1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_attn_factor</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN attention factor.</p>
+            </div>
+          </td>
+          <td>
+                <code>1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_beta_fast</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN beta fast parameter.</p>
+            </div>
+          </td>
+          <td>
+                <code>32.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_beta_slow</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN beta slow parameter.</p>
+            </div>
+          </td>
+          <td>
+                <code>1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_orig_ctx</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Original context size for YaRN.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>mul_mat_q</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Multiply matrices for queries.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>logits_all</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Return logits for all tokens.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>embedding</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Enable embedding mode.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>offload_kqv</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Offload K, Q, V matrices to GPU.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>last_n_tokens_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Size for the last_n_tokens buffer.</p>
+            </div>
+          </td>
+          <td>
+                <code>64</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_base</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Base model path for LoRA.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_scale</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Scale factor for LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_path</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path for LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>numa</code></td>
+          <td>
+                <code><span title="typing.Union">Union</span>[bool, int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>NUMA configuration.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>chat_format</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Chat format configuration.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>chat_handler</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[llama_cpp.<span title="llama_cpp.llama_chat_format">llama_chat_format</span>.<span title="llama_cpp.llama_chat_format.LlamaChatCompletionHandler">LlamaChatCompletionHandler</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Handler for chat completions.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>draft_model</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[llama_cpp.<span title="llama_cpp.LlamaDraftModel">LlamaDraftModel</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Draft model for speculative decoding.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="transformers.tokenization_utils_base.PreTrainedTokenizerBase">PreTrainedTokenizerBase</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Custom tokenizer instance.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>verbose</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Enable verbose logging.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional arguments for model loading and text generation.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.instruction.bulk.InstructionBulk.perform_vllm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">perform_vllm</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">vllm_tokenizer_mode</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">vllm_download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_load_format</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">vllm_seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">vllm_max_model_len</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">vllm_enforce_eager</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vllm_max_context_len_to_capture</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">vllm_block_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">vllm_gpu_memory_utilization</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">vllm_swap_space</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">vllm_sliding_window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_pipeline_parallel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vllm_tensor_parallel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vllm_worker_use_ray</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vllm_max_parallel_loading_workers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_disable_custom_all_reduce</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vllm_max_num_batched_tokens</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_max_num_seqs</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">vllm_max_paddings</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">vllm_max_lora_rank</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_max_loras</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_max_cpu_loras</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_lora_extra_vocab_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vllm_placement_group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vllm_log_stats</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">notification_email</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.instruction.bulk.InstructionBulk.perform_vllm" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Performs bulk text generation using the Versatile Language Learning Model (VLLM) with specified parameters
+for fine-tuning model behavior, including quantization and parallel processing settings. This method is designed
+to process large datasets efficiently by leveraging VLLM capabilities for generating high-quality text completions
+based on provided prompts.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name or path of the VLLM model to use for text generation.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_cuda</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Flag indicating whether to use CUDA for GPU acceleration.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>precision</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Precision of computations, can be "float16", "bfloat16", etc.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;float16&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>quantization</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Level of quantization for model weights, 0 for none.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>device_map</code></td>
+          <td>
+                <code>str | <span title="typing.Dict">Dict</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Specific device(s) to use for model inference.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_tokenizer_mode</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Mode of the tokenizer ("auto", "fast", or "slow").</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_download_dir</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Directory to download and load the model and tokenizer.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_load_format</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Format to load the model, e.g., "auto", "pt".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_seed</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Seed for random number generation.</p>
+            </div>
+          </td>
+          <td>
+                <code>42</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_model_len</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum sequence length the model can handle.</p>
+            </div>
+          </td>
+          <td>
+                <code>1024</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_enforce_eager</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Enforce eager execution instead of using optimization techniques.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_context_len_to_capture</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum context length for CUDA graph capture.</p>
+            </div>
+          </td>
+          <td>
+                <code>8192</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_block_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Block size for caching mechanism.</p>
+            </div>
+          </td>
+          <td>
+                <code>16</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_gpu_memory_utilization</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Fraction of GPU memory to use.</p>
+            </div>
+          </td>
+          <td>
+                <code>0.9</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_swap_space</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Amount of swap space to use in GiB.</p>
+            </div>
+          </td>
+          <td>
+                <code>4</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_sliding_window</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Size of the sliding window for processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_pipeline_parallel_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of pipeline parallel groups.</p>
+            </div>
+          </td>
+          <td>
+                <code>1</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_tensor_parallel_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of tensor parallel groups.</p>
+            </div>
+          </td>
+          <td>
+                <code>1</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_worker_use_ray</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use Ray for model workers.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_parallel_loading_workers</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of workers for parallel loading.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_disable_custom_all_reduce</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Disable custom all-reduce kernel and fall back to NCCL.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_num_batched_tokens</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of tokens to be processed in a single iteration.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_num_seqs</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of sequences to be processed in a single iteration.</p>
+            </div>
+          </td>
+          <td>
+                <code>64</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_paddings</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of paddings to be added to a batch.</p>
+            </div>
+          </td>
+          <td>
+                <code>512</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_lora_rank</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum rank for LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_loras</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_max_cpu_loras</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of LoRA adjustments stored on CPU.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_lora_extra_vocab_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional vocabulary size for LoRA.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_placement_group</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[dict]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Ray placement group for distributed execution.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vllm_log_stats</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to log statistics during model operation.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>notification_email</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Email to send notifications upon completion.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>batch_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of prompts to process in each batch for efficient memory usage.</p>
+            </div>
+          </td>
+          <td>
+                <code>32</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments for generation settings like temperature, top_p, etc.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>This method automates the loading of large datasets, generation of text completions, and saving results,
+facilitating efficient and scalable text generation tasks.</p>
+
   </div>
 
 </div>

@@ -400,6 +400,110 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Blogs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Blogs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/txtclass/" class="md-nav__link">
+        Text classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/qa/" class="md-nav__link">
+        Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/table_qa/" class="md-nav__link">
+        Table Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/nli/" class="md-nav__link">
+        Natural Language Inference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/trans/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -842,6 +946,20 @@
         <li class="md-nav__item">
   <a href="#geniusrise_text.language_model.api.LanguageModelAPI.complete" class="md-nav__link">
     complete()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.language_model.api.LanguageModelAPI.complete_llama_cpp" class="md-nav__link">
+    complete_llama_cpp()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.language_model.api.LanguageModelAPI.complete_vllm" class="md-nav__link">
+    complete_vllm()
   </a>
   
 </li>
@@ -3346,6 +3464,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.language_model.api.LanguageModelAPI.complete_llama_cpp" class="md-nav__link">
+    complete_llama_cpp()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.language_model.api.LanguageModelAPI.complete_vllm" class="md-nav__link">
+    complete_vllm()
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3628,6 +3760,454 @@ the generated text, and any additional returned information from the model.</p>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s1">        &quot;do_sample&quot;: true</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s1">    }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
 </span></code></pre></div></p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.language_model.api.LanguageModelAPI.complete_llama_cpp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">complete_llama_cpp</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.language_model.api.LanguageModelAPI.complete_llama_cpp" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Handles POST requests to generate chat completions using the llama.cpp engine. This method accepts various
+parameters for customizing the chat completion request, including messages, sampling settings, and more.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>prompt</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The prompt to generate text from.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>suffix</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A suffix to append to the generated text. If None, no suffix is appended.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_tokens</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The maximum number of tokens to generate. If max_tokens &lt;= 0 or None, the maximum number of tokens to generate is unlimited and depends on n_ctx.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>temperature</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The temperature to use for sampling.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top_p</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The top-p value to use for nucleus sampling. Nucleus sampling described in academic paper "The Curious Case of Neural Text Degeneration" https://arxiv.org/abs/1904.09751</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>min_p</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The min-p value to use for minimum p sampling. Minimum P sampling as described in https://github.com/ggerganov/llama.cpp/pull/3841</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>typical_p</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The typical-p value to use for sampling. Locally Typical Sampling implementation described in the paper https://arxiv.org/abs/2202.00666.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>logprobs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The number of logprobs to return. If None, no logprobs are returned.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>echo</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to echo the prompt.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stop</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A list of strings to stop generation when encountered.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>frequency_penalty</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The penalty to apply to tokens based on their frequency in the prompt.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>presence_penalty</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The penalty to apply to tokens based on their presence in the prompt.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>repeat_penalty</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The penalty to apply to repeated tokens.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top_k</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The top-k value to use for sampling. Top-K sampling described in academic paper "The Curious Case of Neural Text Degeneration" https://arxiv.org/abs/1904.09751</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stream</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to stream the results.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>seed</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The seed to use for sampling.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tfs_z</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The tail-free sampling parameter. Tail Free Sampling described in https://www.trentonbricken.com/Tail-Free-Sampling/.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>mirostat_mode</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The mirostat sampling mode.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>mirostat_tau</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The target cross-entropy (or surprise) value you want to achieve for the generated text. A higher value corresponds to more surprising or less predictable text, while a lower value corresponds to less surprising or more predictable text.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>mirostat_eta</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The learning rate used to update <code>mu</code> based on the error between the target and observed surprisal of the sampled word. A larger learning rate will cause <code>mu</code> to be updated more quickly, while a smaller learning rate will result in slower updates.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name to use for the model in the completion object.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stopping_criteria</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A list of stopping criteria to use.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>logits_processor</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A list of logits processors to use.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>grammar</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A grammar to use for constrained sampling.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>logit_bias</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A logit bias to use.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: A dictionary containing the chat completion response or an error message.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example CURL Request:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:3001/api/v1/complete_llama_cpp&quot;</span><span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s1">        &quot;messages&quot;: [{&quot;content&quot;: &quot;Whats the weather like in London?&quot;, &quot;role&quot;: &quot;user&quot;}],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s1">        &quot;temperature&quot;: 0.2,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s1">        &quot;top_p&quot;: 0.95,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s1">        &quot;top_k&quot;: 40,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s1">        &quot;max_tokens&quot;: 50</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s1">    }&#39;</span>
+</span></code></pre></div></p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.language_model.api.LanguageModelAPI.complete_vllm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">complete_vllm</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.language_model.api.LanguageModelAPI.complete_vllm" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Handles POST requests to generate chat completions using the VLLM (Versatile Language Learning Model) engine.
+This method accepts various parameters for customizing the chat completion request, including message content,
+generation settings, and more.</p>
+      <ul>
+<li>**kwargs (Any): Arbitrary keyword arguments. Expects data in JSON format containing any of the following keys:<ul>
+<li>messages (Union[str, List[Dict[str, str]]]): The messages for the chat context.</li>
+<li>temperature (float, optional): The sampling temperature. Defaults to 0.7.</li>
+<li>top_p (float, optional): The nucleus sampling probability. Defaults to 1.0.</li>
+<li>n (int, optional): The number of completions to generate. Defaults to 1.</li>
+<li>max_tokens (int, optional): The maximum number of tokens to generate.</li>
+<li>stop (Union[str, List[str]], optional): Stop sequence to end generation.</li>
+<li>stream (bool, optional): Whether to stream the response. Defaults to False.</li>
+<li>presence_penalty (float, optional): The presence penalty. Defaults to 0.0.</li>
+<li>frequency_penalty (float, optional): The frequency penalty. Defaults to 0.0.</li>
+<li>logit_bias (Dict[str, float], optional): Adjustments to the logits of specified tokens.</li>
+<li>user (str, optional): An identifier for the user making the request.</li>
+<li>(Additional model-specific parameters)</li>
+</ul>
+</li>
+</ul>
+      <p>Dict[str, Any]: A dictionary with the chat completion response or an error message.</p>
+<p>Example CURL Request:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-v<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:3000/api/v1/complete_vllm&quot;</span><span class="w">             </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">             </span>-u<span class="w"> </span><span class="s2">&quot;user:password&quot;</span><span class="w">             </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s1">        &quot;messages&quot;: [&quot;Whats the weather like in London?&quot;],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s1">        &quot;temperature&quot;: 0.7,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s1">        &quot;top_p&quot;: 1.0,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s1">        &quot;n&quot;: 1,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s1">        &quot;max_tokens&quot;: 50,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s1">        &quot;stream&quot;: false,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s1">        &quot;presence_penalty&quot;: 0.0,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s1">        &quot;frequency_penalty&quot;: 0.0,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s1">        &quot;logit_bias&quot;: {},</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s1">        &quot;user&quot;: &quot;example_user&quot;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s1">    }&#39;</span>
+</span></code></pre></div>
+This request asks the VLLM engine to generate a completion for the provided chat context, with specified generation settings.</p>
 
   </div>
 

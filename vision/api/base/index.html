@@ -400,6 +400,110 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Blogs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Blogs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/txtclass/" class="md-nav__link">
+        Text classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/qa/" class="md-nav__link">
+        Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/table_qa/" class="md-nav__link">
+        Table Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/nli/" class="md-nav__link">
+        Natural Language Inference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/trans/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3487,7 +3591,7 @@ It sets up a server to process image-related requests using a specified model.</
 
 
 <h2 id="geniusrise_vision.base.api.VisionAPI.listen" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">listen</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">processor_class</span><span class="o">=</span><span class="s1">&#39;AutoProcessor&#39;</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flash_attention</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">better_transformers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">cors_domain</span><span class="o">=</span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">listen</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">processor_class</span><span class="o">=</span><span class="s1">&#39;AutoProcessor&#39;</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flash_attention</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">better_transformers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">concurrent_queries</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">cors_domain</span><span class="o">=</span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
 
 <a href="#geniusrise_vision.base.api.VisionAPI.listen" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -3657,6 +3761,20 @@ It sets up a server to process image-related requests using a specified model.</
           <td>
             <div class="doc-md-description">
               <p>Flag to enable Better Transformers optimization for faster processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>concurrent_queries</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>(bool): Whether the API supports concurrent API calls (usually false).</p>
             </div>
           </td>
           <td>

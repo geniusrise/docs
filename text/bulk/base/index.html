@@ -400,6 +400,110 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Blogs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Blogs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/txtclass/" class="md-nav__link">
+        Text classification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/qa/" class="md-nav__link">
+        Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/table_qa/" class="md-nav__link">
+        Table Question Answering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/nli/" class="md-nav__link">
+        Natural Language Inference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/trans/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1133,6 +1237,20 @@
         <li class="md-nav__item">
   <a href="#geniusrise_text.base.bulk.TextBulk.load_models" class="md-nav__link">
     load_models()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.base.bulk.TextBulk.load_models_llama_cpp" class="md-nav__link">
+    load_models_llama_cpp()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.base.bulk.TextBulk.load_models_vllm" class="md-nav__link">
+    load_models_vllm()
   </a>
   
 </li>
@@ -3360,6 +3478,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.base.bulk.TextBulk.load_models_llama_cpp" class="md-nav__link">
+    load_models_llama_cpp()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_text.base.bulk.TextBulk.load_models_vllm" class="md-nav__link">
+    load_models_vllm()
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4112,6 +4244,1173 @@ Parameters: num_beams, max_length, constraints, pad_token_id, eos_token_id, outp
           <td>
             <div class="doc-md-description">
               <p>Tuple[AutoModelForCausalLM, AutoTokenizer]: The loaded model and tokenizer ready for text generation.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.base.bulk.TextBulk.load_models_llama_cpp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_models_llama_cpp</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">local_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_gpu_layers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">split_mode</span><span class="o">=</span><span class="n">llama_cpp</span><span class="o">.</span><span class="n">LLAMA_SPLIT_LAYER</span><span class="p">,</span> <span class="n">main_gpu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tensor_split</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vocab_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_mmap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_mlock</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">kv_overrides</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">llama_cpp</span><span class="o">.</span><span class="n">LLAMA_DEFAULT_SEED</span><span class="p">,</span> <span class="n">n_ctx</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">n_batch</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">n_threads</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_threads_batch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rope_scaling_type</span><span class="o">=</span><span class="n">llama_cpp</span><span class="o">.</span><span class="n">LLAMA_ROPE_SCALING_UNSPECIFIED</span><span class="p">,</span> <span class="n">rope_freq_base</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">rope_freq_scale</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">yarn_ext_factor</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">yarn_attn_factor</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">yarn_beta_fast</span><span class="o">=</span><span class="mf">32.0</span><span class="p">,</span> <span class="n">yarn_beta_slow</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">yarn_orig_ctx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mul_mat_q</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">logits_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">embedding</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">offload_kqv</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">last_n_tokens_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">lora_base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lora_scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">lora_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">numa</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">chat_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">chat_handler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">draft_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.base.bulk.TextBulk.load_models_llama_cpp" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initializes and loads LLaMA model with llama.cpp backend, along with an optional tokenizer.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Huggingface ID to the LLaMA model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filename</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A filename or glob pattern to match the model file in the repo.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>local_dir</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[str, os.<span title="os.PathLike">PathLike</span>[str]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The local directory to save the model to.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_gpu_layers</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of layers to offload to GPU. Default is 0.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>split_mode</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Split mode for distributing model across GPUs.</p>
+            </div>
+          </td>
+          <td>
+                <code>llama_cpp.<span title="llama_cpp.LLAMA_SPLIT_LAYER">LLAMA_SPLIT_LAYER</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>main_gpu</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Main GPU index.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tensor_split</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[float]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Tensor split configuration.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vocab_only</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to load vocabulary only.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_mmap</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Use memory-mapped files for model loading.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_mlock</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Lock model data in RAM.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>kv_overrides</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Union">Union</span>[bool, int, float]]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Key-value pairs for model overrides.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>seed</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Random seed for initialization.</p>
+            </div>
+          </td>
+          <td>
+                <code>llama_cpp.<span title="llama_cpp.LLAMA_DEFAULT_SEED">LLAMA_DEFAULT_SEED</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_ctx</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of context tokens.</p>
+            </div>
+          </td>
+          <td>
+                <code>512</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_batch</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Batch size for processing prompts.</p>
+            </div>
+          </td>
+          <td>
+                <code>512</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_threads</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of threads for generation.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>n_threads_batch</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of threads for batch processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>rope_scaling_type</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>RoPE scaling type.</p>
+            </div>
+          </td>
+          <td>
+                <code>llama_cpp.<span title="llama_cpp.LLAMA_ROPE_SCALING_UNSPECIFIED">LLAMA_ROPE_SCALING_UNSPECIFIED</span></code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>rope_freq_base</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Base frequency for RoPE.</p>
+            </div>
+          </td>
+          <td>
+                <code>0.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>rope_freq_scale</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Frequency scaling for RoPE.</p>
+            </div>
+          </td>
+          <td>
+                <code>0.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_ext_factor</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN extrapolation mix factor.</p>
+            </div>
+          </td>
+          <td>
+                <code>-1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_attn_factor</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN attention factor.</p>
+            </div>
+          </td>
+          <td>
+                <code>1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_beta_fast</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN beta fast parameter.</p>
+            </div>
+          </td>
+          <td>
+                <code>32.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_beta_slow</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>YaRN beta slow parameter.</p>
+            </div>
+          </td>
+          <td>
+                <code>1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>yarn_orig_ctx</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Original context size for YaRN.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>mul_mat_q</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to multiply matrices for queries.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>logits_all</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Return logits for all tokens.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>embedding</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Enable embedding mode only.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>offload_kqv</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Offload K, Q, V matrices to GPU.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>last_n_tokens_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Size for the last_n_tokens buffer.</p>
+            </div>
+          </td>
+          <td>
+                <code>64</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_base</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Base model path for LoRA.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_scale</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Scale factor for LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_path</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path to LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>numa</code></td>
+          <td>
+                <code><span title="typing.Union">Union</span>[bool, int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>NUMA configuration.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>chat_format</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Chat format configuration.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>chat_handler</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[llama_cpp.<span title="llama_cpp.LlamaChatCompletionHandler">LlamaChatCompletionHandler</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Handler for chat completions.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>draft_model</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[llama_cpp.<span title="llama_cpp.LlamaDraftModel">LlamaDraftModel</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Draft model for speculative decoding.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="transformers.tokenization_utils_base.PreTrainedTokenizerBase">PreTrainedTokenizerBase</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Custom tokenizer instance.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>verbose</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Enable verbose logging.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Tuple">Tuple</span>[<span title="llama_cpp.Llama">LlamaCPP</span>, <span title="typing.Optional">Optional</span>[<span title="transformers.tokenization_utils_base.PreTrainedTokenizerBase">PreTrainedTokenizerBase</span>]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Tuple[LlamaCPP, Optional[PreTrainedTokenizerBase]]: The loaded LLaMA model and tokenizer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_text.base.bulk.TextBulk.load_models_vllm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_models_vllm</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">tokenizer_mode</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">trust_remote_code</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">load_format</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tokenizer_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_model_len</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">enforce_eager</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_context_len_to_capture</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">block_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">gpu_memory_utilization</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">swap_space</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">cache_dtype</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">sliding_window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pipeline_parallel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">tensor_parallel_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">worker_use_ray</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_parallel_loading_workers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">disable_custom_all_reduce</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_num_batched_tokens</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_num_seqs</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">max_paddings</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">,</span> <span class="n">max_lora_rank</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_loras</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_cpu_loras</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lora_dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lora_extra_vocab_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">placement_group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log_stats</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">batched_inference</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#geniusrise_text.base.bulk.TextBulk.load_models_vllm" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initializes and loads models using VLLM configurations with specific parameters.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name or path of the Hugging Face model to use.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name or path of the Hugging Face tokenizer to use.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer_mode</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Tokenizer mode. "auto" will use the fast tokenizer if available, "slow" will always use the slow tokenizer.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>trust_remote_code</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Trust remote code (e.g., from Hugging Face) when downloading the model and tokenizer.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>download_dir</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Directory to download and load the weights, default to the default cache directory of Hugging Face.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>load_format</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The format of the model weights to load. Options include "auto", "pt", "safetensors", "npcache", "dummy".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dtype</code></td>
+          <td>
+                <code><span title="typing.Union">Union</span>[str, torch.<span title="torch.dtype">dtype</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Data type for model weights and activations. Options include "auto", torch.float32, torch.float16, etc.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>seed</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Random seed for reproducibility.</p>
+            </div>
+          </td>
+          <td>
+                <code>42</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>revision</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The specific model version to use. Can be a branch name, a tag name, or a commit id.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>code_revision</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The specific revision to use for the model code on Hugging Face Hub.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tokenizer_revision</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The specific tokenizer version to use.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_model_len</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum length of a sequence (including prompt and output). If None, will be derived from the model.</p>
+            </div>
+          </td>
+          <td>
+                <code>1024</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>quantization</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Quantization method that was used to quantize the model weights. If None, we assume the model weights are not quantized.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>enforce_eager</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to enforce eager execution. If True, disables CUDA graph and always execute the model in eager mode.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_context_len_to_capture</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum context length covered by CUDA graphs. When larger, falls back to eager mode.</p>
+            </div>
+          </td>
+          <td>
+                <code>8192</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>block_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Size of a cache block in number of tokens.</p>
+            </div>
+          </td>
+          <td>
+                <code>16</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>gpu_memory_utilization</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Fraction of GPU memory to use for the VLLM execution.</p>
+            </div>
+          </td>
+          <td>
+                <code>0.9</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>swap_space</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Size of the CPU swap space per GPU (in GiB).</p>
+            </div>
+          </td>
+          <td>
+                <code>4</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cache_dtype</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Data type for KV cache storage.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;auto&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sliding_window</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Configuration for sliding window if applicable.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>pipeline_parallel_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of pipeline parallel groups.</p>
+            </div>
+          </td>
+          <td>
+                <code>1</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tensor_parallel_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of tensor parallel groups.</p>
+            </div>
+          </td>
+          <td>
+                <code>1</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>worker_use_ray</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use Ray for model workers. Required if either pipeline_parallel_size or tensor_parallel_size is greater than 1.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_parallel_loading_workers</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of workers for loading the model in parallel to avoid RAM OOM.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>disable_custom_all_reduce</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Disable custom all-reduce kernel and fall back to NCCL.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_num_batched_tokens</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of tokens to be processed in a single iteration.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_num_seqs</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of sequences to be processed in a single iteration.</p>
+            </div>
+          </td>
+          <td>
+                <code>64</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_paddings</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of paddings to be added to a batch.</p>
+            </div>
+          </td>
+          <td>
+                <code>512</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>device</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Device configuration, typically "cuda" or "cpu".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;cuda&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_lora_rank</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum rank for LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_loras</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of LoRA adjustments.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_cpu_loras</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of LoRA adjustments stored on CPU.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_dtype</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[torch.<span title="torch.dtype">dtype</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Data type for LoRA parameters.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lora_extra_vocab_size</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional vocabulary size for LoRA.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>placement_group</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="ray.util.placement_group.PlacementGroup">PlacementGroup</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Ray placement group for distributed execution. Required for distributed execution.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>log_stats</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to log statistics during model operation.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>LLMEngine</code></td>          <td>
+                <code><span title="vllm.AsyncLLMEngine">AsyncLLMEngine</span> | <span title="vllm.LLM">LLM</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An instance of the LLMEngine class initialized with the given configurations.</p>
             </div>
           </td>
         </tr>

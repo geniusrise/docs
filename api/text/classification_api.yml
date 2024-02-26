@@ -1,13 +1,12 @@
 openapi: 3.0.0
 info:
-  title: GeniusRise Text Processing API
+  title: Geniusrise Text Processing API
   description: API for text generation and classification using Hugging Face models.
   version: "1.0"
 servers:
   - url: http://localhost:3000/api/v1
     description: Development server
 paths:
-
   /classify:
     post:
       summary: Classifies text into categories
