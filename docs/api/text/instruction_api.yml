@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: GeniusRise Instruction-Based Text Processing API
+  title: Geniusrise Instruction-Based Text Processing API
   description: API for generating text based on instructions using Hugging Face models.
   version: "1.0"
 servers:
