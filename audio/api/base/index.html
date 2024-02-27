@@ -3776,7 +3776,7 @@
 
 
 <h2 id="geniusrise_audio.base.api.AudioAPI.listen" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">listen</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">processor_class</span><span class="o">=</span><span class="s1">&#39;AutoProcessor&#39;</span><span class="p">,</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">concurrent_queries</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">cors_domain</span><span class="o">=</span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">listen</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;AutoModel&#39;</span><span class="p">,</span> <span class="n">processor_class</span><span class="o">=</span><span class="s1">&#39;AutoProcessor&#39;</span><span class="p">,</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">concurrent_queries</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_whisper_cpp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">cors_domain</span><span class="o">=</span><span class="s1">&#39;http://localhost:3000&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
 
 <a href="#geniusrise_audio.base.api.AudioAPI.listen" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -3946,6 +3946,20 @@
           <td>
             <div class="doc-md-description">
               <p>(bool): Whether the API supports concurrent API calls (usually false).</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_whisper_cpp</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use whisper.cpp to load the model. Defaults to False. Note: only works for these models: https://github.com/aarnphm/whispercpp/blob/524dd6f34e9d18137085fb92a42f1c31c9c6bc29/src/whispercpp/utils.py#L32</p>
             </div>
           </td>
           <td>
