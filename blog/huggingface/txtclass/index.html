@@ -3694,14 +3694,17 @@
 </ul>
 <p>This post will guide you through creating inference APIs for different text classification tasks using geniusrise, explaining the <code>genius.yml</code> configuration and providing examples of how to interact with your API using <code>curl</code> and <code>python-requests</code>.</p>
 <h2 id="quick-setup">Quick Setup<a class="headerlink" href="#quick-setup" title="Permanent link">&para;</a></h2>
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/jyvqfl2KCew?si=-kgGz9CbcduxCSxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <p><strong>Requirements:</strong></p>
 <ul>
+<li>python 3.10, <a href="https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa">PPA</a>, <a href="https://aur.archlinux.org/packages/python310">AUR</a>, <a href="https://formulae.brew.sh/formula/python@3.10">brew</a>, <a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0b3-amd64.exe">Windows</a>.</li>
 <li>You need to have a GPU. Most of the system works with NVIDIA GPUs.</li>
 <li><a href="https://developer.nvidia.com/cuda-downloads">Install CUDA</a>.</li>
 </ul>
 <p><strong>Installation:</strong></p>
 <p>Optional: Set up a virtual environment:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>virtualenv<span class="w"> </span>venv
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>virtualenv<span class="w"> </span>venv<span class="w"> </span>-p<span class="w"> </span><span class="sb">`</span>which<span class="w"> </span>python3.10<span class="sb">`</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
 </span></code></pre></div>
 <p>Install the packages:</p>
@@ -3744,6 +3747,8 @@
 <p>Launch your API with:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>genius<span class="w"> </span>rise
 </span></code></pre></div>
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/PXIoge6kFPo?si=fiOkIYZgxwwHOi3a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <h2 id="configuration-breakdown">Configuration Breakdown<a class="headerlink" href="#configuration-breakdown" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>model_name</strong>: Specify the Hugging Face model ID, e.g., <code>bert-base-uncased</code> for sentiment analysis.</li>

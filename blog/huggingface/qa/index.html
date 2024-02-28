@@ -3695,13 +3695,16 @@
 <p>The models discussed in this guide focus on extractive QA tasks, which are particularly well-suited for direct, fact-based question answering from provided texts.</p>
 <p>Extractive QA models are ideal for applications requiring high precision and direct answers from given texts.</p>
 <h2 id="installation-and-configuration">Installation and Configuration<a class="headerlink" href="#installation-and-configuration" title="Permanent link">&para;</a></h2>
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/jyvqfl2KCew?si=-kgGz9CbcduxCSxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <p><strong>Requirements</strong></p>
 <ul>
+<li>python 3.10, <a href="https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa">PPA</a>, <a href="https://aur.archlinux.org/packages/python310">AUR</a>, <a href="https://formulae.brew.sh/formula/python@3.10">brew</a>, <a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0b3-amd64.exe">Windows</a>.</li>
 <li>You need to have a GPU. Most of the system works with NVIDIA GPUs.</li>
 <li><a href="https://developer.nvidia.com/cuda-downloads">Install CUDA</a>.</li>
 </ul>
 <p>Optional: Set up a virtual environment:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>virtualenv<span class="w"> </span>venv
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>virtualenv<span class="w"> </span>venv<span class="w"> </span>-p<span class="w"> </span><span class="sb">`</span>which<span class="w"> </span>python3.10<span class="sb">`</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
 </span></code></pre></div>
 <p><strong>Step 1: Install Geniusrise</strong></p>
@@ -3742,6 +3745,8 @@
 <p>After setting up your <code>genius.yml</code>, launch your API with:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>genius<span class="w"> </span>rise
 </span></code></pre></div>
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/vgWKoYp_miM?si=Mb9ZwEOhknyQOWbX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <h2 id="understanding-geniusyml">Understanding <code>genius.yml</code><a class="headerlink" href="#understanding-geniusyml" title="Permanent link">&para;</a></h2>
 <p>Each parameter in the <code>genius.yml</code> file is crucial for customizing your QA API:</p>
 <ul>
