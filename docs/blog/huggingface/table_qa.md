@@ -18,15 +18,18 @@ Deploying table question answering (QA) models is a sophisticated task that Geni
 
 ## Setup and Configuration
 
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/jyvqfl2KCew?si=-kgGz9CbcduxCSxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 **Requirements**
 
+- python 3.10, [PPA](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa), [AUR](https://aur.archlinux.org/packages/python310), [brew](https://formulae.brew.sh/formula/python@3.10), [Windows](https://www.python.org/ftp/python/3.12.0/python-3.12.0b3-amd64.exe).
 - You need to have a GPU. Most of the system works with NVIDIA GPUs.
 - [Install CUDA](https://developer.nvidia.com/cuda-downloads).
 
 Optional: Set up a virtual environment:
 
 ```bash
-virtualenv venv
+virtualenv venv -p `which python3.10`
 source venv/bin/activate
 ```
 
@@ -77,6 +80,8 @@ Launch your API with:
 ```bash
 genius rise
 ```
+
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/7xZFXMuem8w?si=hc3lOVdSxabbzP1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Understanding `genius.yml` Parameters
 

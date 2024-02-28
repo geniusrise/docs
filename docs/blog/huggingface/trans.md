@@ -4,6 +4,21 @@ This guide will walk you through deploying translation models using Geniusrise, 
 
 ## Setup and Configuration
 
+**Requirements**
+
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/jyvqfl2KCew?si=-kgGz9CbcduxCSxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+- python 3.10, [PPA](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa), [AUR](https://aur.archlinux.org/packages/python310), [brew](https://formulae.brew.sh/formula/python@3.10), [Windows](https://www.python.org/ftp/python/3.12.0/python-3.12.0b3-amd64.exe).
+- You need to have a GPU. Most of the system works with NVIDIA GPUs.
+- [Install CUDA](https://developer.nvidia.com/cuda-downloads).
+
+Optional: Set up a virtual environment:
+
+```bash
+virtualenv venv -p `which python3.10`
+source venv/bin/activate
+```
+
 **Installation:**
 
 Begin by installing Geniusrise and the necessary text processing extensions:
@@ -54,6 +69,8 @@ To launch your API, execute:
 genius rise
 ```
 
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/5yPT79m7r7o?si=HgFomteKYR5ruh6t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Configuration Parameters Explained
 
 - **model_name**: Specifies the model to use, such as `facebook/mbart-large-50-many-to-many-mmt` for multilingual translation.
@@ -87,7 +104,7 @@ curl -X POST http://localhost:3000/api/v1/translate \
         "max_length": 200,
         "num_beams": 5,
         "pad_token_id": 1
-    }'
+    }' | jq
 ```
 
 **Example using `python-requests`**:

@@ -23,6 +23,21 @@ This post will explore setting up APIs for various NLI tasks using Geniusrise, i
 
 ## Setup and Configuration
 
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/jyvqfl2KCew?si=-kgGz9CbcduxCSxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+**Requirements**
+
+- python 3.10, [PPA](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa), [AUR](https://aur.archlinux.org/packages/python310), [brew](https://formulae.brew.sh/formula/python@3.10), [Windows](https://www.python.org/ftp/python/3.12.0/python-3.12.0b3-amd64.exe).
+- You need to have a GPU. Most of the system works with NVIDIA GPUs.
+- [Install CUDA](https://developer.nvidia.com/cuda-downloads).
+
+Optional: Set up a virtual environment:
+
+```bash
+virtualenv venv -p `which python3.10`
+source venv/bin/activate
+```
+
 **Installation:**
 
 Start by installing Geniusrise and the necessary text processing extensions:
@@ -72,6 +87,8 @@ Launch your API with the command:
 ```bash
 genius rise
 ```
+
+<iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/89ddLqYm5Qw?si=jYh-jjC3ftvIhhMF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Understanding Configuration Parameters
 
