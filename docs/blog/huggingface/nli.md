@@ -14,6 +14,7 @@
     - [Real-Time Debate Judging](#real-time-debate-judging)
     - [Automated Story Plot Analysis](#automated-story-plot-analysis)
     - [Customer Feedback Interpretation](#customer-feedback-interpretation)
+    - [Virtual Courtroom Simulation](#virtual-courtroom-simulation)
   - [Play Around](#play-around)
 
 
@@ -455,6 +456,36 @@ for feedback in feedbacks:
 # Feedback - complaint: I've been facing frequent crashes after the last update.
 # Feedback - suggestion: It would be great if you could add a dark mode feature.
 # Feedback - murderous intent: Otherwise you leave me no choice but to slowly torture your soul.
+```
+
+### Virtual Courtroom Simulation
+
+This is a game where players can simulate courtroom trials!
+Players submit evidence and arguments, and the AI acts as the judge, determining the credibility and relevance of each submission to the case.
+
+```python
+courtroom_evidence = [
+    {"evidence": "The defendant's fingerprints were found on the weapon."},
+    {"evidence": "A witness reported seeing the defendant near the crime scene."},
+]
+
+for evidence in courtroom_evidence:
+    submission = evidence["evidence"]
+
+    response = requests.post("http://localhost:3000/api/v1/classify",
+                             json={"text": submission, "candidate_labels": ["highly relevant", "relevant", "irrelevant"]},
+                             auth=('user', 'password'))
+    label_scores = response.json()["label_scores"]
+    max_score = max(label_scores.values())
+    chosen_label = [k for k, v in label_scores.items() if v == max_score][0]
+
+    print(f"Evidence submitted: {submission}")
+    print(f"Judged as: {chosen_label}")
+
+# Evidence submitted: The defendant's fingerprints were found on the weapon.
+# Judged as: highly relevant
+# Evidence submitted: A witness reported seeing the defendant near the crime scene.
+# Judged as: highly relevant
 ```
 
 ## Play Around
