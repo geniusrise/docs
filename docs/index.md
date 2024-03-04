@@ -26,6 +26,19 @@ Together the framework and ecosystem can be used for:
     2. Local model pipeline server for personal or home IOT devices (e.g. a personal AI pin connected to voice-LLM pipeline hosted on desktop)
     3. Desktop and CLI applications
 
+Quickstarts:
+
+- Text classification: [quickstart](blog/huggingface/txtclass.md)
+- Question Answering: [quickstart](blog/huggingface/qa.md)
+- Table Question Answering: [quickstart](blog/huggingface/table_qa.md)
+- Natural Language Inference: [quickstart](blog/huggingface/nli.md)
+- Translation: [quickstart](blog/huggingface/trans.md)
+- Summarization: [quickstart](blog/huggingface/summz.md)
+- Chat: [quickstart](blog/huggingface/chat.md)
+- Language Models: [quickstart](blog/huggingface/lm.md)
+
+(More coming soon).
+
 ## Guides
 
 ---

@@ -24,6 +24,9 @@ nav:
                 - Table Question Answering: blog/huggingface/table_qa.md
                 - Natural Language Inference: blog/huggingface/nli.md
                 - Translation: blog/huggingface/trans.md
+                - Summarization: blog/huggingface/summz.md
+                - Chat: blog/huggingface/chat.md
+                - Language Models: blog/huggingface/lm.md
     - Deployment:
           - Runners:
                 - Kubernetes: guides/kubernetes.md
