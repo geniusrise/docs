@@ -502,7 +502,7 @@ from openai import OpenAI
 
 # Importing the necessary libraries and the OpenAI API client
 
-client = OpenAI(api_key="***REMOVED***")
+client = OpenAI(api_key="YOUR KEY")
 
 def send_request_to_api(messages: List[Dict[str, str]], endpoint: str, max_tokens=2048) -> Dict:
     # Function to send requests to the local API
