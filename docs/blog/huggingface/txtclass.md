@@ -51,7 +51,7 @@ pip install geniusrise-text
 
 Create a `genius.yml` with the necessary configuration for your text classification API:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -106,7 +106,7 @@ genius rise
 
 For sentiment analysis, swap the `model_name` to a model trained for sentiment, like `distilbert-base-uncased-finetuned-sst-2-english`.
 
-```yml
+```yaml
 args:
   model_name: "distilbert-base-uncased-finetuned-sst-2-english"
 ```
@@ -115,7 +115,7 @@ args:
 
 To filter inappropriate content, use a model like `roberta-base-openai-detector`.
 
-```yml
+```yaml
 args:
   model_name: "roberta-base-openai-detector"
 ```
@@ -124,7 +124,7 @@ args:
 
 For detecting the language of the input text, a model like `xlm-roberta-base` is suitable.
 
-```yml
+```yaml
 args:
   model_name: "xlm-roberta-base"
 ```
@@ -185,7 +185,7 @@ There are quite a few fun models to try out from huggingface!
 
 This model tries to classify text according to the political bias they might possess.
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -260,7 +260,7 @@ Works fairly well empirically for medium-sized sentences and in an american cont
 
 Text classification can be used to figure out the intent of the user in a chat conversation scenario. For e.g. to determine whether the user has an intent to explore or to buy.
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -326,7 +326,7 @@ bolts:
 
 Figuring out whether your chat / LLM model is hallucinating or not is a text classification task!
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -378,7 +378,7 @@ bolts:
 
 Yussss NLP has advanced enough for us to be easily be able to detect irony!
 
-```yml
+```yaml
 version: "1"
 
 bolts:

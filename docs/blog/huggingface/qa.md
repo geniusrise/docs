@@ -67,7 +67,7 @@ pip install geniusrise-text
 
 **Step 2: Create Your Configuration File (`genius.yml`)**
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -125,7 +125,7 @@ To adapt the API for various QA tasks, simply change the `model_name` in your `g
 
 **Example `genius.yml` for a Different Use Case:**
 
-```yml
+```yaml
 args:
   model_name: "bert-large-uncased-whole-word-masking-finetuned-squad"
 ```
@@ -204,7 +204,7 @@ An usual problem that faces QA models is small context sizes. This limits the mo
 
 However there are exceptions like this one:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -260,7 +260,7 @@ bolts:
 
 QA models can also be trained to be better at answering questions at chosen domains. This one is optimized for healthcare:
 
-```yml
+```yaml
 version: "1"
 
 bolts:

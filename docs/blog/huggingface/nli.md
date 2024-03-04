@@ -52,7 +52,7 @@ pip install geniusrise-text
 
 To deploy an NLI model, create a `genius.yml` configuration file:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -314,7 +314,7 @@ intents = {
 
 Lets deploy a large model so its more intelligent:
 
-```yml
+```yaml
 version: "1"
 
 bolts:

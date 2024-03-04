@@ -44,7 +44,7 @@ pip install geniusrise-text
 
 Create a `genius.yml` file to define the settings of your table QA API.
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -101,7 +101,7 @@ To tailor your API for different table QA tasks, such as financial data analysis
 
 ### Example `genius.yml` for tabular fact-checking:
 
-```yml
+```yaml
 args:
   model_name: "google/tapas-large-finetuned-tabfact"
 ```
@@ -177,7 +177,7 @@ Table QA is dominated by two families of base models: the google TAPAS and micro
 
 Given some data and an sql query, this model can return the results.
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -254,7 +254,7 @@ bolts:
 
 Given some data and a natural language query, these models generate a query that can be used to compute the result. These models are what power spreadsheet automations.
 
-```yml
+```yaml
 version: "1"
 
 bolts:

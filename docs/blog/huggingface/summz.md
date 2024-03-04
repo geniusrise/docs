@@ -51,7 +51,7 @@ pip install geniusrise-text
 
 Create a `genius.yml` to define your summarization service:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -177,7 +177,7 @@ Adjust summarization parameters such as `max_length`, `min_length`, and `num_bea
 Models with very large context sizes trained on the [booksum](https://huggingface.co/datasets/kmfoda/booksum) dataset.
 For example [pszemraj/led-base-book-summary](https://huggingface.co/pszemraj/led-base-book-summary), [pszemraj/bigbird-pegasus-large-K-booksum](https://huggingface.co/pszemraj/bigbird-pegasus-large-K-booksum) or the following large model:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -235,7 +235,7 @@ bolts:
 
 Summarization is a text-to-text task and can be used to transform the input text into another form, in this case this model transforms python code into simple english explanations:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -297,7 +297,7 @@ Here are a few examples:
 
 #### Medical text
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -330,7 +330,7 @@ bolts:
 
 #### Legal text
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -363,7 +363,7 @@ bolts:
 
 #### Conversational text
 
-```yml
+```yaml
 version: "1"
 
 bolts:

@@ -17,7 +17,7 @@ pip install geniusrise-vision
 
 Create a `genius.yml` file to define your OCR service:
 
-```yml
+```yaml
 version: "1"
 
 bolts:

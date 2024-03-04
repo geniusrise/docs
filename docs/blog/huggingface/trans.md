@@ -32,7 +32,7 @@ pip install geniusrise-text
 
 Next, define your translation service in a `genius.yml` file:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -166,7 +166,7 @@ Both the MBART and the NLLB families have several members, with [facebook/nllb-m
 
 See [here](https://github.com/facebookresearch/flores/blob/main/flores200/README.md#languages-in-flores-200) for the language codes for the FLORES-200 dataset.
 
-```yml
+```yaml
 version: "1"
 
 bolts:

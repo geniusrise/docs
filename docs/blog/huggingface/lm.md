@@ -51,7 +51,7 @@ Here are a few examples of yaml config for each of these inference engines:
 
 ### Transformers
 
-```yml
+```yaml
 version: "1"
 
 bolts:
@@ -86,7 +86,7 @@ bolts:
 
 For handling VLLMs with Geniusrise, adjust the `args` to accommodate specific requirements, such as enabling eager loading or managing memory more efficiently:
 
-```yml
+```yaml
 version: "1"
 
 bolts:
