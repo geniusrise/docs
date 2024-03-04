@@ -497,6 +497,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/summz/" class="md-nav__link">
+        Summarization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/lm/" class="md-nav__link">
+        Language Models
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1189,6 +1231,13 @@
         <li class="md-nav__item">
   <a href="#geniusrise_audio.s2t.api.SpeechToTextAPI.initialize_pipeline" class="md-nav__link">
     initialize_pipeline()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geniusrise_audio.s2t.api.SpeechToTextAPI.process_faster_whisper" class="md-nav__link">
+    process_faster_whisper()
   </a>
   
 </li>
@@ -3493,6 +3542,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geniusrise_audio.s2t.api.SpeechToTextAPI.process_faster_whisper" class="md-nav__link">
+    process_faster_whisper()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geniusrise_audio.s2t.api.SpeechToTextAPI.process_seamless" class="md-nav__link">
     process_seamless()
   </a>
@@ -3834,6 +3890,121 @@ names, organizations, locations, etc. It's suitable for processing various types
   <div class="doc doc-contents ">
   
       <p>Lazy initialization of the NER Hugging Face pipeline.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="geniusrise_audio.s2t.api.SpeechToTextAPI.process_faster_whisper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">process_faster_whisper</span><span class="p">(</span><span class="n">audio_input</span><span class="p">,</span> <span class="n">model_sampling_rate</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">,</span> <span class="n">generate_args</span><span class="p">)</span></code>
+
+<a href="#geniusrise_audio.s2t.api.SpeechToTextAPI.process_faster_whisper" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Processes audio input with the faster-whisper model.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>audio_input</code></td>
+          <td>
+                <code>bytes</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The audio input for transcription.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>model_sampling_rate</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The sampling rate of the model.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>chunk_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The size of audio chunks to process.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>generate_args</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional arguments for transcription.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dict[str, Any]: A dictionary containing the transcription results.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   </div>
 

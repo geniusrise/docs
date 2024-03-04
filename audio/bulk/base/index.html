@@ -497,6 +497,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/summz/" class="md-nav__link">
+        Summarization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/chat/" class="md-nav__link">
+        Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/huggingface/lm/" class="md-nav__link">
+        Language Models
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3741,7 +3783,7 @@ It handles any final steps such as sending notifications or cleaning up resource
 
 
 <h2 id="geniusrise_audio.base.bulk.AudioBulk.load_models" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">load_models</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">processor_name</span><span class="p">,</span> <span class="n">model_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">processor_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">processor_class</span><span class="o">=</span><span class="s1">&#39;AutoFeatureExtractor&#39;</span><span class="p">,</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flash_attention</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">better_transformers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">load_models</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">processor_name</span><span class="p">,</span> <span class="n">model_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">processor_revision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model_class</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">processor_class</span><span class="o">=</span><span class="s1">&#39;AutoFeatureExtractor&#39;</span><span class="p">,</span> <span class="n">use_cuda</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="s1">&#39;float16&#39;</span><span class="p">,</span> <span class="n">quantization</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">max_memory</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;24GB&#39;</span><span class="p">},</span> <span class="n">torchscript</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flash_attention</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">better_transformers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_whisper_cpp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_faster_whisper</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">model_args</span><span class="p">)</span></code>
 
 <a href="#geniusrise_audio.base.bulk.AudioBulk.load_models" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -3967,6 +4009,34 @@ It handles any final steps such as sending notifications or cleaning up resource
           <td>
             <div class="doc-md-description">
               <p>Flag to enable Better Transformers optimization for faster processing.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_whisper_cpp</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use whisper.cpp to load the model. Defaults to False. Note: only works for these models: https://github.com/aarnphm/whispercpp/blob/524dd6f34e9d18137085fb92a42f1c31c9c6bc29/src/whispercpp/utils.py#L32</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_faster_whisper</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use faster-whisper.</p>
             </div>
           </td>
           <td>
