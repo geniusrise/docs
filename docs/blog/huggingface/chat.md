@@ -406,7 +406,6 @@ def send_request_to_api(messages: List[Dict[str, str]]) -> str:
     response_data = response.json()
 
     if response.status_code == 200:
-        print(response_data)
         last_message = response_data["choices"][0]["message"]["content"]
         return last_message
     else:

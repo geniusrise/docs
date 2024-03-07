@@ -1,5 +1,16 @@
 # Host Language Models Using Geniusrise
 
+- [Host Language Models Using Geniusrise](#host-language-models-using-geniusrise)
+  - [Getting Started](#getting-started)
+    - [Configuration File: `genius.yml`](#configuration-file-geniusyml)
+    - [Transformers](#transformers)
+    - [VLLM](#vllm)
+    - [llama.cpp](#llamacpp)
+    - [Launching Your API](#launching-your-api)
+  - [Interacting with Your API](#interacting-with-your-api)
+    - [Using `curl` for HTTP Requests](#using-curl-for-http-requests)
+    - [Python `requests` Example](#python-requests-example)
+
 Language modeling is the task that any foundational model is trained on, and later fine-tuned for other tasks like chat. Language models are mostly useful for one-shot tasks or tasks that need certain control, e.g. forcing zero-shot classification by asking the model to output only one token. We'll dive into hosting a language model and interact with your API using `curl` and `python-requests`.
 
 ## Getting Started
@@ -104,7 +115,7 @@ bolts:
         output_folder: ./output
     method: listen
     args:
-      model_name: TheBloke/Mistral-7B-Instruct-v0.2-AWQ
+      model_name: TheBloke/Mistral-7B-v0.1-AWQ
       use_cuda: True
       precision: "float16"
       device_map: "auto"

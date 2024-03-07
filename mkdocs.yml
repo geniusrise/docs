@@ -8,6 +8,17 @@ nav:
     - Concepts: guides/concepts.md
     - Architecture: guides/architecture.md
     - Installation: guides/installation.md
+    - Usage Guides:
+          - Text classification: blog/huggingface/txtclass.md
+          - Question Answering: blog/huggingface/qa.md
+          - Table Question Answering: blog/huggingface/table_qa.md
+          - Natural Language Inference: blog/huggingface/nli.md
+          - Translation: blog/huggingface/trans.md
+          - Summarization: blog/huggingface/summz.md
+          - Chat: blog/huggingface/chat.md
+          - Language Models: blog/huggingface/lm.md
+    - Blog:
+          - Mixing AI and programming: blog/ideas/programming_and_ai.md
     - Development:
           - Guides:
                 - Local setup: guides/local.md
@@ -18,15 +29,6 @@ nav:
             #     - Workflow ops: guides/404.md
             #     - Data ops: guides/404.md
             #     - Model ops: guides/404.md
-          - Blogs:
-                - Text classification: blog/huggingface/txtclass.md
-                - Question Answering: blog/huggingface/qa.md
-                - Table Question Answering: blog/huggingface/table_qa.md
-                - Natural Language Inference: blog/huggingface/nli.md
-                - Translation: blog/huggingface/trans.md
-                - Summarization: blog/huggingface/summz.md
-                - Chat: blog/huggingface/chat.md
-                - Language Models: blog/huggingface/lm.md
     - Deployment:
           - Runners:
                 - Kubernetes: guides/kubernetes.md
