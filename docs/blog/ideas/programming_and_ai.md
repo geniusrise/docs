@@ -1,7 +1,7 @@
 # Mixing AI and programming
 
 - [Mixing AI and programming](#mixing-ai-and-programming)
-    - [Practical basics of a programming language](#practical-basics-of-a-programming-language)
+    - [Practical basics of any programming language](#practical-basics-of-any-programming-language)
     - [If conditions](#if-conditions)
         - [Zero-shot if conditions](#zero-shot-if-conditions)
         - [Zero-shot if conditions on images](#zero-shot-if-conditions-on-images)
@@ -14,17 +14,17 @@
     - [Conclusion](#conclusion)
 
 
-The new era of AI models (and they can be finally called "AI" instead of the earlier "ML"), has brought in a new era of capabilities that we are still in the teethhing stages trying to explore.
+The new era of AI models has brought in a new era of capabilities that we are still in the teething stages trying to explore.
 
 This statement has been ringing in my head for a few months, something that now brings about 53 million results on google - "AI is eating software". Cool, lets explore a few ideas how we could help that consumption 😋
 
-## Practical basics of a programming language
+## Practical basics of any programming language
 
 Whenever I try to pick up a new programming language, I'm first always trying to learn that minimal subset of it - essentially - conditional statements, functions, loops and type system if the language has it. Rest all is required but one can technically go miles with just this set of constructs.
 
 So lets see how AI mixes with these!
 
-We are mostly looking at **runtime** ideas. Code-time I guess there are quite a few and more sophisticated tools out already. But, we all saw grok, inference is getting FAST and dirt cheap, hence runtime AI consultation would be a reality in a few years.
+We are mostly looking at **runtime** ideas. Code-time I guess there are quite a few and more sophisticated tools out already. But, we all saw grok, inference is getting FAST and dirt cheap, hence runtime AI usage would be a reality in some time.
 
 ## If conditions
 
@@ -129,6 +129,19 @@ else:
     print("The phone's battery life is bad.")
 
 # The phone has an awesome battery life!
+```
+
+Or sentiment-wise processing:
+
+```python
+text = "This a very good entry level smartphone, battery last 2-3 days after fully charged when connected to the internet. No memory lag issue when playing simple hidden object games. Performance is beyond my expectation, i bought it with a good bargain, couldnt ask for more!"
+
+if when(text, "the user is happy"):
+    print("Yay!")
+else:
+    print("Yay! please fill up this surveymonkey form")
+
+# Yay!
 ```
 
 Or content filtering:
