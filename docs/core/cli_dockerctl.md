@@ -1,3 +1,0 @@
-# Dockerctl
-
-::: cli.dockerctl
