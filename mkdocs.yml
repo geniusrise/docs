@@ -1,5 +1,5 @@
 site_name: geniusrise docs
-site_url: https://docs.geniusrise.ai
+site_url: https://docs.geniusrise.com
 site_description: Run open LLM, STT and TTS models on your own infrastructure.
 repo_url: https://github.com/geniusrise/geniusrise
 repo_name: geniusrise/geniusrise
