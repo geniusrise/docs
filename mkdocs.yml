@@ -5,17 +5,26 @@ repo_url: https://github.com/geniusrise/geniusrise
 repo_name: geniusrise/geniusrise
 
 theme:
-  name: material
-  palette:
-    - scheme: default
-      primary: deep purple
-      toggle: { icon: material/weather-night, name: dark mode }
-    - scheme: slate
-      primary: deep purple
-      toggle: { icon: material/weather-sunny, name: light mode }
-  features:
-    - navigation.sections
-    - content.code.copy
+    name: material
+    palette:
+        scheme: slate
+        primary: pink
+        accent: deep purple
+    font:
+        text: Inconsolata
+        code: Kode Mono
+    logo: assets/logo_with_text.png
+    features:
+        - navigation.instant
+        - navigation.instant.prefetch
+        - navigation.tracking
+        - navigation.sections
+        - header.autohide
+        - content.code.copy
+        - content.code.select
+
+extra_css:
+    - main.css
 
 nav:
   - Home: index.md
@@ -39,7 +48,14 @@ nav:
       - Contributing recipes: dev/recipes.md
 
 markdown_extensions:
-  - admonition
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - tables
+    - admonition
+    - toc:
+          permalink: true
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - tables
